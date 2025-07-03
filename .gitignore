@@ -18,6 +18,9 @@ mono_crash.*
 Thumbs.db
 ehthumbs.db
 
+# node.js dependencies
+node_modules/
+
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
@@ -31,3 +34,5 @@ ScaffoldingReadMe.txt
 *.log
 *.vspscc
 *.vssscc
+
+.fake

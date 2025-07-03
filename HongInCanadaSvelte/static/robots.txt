@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hongincanada.com/sitemap.xml
+
+# Block access to private areas
+Disallow: /bin/
+Disallow: /obj/
+Disallow: /_framework/
+Disallow: /lib/
+
+# Allow access to important files
+Allow: /css/
+Allow: /js/
+Allow: /images/ 
