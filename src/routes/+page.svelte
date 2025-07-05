@@ -131,7 +131,7 @@
                 <div class="w-48 h-48 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full overflow-hidden shadow-lg">
                     <img src="/otto.jpg" alt="Otto - Hong's cat" class="w-full h-full object-cover">
                 </div>
-                <div class="w-48 h-88 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full overflow-hidden shadow-lg">
+                <div class="w-48 h-[22rem] bg-gradient-to-br from-purple-100 to-pink-100 rounded-full overflow-hidden shadow-lg">
                     <img src="/AI-me-and-otto.jpg" alt="Hong and Otto together" class="w-full h-full object-cover">
                 </div>
             </div>
@@ -223,7 +223,7 @@
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2" itemprop="name">Minibreaks</h3>
                     <p class="text-gray-600 mb-4" itemprop="description">
-                        A website that promotes better mental health and by encouraging users to take regular breaks.
+                        A website that promotes better mental health encouraging users to take regular breaks.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">SvelteKit</span>
