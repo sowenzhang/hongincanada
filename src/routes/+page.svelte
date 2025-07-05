@@ -334,7 +334,7 @@
         <div class="text-center mt-12">
             <p class="text-gray-600 mb-4">More thoughts and stories coming soon!</p>
         </div>
-        <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl shadow-lg p-8 text-center text-white mb-12">
+        <!-- <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl shadow-lg p-8 text-center text-white mb-12">
             <h3 class="text-2xl font-bold mb-4">From My Previous Blog</h3>
             <p class="text-purple-100 mb-6">
                 I've been writing about my experiences and thoughts for a while. Check out my previous blog posts to get
@@ -344,7 +344,7 @@
                class="bg-white text-purple-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition inline-flex items-center">
                 Visit My Old Blog <i class="fas fa-external-link-alt ml-2"></i>
             </a>
-        </div>
+        </div> -->
     </div>
 </section>
 
