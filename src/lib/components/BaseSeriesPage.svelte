@@ -81,35 +81,21 @@
 <!-- Breadcrumb -->
 <nav class="bg-gray-50 dark:bg-gray-900 py-4 transition-colors">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <!-- Breadcrumb Path -->
-                <div class="flex items-center space-x-2 text-sm">
-                    <a href="/" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">Home</a>
-                    <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500"></i>
-                    <a href="/series" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">AI Development Series</a>
-                    <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500"></i>
-                    <span class="text-gray-600 dark:text-gray-400">Part {navigation.currentPart}</span>
-                </div>
-                <!-- Part Indicator -->
-                <div class="hidden sm:block">
-                    <span class="bg-blue-500 dark:bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
-                        Part {navigation.currentPart} of {navigation.totalParts}
-                    </span>
-                </div>
+        <div class="flex items-center space-x-4">
+            <!-- Breadcrumb Path -->
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="/" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500"></i>
+                <a href="/series" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">AI Development Series</a>
+                <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500"></i>
+                <span class="text-gray-600 dark:text-gray-400">Part {navigation.currentPart}</span>
             </div>
-            <!-- Theme Toggle -->
-            <button
-                on:click={toggleTheme}
-                class="p-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle theme"
-            >
-                {#if isDarkMode}
-                    <i class="fas fa-sun text-yellow-500"></i>
-                {:else}
-                    <i class="fas fa-moon text-gray-600"></i>
-                {/if}
-            </button>
+            <!-- Part Indicator -->
+            <div class="hidden sm:block">
+                <span class="bg-blue-500 dark:bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    Part {navigation.currentPart} of {navigation.totalParts}
+                </span>
+            </div>
         </div>
     </div>
 </nav>
@@ -156,23 +142,46 @@
     </div>
 </header>
 
+<!-- Sticky Navigation Bar -->
+<div class="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 transition-colors shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-3">
+            <!-- TOC Toggle Button -->
+            {#if tableOfContents.length > 0}
+                <button
+                    on:click={toggleTOC}
+                    class="flex items-center space-x-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200"
+                >
+                    <i class="fas fa-list text-blue-600 dark:text-blue-400"></i>
+                    <span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Table of Contents</span>
+                    <span class="sm:hidden">TOC</span>
+                    <i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400"></i>
+                </button>
+            {:else}
+                <div></div>
+            {/if}
+
+            <!-- Theme Toggle Button -->
+            <button
+                on:click={toggleTheme}
+                class="flex items-center space-x-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200"
+                aria-label="Toggle theme"
+            >
+                {#if isDarkMode}
+                    <i class="fas fa-sun text-yellow-500"></i>
+                    <span class="hidden sm:inline">Light Mode</span>
+                {:else}
+                    <i class="fas fa-moon text-gray-600 dark:text-gray-400"></i>
+                    <span class="hidden sm:inline">Dark Mode</span>
+                {/if}
+            </button>
+        </div>
+    </div>
+</div>
+
 <!-- Article Content -->
 <main class="py-12 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <!-- TOC Toggle Button (Mobile & Desktop) -->
-        {#if tableOfContents.length > 0}
-            <div class="mb-8">
-                <button
-                    on:click={toggleTOC}
-                    class="flex items-center space-x-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 shadow-sm"
-                >
-                    <i class="fas fa-list text-blue-600 dark:text-blue-400"></i>
-                    <span>{showTOC ? 'Hide' : 'Show'} Table of Contents</span>
-                    <i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400"></i>
-                </button>
-            </div>
-        {/if}
 
         <div class="flex flex-col lg:flex-row gap-8 transition-all duration-300">
 
