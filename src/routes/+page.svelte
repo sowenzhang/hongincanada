@@ -61,10 +61,14 @@
                     <span itemprop="jobTitle">Engineering Manager</span> with a passion for building products that people love.
                     <span class="font-medium">Canadian/Chinese</span> with a background in <span itemprop="knowsAbout">HCI</span>.
                 </p>
-                <div class="flex space-x-4">
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
                     <a href="#projects"
                        class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition">
                         View My Work
+                    </a>
+                    <a href="/series"
+                       class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full transition">
+                        <i class="fas fa-robot mr-2"></i>AI Series
                     </a>
                     <a href="#contact"
                        class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-full transition">
@@ -297,13 +301,33 @@
             </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Featured Series -->
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-emerald-500">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-robot text-emerald-500 text-xl mr-3"></i>
+                    <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">
+                        Featured Series
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">How I Built MiniBreaks.io With AI</h3>
+                <p class="text-gray-600 mb-4">
+                    A comprehensive 10-part series documenting my journey of building a complete website using AI tools. Learn from real-world experience and practical solutions.
+                </p>
+                <div class="flex items-center justify-between">
+                    <div class="text-gray-500 text-sm">
+                        <i class="fas fa-clock mr-1"></i> 10-part series
+                    </div>
+                    <a href="/series" class="text-emerald-600 hover:text-emerald-700 font-medium flex items-center">
+                        Start Reading <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
             <!-- Coming Soon Articles -->
-            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+            <!-- <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
                 <div class="flex items-center mb-4">
                     <i class="fas fa-code text-blue-500 text-xl mr-3"></i>
                     <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                        Coming
-                        Soon
+                        Coming Soon
                     </span>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Can we use AI to build a full website?</h3>
@@ -313,13 +337,14 @@
                 <div class="text-gray-500 text-sm">
                     <i class="fas fa-clock mr-1"></i> 10 min read
                 </div>
-            </div>
+            </div> -->
+        </div>
+        <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
                 <div class="flex items-center mb-4">
                     <i class="fas fa-cat text-green-500 text-xl mr-3"></i>
                     <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                        Coming
-                        Soon
+                        Coming Soon
                     </span>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">How having 2 cats help me become a better engineering manager</h3>
@@ -330,7 +355,7 @@
                     <i class="fas fa-clock mr-1"></i> 8 min read
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="text-center mt-12">
             <p class="text-gray-600 mb-4">More thoughts and stories coming soon!</p>
         </div>
