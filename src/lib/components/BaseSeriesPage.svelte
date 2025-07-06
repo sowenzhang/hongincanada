@@ -216,12 +216,12 @@
                 <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
                     <!-- Reading optimized content area -->
                     <div class="p-8 lg:p-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-                        <div class="prose prose-xl dark:prose-invert max-w-4xl mx-auto
+                        <div class="prose prose-xl dark:prose-invert max-w-4xl mx-auto scroll-pt-24
                                     prose-headings:text-gray-900 dark:prose-headings:text-white prose-headings:font-bold
                                     prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-lg
                                     prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg
                                     prose-strong:text-gray-900 dark:prose-strong:text-white
-                                    prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
+                                    prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-blue-800 dark:hover:prose-a:text-blue-300 prose-a:transition-colors
                                     prose-code:text-pink-600 dark:prose-code:text-pink-400 prose-code:font-medium
                                     prose-code:bg-pink-50 dark:prose-code:bg-pink-900/20 prose-code:px-2 prose-code:py-1 prose-code:rounded
                                     prose-pre:bg-gray-100 dark:prose-pre:bg-gray-800 prose-pre:border prose-pre:border-gray-200 dark:prose-pre:border-gray-700
@@ -232,7 +232,9 @@
                                     prose-p:mb-6 prose-ul:mb-6 prose-ol:mb-6
                                     [&_p]:text-gray-700 dark:[&_p]:text-gray-300
                                     [&_span]:text-gray-700 dark:[&_span]:text-gray-300
-                                    [&_div]:text-gray-700 dark:[&_div]:text-gray-300">
+                                    [&_div]:text-gray-700 dark:[&_div]:text-gray-300
+                                    [&_section]:scroll-mt-24
+                                    [&_h1]:scroll-mt-24 [&_h2]:scroll-mt-24 [&_h3]:scroll-mt-24 [&_h4]:scroll-mt-24 [&_h5]:scroll-mt-24 [&_h6]:scroll-mt-24">
 
                             <!-- Main content slot -->
                             <slot />

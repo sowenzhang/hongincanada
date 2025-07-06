@@ -107,13 +107,13 @@
 			<div class="rounded-lg border-l-4 border-green-500 bg-green-50 p-6 dark:bg-green-900/20">
 				<h4 class="mb-2 font-bold text-green-700 dark:text-green-300">⚡ GitHub Copilot/Cursor</h4>
 				<p class="text-sm text-gray-600 dark:text-gray-400">
-					Your AI coding assistant that writes code as you type
+					Your AI coding assistant that writes code as you instruct it
 				</p>
 			</div>
 			<div class="rounded-lg border-l-4 border-purple-500 bg-purple-50 p-6 dark:bg-purple-900/20">
 				<h4 class="mb-2 font-bold text-purple-700 dark:text-purple-300">🤗 Hugging Face</h4>
 				<p class="text-sm text-gray-600 dark:text-gray-400">
-					Free AI models for advanced features (optional)
+					Free AI models for advanced features such as designing (optional)
 				</p>
 			</div>
 			<div class="rounded-lg border-l-4 border-orange-500 bg-orange-50 p-6 dark:bg-orange-900/20">
@@ -124,42 +124,37 @@
 			</div>
 		</div>
 
-		<h3 id="chatgpt">ChatGPT - Your AI Assistant</h3>
+<h3 id="chatgpt">ChatGPT - Your AI Assistant</h3>
 
-		<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
-			<p class="mb-0 text-gray-700 dark:text-gray-300">
-				<strong
-					>Think of ChatGPT as your patient mentor who never gets tired of explaining things.</strong
-				>
-			</p>
-		</div>
+<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
+  <p class="mb-0 text-gray-700 dark:text-gray-300">
+    <strong>Think of ChatGPT as your patient mentor who never gets tired of explaining things.</strong>
+  </p>
+</div>
 
-		<p>ChatGPT will be your primary brainstorming partner. Here's how I use it:</p>
+<p>ChatGPT will be your primary brainstorming partner. Here's how I use it:</p>
 
-		<ul>
-			<li><strong>Idea refinement</strong> - "Help me think through this website idea..."</li>
-			<li><strong>Learning new concepts</strong> - "Explain how websites work in simple terms"</li>
-			<li>
-				<strong>Problem solving</strong> - "My code isn't working, here's what's happening..."
-			</li>
-			<li><strong>Writing content</strong> - "Help me write copy for my homepage"</li>
-		</ul>
+<ul>
+  <li><strong>Idea refinement</strong> - "Help me think through this website idea..."</li>
+  <li><strong>Learning new concepts</strong> - "Explain how websites work in simple terms"</li>
+  <li><strong>Problem solving</strong> - "My code isn't working, here's what's happening..."</li>
+  <li><strong>Writing content</strong> - "Help me write an introduction about my website."</li>
+</ul>
 
-		<div class="not-prose my-6 rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-			<h4 class="mb-2 font-bold text-gray-900 dark:text-white">
-				🎯 Pro Tip: How to Talk to ChatGPT
-			</h4>
-			<p class="mb-2 text-sm text-gray-700 dark:text-gray-300">
-				The secret to getting great results from ChatGPT is being specific:
-			</p>
-			<ul class="space-y-1 text-sm text-gray-600 dark:text-gray-400">
-				<li>❌ "Help me build a website"</li>
-				<li>
-					✅ "I want to build a simple website for my local bakery that shows our menu and contact
-					info. I'm not a programmer. What's the easiest way to start?"
-				</li>
-			</ul>
-		</div>
+<div class="not-prose my-6 rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
+  <h4 class="mb-2 font-bold text-gray-900 dark:text-white">
+    🎯 Pro Tip: How to Talk to ChatGPT
+  </h4>
+  <p class="mb-2 text-sm text-gray-700 dark:text-gray-300">
+    The secret to getting great results from ChatGPT is being specific:
+  </p>
+  <ul class="space-y-1 text-sm text-gray-600 dark:text-gray-400">
+    <li>❌ "Help me build a website"</li>
+    <li>
+      ✅ "I want to build a simple website for my local bakery that shows our menu and contact info. I'm not a programmer. What's the easiest way to start?"
+    </li>
+  </ul>
+</div>
 
 		<h3 id="github-copilot">GitHub Copilot - AI Code Companion</h3>
 
@@ -171,7 +166,7 @@
 
 		<div class="not-prose my-6 rounded-lg bg-green-50 p-4 dark:bg-green-900/20">
 			<h4 class="mb-2 font-bold text-green-700 dark:text-green-300">
-				💰 Cost: $10/month (but there's a free trial)
+				💰 Cost: $10/month or $100/year (but there's a free trial)
 			</h4>
 			<p class="text-sm text-gray-600 dark:text-gray-400">
 				While it's paid, the time it saves makes it worth every penny. You can start with the free
@@ -179,16 +174,26 @@
 			</p>
 		</div>
 
+      <p>
+        When using GitHub Copilot, make sure you configure it to use the Agent mode, which allows it to understand your code context better and provide more accurate suggestions.
+        I also prefer to use Claude model, such as Sonnet 3.5 or 4, which appears to be more accurate and helpful than the default model.
+      </p>
+
 		<h3 id="cursor">Cursor IDE - AI-First Code Editor</h3>
 
 		<p>
 			Cursor is like a supercharged code editor built specifically for AI assistance. It's what I
-			used for most of MiniBreaks.io, and it's <strong>completely free</strong>.
+			used to kick off MiniBreaks.io, and it's <strong>completely free</strong>. You can even get a two-week trial with all premium features unlocked.
 		</p>
+
+    <p>
+      In my experience, Cursor is very fast and yields great results. I was skeptical at first, but it really does make coding easier and more intuitive.
+      However, after using both tools extensively, I found that GitHub Copilot had gained noticeable improvements in its suggestions and accuracy.
+    </p>
 
 		<div class="not-prose my-6 border-l-4 border-purple-500 bg-purple-50 p-4 dark:bg-purple-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
-				<strong>My recommendation:</strong> Start with Cursor (free) and add GitHub Copilot later if
+				<strong>My recommendation:</strong> Start with Cursor (free), do as much as you can in the first 2 weeks, and add GitHub Copilot later if
 				you want even more AI assistance.
 			</p>
 		</div>
@@ -196,11 +201,13 @@
 		<h3 id="hugging-face">Hugging Face - AI Models Hub (Optional)</h3>
 
 		<p>
-			Think of Hugging Face as a library of free AI tools. You might not need it for your first
-			website, but it's good to know it exists for when you want to add cool AI features later.
+			Think of Hugging Face as a library of free AI tools
+      (check <a href="https://huggingface.co/spaces" target="_blank">Hugging Face Space</a>).
+      You might not need it for your first website, but it's good to know it exists for when you want to add cool AI features later.
 		</p>
 
 		<ul>
+      <li>Design your landing home page, recommend <a target="_blank" href="https://huggingface.co/spaces/enzostvs/deepsite">Deepsite</a></li>
 			<li>Image generation for your website</li>
 			<li>Text translation</li>
 			<li>Chatbots for customer service</li>
@@ -223,12 +230,6 @@
 			up for GitHub". Choose a username that represents you or your project—you'll use this in your website's
 			URL.
 		</p>
-
-		<div class="not-prose my-6 border-l-4 border-yellow-500 bg-yellow-50 p-4 dark:bg-yellow-900/20">
-			<p class="mb-0 text-gray-700 dark:text-gray-300">
-				<strong>Username tip:</strong> Your website will be at username.github.io, so choose wisely!
-			</p>
-		</div>
 
 		<h3 id="first-repository">Creating Your First Repository</h3>
 
@@ -261,9 +262,16 @@
 
 		<ol>
 			<li>
-				<strong>Download Cursor IDE</strong> - Visit
-				<a href="https://cursor.sh" target="_blank" rel="noopener">cursor.sh</a> and download the free
-				editor
+				<strong>Download Visual Studio Code</strong> - Visit
+				<a href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a> and download the free editor
+			</li>
+			<li>
+				<strong>Sign up for GitHub Copilot</strong> - Go to
+				<a href="https://github.com/features/copilot" target="_blank" rel="noopener">github.com/features/copilot</a> and start your free trial
+			</li>
+			<li>
+				<strong>Download Cursor IDE (Optional)</strong> - Visit
+				<a href="https://cursor.sh" target="_blank" rel="noopener">cursor.sh</a> and download the free editor
 			</li>
 			<li>
 				<strong>Sign up for ChatGPT</strong> - Go to
@@ -326,7 +334,11 @@
 			</div>
 			<div class="flex items-start space-x-3">
 				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
-				<span>Download and install Cursor IDE</span>
+				<span>Download and install Visual Studio Code</span>
+			</div>
+			<div class="flex items-start space-x-3">
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<span>Sign up for GitHub Copilot (start your free trial)</span>
 			</div>
 			<div class="flex items-start space-x-3">
 				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
@@ -334,8 +346,15 @@
 			</div>
 			<div class="flex items-start space-x-3">
 				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
-				<span>Ask ChatGPT: "What should I consider when planning a simple website?"</span>
+				<span>Install Git to connect your computer to GitHub (ask ChatGPT if not familiar)</span>
 			</div>
+		</div>
+
+		<div class="not-prose my-6 border-l-4 border-yellow-500 bg-yellow-50 p-4 dark:bg-yellow-900/20">
+			<p class="mb-0 text-gray-700 dark:text-gray-300">
+				<strong>⚠️ Important about Cursor:</strong> If you've never registered for Cursor before, do NOT register yet!
+				Wait until Part 5 so you can take advantage of the 2-week trial with all premium features unlocked when you actually start coding.
+			</p>
 		</div>
 
 		<div class="not-prose my-6 border-l-4 border-green-500 bg-green-50 p-4 dark:bg-green-900/20">
@@ -350,17 +369,16 @@
 		<h2>What's Next</h2>
 
 		<p>
-			In Part 4, we'll dive into crafting your website idea and creating your first MVP (Minimum
-			Viable Product) with AI assistance. You'll learn how to:
+			In Part 4, we'll dive into using ChatGPT strategically to craft your website idea and create your first MVP (Minimum Viable Product). You'll learn how to:
 		</p>
 
 		<ul>
-			<li>Refine your website idea using AI brainstorming techniques</li>
-			<li>Create wireframes and plan your site structure</li>
-			<li>Write your first code with AI assistance</li>
-			<li>Set up your local development environment</li>
+			<li>Use ChatGPT effectively for idea refinement and brainstorming</li>
+			<li>Structure conversations with AI to get better results</li>
+			<li>Avoid common pitfalls when planning with AI assistance</li>
+			<li>Create a clear scope and feature list for your first website</li>
 		</ul>
 
-		<p>By the end of Part 4, you'll have a clear plan and the beginning of your actual website!</p>
+		<p>By the end of Part 4, you'll have a clear plan and know exactly what you want to build!</p>
 	</section>
 </BaseSeriesPage>

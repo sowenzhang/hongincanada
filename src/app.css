@@ -35,3 +35,25 @@
 	0%, 100% { transform: translateY(0px); }
 	50% { transform: translateY(-20px); }
 }
+
+/* Enhanced header styles - subtle and clean */
+.prose h2 {
+	@apply border-l-4 border-blue-500 dark:border-blue-400 pl-4 py-2 font-bold text-gray-900 dark:text-white text-2xl mb-6 mt-12;
+}
+
+.prose h3 {
+	@apply border-l-4 border-green-500 dark:border-green-400 pl-4 py-1 font-semibold text-gray-800 dark:text-gray-200 text-xl mb-4 mt-8;
+}
+
+/* Enhanced link styles to ensure visibility */
+.prose a {
+	@apply text-blue-600 dark:text-blue-400 underline decoration-2 underline-offset-2 transition-colors;
+}
+
+.prose a:hover {
+	@apply text-blue-800 dark:text-blue-300;
+}
+
+/* .prose h4 {
+	@apply border-l-2 border-gray-400 dark:border-gray-500 pl-3 py-1 font-medium text-gray-700 dark:text-gray-300 text-lg mb-3 mt-6;
+} */
