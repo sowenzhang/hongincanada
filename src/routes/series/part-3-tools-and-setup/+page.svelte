@@ -1,33 +1,10 @@
 <script>
 	import BaseSeriesPage from '$lib/components/BaseSeriesPage.svelte';
+	import { getArticleData, getNavigationData } from '$lib/data/seriesData';
 
-	// Article metadata
-	const articleData = {
-		title: 'Part 3: Choosing Your Tools & Setting Up - How I Built MiniBreaks.io With AI',
-		description:
-			"Introduce the minimal set of tools needed: ChatGPT, GitHub Copilot/Cursor, and Hugging Face. Walk readers through creating a GitHub account and setting up their first repository, even if they're non-engineers.",
-		canonical: 'https://hongincanada.com/series/part-3-tools-and-setup',
-		ogImage: 'https://hongincanada.com/profile.png',
-		publishDate: '2025-07-05',
-		readTime: '12 min read'
-	};
-
-	// Navigation data
-	const navigation = {
-		series: 'How I Built MiniBreaks.io With AI',
-		currentPart: 3,
-		totalParts: 10,
-		prevPart: {
-			number: 2,
-			title: 'Why I Wanted to Use AI',
-			slug: 'part-2-why-use-ai'
-		},
-		nextPart: {
-			number: 4,
-			title: 'Crafting Your Idea & MVP with AI',
-			slug: 'part-4-crafting-idea-mvp'
-		}
-	};
+	// Get centralized data for Part 3
+	const articleData = getArticleData(3);
+	const navigation = getNavigationData(3);
 
 	// Table of contents
 	const tableOfContents = [
@@ -48,7 +25,7 @@
 	];
 </script>
 
-<BaseSeriesPage {articleData} {navigation} {tableOfContents}>
+<BaseSeriesPage {articleData} {navigation} {tableOfContents} disableNextPart={true}>
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
@@ -60,8 +37,8 @@
 		<div
 			class="mb-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
 		>
-			<span><i class="fas fa-calendar mr-2"></i>{articleData.publishDate}</span>
-			<span><i class="fas fa-clock mr-2"></i>{articleData.readTime}</span>
+			<span><i class="fas fa-calendar mr-2"></i>{articleData?.publishDate}</span>
+			<span><i class="fas fa-clock mr-2"></i>{articleData?.readTime}</span>
 			<span><i class="fas fa-user mr-2"></i>Hong</span>
 		</div>
 

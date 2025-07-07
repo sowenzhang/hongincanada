@@ -323,21 +323,23 @@
                 </div>
             </div>
             <!-- Coming Soon Articles -->
-            <!-- <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
                 <div class="flex items-center mb-4">
-                    <i class="fas fa-code text-blue-500 text-xl mr-3"></i>
+                    <i class="fas fa-book-skull text-blue-500 text-xl mr-3"></i>
                     <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                         Coming Soon
                     </span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Can we use AI to build a full website?</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Unnamed Novel about AI and a person</h3>
                 <p class="text-gray-600 mb-4">
-                    I will discuss how I use the power of AI to build a full website of Minibreaks.
+                    I am working on a novel that explores the relationship between AI and humanity, set in a near-future world. Stay tuned for updates!
                 </p>
-                <div class="text-gray-500 text-sm">
-                    <i class="fas fa-clock mr-1"></i> 10 min read
+                <div class="flex items-center justify-between">
+                    <div class="text-gray-500 text-sm">
+                        <i class="fas fa-clock mr-1"></i> ?-part series
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">

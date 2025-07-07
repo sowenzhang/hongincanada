@@ -7,6 +7,8 @@
     export let navigation;
     /** @type {Array<{id: string, title: string, level: number}>} */
     export let tableOfContents = [];
+    /** @type {boolean} Whether the next part link should be disabled (when next part isn't ready yet) */
+    export let disableNextPart = false;
 
     // Theme management
     let isDarkMode = false;
@@ -219,7 +221,9 @@
                         <div class="prose prose-xl dark:prose-invert max-w-4xl mx-auto scroll-pt-24
                                     prose-headings:text-gray-900 dark:prose-headings:text-white prose-headings:font-bold
                                     prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-lg
-                                    prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg
+                                    prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg prose-li:mb-2 prose-li:pl-2
+                                    prose-ul:ml-6 prose-ul:mb-6 prose-ul:mt-4 prose-ul:space-y-2 prose-ul:list-disc prose-ul:pl-6
+                                    prose-ol:ml-6 prose-ol:mb-6 prose-ol:mt-4 prose-ol:space-y-2 prose-ol:list-decimal prose-ol:pl-6
                                     prose-strong:text-gray-900 dark:prose-strong:text-white
                                     prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-blue-800 dark:hover:prose-a:text-blue-300 prose-a:transition-colors
                                     prose-code:text-pink-600 dark:prose-code:text-pink-400 prose-code:font-medium
@@ -233,6 +237,9 @@
                                     [&_p]:text-gray-700 dark:[&_p]:text-gray-300
                                     [&_span]:text-gray-700 dark:[&_span]:text-gray-300
                                     [&_div]:text-gray-700 dark:[&_div]:text-gray-300
+                                    [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:pl-6 [&_ul]:space-y-2
+                                    [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:pl-6 [&_ol]:space-y-2
+                                    [&_li]:mb-2 [&_li]:pl-1
                                     [&_section]:scroll-mt-24
                                     [&_h1]:scroll-mt-24 [&_h2]:scroll-mt-24 [&_h3]:scroll-mt-24 [&_h4]:scroll-mt-24 [&_h5]:scroll-mt-24 [&_h6]:scroll-mt-24">
 
@@ -273,7 +280,7 @@
             </a>
 
             <!-- Next Part -->
-            {#if navigation.nextPart}
+            {#if navigation.nextPart && !disableNextPart}
                 <a href="/series/{navigation.nextPart.slug}"
                    class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group">
                     <div class="text-right">
@@ -284,6 +291,17 @@
                         <i class="fas fa-arrow-right text-lg"></i>
                     </div>
                 </a>
+            {:else if navigation.nextPart && disableNextPart}
+                <div class="flex items-center space-x-3 text-gray-400 dark:text-gray-500">
+                    <div class="text-right">
+                        <div class="text-sm text-gray-500 dark:text-gray-400">Next</div>
+                        <div class="font-medium">Part {navigation.nextPart.number}: {navigation.nextPart.title}</div>
+                        <div class="text-xs text-gray-400 dark:text-gray-500 italic">Coming Soon</div>
+                    </div>
+                    <div class="flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full">
+                        <i class="fas fa-arrow-right text-lg text-gray-400 dark:text-gray-500"></i>
+                    </div>
+                </div>
             {:else}
                 <div></div>
             {/if}
