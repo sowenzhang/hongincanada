@@ -30,4 +30,22 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-1-can-you-build-with-ai/</loc>
+        <lastmod>2025-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-2-why-use-ai/</loc>
+        <lastmod>2025-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-3-tools-and-setup/</loc>
+        <lastmod>2025-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset> 

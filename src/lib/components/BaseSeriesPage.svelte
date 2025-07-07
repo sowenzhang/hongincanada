@@ -256,17 +256,17 @@
 <!-- Navigation Footer -->
 <nav class="py-12 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 transition-colors">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 sm:gap-0 min-w-0">
             <!-- Previous Part -->
             {#if navigation.prevPart}
                 <a href="/series/{navigation.prevPart.slug}"
-                   class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group">
+                   class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group min-w-0">
                     <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition">
                         <i class="fas fa-arrow-left text-lg"></i>
                     </div>
-                    <div>
+                    <div class="min-w-0">
                         <div class="text-sm text-gray-500 dark:text-gray-400">Previous</div>
-                        <div class="font-medium">Part {navigation.prevPart.number}: {navigation.prevPart.title}</div>
+                        <div class="font-medium truncate overflow-hidden min-w-0">Part {navigation.prevPart.number}: {navigation.prevPart.title}</div>
                     </div>
                 </a>
             {:else}
@@ -275,27 +275,27 @@
 
             <!-- Series Overview -->
             <a href="/series"
-               class="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-lg transition font-medium">
+               class="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-lg transition font-medium flex-shrink-0 whitespace-nowrap">
                 <i class="fas fa-list mr-2"></i>View All Parts
             </a>
 
             <!-- Next Part -->
             {#if navigation.nextPart && !disableNextPart}
                 <a href="/series/{navigation.nextPart.slug}"
-                   class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group">
-                    <div class="text-right">
+                   class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group min-w-0">
+                    <div class="text-right min-w-0">
                         <div class="text-sm text-gray-500 dark:text-gray-400">Next</div>
-                        <div class="font-medium">Part {navigation.nextPart.number}: {navigation.nextPart.title}</div>
+                        <div class="font-medium truncate overflow-hidden min-w-0">Part {navigation.nextPart.number}: {navigation.nextPart.title}</div>
                     </div>
                     <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition">
                         <i class="fas fa-arrow-right text-lg"></i>
                     </div>
                 </a>
             {:else if navigation.nextPart && disableNextPart}
-                <div class="flex items-center space-x-3 text-gray-400 dark:text-gray-500">
-                    <div class="text-right">
+                <div class="flex items-center space-x-3 text-gray-400 dark:text-gray-500 min-w-0">
+                    <div class="text-right min-w-0">
                         <div class="text-sm text-gray-500 dark:text-gray-400">Next</div>
-                        <div class="font-medium">Part {navigation.nextPart.number}: {navigation.nextPart.title}</div>
+                        <div class="font-medium truncate overflow-hidden min-w-0">Part {navigation.nextPart.number}: {navigation.nextPart.title}</div>
                         <div class="text-xs text-gray-400 dark:text-gray-500 italic">Coming Soon</div>
                     </div>
                     <div class="flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full">

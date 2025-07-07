@@ -92,24 +92,22 @@
             {#each seriesParts as part}
                 <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden">
                     <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <div class="flex items-center space-x-3">
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                                    Part {part.part}
+                        <div class="flex flex-nowrap min-w-0 items-center gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap">
+                                Part {part.part}
+                            </span>
+                            <span class="text-sm text-gray-500 whitespace-nowrap">
+                                <i class="fas fa-clock mr-1"></i>{part.readTime}
+                            </span>
+                            {#if part.status === 'published'}
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium whitespace-nowrap">
+                                    <i class="fas fa-check mr-1"></i>Published
                                 </span>
-                                <span class="text-sm text-gray-500">
-                                    <i class="fas fa-clock mr-1"></i>{part.readTime}
+                            {:else}
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium whitespace-nowrap">
+                                    <i class="fas fa-clock mr-1"></i>Coming Soon
                                 </span>
-                                {#if part.status === 'published'}
-                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">
-                                        <i class="fas fa-check mr-1"></i>Published
-                                    </span>
-                                {:else}
-                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium">
-                                        <i class="fas fa-clock mr-1"></i>Coming Soon
-                                    </span>
-                                {/if}
-                            </div>
+                            {/if}
                         </div>
 
                         <h3 class="text-xl font-bold mb-3 text-gray-900 leading-tight">
