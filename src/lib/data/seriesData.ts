@@ -49,8 +49,8 @@ export const seriesParts = [
         title: "Crafting Your Idea & MVP with AI",
         description: "Guide readers through brainstorming ideas with AI and defining a Minimum Viable Product (MVP). Show how to prompt AI to focus on what matters most. Homework: Write down your MVP in one paragraph.",
         readTime: "10 min read",
-        publishDate: "2025-07-07",
-        status: "coming-soon",
+        publishDate: "2025-07-11",
+        status: "published",
         slug: "part-4-crafting-idea-mvp",
         canonical: "https://hongincanada.com/series/part-4-crafting-idea-mvp",
         ogImage: "https://hongincanada.com/profile.png"
