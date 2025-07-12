@@ -25,7 +25,7 @@
 	];
 </script>
 
-<BaseSeriesPage {articleData} {navigation} {tableOfContents} disableNextPart={true}>
+<BaseSeriesPage {articleData} {navigation} {tableOfContents}>
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
@@ -346,16 +346,17 @@
 		<h2>What's Next</h2>
 
 		<p>
-			In Part 4, we'll dive into using ChatGPT strategically to craft your website idea and create your first MVP (Minimum Viable Product). You'll learn how to:
+			In Part 4, we'll dive into using AI strategically to craft your website idea and create your first MVP (Minimum Viable Product). You'll learn how to:
 		</p>
 
 		<ul>
-			<li>Use ChatGPT effectively for idea refinement and brainstorming</li>
-			<li>Structure conversations with AI to get better results</li>
-			<li>Avoid common pitfalls when planning with AI assistance</li>
-			<li>Create a clear scope and feature list for your first website</li>
+			<li>Guide AI toward simplicity rather than overengineering</li>
+			<li>Use the 3 essential guidelines for effective AI brainstorming</li>
+			<li>Set up ChatGPT Projects for better, more focused conversations</li>
+			<li>Avoid common pitfalls that lead to overly complex solutions</li>
+			<li>Cross-reference ideas across multiple AI tools for confidence</li>
 		</ul>
 
-		<p>By the end of Part 4, you'll have a clear plan and know exactly what you want to build!</p>
+		<p>By the end of Part 4, you'll have a clear, one-paragraph MVP that you can actually build!</p>
 	</section>
 </BaseSeriesPage>
