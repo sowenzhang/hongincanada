@@ -48,4 +48,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-</urlset> 
+    <url>
+        <loc>https://hongincanada.com/series/part-4-crafting-idea-mvp/</loc>
+        <lastmod>2025-07-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-5-designing-ui-ux/</loc>
+        <lastmod>2025-07-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>

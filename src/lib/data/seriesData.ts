@@ -60,8 +60,8 @@ export const seriesParts = [
         title: "Designing Your UI/UX with AI",
         description: "Explore how to use AI for wireframing, generating page layouts, and writing user-facing copy. Homework: Draw or describe your main page's layout based on AI suggestions.",
         readTime: "12 min read",
-        publishDate: "2025-07-08",
-        status: "coming-soon",
+        publishDate: "2025-07-12",
+        status: "published",
         slug: "part-5-designing-ui-ux",
         canonical: "https://hongincanada.com/series/part-5-designing-ui-ux",
         ogImage: "https://hongincanada.com/profile.png"

@@ -22,7 +22,7 @@
 	];
 </script>
 
-<BaseSeriesPage {articleData} {navigation} {tableOfContents} disableNextPart={true}>
+<BaseSeriesPage {articleData} {navigation} {tableOfContents}>
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
