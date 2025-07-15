@@ -60,4 +60,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-6-writing-code-ai/</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
