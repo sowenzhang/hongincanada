@@ -82,8 +82,8 @@ export const seriesParts = [
         title: "Adding Advanced Features with AI",
         description: "Learn how to enhance your website with authentication, email functionality, and database integration. Step-by-step instructions and examples for wiring these features to your UI.",
         readTime: "15 min read",
-        publishDate: "2025-07-10",
-        status: "coming-soon",
+        publishDate: "2025-07-15",
+        status: "published",
         slug: "part-7-adding-advanced-features",
         canonical: "https://hongincanada.com/series/part-7-adding-advanced-features",
         ogImage: "https://hongincanada.com/profile.png"
