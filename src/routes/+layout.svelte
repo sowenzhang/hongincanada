@@ -196,6 +196,11 @@
 		gtag('config', 'G-LF4DS5T0H9');
 	</script>
 	<script src="/site.js"></script>
+
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3210995713998595"
+         crossorigin="anonymous"></script>
 </svelte:head>
 
 <!-- Navigation -->
