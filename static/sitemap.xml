@@ -2,67 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://hongincanada.com</loc>
-        <lastmod>2025-06-30</lastmod>
+        <lastmod>2025-07-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://hongincanada.com#about</loc>
-        <lastmod>2025-06-30</lastmod>
+        <lastmod>2025-07-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://hongincanada.com#projects</loc>
-        <lastmod>2025-06-30</lastmod>
+        <lastmod>2025-07-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://hongincanada.com#thoughts</loc>
-        <lastmod>2025-06-30</lastmod>
+        <lastmod>2025-07-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://hongincanada.com#contact</loc>
-        <lastmod>2025-06-30</lastmod>
+        <lastmod>2025-07-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-1-can-you-build-with-ai/</loc>
+        <loc>https://hongincanada.com/series</loc>
+        <lastmod>2025-07-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-1-can-you-build-with-ai</loc>
+        <lastmod>2025-07-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-2-why-use-ai</loc>
         <lastmod>2025-07-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-2-why-use-ai/</loc>
+        <loc>https://hongincanada.com/series/part-3-tools-and-setup</loc>
         <lastmod>2025-07-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-3-tools-and-setup/</loc>
-        <lastmod>2025-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://hongincanada.com/series/part-4-crafting-idea-mvp/</loc>
+        <loc>https://hongincanada.com/series/part-4-crafting-idea-mvp</loc>
         <lastmod>2025-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-5-designing-ui-ux/</loc>
+        <loc>https://hongincanada.com/series/part-5-designing-ui-ux</loc>
         <lastmod>2025-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-6-writing-code-ai/</loc>
-        <lastmod>2025-07-13</lastmod>
+        <loc>https://hongincanada.com/series/part-6-writing-code-ai</loc>
+        <lastmod>2025-07-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-7-adding-advanced-features</loc>
+        <lastmod>2025-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-8-before-deployment</loc>
+        <lastmod>2025-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-9-lessons-learned</loc>
+        <lastmod>2025-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hongincanada.com/series/part-10-future-ai-development</loc>
+        <lastmod>2025-07-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

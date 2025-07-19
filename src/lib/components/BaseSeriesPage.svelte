@@ -57,6 +57,10 @@
     <meta name="twitter:description" content={articleData.description} />
     <meta name="twitter:image" content={articleData.ogImage} />
 
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3210995713998595"
+         crossorigin="anonymous"></script>
+
     <!-- Structured Data -->
     {@html `<script type="application/ld+json">
     {
