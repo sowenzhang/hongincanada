@@ -38,9 +38,9 @@
 		<div
 			class="mb-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
 		>
-			<span><i class="fas fa-calendar mr-2"></i>{articleData?.publishDate}</span>
-			<span><i class="fas fa-clock mr-2"></i>{articleData?.readTime}</span>
-			<span><i class="fas fa-user mr-2"></i>Hong</span>
+			<span><i class="fas fa-calendar mr-2" aria-hidden="true"></i>{articleData?.publishDate}</span>
+			<span><i class="fas fa-clock mr-2" aria-hidden="true"></i>{articleData?.readTime}</span>
+			<span><i class="fas fa-user mr-2" aria-hidden="true"></i>Hong</span>
 		</div>
 
 		<p
@@ -68,7 +68,7 @@
 
 		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
 			<p class="mb-2 font-medium text-blue-800 dark:text-blue-200">
-				<i class="fas fa-lightbulb mr-2"></i>Remember Our Approach
+				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>Remember Our Approach
 			</p>
 			<p class="text-blue-700 dark:text-blue-300">
 				We'll continue using AI assistance throughout this process. The key is breaking down complex features into clear, manageable steps that AI can help us implement effectively.
@@ -86,7 +86,7 @@
 		<div class="not-prose my-6 space-y-4">
 			<div class="flex items-start space-x-4">
 				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-white font-bold">
-					<i class="fas fa-table"></i>
+					<i class="fas fa-table" aria-hidden="true"></i>
 				</div>
 				<div>
 					<h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Table</h4>
@@ -98,7 +98,7 @@
 
 			<div class="flex items-start space-x-4">
 				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500 text-white font-bold">
-					<i class="fas fa-columns"></i>
+					<i class="fas fa-columns" aria-hidden="true"></i>
 				</div>
 				<div>
 					<h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Column</h4>
@@ -110,7 +110,7 @@
 
 			<div class="flex items-start space-x-4">
 				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
-					<i class="fas fa-grip-lines-vertical"></i>
+					<i class="fas fa-grip-lines-vertical" aria-hidden="true"></i>
 				</div>
 				<div>
 					<h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Row</h4>
@@ -192,7 +192,7 @@
 
 		<div class="not-prose my-8 border-l-4 border-amber-500 bg-amber-50 p-6 dark:bg-amber-900/20">
 			<p class="mb-2 font-medium text-amber-800 dark:text-amber-200">
-				<i class="fas fa-exclamation-triangle mr-2"></i>Important Note
+				<i class="fas fa-exclamation-triangle mr-2" aria-hidden="true"></i>Important Note
 			</p>
 			<p class="text-amber-700 dark:text-amber-300">
 				Keep your database password safe! You'll need it to connect your website to the database. Consider using a password manager or writing it down securely.
@@ -209,7 +209,7 @@
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-robot mr-3 text-blue-500 text-2xl"></i>
+				<i class="fas fa-robot mr-3 text-blue-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Example Prompt (for non-engineers):</h4>
 			</div>
 			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-blue-500">
@@ -247,7 +247,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 border-l-4 border-green-500 bg-green-50 p-6 dark:bg-green-900/20">
 			<p class="mb-2 font-medium text-green-800 dark:text-green-200">
-				<i class="fas fa-check-circle mr-2"></i>Pro Tip
+				<i class="fas fa-check-circle mr-2" aria-hidden="true"></i>Pro Tip
 			</p>
 			<p class="text-green-700 dark:text-green-300">
 				Always store password hashes, never plain text passwords! AI will help you implement proper password hashing when we build the authentication logic.
@@ -266,7 +266,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-user-plus mr-3 text-green-500 text-2xl"></i>
+				<i class="fas fa-user-plus mr-3 text-green-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Prompt Example:</h4>
 			</div>
 			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-green-500">
@@ -280,7 +280,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-sign-in-alt mr-3 text-blue-500 text-2xl"></i>
+				<i class="fas fa-sign-in-alt mr-3 text-blue-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Prompt Example:</h4>
 			</div>
 			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-blue-500">
@@ -294,7 +294,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-key mr-3 text-purple-500 text-2xl"></i>
+				<i class="fas fa-key mr-3 text-purple-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Prompt Example:</h4>
 			</div>
 			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-purple-500">
@@ -306,7 +306,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
 			<p class="mb-2 font-medium text-blue-800 dark:text-blue-200">
-				<i class="fas fa-lightbulb mr-2"></i>Why Break It Down?
+				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>Why Break It Down?
 			</p>
 			<p class="text-blue-700 dark:text-blue-300">
 				By splitting authentication into separate prompts, you get cleaner, more focused code. AI can concentrate on one task at a time, resulting in better quality and easier debugging.
@@ -366,7 +366,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-envelope mr-3 text-red-500 text-2xl"></i>
+				<i class="fas fa-envelope mr-3 text-red-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Email Integration Prompt:</h4>
 			</div>
 			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-red-500">
@@ -382,7 +382,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 border-l-4 border-amber-500 bg-amber-50 p-6 dark:bg-amber-900/20">
 			<p class="mb-2 font-medium text-amber-800 dark:text-amber-200">
-				<i class="fas fa-exclamation-triangle mr-2"></i>Important Note
+				<i class="fas fa-exclamation-triangle mr-2" aria-hidden="true"></i>Important Note
 			</p>
 			<p class="text-amber-700 dark:text-amber-300">
 				It's important to explicitly call out to use the API, otherwise AI may pull a different framework, which is usually a wrapper of the API. In my experience, AI pulled a deprecated library for email sending, and it didn't work. 😫
@@ -391,7 +391,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 border-l-4 border-green-500 bg-green-50 p-6 dark:bg-green-900/20">
 			<p class="mb-2 font-medium text-green-800 dark:text-green-200">
-				<i class="fas fa-magic mr-2"></i>AI Magic in Action
+				<i class="fas fa-magic mr-2" aria-hidden="true"></i>AI Magic in Action
 			</p>
 			<p class="text-green-700 dark:text-green-300">
 				This is where AI truly shines! It can read the API documentation, understand the required parameters, and generate the exact code you need to integrate email functionality. No need to manually parse through documentation or figure out the API calls yourself.
@@ -409,7 +409,7 @@ CREATE TABLE users (
 		<div class="my-8 space-y-6">
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-lock mr-3 text-red-500"></i>
+					<i class="fas fa-lock mr-3 text-red-500" aria-hidden="true"></i>
 					Password Security
 				</h4>
 				<ul class="space-y-2 text-gray-700 dark:text-gray-300">
@@ -421,7 +421,7 @@ CREATE TABLE users (
 
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-shield-alt mr-3 text-blue-500"></i>
+					<i class="fas fa-shield-alt mr-3 text-blue-500" aria-hidden="true"></i>
 					API Key Security
 				</h4>
 				<ul class="space-y-2 text-gray-700 dark:text-gray-300">
@@ -434,7 +434,7 @@ CREATE TABLE users (
 
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-user-check mr-3 text-green-500"></i>
+					<i class="fas fa-user-check mr-3 text-green-500" aria-hidden="true"></i>
 					User Input Validation
 				</h4>
 				<ul class="space-y-2 text-gray-700 dark:text-gray-300">
@@ -484,7 +484,7 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
 			<p class="mb-2 font-medium text-emerald-800 dark:text-emerald-200">
-				<i class="fas fa-lightbulb mr-2"></i>Documentation Tip
+				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>Documentation Tip
 			</p>
 			<p class="text-emerald-700 dark:text-emerald-300">
 				Keep a simple text file or document where you record the prompts you used and what AI generated. This becomes invaluable when you need to make changes or debug issues later. It's like having a conversation history with your AI assistant!

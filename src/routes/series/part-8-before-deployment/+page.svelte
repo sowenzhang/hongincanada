@@ -44,9 +44,9 @@
 		<div
 			class="mb-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
 		>
-			<span><i class="fas fa-calendar mr-2"></i>{articleData?.publishDate}</span>
-			<span><i class="fas fa-clock mr-2"></i>{articleData?.readTime}</span>
-			<span><i class="fas fa-user mr-2"></i>Hong</span>
+			<span><i class="fas fa-calendar mr-2" aria-hidden="true"></i>{articleData?.publishDate}</span>
+			<span><i class="fas fa-clock mr-2" aria-hidden="true"></i>{articleData?.readTime}</span>
+			<span><i class="fas fa-user mr-2" aria-hidden="true"></i>Hong</span>
 		</div>
 
 		<p
@@ -88,7 +88,7 @@
 
 		<!-- Placeholder for manual testing image -->
 		<div class="my-4 rounded-lg bg-gray-100 dark:bg-gray-800 p-2 text-center">
-			<img src="/ai-series/testing_minibreak_locally.jpg"
+			<img src="/ai-series/testing_minibreak_locally.jpg" loading="lazy"
 				 alt="Screenshot of browser dev tools showing manual testing process"
 				 class="w-full h-auto object-contain rounded-lg shadow-sm max-w-4xl mx-auto"
 				 style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -106,7 +106,7 @@
 
 		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
 			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
-				<i class="fas fa-lightbulb mr-2"></i>AI Debugging Prompt Template
+				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>AI Debugging Prompt Template
 			</h4>
 			<p class="text-blue-700 dark:text-blue-300 mb-3">
 				"This [page/feature] isn't working as expected. Here's what I'm seeing: [describe the issue clearly]. Can you help me write a console log to identify the issue?"
@@ -149,7 +149,7 @@
 
 		<!-- Placeholder for security measures image -->
 		<div class="my-4 rounded-lg bg-gray-100 dark:bg-gray-800 p-2 text-center">
-			<img src="/ai-series/security-practice.jpg"
+			<img src="/ai-series/security-practice.jpg" loading="lazy"
 				 alt="Security best practices infographic"
 				 class="w-full h-auto object-contain rounded-lg shadow-sm max-w-4xl mx-auto"
 				 style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -157,7 +157,7 @@
 
 		<div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-6 my-6">
 			<h4 class="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mb-3">
-				<i class="fas fa-robot mr-2"></i>AI Security Review Prompt
+				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI Security Review Prompt
 			</h4>
 			<p class="text-yellow-700 dark:text-yellow-300">
 				"Review my [technology stack] solution and implement security best practices tailored for it. Focus on the most critical vulnerabilities for a [type of application] website."
@@ -201,7 +201,7 @@
 
 		<div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6 my-6">
 			<h4 class="text-lg font-semibold text-green-800 dark:text-green-200 mb-3">
-				<i class="fas fa-tools mr-2"></i>Recommended Tool: Accessibility Insights
+				<i class="fas fa-tools mr-2" aria-hidden="true"></i>Recommended Tool: Accessibility Insights
 			</h4>
 			<p class="text-green-700 dark:text-green-300 mb-3">
 				Install the <a href="https://chromewebstore.google.com/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni?hl=en" target="_blank" rel="noopener noreferrer" class="underline">Accessibility Insights browser extension</a> for a quick accessibility audit.
@@ -224,7 +224,7 @@
 
 		<!-- Placeholder for responsiveness testing image -->
 		<div class="my-4 rounded-lg bg-gray-100 dark:bg-gray-800 p-2 text-center">
-			<img src="/ai-series/responsiveness-testing.jpg"
+			<img src="/ai-series/responsiveness-testing.jpg" loading="lazy"
 				 alt="Screenshot showing responsive design testing across different devices"
 				 class="w-full h-auto object-contain rounded-lg shadow-sm max-w-4xl mx-auto"
 				 style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -234,7 +234,7 @@
 
 		<div class="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-6 my-6">
 			<h4 class="text-lg font-semibold text-purple-800 dark:text-purple-200 mb-3">
-				<i class="fas fa-robot mr-2"></i>AI Accessibility Prompt
+				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI Accessibility Prompt
 			</h4>
 			<p class="text-purple-700 dark:text-purple-300">
 				"Can you create a simple checklist to ensure my website is accessible and responsive? Focus on the most important items for a beginner."
@@ -263,7 +263,7 @@
 
 		<!-- Placeholder for Lighthouse tool image -->
 		<div class="my-4 rounded-lg bg-gray-100 dark:bg-gray-800 p-2 text-center">
-			<img src="/ai-series/lighthouse-testing.jpg"
+			<img src="/ai-series/lighthouse-testing.jpg" loading="lazy"
 				 alt="Screenshot of Lighthouse tool showing performance audit results"
 				 class="w-full h-auto object-contain rounded-lg shadow-sm max-w-4xl mx-auto"
 				 style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -285,7 +285,7 @@
 
 		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
 			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
-				<i class="fas fa-robot mr-2"></i>AI Performance Prompt
+				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI Performance Prompt
 			</h4>
 			<p class="text-blue-700 dark:text-blue-300">
 				"Can you review my solution and identify possible improvements for performance? Focus on the biggest impact optimizations for a [your technology stack] website."
@@ -325,7 +325,7 @@
 
 		<!-- Placeholder for SEO optimization image -->
 		<div class="my-4 rounded-lg bg-gray-100 dark:bg-gray-800 p-2 text-center">
-			<img src="/ai-series/SEO-metadata.jpg"
+			<img src="/ai-series/SEO-metadata.jpg" loading="lazy"
 				 alt="Screenshot showing SEO metadata setup in a website"
 				 class="w-full h-auto object-contain rounded-lg shadow-sm max-w-4xl mx-auto"
 				 style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
@@ -333,7 +333,7 @@
 
 		<div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6 my-6">
 			<h4 class="text-lg font-semibold text-green-800 dark:text-green-200 mb-3">
-				<i class="fas fa-robot mr-2"></i>AI SEO Prompt
+				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI SEO Prompt
 			</h4>
 			<p class="text-green-700 dark:text-green-300">
 				"Can you review my website and implement SEO improvements using best practices? Focus on the most important elements for a [type of website] targeting [your audience]."
@@ -378,7 +378,7 @@
 
 		<div class="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-6 my-6">
 			<h4 class="text-lg font-semibold text-orange-800 dark:text-orange-200 mb-3">
-				<i class="fas fa-rocket mr-2"></i>For SvelteKit Users
+				<i class="fas fa-rocket mr-2" aria-hidden="true"></i>For SvelteKit Users
 			</h4>
 			<p class="text-orange-700 dark:text-orange-300 mb-3">
 				SvelteKit supports multiple deployment methods (serverless, static, node). Check the <a href="https://kit.svelte.dev/docs/adapters" target="_blank" rel="noopener noreferrer" class="underline">adapter documentation</a> for your chosen platform.
@@ -387,7 +387,7 @@
 
 		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
 			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
-				<i class="fas fa-robot mr-2"></i>AI Deployment Prompt
+				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI Deployment Prompt
 			</h4>
 			<p class="text-blue-700 dark:text-blue-300">
 				"Guide me step-by-step on how to deploy my [technology stack] app using [chosen hosting platform]. Include any specific configuration needed for my setup."

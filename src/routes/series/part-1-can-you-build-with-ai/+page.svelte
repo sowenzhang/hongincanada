@@ -33,9 +33,9 @@
 		<div
 			class="mb-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
 		>
-			<span><i class="fas fa-calendar mr-2"></i>{articleData?.publishDate || ''}</span>
-			<span><i class="fas fa-clock mr-2"></i>{articleData?.readTime || ''}</span>
-			<span><i class="fas fa-user mr-2"></i>Hong</span>
+			<span><i class="fas fa-calendar mr-2" aria-hidden="true"></i>{articleData?.publishDate || ''}</span>
+			<span><i class="fas fa-clock mr-2" aria-hidden="true"></i>{articleData?.readTime || ''}</span>
+			<span><i class="fas fa-user mr-2" aria-hidden="true"></i>Hong</span>
 		</div>
 
 		<p
@@ -109,7 +109,7 @@
 
 		<div class="not-prose my-8 border-l-4 border-yellow-500 bg-yellow-50 p-6 dark:bg-yellow-900/20">
 			<div class="flex items-start space-x-3">
-				<i class="fas fa-exclamation-triangle mt-1 text-yellow-600 dark:text-yellow-400"></i>
+				<i class="fas fa-exclamation-triangle mt-1 text-yellow-600 dark:text-yellow-400" aria-hidden="true"></i>
 				<div>
 					<p class="mb-2 font-semibold text-yellow-800 dark:text-yellow-300">
 						The AI Overwhelm Problem
@@ -192,7 +192,7 @@
 				<div
 					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"
 				>
-					<i class="fas fa-tools text-blue-600 dark:text-blue-300"></i>
+					<i class="fas fa-tools text-blue-600 dark:text-blue-300" aria-hidden="true"></i>
 				</div>
 				<div>
 					<h4 class="mb-2 font-bold text-gray-900 dark:text-white">
@@ -209,7 +209,7 @@
 				<div
 					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900"
 				>
-					<i class="fas fa-comment-dots text-purple-600 dark:text-purple-300"></i>
+					<i class="fas fa-comment-dots text-purple-600 dark:text-purple-300" aria-hidden="true"></i>
 				</div>
 				<div>
 					<h4 class="mb-2 font-bold text-gray-900 dark:text-white">Writing Effective Prompts</h4>
@@ -224,7 +224,7 @@
 				<div
 					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 dark:bg-green-900"
 				>
-					<i class="fas fa-hand-paper text-green-600 dark:text-green-300"></i>
+					<i class="fas fa-hand-paper text-green-600 dark:text-green-300" aria-hidden="true"></i>
 				</div>
 				<div>
 					<h4 class="mb-2 font-bold text-gray-900 dark:text-white">When to Manually Intervene</h4>

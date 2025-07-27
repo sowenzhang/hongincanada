@@ -35,9 +35,9 @@
 		<div
 			class="mb-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
 		>
-			<span><i class="fas fa-calendar mr-2"></i>{articleData?.publishDate}</span>
-			<span><i class="fas fa-clock mr-2"></i>{articleData?.readTime}</span>
-			<span><i class="fas fa-user mr-2"></i>Hong</span>
+			<span><i class="fas fa-calendar mr-2" aria-hidden="true"></i>{articleData?.publishDate}</span>
+			<span><i class="fas fa-clock mr-2" aria-hidden="true"></i>{articleData?.readTime}</span>
+			<span><i class="fas fa-user mr-2" aria-hidden="true"></i>Hong</span>
 		</div>
 
 		<p
@@ -201,7 +201,7 @@
 			<div class="not-prose my-8 border-l-4 border-amber-500 bg-amber-50 p-6 dark:bg-amber-900/20">
 				<p class="mb-2 font-medium text-amber-800 dark:text-amber-200">📝 Example of selected options</p>
 				<p class="text-amber-700 dark:text-amber-300">
-					<img src="/ai-series/sv-new-project-minimal.jpg" alt="SvelteKit New Project" class="max-w-full h-auto rounded-lg shadow-lg">
+					<img src="/ai-series/sv-new-project-minimal.jpg" loading="lazy" alt="SvelteKit New Project" class="max-w-full h-auto rounded-lg shadow-lg">
 				</p>
 			</div>
 
@@ -225,7 +225,7 @@
 		<div class="not-prose my-8 border-l-4 border-amber-500 bg-amber-50 p-6 dark:bg-amber-900/20">
 			<p class="mb-2 font-medium text-amber-800 dark:text-amber-200">📁 Folder Structure</p>
 			<p class="text-amber-700 dark:text-amber-300">
-				<img src="/ai-series/folder-tree.jpg" alt="Project Folder Structure" class="max-w-full h-auto rounded-lg shadow-lg">
+				<img src="/ai-series/folder-tree.jpg"  loading="lazy" alt="Project Folder Structure" class="max-w-full h-auto rounded-lg shadow-lg">
 			</p>
 		</div>
 	</section>
@@ -243,7 +243,7 @@
 
 		<div class="not-prose my-6 rounded-lg bg-gray-100 p-6 dark:bg-gray-800 border-l-4 border-blue-500">
 			<div class="mb-3 flex items-center">
-				<i class="fas fa-robot mr-2 text-blue-600 dark:text-blue-400"></i>
+				<i class="fas fa-robot mr-2 text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
 				<span class="font-semibold text-gray-900 dark:text-white">AI Prompt Template</span>
 			</div>
 			<div class="text-sm text-gray-700 dark:text-gray-300 font-mono bg-white dark:bg-gray-900 p-4 rounded border">
@@ -280,7 +280,7 @@
 				</div>
 
 				<div class="lg:w-80 lg:flex-shrink-0 mt-6 lg:mt-0">
-					<img src="/ai-series/post-generation-solution.jpg" alt="Well Structured Solution from AI generation" class="w-full h-auto max-h-96 object-contain rounded-lg shadow-lg">
+					<img src="/ai-series/post-generation-solution.jpg" loading="lazy" alt="Well Structured Solution from AI generation" class="w-full h-auto max-h-96 object-contain rounded-lg shadow-lg">
 				</div>
 			</div>
 		</section>
@@ -310,7 +310,7 @@
 		<div class="my-8 space-y-6">
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-code mr-3 text-blue-500"></i>
+					<i class="fas fa-code mr-3 text-blue-500" aria-hidden="true"></i>
 					Be Specific with Context
 				</h4>
 				<p class="text-gray-700 dark:text-gray-300">
@@ -320,7 +320,7 @@
 
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-puzzle-piece mr-3 text-green-500"></i>
+					<i class="fas fa-puzzle-piece mr-3 text-green-500" aria-hidden="true"></i>
 					Break Down Complex Tasks
 				</h4>
 				<p class="text-gray-700 dark:text-gray-300">
@@ -330,7 +330,7 @@
 
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-sync-alt mr-3 text-orange-500"></i>
+					<i class="fas fa-sync-alt mr-3 text-orange-500" aria-hidden="true"></i>
 					Iterate and Refine
 				</h4>
 				<p class="text-gray-700 dark:text-gray-300">

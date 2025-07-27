@@ -174,6 +174,9 @@
 		content="Engineering Manager with a passion for building products that people love. Canadian/Chinese with a background in HCI."
 	/>
 	<meta name="twitter:image" content="/profile.png" />
+
+	<meta name='impact-site-verification' value='118ac292-615c-404f-acb1-f625915e6b02'>
+
 	<link rel="icon" type="image/x-icon" href="/favicon.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png.placeholder" />
 

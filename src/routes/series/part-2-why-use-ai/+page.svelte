@@ -36,9 +36,9 @@
 		<div
 			class="mb-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
 		>
-			<span><i class="fas fa-calendar mr-2"></i>{articleData?.publishDate}</span>
-			<span><i class="fas fa-clock mr-2"></i>{articleData?.readTime}</span>
-			<span><i class="fas fa-user mr-2"></i>Hong</span>
+			<span><i class="fas fa-calendar mr-2" aria-hidden="true"></i>{articleData?.publishDate}</span>
+			<span><i class="fas fa-clock mr-2" aria-hidden="true"></i>{articleData?.readTime}</span>
+			<span><i class="fas fa-user mr-2" aria-hidden="true"></i>Hong</span>
 		</div>
 
 		<p
@@ -183,7 +183,7 @@
 			class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20"
 		>
 			<div class="flex items-start space-x-3">
-				<i class="fas fa-lightbulb mt-1 text-emerald-600 dark:text-emerald-400"></i>
+				<i class="fas fa-lightbulb mt-1 text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
 				<div>
 					<p class="mb-2 font-semibold text-emerald-800 dark:text-emerald-300">Key Lesson</p>
 					<p class="mb-0 text-emerald-700 dark:text-emerald-400">

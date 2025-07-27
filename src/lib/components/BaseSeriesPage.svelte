@@ -87,9 +87,9 @@
             <!-- Breadcrumb Path -->
             <div class="flex items-center space-x-2 text-sm">
                 <a href="/" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">Home</a>
-                <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500"></i>
+                <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500" aria-hidden="true"></i>
                 <a href="/series" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">AI Development Series</a>
-                <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500"></i>
+                <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500" aria-hidden="true"></i>
                 <span class="text-gray-600 dark:text-gray-400">Part {navigation.currentPart}</span>
             </div>
             <!-- Part Indicator -->
@@ -110,7 +110,7 @@
             <div class="sm:hidden mb-6">
                 <div class="flex flex-col items-center gap-3">
                     <a href="/series" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
-                        <i class="fas fa-arrow-left mr-2"></i>Back to Series
+                        <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>Back to Series
                     </a>
                     <span class="bg-blue-500 dark:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Part {navigation.currentPart} of {navigation.totalParts}
@@ -120,7 +120,7 @@
             <!-- Desktop: Just the back button since part indicator is in nav -->
             <div class="hidden sm:block mb-6">
                 <a href="/series" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
-                    <i class="fas fa-arrow-left mr-2"></i>Back to Series
+                    <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>Back to Series
                 </a>
             </div>
         </div>
@@ -132,9 +132,9 @@
             </h1>
 
             <div class="flex flex-wrap justify-center items-center gap-6 text-gray-600 dark:text-gray-400 mb-8">
-                <span><i class="fas fa-calendar mr-2"></i>{articleData.publishDate}</span>
-                <span><i class="fas fa-clock mr-2"></i>{articleData.readTime}</span>
-                <span><i class="fas fa-user mr-2"></i>Hong</span>
+                <span><i class="fas fa-calendar mr-2" aria-hidden="true"></i>{articleData.publishDate}</span>
+                <span><i class="fas fa-clock mr-2" aria-hidden="true"></i>{articleData.readTime}</span>
+                <span><i class="fas fa-user mr-2" aria-hidden="true"></i>Hong</span>
             </div>
 
             <p class="text-xl text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto leading-relaxed">
@@ -154,10 +154,10 @@
                     on:click={toggleTOC}
                     class="flex items-center space-x-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200"
                 >
-                    <i class="fas fa-list text-blue-600 dark:text-blue-400"></i>
+                    <i class="fas fa-list text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
                     <span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Table of Contents</span>
                     <span class="sm:hidden">TOC</span>
-                    <i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400"></i>
+                    <i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400" aria-hidden="true"></i>
                 </button>
             {:else}
                 <div></div>
@@ -170,10 +170,10 @@
                 aria-label="Toggle theme"
             >
                 {#if isDarkMode}
-                    <i class="fas fa-sun text-yellow-500"></i>
+                    <i class="fas fa-sun text-yellow-500" aria-hidden="true"></i>
                     <span class="hidden sm:inline">Light Mode</span>
                 {:else}
-                    <i class="fas fa-moon text-gray-600 dark:text-gray-400"></i>
+                    <i class="fas fa-moon text-gray-600 dark:text-gray-400" aria-hidden="true"></i>
                     <span class="hidden sm:inline">Dark Mode</span>
                 {/if}
             </button>
@@ -198,7 +198,7 @@
                                 class="lg:hidden text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 p-1"
                                 aria-label="Close table of contents"
                             >
-                                <i class="fas fa-times"></i>
+                                <i class="fas fa-times" aria-hidden="true"></i>
                             </button>
                         </div>
                         <nav class="space-y-3">
@@ -262,7 +262,7 @@
                 <a href="/series/{navigation.prevPart.slug}"
                    class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group min-w-0">
                     <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition">
-                        <i class="fas fa-arrow-left text-lg"></i>
+                        <i class="fas fa-arrow-left text-lg" aria-hidden="true"></i>
                     </div>
                     <div class="min-w-0">
                         <div class="text-sm text-gray-500 dark:text-gray-400">Previous</div>
@@ -276,7 +276,7 @@
             <!-- Series Overview -->
             <a href="/series"
                class="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-lg transition font-medium flex-shrink-0 whitespace-nowrap">
-                <i class="fas fa-list mr-2"></i>View All Parts
+                <i class="fas fa-list mr-2" aria-hidden="true"></i>View All Parts
             </a>
 
             <!-- Next Part -->
@@ -288,7 +288,7 @@
                         <div class="font-medium truncate overflow-hidden min-w-0">Part {navigation.nextPart.number}: {navigation.nextPart.title}</div>
                     </div>
                     <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition">
-                        <i class="fas fa-arrow-right text-lg"></i>
+                        <i class="fas fa-arrow-right text-lg" aria-hidden="true"></i>
                     </div>
                 </a>
             {:else if navigation.nextPart && disableNextPart}
@@ -299,7 +299,7 @@
                         <div class="text-xs text-gray-400 dark:text-gray-500 italic">Coming Soon</div>
                     </div>
                     <div class="flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full">
-                        <i class="fas fa-arrow-right text-lg text-gray-400 dark:text-gray-500"></i>
+                        <i class="fas fa-arrow-right text-lg text-gray-400 dark:text-gray-500" aria-hidden="true"></i>
                     </div>
                 </div>
             {:else}
@@ -320,11 +320,11 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="mailto:me@hongincanada.com?subject=AI Development Series - Part {navigation.currentPart} Feedback"
                    class="bg-white text-blue-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition shadow-lg">
-                    <i class="fas fa-envelope mr-2"></i>Send Feedback
+                    <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Send Feedback
                 </a>
                 <a href="https://www.linkedin.com/in/keepsrunning/" target="_blank"
                    class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-full font-medium transition">
-                    <i class="fab fa-linkedin mr-2"></i>Discuss on LinkedIn
+                    <i class="fab fa-linkedin mr-2" aria-hidden="true"></i>Discuss on LinkedIn
                 </a>
             </div>
         </div>

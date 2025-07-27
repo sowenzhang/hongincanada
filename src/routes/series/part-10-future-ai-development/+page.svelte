@@ -32,14 +32,14 @@
 		<div
 			class="mb-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
 		>
-			<span><i class="fas fa-calendar mr-2"></i>{articleData?.publishDate || ''}</span>
-			<span><i class="fas fa-clock mr-2"></i>{articleData?.readTime || ''}</span>
-			<span><i class="fas fa-user mr-2"></i>Hong</span>
+			<span><i class="fas fa-calendar mr-2" aria-hidden="true"></i>{articleData?.publishDate || ''}</span>
+			<span><i class="fas fa-clock mr-2" aria-hidden="true"></i>{articleData?.readTime || ''}</span>
+			<span><i class="fas fa-user mr-2" aria-hidden="true"></i>Hong</span>
 		</div>
 
 		<div class="mx-auto max-w-4xl text-center">
 			<div class="mb-6 inline-flex items-center rounded-lg bg-green-50 px-4 py-2 text-green-800 dark:bg-green-900/20 dark:text-green-300">
-				<i class="fas fa-trophy mr-2"></i>
+				<i class="fas fa-trophy mr-2" aria-hidden="true"></i>
 				<span class="font-medium"> Series Complete!</span>
 			</div>
 			<p class="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
@@ -86,7 +86,7 @@
 
 			<div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6 dark:bg-blue-900/20 dark:border-blue-400">
 				<div class="flex items-start">
-					<i class="fas fa-lightbulb text-blue-500 mt-1 mr-3 dark:text-blue-400"></i>
+					<i class="fas fa-lightbulb text-blue-500 mt-1 mr-3 dark:text-blue-400" aria-hidden="true"></i>
 					<div>
 						<p class="font-semibold text-blue-800 dark:text-blue-300 mb-2">Key Insight</p>
 						<p class="text-blue-700 dark:text-blue-200 mb-0">AI can empower you. It can save you time. But it still needs you — your judgment, your creativity, your intent. That's why I believe no one, especially those without an engineering background, should be judged by how "vibey" their code feels.</p>
@@ -197,23 +197,23 @@
 					<!-- Best Practices -->
 					<div>
 						<h4 class="text-xl font-bold text-purple-800 dark:text-purple-300 mb-4 flex items-center">
-							<i class="fas fa-comments mr-3 text-purple-600"></i> Best Prompt Practices
+							<i class="fas fa-comments mr-3 text-purple-600" aria-hidden="true"></i> Best Prompt Practices
 						</h4>
 						<div class="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-sm space-y-3">
 							<div class="flex items-center">
-								<i class="fas fa-check-circle text-green-500 mr-3"></i>
+								<i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
 								<span class="text-gray-800 dark:text-gray-200">State your goal clearly</span>
 							</div>
 							<div class="flex items-center">
-								<i class="fas fa-check-circle text-green-500 mr-3"></i>
+								<i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
 								<span class="text-gray-800 dark:text-gray-200">Include context & constraints</span>
 							</div>
 							<div class="flex items-center">
-								<i class="fas fa-check-circle text-green-500 mr-3"></i>
+								<i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
 								<span class="text-gray-800 dark:text-gray-200">Request alternatives if stuck</span>
 							</div>
 							<div class="flex items-center">
-								<i class="fas fa-check-circle text-green-500 mr-3"></i>
+								<i class="fas fa-check-circle text-green-500 mr-3" aria-hidden="true"></i>
 								<span class="text-gray-800 dark:text-gray-200">Refine & iterate</span>
 							</div>
 						</div>
@@ -222,23 +222,23 @@
 					<!-- Common Pitfalls -->
 					<div>
 						<h4 class="text-xl font-bold text-red-800 dark:text-red-300 mb-4 flex items-center">
-							<i class="fas fa-exclamation-triangle mr-3 text-red-600"></i> Common Pitfalls
+							<i class="fas fa-exclamation-triangle mr-3 text-red-600" aria-hidden="true"></i> Common Pitfalls
 						</h4>
 						<div class="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-sm space-y-3">
 							<div class="flex items-center">
-								<i class="fas fa-times-circle text-red-500 mr-3"></i>
+								<i class="fas fa-times-circle text-red-500 mr-3" aria-hidden="true"></i>
 								<span class="text-gray-800 dark:text-gray-200">Blindly copy-pasting code</span>
 							</div>
 							<div class="flex items-center">
-								<i class="fas fa-times-circle text-red-500 mr-3"></i>
+								<i class="fas fa-times-circle text-red-500 mr-3" aria-hidden="true"></i>
 								<span class="text-gray-800 dark:text-gray-200">Not testing in real environment</span>
 							</div>
 							<div class="flex items-center">
-								<i class="fas fa-times-circle text-red-500 mr-3"></i>
+								<i class="fas fa-times-circle text-red-500 mr-3" aria-hidden="true"></i>
 								<span class="text-gray-800 dark:text-gray-200">Forgetting accessibility</span>
 							</div>
 							<div class="flex items-center">
-								<i class="fas fa-times-circle text-red-500 mr-3"></i>
+								<i class="fas fa-times-circle text-red-500 mr-3" aria-hidden="true"></i>
 								<span class="text-gray-800 dark:text-gray-200">Ignoring performance</span>
 							</div>
 						</div>
@@ -255,25 +255,25 @@
 						<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
 							<div class="text-center">
 								<div class="bg-blue-100 dark:bg-blue-900 rounded-lg p-3 mb-2">
-									<i class="fas fa-code-branch text-blue-600 text-xl"></i>
+									<i class="fas fa-code-branch text-blue-600 text-xl" aria-hidden="true"></i>
 								</div>
 								<span class="text-sm font-medium text-gray-800 dark:text-gray-200">Review your code</span>
 							</div>
 							<div class="text-center">
 								<div class="bg-green-100 dark:bg-green-900 rounded-lg p-3 mb-2">
-									<i class="fas fa-lightbulb text-green-600 text-xl"></i>
+									<i class="fas fa-lightbulb text-green-600 text-xl" aria-hidden="true"></i>
 								</div>
 								<span class="text-sm font-medium text-gray-800 dark:text-gray-200">Explain concepts</span>
 							</div>
 							<div class="text-center">
 								<div class="bg-purple-100 dark:bg-purple-900 rounded-lg p-3 mb-2">
-									<i class="fas fa-vial text-purple-600 text-xl"></i>
+									<i class="fas fa-vial text-purple-600 text-xl" aria-hidden="true"></i>
 								</div>
 								<span class="text-sm font-medium text-gray-800 dark:text-gray-200">Suggest tests</span>
 							</div>
 							<div class="text-center">
 								<div class="bg-red-100 dark:bg-red-900 rounded-lg p-3 mb-2">
-									<i class="fas fa-bug text-red-600 text-xl"></i>
+									<i class="fas fa-bug text-red-600 text-xl" aria-hidden="true"></i>
 								</div>
 								<span class="text-sm font-medium text-gray-800 dark:text-gray-200">Debug step by step</span>
 							</div>
@@ -284,7 +284,7 @@
 				<!-- Final Reminder -->
 				<div class="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/30 dark:to-blue-900/30 border-2 border-green-200 dark:border-green-700 rounded-lg p-6 text-center">
 					<h4 class="text-xl font-bold mb-3 flex items-center justify-center text-gray-800 dark:text-gray-200">
-						<i class="fas fa-heart mr-3 text-green-600 dark:text-green-400"></i>🌟 Closing Reminder
+						<i class="fas fa-heart mr-3 text-green-600 dark:text-green-400" aria-hidden="true"></i>🌟 Closing Reminder
 					</h4>
 					<div class="space-y-2">
 						<p class="font-medium text-gray-700 dark:text-gray-300">You don't need to be perfect.</p>
@@ -303,11 +303,11 @@
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<a href="/series" class="inline-flex items-center px-8 py-4 bg-gray-800 hover:bg-gray-900 font-bold rounded-lg transition-colors shadow-lg hover:shadow-xl border border-gray-700 no-underline" style="color: white !important; ">
-					<i class="fas fa-arrow-left mr-3 no-underline" style="color: white !important; text-decoration: none !important;"></i>
+					<i class="fas fa-arrow-left mr-3 no-underline" style="color: white !important; text-decoration: none !important;" aria-hidden="true"></i>
 					<span style="color: white !important; ">Review the Full Series</span>
 				</a>
 				<a href="https://minibreaks.io" target="_blank" class="inline-flex items-center px-8 py-4 bg-emerald-600 hover:bg-emerald-700 font-bold rounded-lg transition-colors shadow-lg hover:shadow-xl border border-emerald-500 no-underline" style="color: white !important; ">
-					<i class="fas fa-external-link-alt mr-3 no-underline" style="color: white !important; text-decoration: none !important;"></i>
+					<i class="fas fa-external-link-alt mr-3 no-underline" style="color: white !important; text-decoration: none !important;" aria-hidden="true"></i>
 					<span style="color: white !important; ">See MiniBreaks.io Live</span>
 				</a>
 			</div>

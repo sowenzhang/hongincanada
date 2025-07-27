@@ -34,9 +34,9 @@
 		<div
 			class="mb-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
 		>
-			<span><i class="fas fa-calendar mr-2"></i>{articleData?.publishDate}</span>
-			<span><i class="fas fa-clock mr-2"></i>{articleData?.readTime}</span>
-			<span><i class="fas fa-user mr-2"></i>Hong</span>
+			<span><i class="fas fa-calendar mr-2" aria-hidden="true"></i>{articleData?.publishDate}</span>
+			<span><i class="fas fa-clock mr-2" aria-hidden="true"></i>{articleData?.readTime}</span>
+			<span><i class="fas fa-user mr-2" aria-hidden="true"></i>Hong</span>
 		</div>
 
 		<p
@@ -61,7 +61,7 @@
 
 		<div class="relative">
 			<a href="https://amzn.to/3GLsf3M" target="_blank" rel="noopener" class="float-right ml-6 mb-4">
-				<img src="https://m.media-amazon.com/images/I/7110mmksJsL._SL1360_.jpg" alt="Scalability Rules Book Cover" class="w-40 sm:w-48 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+				<img src="https://m.media-amazon.com/images/I/7110mmksJsL._SL1360_.jpg" loading="lazy" alt="Scalability Rules Book Cover" class="w-40 sm:w-48 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
 			</a>
 
 			<p>
@@ -163,7 +163,7 @@
 			If you're using the paid version of ChatGPT, create a Project for this brainstorming session.
 		</p>
 
-		<img src="/ai-series/new-chatgpt-project.jpg" alt="ChatGPT Projects Setup"
+		<img src="/ai-series/new-chatgpt-project.jpg" alt="ChatGPT Projects Setup" loading="lazy"
 			class="my-6 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl rounded-lg shadow-lg object-cover">
 
 		<p>

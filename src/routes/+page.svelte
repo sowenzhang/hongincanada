@@ -79,7 +79,7 @@
             <div class="md:w-1/2 flex justify-center relative">
                 <div class="relative">
                     <div class="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-blue-400 to-emerald-400 rounded-full flex items-center justify-center overflow-hidden shadow-xl">
-                        <img src="/profile.png" alt="Hong - Engineering Manager and Product Builder" class="w-full h-full object-cover" itemprop="image">
+                        <img loading="lazy" src="/profile.png" alt="Hong - Engineering Manager and Product Builder" class="w-full h-full object-cover" itemprop="image">
                     </div>
                     <div class="absolute -bottom-6 -left-12 bg-white p-2 rounded-lg shadow-md">
                         <div class="flex items-center">
@@ -130,13 +130,13 @@
         <div class="flex flex-col md:flex-row items-top">
             <div class="md:w-1/3 mb-8 md:mb-0 flex flex-col items-center space-y-4">
                 <div class="w-48 h-48 bg-gradient-to-br from-blue-100 to-emerald-100 rounded-full overflow-hidden shadow-lg">
-                    <img src="/melody.jpg" alt="Melody - Hong's cat" class="w-full h-full object-cover">
+                    <img src="/melody.jpg" loading="lazy" alt="Melody - Hong's cat" class="w-full h-full object-cover">
                 </div>
                 <div class="w-48 h-48 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full overflow-hidden shadow-lg">
-                    <img src="/otto.jpg" alt="Otto - Hong's cat" class="w-full h-full object-cover">
+                    <img src="/otto.jpg" loading="lazy" alt="Otto - Hong's cat" class="w-full h-full object-cover">
                 </div>
                 <div class="w-48 h-[22rem] bg-gradient-to-br from-purple-100 to-pink-100 rounded-full overflow-hidden shadow-lg">
-                    <img src="/AI-me-and-otto.jpg" alt="Hong and Otto together" class="w-full h-full object-cover">
+                    <img src="/AI-me-and-otto.jpg" loading="lazy" alt="Hong and Otto together" class="w-full h-full object-cover">
                 </div>
             </div>
             <div class="md:w-2/3 md:pl-12" itemprop="about">
