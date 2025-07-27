@@ -27,7 +27,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Blog",
-        "name": "How I Built MiniBreaks.io With AI Series",
+        "name": "How I Built a full website With AI - Series",
         "description": "A comprehensive series on building a full website using AI tools",
         "url": "https://hongincanada.com/series",
         "author": {
@@ -57,7 +57,7 @@
             </span>
         </div>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            How I Built <span class="gradient-text">MiniBreaks.io</span>
+            How I Built a Full Website (<span class="gradient-text">MiniBreaks.io</span>)
             <span class="block">With AI</span>
         </h1>
         <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -83,8 +83,11 @@
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Series Overview</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Follow along as I document every step of building MiniBreaks.io with AI assistance.
-                From initial concept to final deployment, learn the real challenges and solutions.
+                Follow along as I document every step of building a full website: MiniBreaks.io with AI assistance.
+                From initial concept to final deployment, learn the real challenges and solutions. Hopefully this can
+                encourage anyone to give AI a try to build a complete website.
+                (A complete website means a website with multiple pages, navigation,
+                authentication, email, APIs, database, SEO, etc.)
             </p>
         </div>
 

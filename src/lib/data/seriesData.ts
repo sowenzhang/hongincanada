@@ -2,12 +2,12 @@
 // and individual article pages to ensure consistency
 
 export const seriesMetadata = {
-    title: "How I Built MiniBreaks.io With AI Series - Hong in Canada",
+    title: "How I Built a Full Website (MiniBreaks.io) With AI Series",
     description: "A comprehensive 10-part series on building a full website using AI tools. Learn from real-world experience, challenges, and solutions.",
     canonical: "https://hongincanada.com/series",
-    ogImage: "https://hongincanada.com/profile.png",
+    ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg",
     totalParts: 10,
-    seriesName: "How I Built MiniBreaks.io With AI"
+    seriesName: "How I Built a Full Website (MiniBreaks.io) With AI "
 };
 
 export const seriesParts = [
@@ -20,7 +20,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-1-can-you-build-with-ai",
         canonical: "https://hongincanada.com/series/part-1-can-you-build-with-ai",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 2,
@@ -31,7 +31,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-2-why-use-ai",
         canonical: "https://hongincanada.com/series/part-2-why-use-ai",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 3,
@@ -42,7 +42,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-3-tools-and-setup",
         canonical: "https://hongincanada.com/series/part-3-tools-and-setup",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 4,
@@ -53,7 +53,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-4-crafting-idea-mvp",
         canonical: "https://hongincanada.com/series/part-4-crafting-idea-mvp",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 5,
@@ -64,7 +64,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-5-designing-ui-ux",
         canonical: "https://hongincanada.com/series/part-5-designing-ui-ux",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 6,
@@ -75,7 +75,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-6-writing-code-ai",
         canonical: "https://hongincanada.com/series/part-6-writing-code-ai",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 7,
@@ -86,7 +86,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-7-adding-advanced-features",
         canonical: "https://hongincanada.com/series/part-7-adding-advanced-features",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 8,
@@ -97,7 +97,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-8-before-deployment",
         canonical: "https://hongincanada.com/series/part-8-before-deployment",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 9,
@@ -108,7 +108,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-9-lessons-learned",
         canonical: "https://hongincanada.com/series/part-9-lessons-learned",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 10,
@@ -119,7 +119,7 @@ export const seriesParts = [
         status: "published",
         slug: "part-10-future-ai-development",
         canonical: "https://hongincanada.com/series/part-10-future-ai-development",
-        ogImage: "https://hongincanada.com/profile.png"
+        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
     }
 ];
 
