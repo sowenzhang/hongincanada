@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
     import { slide } from 'svelte/transition';
+    import type { ArticleData, Navigation, TableOfContents } from '$lib/types/series';
 
     // Props
-    export let articleData;
-    export let navigation;
-    /** @type {Array<{id: string, title: string, level: number}>} */
-    export let tableOfContents = [];
+    export let articleData: ArticleData;
+    export let navigation: Navigation;
+    export let tableOfContents: TableOfContents = [];
     /** @type {boolean} Whether the next part link should be disabled (when next part isn't ready yet) */
     export let disableNextPart = false;
 
@@ -48,16 +48,37 @@
 <svelte:head>
     <title>{articleData.title}</title>
     <meta name="description" content={articleData.description} />
+    <meta name="keywords" content="mosaic app design, adaptive user interfaces, progressive web apps, context-aware applications, mobile app architecture, user experience design, app flow patterns, software engineering" />
+    <meta name="author" content="Hong" />
     <link rel="canonical" href={articleData.canonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
     <meta property="og:title" content={articleData.title} />
     <meta property="og:description" content={articleData.description} />
     <meta property="og:image" content={articleData.ogImage} />
     <meta property="og:url" content={articleData.canonical} />
+    <meta property="og:site_name" content="Hong in Canada" />
+    <meta property="article:published_time" content={new Date(articleData.publishDate).toISOString()} />
+    <meta property="article:modified_time" content={new Date(articleData.publishDate).toISOString()} />
+    <meta property="article:author" content="Hong" />
+    <meta property="article:section" content="Technology" />
+    <meta property="article:tag" content="App Design" />
+    <meta property="article:tag" content="User Experience" />
+    <meta property="article:tag" content="Mobile Apps" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={articleData.title} />
     <meta name="twitter:description" content={articleData.description} />
     <meta name="twitter:image" content={articleData.ogImage} />
+    <meta name="twitter:creator" content="@hongincanada" />
 
-    <!-- Structured Data -->
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="alternate" type="application/rss+xml" title="Hong in Canada RSS Feed" href="/rss.xml" />
+
+    <!-- Enhanced Structured Data -->
     {@html `<script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -65,17 +86,31 @@
         "headline": "${articleData.title}",
         "description": "${articleData.description}",
         "url": "${articleData.canonical}",
-        "datePublished": "${articleData.publishDate}",
+        "image": "${articleData.ogImage}",
+        "datePublished": "${new Date(articleData.publishDate).toISOString()}",
+        "dateModified": "${new Date(articleData.publishDate).toISOString()}",
         "author": {
             "@type": "Person",
             "name": "Hong",
             "url": "https://hongincanada.com"
         },
+        "publisher": {
+            "@type": "Person",
+            "name": "Hong",
+            "url": "https://hongincanada.com"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "${articleData.canonical}"
+        },
         "isPartOf": {
-            "@type": "Blog",
-            "name": "How I Built MiniBreaks.io With AI Series",
-            "url": "https://hongincanada.com/series"
-        }
+            "@type": "BlogPosting",
+            "name": "${navigation.seriesTitle}",
+            "url": "https://hongincanada.com${navigation.seriesUrl}"
+        },
+        "articleSection": "Technology",
+        "keywords": ["app design", "user experience", "progressive web apps", "adaptive interfaces"],
+        "timeRequired": "${articleData.readTime}"
     }
    </script>`}
 </svelte:head>
@@ -88,7 +123,7 @@
             <div class="flex items-center space-x-2 text-sm">
                 <a href="/" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">Home</a>
                 <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500" aria-hidden="true"></i>
-                <a href="/series" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">AI Development Series</a>
+                <a href="{navigation.seriesUrl}" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">{navigation.seriesTitle}</a>
                 <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500" aria-hidden="true"></i>
                 <span class="text-gray-600 dark:text-gray-400">Part {navigation.currentPart}</span>
             </div>
@@ -109,7 +144,7 @@
             <!-- Back to Series button - only show on mobile when part indicator is hidden -->
             <div class="sm:hidden mb-6">
                 <div class="flex flex-col items-center gap-3">
-                    <a href="/series" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
+                    <a href="{navigation.seriesUrl}" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
                         <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>Back to Series
                     </a>
                     <span class="bg-blue-500 dark:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -119,7 +154,7 @@
             </div>
             <!-- Desktop: Just the back button since part indicator is in nav -->
             <div class="hidden sm:block mb-6">
-                <a href="/series" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
+                <a href="{navigation.seriesUrl}" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
                     <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>Back to Series
                 </a>
             </div>
@@ -259,7 +294,7 @@
         <div class="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 sm:gap-0 min-w-0">
             <!-- Previous Part -->
             {#if navigation.prevPart}
-                <a href="/series/{navigation.prevPart.slug}"
+                <a href="{navigation.seriesUrl}/{navigation.prevPart.slug}"
                    class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group min-w-0">
                     <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition">
                         <i class="fas fa-arrow-left text-lg" aria-hidden="true"></i>
@@ -274,14 +309,14 @@
             {/if}
 
             <!-- Series Overview -->
-            <a href="/series"
+            <a href="{navigation.seriesUrl}"
                class="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-lg transition font-medium flex-shrink-0 whitespace-nowrap">
                 <i class="fas fa-list mr-2" aria-hidden="true"></i>View All Parts
             </a>
 
             <!-- Next Part -->
             {#if navigation.nextPart && !disableNextPart}
-                <a href="/series/{navigation.nextPart.slug}"
+                <a href="{navigation.seriesUrl}/{navigation.nextPart.slug}"
                    class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group min-w-0">
                     <div class="text-right min-w-0">
                         <div class="text-sm text-gray-500 dark:text-gray-400">Next</div>

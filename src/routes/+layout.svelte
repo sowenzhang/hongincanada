@@ -93,17 +93,49 @@
 		// Create ping pong balls periodically
 		pingPongInterval = window.setInterval(createPingPongBall, 2000);
 
-		// Smooth scrolling for anchor links
-		document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+		// Smooth scrolling for anchor links (both same-page "#" and cross-page "/#")
+		document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach((anchor) => {
 			const handleAnchorClick = (e: Event) => {
-				e.preventDefault();
+				let targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+				if (targetId === '#' || targetId === '/#') return;
 
-				const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
-				if (targetId === '#') return;
+				// Check if this is a cross-page link (starts with "/")
+				const isCrossPage = targetId?.startsWith('/');
+
+				// Remove leading "/" if present (for cross-page links)
+				if (isCrossPage) {
+					targetId = targetId.substring(1);
+				}
+
+				console.log('Target ID:', targetId, 'Is cross-page:', isCrossPage);
 
 				const targetElement = document.querySelector(targetId!);
+
+				// If target element exists on current page, prevent default and scroll
 				if (targetElement) {
-					targetElement.scrollIntoView({
+					e.preventDefault();
+
+					// Calculate the height of the sticky navigation bar
+					const navbar = document.querySelector('nav');
+					let navbarHeight = 80; // default fallback
+
+					if (navbar) {
+						const rect = navbar.getBoundingClientRect();
+						navbarHeight = rect.height;
+					}
+
+					const totalOffset = navbarHeight;
+
+					// Calculate the target position with offset
+					const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+					const offsetPosition = elementTop - totalOffset;					// Smooth scroll to the calculated position
+					window.scrollTo({
+						top: offsetPosition,
+						behavior: 'smooth'
+					});
+					// Smooth scroll to the calculated position
+					window.scrollTo({
+						top: offsetPosition,
 						behavior: 'smooth'
 					});
 
@@ -111,6 +143,14 @@
 					if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
 						mobileMenu.classList.add('hidden');
 					}
+				}
+				// If target element doesn't exist and this is a cross-page link,
+				// let the browser handle the navigation (don't prevent default)
+				else if (isCrossPage) {
+					// Let the browser navigate to the new page with the anchor
+					// The browser will automatically scroll to the anchor after page load
+					console.log('Cross-page navigation - letting browser handle it');
+					// Don't prevent default - let the link work normally
 				}
 			};
 			anchor.addEventListener('click', handleAnchorClick);
