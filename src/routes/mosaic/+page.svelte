@@ -69,7 +69,7 @@
                 {mosaicSeriesMetadata.description}
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
-                <a href="/mosaic/part-1"
+                <a href="/mosaic/the-problem-with-apps-today"
                    class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-full transition">
                     Start Reading Part 1
                 </a>
