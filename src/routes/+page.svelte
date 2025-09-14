@@ -66,13 +66,9 @@
                        class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition">
                         View My Work
                     </a>
-                    <a href="/series"
-                       class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full transition">
-                        <i class="fas fa-robot mr-2"></i>AI Series
-                    </a>
-                    <a href="#contact"
-                       class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-full transition">
-                        Get In Touch
+                    <a href="/mosaic"
+                       class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-full transition">
+                        <i class="fas fa-th mr-2"></i>Read Mosaic Article
                     </a>
                 </div>
             </div>
@@ -293,15 +289,39 @@
 <!-- Thoughts Section -->
 <section id="thoughts" class="py-10 bg-yellow-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
+        <div class="text-center mb-8">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">My Thoughts</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto"></div>
             <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
                 Sharing learning and reflections on engineering, life, and everything in between.
             </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Featured Series -->
+        <!-- Mosaic Article - Featured at top -->
+        <div class="max-w-3xl mx-auto mb-8">
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-th text-purple-500 text-xl mr-3"></i>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                        New Article
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">From App Stores to App Flows: Why Mosaic Matters</h3>
+                <p class="text-gray-600 mb-4">
+                    For years, our digital lives have revolved around app stores. We search, download, install, and juggle dozens of apps: each built as a siloed product. But our lives don't happen in silos. They happen in flows. Mosaic is a vision that replaces app stores with app flows.
+                </p>
+                <div class="flex items-center justify-between">
+                    <div class="text-gray-500 text-sm">
+                        <i class="fas fa-clock mr-1"></i> 4-part article
+                    </div>
+                    <a href="/mosaic" class="text-purple-600 hover:text-purple-700 font-medium flex items-center">
+                        Start Reading <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Series -->
+        <div class="max-w-3xl mx-auto mb-8">
             <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-emerald-500">
                 <div class="flex items-center mb-4">
                     <i class="fas fa-robot text-emerald-500 text-xl mr-3"></i>
@@ -322,25 +342,8 @@
                     </a>
                 </div>
             </div>
-            <!-- Coming Soon Articles -->
-            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
-                <div class="flex items-center mb-4">
-                    <i class="fas fa-book-skull text-blue-500 text-xl mr-3"></i>
-                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                        Coming Soon
-                    </span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Unnamed Novel about AI and a person</h3>
-                <p class="text-gray-600 mb-4">
-                    I am working on a novel that explores the relationship between AI and humanity, set in a near-future world. Stay tuned for updates!
-                </p>
-                <div class="flex items-center justify-between">
-                    <div class="text-gray-500 text-sm">
-                        <i class="fas fa-clock mr-1"></i> ?-part series
-                    </div>
-                </div>
-            </div>
         </div>
+
         <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
                 <div class="flex items-center mb-4">
