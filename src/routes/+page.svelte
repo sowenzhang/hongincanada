@@ -3,8 +3,8 @@
     const pageData = {
         title: "Home - Hong in Canada",
         description: "Engineering Manager with a passion for building products that people love. Canadian/Chinese with a background in HCI.",
-        canonical: "https://hongincanada.com",
-        ogImage: "https://hongincanada.com/profile.png"
+        canonical: "https://www.hongincanada.com",
+        ogImage: "https://www.hongincanada.com/profile.png"
     };
 </script>
 
@@ -28,7 +28,7 @@
         "name": "Hong",
         "jobTitle": "Engineering Manager",
         "description": "Engineering Manager with a passion for building products that people love. Canadian/Chinese with a background in HCI.",
-        "url": "https://hongincanada.com",
+        "url": "https://www.hongincanada.com",
         "sameAs": [
             "https://www.linkedin.com/in/keepsrunning/",
             "https://www.strava.com/athletes/6051008"

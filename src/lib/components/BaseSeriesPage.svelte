@@ -48,7 +48,7 @@
 <svelte:head>
     <title>{articleData.title}</title>
     <meta name="description" content={articleData.description} />
-    <meta name="keywords" content="mosaic app design, adaptive user interfaces, progressive web apps, context-aware applications, mobile app architecture, user experience design, app flow patterns, software engineering" />
+    <meta name="keywords" content="AI website development, {articleData.title.toLowerCase()}, building websites with AI, ChatGPT web development, GitHub Copilot tutorial, AI coding tutorial, {navigation.seriesTitle.toLowerCase()}" />
     <meta name="author" content="Hong" />
     <link rel="canonical" href={articleData.canonical} />
 
@@ -63,9 +63,18 @@
     <meta property="article:modified_time" content={new Date(articleData.publishDate).toISOString()} />
     <meta property="article:author" content="Hong" />
     <meta property="article:section" content="Technology" />
-    <meta property="article:tag" content="App Design" />
-    <meta property="article:tag" content="User Experience" />
-    <meta property="article:tag" content="Mobile Apps" />
+    <meta property="article:tag" content="AI Development" />
+    <meta property="article:tag" content="Part {navigation.currentPart}" />
+    <meta property="article:tag" content="{articleData.title}" />
+
+    <!-- Series Navigation -->
+    {#if navigation.prevPart}
+        <link rel="prev" href="https://hongincanada.com{navigation.seriesUrl}/{navigation.prevPart.slug}" />
+    {/if}
+    {#if navigation.nextPart}
+        <link rel="next" href="https://hongincanada.com{navigation.seriesUrl}/{navigation.nextPart.slug}" />
+    {/if}
+    <link rel="start" href="https://hongincanada.com{navigation.seriesUrl}" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -76,6 +85,10 @@
 
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="article:tag" content="{articleData.title}" />
+    <meta name="article:tag" content="Part {navigation.currentPart}" />
+    <meta name="series:part" content="{String(navigation.currentPart)}" />
+    <meta name="series:total" content="{String(navigation.totalParts)}" />
     <link rel="alternate" type="application/rss+xml" title="Hong in Canada RSS Feed" href="/rss.xml" />
 
     <!-- Enhanced Structured Data -->
@@ -109,8 +122,13 @@
             "url": "https://hongincanada.com${navigation.seriesUrl}"
         },
         "articleSection": "Technology",
-        "keywords": ["app design", "user experience", "progressive web apps", "adaptive interfaces"],
-        "timeRequired": "${articleData.readTime}"
+        "keywords": ["AI development", "part ${navigation.currentPart}", "web development", "${articleData.title.toLowerCase()}"],
+        "timeRequired": "${articleData.readTime}",
+        "position": ${navigation.currentPart},
+        "hasPart": {
+            "@type": "CreativeWork",
+            "name": "Part ${navigation.currentPart} of ${navigation.totalParts}"
+        }
     }
    </script>`}
 </svelte:head>
