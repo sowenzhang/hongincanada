@@ -1,33 +1,15 @@
 <script>
     import BaseSeriesPage from '$lib/components/BaseSeriesPage.svelte';
+    import { getMosaicArticleData, getMosaicNavigationData } from '$lib/data/mosaicSeriesData';
 
-    // Article metadata
-    const articleData = {
-        title: "Mosaic, Part 3: Under the Hood of App Flows",
-        description: "Deep dive into the technical architecture of Mosaic: the Context Engine, Registry of Tiles, Composer, and how they work together to create adaptive App Flows.",
-        canonical: "https://hongincanada.com/mosaic/app-flow-under-the-hood",
-        ogImage: "https://hongincanada.com/mosaic-series/core-architectural-design.jpg",
-        publishDate: "September 13, 2025",
-        readTime: "9 min read"
-    };
+    // Get data from the centralized mosaic series data
+    const articleData = getMosaicArticleData(3);
+    const navigation = getMosaicNavigationData(3);
 
-    // Navigation data
-    const navigation = {
-        currentPart: 3,
-        totalParts: 4,
-        seriesUrl: "/mosaic",
-        seriesTitle: "Mosaic Series",
-        prevPart: {
-            number: 2,
-            title: "Adaptive Journeys",
-            slug: "adaptive-journeys"
-        },
-        nextPart: {
-            number: 4,
-            title: "The Path Forward",
-            slug: "near-future-and-beyond"
-        }
-    };
+    // Ensure data exists (shouldn't happen for valid part numbers, but TypeScript safety)
+    if (!articleData || !navigation) {
+        throw new Error('Article data not found for Part 3');
+    }
 
     // Table of contents
     const tableOfContents = [

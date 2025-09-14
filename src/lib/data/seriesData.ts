@@ -1,16 +1,19 @@
+import type { SeriesMetadata, SeriesPartData } from '$lib/types/series';
+
 // Centralized series data that can be used by both the series landing page
 // and individual article pages to ensure consistency
 
-export const seriesMetadata = {
+export const seriesMetadata: SeriesMetadata = {
     title: "How I Built a Full Website (MiniBreaks.io) With AI Series",
     description: "A comprehensive 10-part series on building a full website using AI tools. Learn from real-world experience, challenges, and solutions.",
     canonical: "https://hongincanada.com/series",
     ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg",
     totalParts: 10,
-    seriesName: "How I Built a Full Website (MiniBreaks.io) With AI "
+    seriesName: "How I Built a Full Website (MiniBreaks.io) With AI ",
+    seriesUrl: "/series"
 };
 
-export const seriesParts = [
+export const seriesParts: SeriesPartData[] = [
     {
         part: 1,
         title: "Can You Really Build a Website with AI? (Spoiler: Yes, But…)",
@@ -124,7 +127,7 @@ export const seriesParts = [
 ];
 
 // Helper function to get data for a specific part
-export function getPartData(partNumber: number) {
+export function getPartData(partNumber: number): SeriesPartData | undefined {
     return seriesParts.find(part => part.part === partNumber);
 }
 
@@ -134,9 +137,10 @@ export function getNavigationData(partNumber: number) {
     const nextPart = partNumber < seriesMetadata.totalParts ? getPartData(partNumber + 1) : null;
 
     return {
-        series: seriesMetadata.seriesName,
         currentPart: partNumber,
         totalParts: seriesMetadata.totalParts,
+        seriesUrl: seriesMetadata.seriesUrl,
+        seriesTitle: seriesMetadata.seriesName,
         prevPart: prevPart ? {
             number: prevPart.part,
             title: prevPart.title,
