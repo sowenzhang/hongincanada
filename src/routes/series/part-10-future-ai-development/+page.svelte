@@ -3,7 +3,14 @@
 	import { getArticleData, getNavigationData } from '$lib/data/seriesData';
 
 	// Get centralized data for Part 10
-	const articleData = getArticleData(10);
+	const articleData = getArticleData(10) || {
+		title: 'The Future of AI-Assisted Development',
+		description: 'Complete AI Development Cheat Sheet and series conclusion',
+		canonical: '/series/part-10-future-ai-development',
+		ogImage: '/images/og/part-10.jpg',
+		publishDate: '2024-01-10',
+		readTime: '8 min read'
+	};
 	const navigation = getNavigationData(10);
 
 	// Table of contents for this part
@@ -311,6 +318,30 @@
 					<span style="color: white !important; ">See MiniBreaks.io Live</span>
 				</a>
 			</div>
+		</div>
+
+		<!-- Want to Read More? Section -->
+		<div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-8 text-center border border-blue-200 dark:border-blue-700 mt-8">
+			<h4 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Want to read more?</h4>
+			<p class="text-gray-600 dark:text-gray-400 mb-6">
+				If you enjoyed this AI development series, you might be interested in my thoughts on the future of how we interact with software.
+			</p>
+			<div class="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-600 max-w-2xl mx-auto mb-6">
+				<div class="flex items-center justify-center mb-4">
+					<i class="fas fa-th text-purple-500 text-2xl mr-3"></i>
+					<h5 class="text-xl font-bold text-gray-800 dark:text-gray-200">Mosaic: Rethinking App Flows</h5>
+				</div>
+				<p class="text-gray-600 dark:text-gray-400 text-left mb-4">
+					Imagine a world where you don't download apps — you flow between them. Where your digital experience is seamless, contextual, and truly personalized. Mosaic explores how we can move beyond app stores to create app flows that match how we actually live and work.
+				</p>
+				<p class="text-sm text-gray-500 dark:text-gray-500 italic">
+					A 4-part exploration of the future of digital interaction design.
+				</p>
+			</div>
+			<a href="/mosaic" class="inline-flex items-center px-8 py-4 bg-purple-100 dark:bg-purple-600 hover:bg-purple-400 text-white font-bold rounded-lg transition-colors shadow-lg hover:shadow-xl border border-purple-500 no-underline">
+				<i class="fas fa-th mr-3" aria-hidden="true"></i>
+				<span>Read the Mosaic Series</span>
+			</a>
 		</div>
 	</div>
 </BaseSeriesPage>
