@@ -3,8 +3,8 @@
 
     // Page metadata
     const pageData = {
-        title: "From App Stores to App Flows: Why Mosaic Matters - Hong in Canada",
-        description: mosaicSeriesMetadata.description,
+        title: "Mosaic App Design Series: From App Stores to Adaptive App Flows | Hong in Canada",
+        description: "A comprehensive 4-part series exploring how to design apps that work together seamlessly, adapting to user context and creating unified experiences across platforms. Learn about adaptive journeys, context engines, and the future of progressive web apps.",
         canonical: mosaicSeriesMetadata.canonical,
         ogImage: mosaicSeriesMetadata.ogImage
     };
@@ -19,14 +19,35 @@
 <svelte:head>
     <title>{pageData.title}</title>
     <meta name="description" content={pageData.description} />
+    <meta name="keywords" content="app design, user experience, progressive web apps, PWA, app flows, mobile apps, software architecture, product design, adaptive interfaces, context-aware apps" />
+    <meta name="author" content="Hong" />
     <link rel="canonical" href={pageData.canonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
     <meta property="og:title" content={pageData.title} />
     <meta property="og:description" content={pageData.description} />
     <meta property="og:image" content={pageData.ogImage} />
     <meta property="og:url" content={pageData.canonical} />
+    <meta property="og:site_name" content="Hong in Canada" />
+    <meta property="article:published_time" content="2025-09-12T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-09-13T00:00:00Z" />
+    <meta property="article:author" content="Hong" />
+    <meta property="article:section" content="Technology" />
+    <meta property="article:tag" content="App Design" />
+    <meta property="article:tag" content="User Experience" />
+    <meta property="article:tag" content="Progressive Web Apps" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageData.title} />
     <meta name="twitter:description" content={pageData.description} />
     <meta name="twitter:image" content={pageData.ogImage} />
+    <meta name="twitter:creator" content="@hongincanada" />
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="alternate" type="application/rss+xml" title="Hong in Canada RSS Feed" href="/rss.xml" />
 </svelte:head>
 
 <!-- Hero Section -->

@@ -48,16 +48,37 @@
 <svelte:head>
     <title>{articleData.title}</title>
     <meta name="description" content={articleData.description} />
+    <meta name="keywords" content="mosaic app design, adaptive user interfaces, progressive web apps, context-aware applications, mobile app architecture, user experience design, app flow patterns, software engineering" />
+    <meta name="author" content="Hong" />
     <link rel="canonical" href={articleData.canonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
     <meta property="og:title" content={articleData.title} />
     <meta property="og:description" content={articleData.description} />
     <meta property="og:image" content={articleData.ogImage} />
     <meta property="og:url" content={articleData.canonical} />
+    <meta property="og:site_name" content="Hong in Canada" />
+    <meta property="article:published_time" content={new Date(articleData.publishDate).toISOString()} />
+    <meta property="article:modified_time" content={new Date(articleData.publishDate).toISOString()} />
+    <meta property="article:author" content="Hong" />
+    <meta property="article:section" content="Technology" />
+    <meta property="article:tag" content="App Design" />
+    <meta property="article:tag" content="User Experience" />
+    <meta property="article:tag" content="Mobile Apps" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={articleData.title} />
     <meta name="twitter:description" content={articleData.description} />
     <meta name="twitter:image" content={articleData.ogImage} />
+    <meta name="twitter:creator" content="@hongincanada" />
 
-    <!-- Structured Data -->
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="alternate" type="application/rss+xml" title="Hong in Canada RSS Feed" href="/rss.xml" />
+
+    <!-- Enhanced Structured Data -->
     {@html `<script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -65,17 +86,31 @@
         "headline": "${articleData.title}",
         "description": "${articleData.description}",
         "url": "${articleData.canonical}",
-        "datePublished": "${articleData.publishDate}",
+        "image": "${articleData.ogImage}",
+        "datePublished": "${new Date(articleData.publishDate).toISOString()}",
+        "dateModified": "${new Date(articleData.publishDate).toISOString()}",
         "author": {
             "@type": "Person",
             "name": "Hong",
             "url": "https://hongincanada.com"
         },
+        "publisher": {
+            "@type": "Person",
+            "name": "Hong",
+            "url": "https://hongincanada.com"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "${articleData.canonical}"
+        },
         "isPartOf": {
-            "@type": "Blog",
+            "@type": "BlogPosting",
             "name": "${navigation.seriesTitle}",
             "url": "https://hongincanada.com${navigation.seriesUrl}"
-        }
+        },
+        "articleSection": "Technology",
+        "keywords": ["app design", "user experience", "progressive web apps", "adaptive interfaces"],
+        "timeRequired": "${articleData.readTime}"
     }
    </script>`}
 </svelte:head>

@@ -7,7 +7,7 @@ export const mosaicSeriesMetadata: SeriesMetadata = {
     title: "Mosaic: Rethinking App Design for the Multi-App Era",
     description: "A comprehensive series exploring how to design apps that work together seamlessly, adapting to user context and creating unified experiences across platforms.",
     canonical: "https://hongincanada.com/mosaic",
-    ogImage: "https://hongincanada.com/mosaic-series/core-architectural-design.jpg",
+    ogImage: "https://hongincanada.com/mosaic-series/adaptive-ui.jpg",
     totalParts: 4,
     seriesName: "Mosaic Series",
     seriesUrl: "/mosaic"
@@ -23,7 +23,7 @@ export const mosaicSeriesParts: SeriesPartData[] = [
         status: "published",
         slug: "the-problem-with-apps-today",
         canonical: "https://hongincanada.com/mosaic/the-problem-with-apps-today",
-        ogImage: "https://hongincanada.com/mosaic-series/user-flow.jpg"
+        ogImage: "https://hongincanada.com/mosaic-series/adaptive-ui.jpg"
     },
     {
         part: 2,
@@ -45,7 +45,7 @@ export const mosaicSeriesParts: SeriesPartData[] = [
         status: "published",
         slug: "app-flow-under-the-hood",
         canonical: "https://hongincanada.com/mosaic/app-flow-under-the-hood",
-        ogImage: "https://hongincanada.com/mosaic-series/core-architectural-design.jpg"
+        ogImage: "https://hongincanada.com/mosaic-series/adaptive-ui.jpg"
     },
     {
         part: 4,
@@ -56,7 +56,7 @@ export const mosaicSeriesParts: SeriesPartData[] = [
         status: "published",
         slug: "near-future-and-beyond",
         canonical: "https://hongincanada.com/mosaic/near-future-and-beyond",
-        ogImage: "https://hongincanada.com/mosaic-series/core-architectural-design.jpg"
+        ogImage: "https://hongincanada.com/mosaic-series/adaptive-ui.jpg"
     }
 ];
 
