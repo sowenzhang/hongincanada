@@ -43,6 +43,27 @@
     function toggleTOC() {
         showTOC = !showTOC;
     }
+
+    function generateFeedbackEmail() {
+        const email = 'me@hongincanada.com';
+        const subject = `Feedback: ${articleData.title}`;
+        const body = `Hi Hong,
+
+I wanted to share some feedback about "${articleData.title}":
+
+Feedback to ${articleData.canonical}:
+
+[Please share your thoughts here...]
+
+Thanks for the great content!
+
+Best regards`;
+
+        const encodedSubject = encodeURIComponent(subject);
+        const encodedBody = encodeURIComponent(body);
+
+        return `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+    }
 </script>
 
 <svelte:head>
@@ -371,7 +392,7 @@
                 Share your thoughts or questions about AI-powered development.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:me@hongincanada.com?subject=AI Development Series - Part {navigation.currentPart} Feedback"
+                <a href={generateFeedbackEmail()}
                    class="bg-white text-blue-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition shadow-lg">
                     <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Send Feedback
                 </a>

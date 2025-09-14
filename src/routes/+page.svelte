@@ -6,6 +6,15 @@
         canonical: "https://www.hongincanada.com",
         ogImage: "https://www.hongincanada.com/profile.png"
     };
+
+    function generateEmailLink() {
+        const email = 'me@hongincanada.com';
+        return `mailto:${email}`;
+    }
+
+    function getEmailDisplay() {
+        return 'me@hongincanada.com';
+    }
 </script>
 
 <svelte:head>
@@ -391,14 +400,14 @@
         </div>
         <div class="bg-white rounded-xl shadow-xl p-8 max-w-2xl mx-auto">
             <div class="space-y-4">
-                <a href="mailto:me@hongincanada.com"
+                <a href={generateEmailLink()}
                    class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition group">
                     <div class="w-12 h-12 flex-shrink-0 bg-blue-500 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition">
                         <i class="fas fa-envelope text-white"></i>
                     </div>
                     <div class="ml-4 flex-1">
                         <h4 class="font-medium text-gray-800">Email Me</h4>
-                        <p class="text-gray-600 text-sm">me@hongincanada.com</p>
+                        <p class="text-gray-600 text-sm">Me, me, me!</p>
                     </div>
                 </a>
                 <a href="https://www.linkedin.com/in/keepsrunning/" target="_blank"
