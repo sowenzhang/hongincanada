@@ -7,30 +7,6 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com#about</loc>
-        <lastmod>2025-07-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://hongincanada.com#projects</loc>
-        <lastmod>2025-07-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://hongincanada.com#thoughts</loc>
-        <lastmod>2025-07-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://hongincanada.com#contact</loc>
-        <lastmod>2025-07-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
         <loc>https://hongincanada.com/series</loc>
         <lastmod>2025-07-19</lastmod>
         <changefreq>weekly</changefreq>
