@@ -2,7 +2,7 @@
     // Page metadata
     const pageData = {
         title: "Home - Hong in Canada",
-        description: "Engineering Manager with a passion for building products that people love. Canadian/Chinese with a background in HCI.",
+        description: "Engineering Manager with a passion for building products that people love. Background HCI with Product Mindset.",
         canonical: "https://www.hongincanada.com",
         ogImage: "https://www.hongincanada.com/profile.png"
     };
@@ -36,7 +36,7 @@
         "@type": "Person",
         "name": "Hong",
         "jobTitle": "Engineering Manager",
-        "description": "Engineering Manager with a passion for building products that people love. Canadian/Chinese with a background in HCI.",
+        "description": "Engineering Manager with a passion for building products that people love. Background HCI with Product Mindset.",
         "url": "https://www.hongincanada.com",
         "sameAs": [
             "https://www.linkedin.com/in/keepsrunning/",
@@ -58,68 +58,142 @@
 <!-- Main page content migrated from Index.cshtml -->
 
 <!-- Hero Section -->
-<section class="hero-pattern py-20 md:py-22 relative overflow-hidden" itemscope itemtype="https://schema.org/Person">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-16 md:mb-0 relative z-10">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                    <span class="block">Hello, I'm</span>
-                    <span class="gradient-text" itemprop="name">Hong</span>
-                </h1>
-                <p class="text-xl text-gray-600 mb-8" itemprop="description">
-                    <span itemprop="jobTitle">Engineering Manager</span> with a passion for building products that people love.
-                    <span class="font-medium">Canadian/Chinese</span> with a background in <span itemprop="knowsAbout">HCI</span>.
-                </p>
-                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                    <a href="#projects"
-                       class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition">
-                        View My Work
-                    </a>
-                    <a href="/mosaic"
-                       class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-full transition">
-                        <i class="fas fa-th mr-2"></i>Read Mosaic Article
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center relative">
-                <div class="relative">
-                    <div class="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-gradient-to-br from-blue-400 to-emerald-400 rounded-full flex items-center justify-center overflow-hidden shadow-xl">
-                        <img loading="lazy" src="/profile.png" alt="Hong - Engineering Manager and Product Builder" class="w-full h-full object-cover" itemprop="image">
-                    </div>
-                    <div class="absolute -bottom-6 -left-12 bg-white p-2 rounded-lg shadow-md">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                                <i class="fas fa-table-tennis-paddle-ball text-white text-lg"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-xs text-gray-500">Currently</p>
-                                <p class="font-medium">Playing TT</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="absolute -top-8 -right-16 bg-white p-2 rounded-lg shadow-md">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-pink-400 rounded-full flex items-center justify-center">
-                                <i class="fas fa-cat text-white text-lg"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-xs text-gray-500">Cat lover</p>
-                                <p class="font-medium">2 cats</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section class="hero-pattern py-12 md:py-16 relative overflow-hidden" itemscope itemtype="https://schema.org/Person">
+    <!-- Subtle background image -->
+    <!-- <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+        <img src="/profile.png" alt="" class="h-full object-contain" loading="lazy">
+    </div> -->
 
-                <!-- Decorative elements -->
-                <div class="cat-paw top-12 left-12 text-6xl text-gray-400">
-                    <i class="fas fa-paw"></i>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-6 relative z-10">
+        <!-- Header with Stats -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+                <span class="whitespace-nowrap">Hello, I'm <span class="gradient-text" itemprop="name">Hong</span></span>
+            </h1>
+            <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-4" itemprop="description">
+                <span itemprop="jobTitle">Engineering Manager</span> building products that people love.
+                Background in <span itemprop="knowsAbout">HCI</span> with Product Mindset.
+            </p>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <!-- AI Series Card -->
+            <a href="/series" class="block bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-5 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border-2 border-emerald-200 group">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-robot text-white text-lg"></i>
+                        </div>
+                        <span class="bg-emerald-200 text-emerald-900 px-2 py-1 rounded-full text-xs font-bold">
+                            10 PARTS
+                        </span>
+                    </div>
+                    <i class="fas fa-arrow-right text-emerald-600 group-hover:translate-x-1 transition"></i>
                 </div>
-                <div class="cat-paw bottom-24 right-24 text-5xl text-gray-400">
-                    <i class="fas fa-paw"></i>
+                <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">How I Built MiniBreaks.io With AI</h3>
+                <p class="text-sm text-gray-700 mb-3">Real-world journey of building a complete website using AI assistance</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-emerald-700 font-semibold text-sm">Read Series →</span>
+                    <span class="text-xs text-gray-600">~ 45 min read</span>
                 </div>
-                <div class="cat-paw top-1/3 right-1/4 text-4xl text-gray-400">
-                    <i class="fas fa-paw"></i>
+            </a>
+
+            <!-- Mosaic Article Card -->
+            <a href="/mosaic" class="block bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-5 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border-2 border-purple-200 group">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-th text-white text-lg"></i>
+                        </div>
+                        <span class="bg-purple-200 text-purple-900 px-2 py-1 rounded-full text-xs font-bold">
+                            NEW
+                        </span>
+                    </div>
+                    <i class="fas fa-arrow-right text-purple-600 group-hover:translate-x-1 transition"></i>
                 </div>
+                <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">Why Mosaic Matters</h3>
+                <p class="text-sm text-gray-700 mb-3">A vision that replaces app stores with seamless app flows</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-purple-700 font-semibold text-sm">Read Article →</span>
+                    <span class="text-xs text-gray-600">~ 20 min read</span>
+                </div>
+            </a>
+
+            <!-- Other Writing Card -->
+            <!-- <a href="#writing" class="block bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-5 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border-2 border-orange-200 group">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-pen-fancy text-white text-lg"></i>
+                        </div>
+                        <span class="bg-orange-200 text-orange-900 px-2 py-1 rounded-full text-xs font-bold">
+                            MORE
+                        </span>
+                    </div>
+                    <i class="fas fa-arrow-down text-orange-600 group-hover:translate-y-1 transition"></i>
+                </div>
+                <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">More Writing</h3>
+                <p class="text-sm text-gray-700 mb-3">Engineering insights, product thoughts, and life reflections</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-orange-700 font-semibold text-sm">Explore All →</span>
+                    <span class="text-xs text-gray-600">14 articles</span>
+                </div>
+            </a> -->
+        </div>
+
+        <!-- Live Websites Section -->
+        <div class="bg-white/60 backdrop-blur-sm rounded-xl p-5 shadow-lg border-2 border-blue-100">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-rocket text-blue-500 text-xl"></i>
+                    <h3 class="text-lg font-bold text-gray-900">Live Websites</h3>
+                    <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                        <i class="fas fa-circle text-green-500 text-[6px]"></i> ACTIVE
+                    </span>
+                </div>
+                <a href="#projects" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                    View all projects <i class="fas fa-arrow-down text-xs"></i>
+                </a>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- Minibreaks.io -->
+                <a href="https://minibreaks.io" target="_blank"
+                   class="flex items-center gap-3 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4 hover:from-blue-100 hover:to-blue-200 transition group border border-blue-200">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                        <i class="fas fa-spa text-white text-xl"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="font-bold text-gray-900">Minibreaks.io</span>
+                            <i class="fas fa-external-link-alt text-blue-500 text-xs opacity-0 group-hover:opacity-100 transition"></i>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-1">Mental health breaks in your workplace</p>
+                        <div class="flex gap-1">
+                            <span class="bg-blue-200 text-blue-800 px-2 py-0.5 rounded text-[10px] font-medium">Mental Health</span>
+                            <span class="bg-green-200 text-green-800 px-2 py-0.5 rounded text-[10px] font-medium">Fun</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- NearbyGame.com -->
+                <a href="https://nearbygame.com" target="_blank"
+                   class="flex items-center gap-3 bg-gradient-to-r from-teal-50 to-cyan-100 rounded-lg p-4 hover:from-teal-100 hover:to-cyan-200 transition group border border-teal-200">
+                    <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                        <i class="fas fa-location-dot text-white text-xl"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="font-bold text-gray-900">NearbyGame.com</span>
+                            <i class="fas fa-external-link-alt text-teal-500 text-xs opacity-0 group-hover:opacity-100 transition"></i>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-1">Discover local games near you</p>
+                        <div class="flex gap-1">
+                            <span class="bg-teal-200 text-teal-800 px-2 py-0.5 rounded text-[10px] font-medium">Location</span>
+                            <span class="bg-yellow-200 text-yellow-800 px-2 py-0.5 rounded text-[10px] font-medium">Community</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -217,89 +291,129 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto"></div>
             <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
-                Here are some of the products I've built and still alive.
+                Products I've built that are live and serving users.
             </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <article class="bg-white rounded-xl overflow-hidden shadow-md card-hover" itemscope itemtype="https://schema.org/SoftwareApplication">
-                <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center relative">
-                    <i class="fas fa-globe text-white text-6xl"></i>
-                    <div class="absolute top-4 right-4 bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-medium">
-                        Web
+
+        <!-- Live Websites - Featured at top -->
+        <div class="mb-12">
+            <div class="flex items-center justify-center mb-6">
+                <i class="fas fa-rocket text-blue-500 text-2xl mr-3"></i>
+                <h3 class="text-2xl font-bold text-gray-900">Live Websites</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Minibreaks.io -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg card-hover border-2 border-blue-200 flex flex-col" itemscope itemtype="https://schema.org/SoftwareApplication">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center relative flex-shrink-0">
+                        <i class="fas fa-spa text-white text-6xl"></i>
+                        <div class="absolute top-4 right-4 bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-circle text-green-500 mr-1"></i>Live
+                        </div>
                     </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2" itemprop="name">Minibreaks</h3>
-                    <p class="text-gray-600 mb-4" itemprop="description">
-                        A website that promotes better mental health encouraging users to take regular breaks.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">SvelteKit</span>
-                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">AI</span>
-                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">Node.js</span>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold mb-2" itemprop="name">Minibreaks.io</h3>
+                        <p class="text-gray-600 mb-4 flex-grow" itemprop="description">
+                            A website promoting better mental health by encouraging users to take regular breaks. Built with AI assistance.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">SvelteKit</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">AI-Powered</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">Node.js</span>
+                        </div>
+                        <a href="https://minibreaks.io" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium flex items-center text-lg mt-auto" itemprop="url">
+                            Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
-                    <a href="https://minibreaks.io" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium flex items-center" itemprop="url">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </article>
+                </article>
+
+                <!-- NearbyGame.com -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg card-hover border-2 border-emerald-200 flex flex-col" itemscope itemtype="https://schema.org/SoftwareApplication">
+                    <div class="h-48 bg-gradient-to-r from-emerald-400 to-emerald-600 flex items-center justify-center relative flex-shrink-0">
+                        <i class="fas fa-location-dot text-white text-6xl"></i>
+                        <div class="absolute top-4 right-4 bg-white text-emerald-600 px-3 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-circle text-green-500 mr-1"></i>Live
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold mb-2" itemprop="name">NearbyGame.com</h3>
+                        <p class="text-gray-600 mb-4 flex-grow" itemprop="description">
+                            Discover and join local games and sports activities in your area. Connect with players and find your next match.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">SvelteKit</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Location-based</span>
+                            <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs">Community</span>
+                        </div>
+                        <a href="https://nearbygame.com" target="_blank" class="text-emerald-500 hover:text-emerald-700 font-medium flex items-center text-lg mt-auto" itemprop="url">
+                            Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Other Projects -->
+        <div class="border-t-2 border-gray-200 pt-12">
+            <h3 class="text-lg font-semibold text-gray-600 text-center mb-6">Other Projects</h3>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <!-- Project 1 - Removed Minibreaks since it's featured above -->
             <!-- Project 2 -->
-            <article class="bg-white rounded-xl overflow-hidden shadow-md card-hover" itemscope itemtype="https://schema.org/SoftwareApplication">
-                <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center relative">
-                    <i class="fas fa-robot text-white text-6xl"></i>
-                    <div class="absolute top-4 right-4 bg-white text-purple-600 px-3 py-1 rounded-full text-xs font-medium">
+            <article class="bg-white rounded-lg overflow-hidden shadow-md card-hover flex flex-col w-full" itemscope itemtype="https://schema.org/SoftwareApplication">
+                <div class="h-32 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center relative flex-shrink-0">
+                    <i class="fas fa-robot text-white text-4xl"></i>
+                    <div class="absolute top-2 right-2 bg-white text-purple-600 px-2 py-1 rounded-full text-[10px] font-medium">
                         App
                     </div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2" itemprop="name">FakeBlueScreen</h3>
-                    <p class="text-gray-600 mb-4" itemprop="description">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-base font-bold mb-1" itemprop="name">FakeBlueScreen</h3>
+                    <p class="text-gray-600 mb-3 text-sm flex-1" itemprop="description">
                         A fake blue screen with progress. It gives you a legitimate excuse to procrastinate for a while, or forever, whatever you like.
                     </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">WinUI3</span>
-                        <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">C#</span>
+                    <div class="flex flex-wrap gap-1 mb-3 mt-auto">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-[10px]" itemprop="programmingLanguage">WinUI3</span>
+                        <span class="bg-pink-100 text-pink-800 px-2 py-0.5 rounded-full text-[10px]" itemprop="programmingLanguage">C#</span>
                     </div>
-                    <a href="https://apps.microsoft.com/detail/9n8r514363br" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium flex items-center" itemprop="url">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="https://apps.microsoft.com/detail/9n8r514363br" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium flex items-center text-sm" itemprop="url">
+                        View Project <i class="fas fa-arrow-right ml-1 text-xs"></i>
                     </a>
                 </div>
             </article>
             <!-- Project 3 -->
-            <article class="bg-white rounded-xl overflow-hidden shadow-md card-hover" itemscope itemtype="https://schema.org/SoftwareApplication">
-                <div class="h-48 bg-gradient-to-r from-emerald-400 to-emerald-600 flex items-center justify-center relative">
-                    <i class="fas fa-window-maximize text-white text-6xl"></i>
-                    <div class="absolute top-4 right-4 bg-white text-emerald-600 px-3 py-1 rounded-full text-xs font-medium">
+            <article class="bg-white rounded-lg overflow-hidden shadow-md card-hover flex flex-col w-full" itemscope itemtype="https://schema.org/SoftwareApplication">
+                <div class="h-32 bg-gradient-to-r from-emerald-400 to-emerald-600 flex items-center justify-center relative flex-shrink-0">
+                    <i class="fas fa-window-maximize text-white text-4xl"></i>
+                    <div class="absolute top-2 right-2 bg-white text-emerald-600 px-2 py-1 rounded-full text-[10px] font-medium">
                         App
                     </div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2" itemprop="name">FotoAssemblyLine Free</h3>
-                    <p class="text-gray-600 mb-4" itemprop="description">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-base font-bold mb-1" itemprop="name">FotoAssemblyLine Free</h3>
+                    <p class="text-gray-600 mb-3 text-sm flex-1" itemprop="description">
                         Apply filter, edit or watermark and process multiple images at once.
                     </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">UWP</span>
-                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs" itemprop="programmingLanguage">C#</span>
+                    <div class="flex flex-wrap gap-1 mb-3 mt-auto">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-[10px]" itemprop="programmingLanguage">UWP</span>
+                        <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded-full text-[10px]" itemprop="programmingLanguage">C#</span>
                     </div>
-                    <a href="https://apps.microsoft.com/detail/9mtg2ff7rnq4" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium flex items-center" itemprop="url">
-                        View Project <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="https://apps.microsoft.com/detail/9mtg2ff7rnq4" target="_blank" class="text-blue-500 hover:text-blue-700 font-medium flex items-center text-sm" itemprop="url">
+                        View Project <i class="fas fa-arrow-right ml-1 text-xs"></i>
                     </a>
                 </div>
             </article>
         </div>
-        <div class="text-center mt-4 text-gray-600">
+        </div>
+        <div class="text-center mt-8 text-gray-600">
             <p>I am in the process of trying to make some of my projects open source...</p>
         </div>
     </div>
 </section>
 
-<!-- Thoughts Section -->
-<section id="thoughts" class="py-10 bg-yellow-50">
+<!-- Writing Section -->
+<section id="writing" class="py-10 bg-yellow-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">My Thoughts</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Writing</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto"></div>
             <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
                 Sharing learning and reflections on engineering, life, and everything in between.

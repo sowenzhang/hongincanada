@@ -103,7 +103,7 @@
 				const isCrossPage = targetId?.startsWith('/');
 
 				// Remove leading "/" if present (for cross-page links)
-				if (isCrossPage) {
+				if (isCrossPage && targetId) {
 					targetId = targetId.substring(1);
 				}
 
@@ -215,7 +215,7 @@
 	/>
 	<meta name="twitter:image" content="/profile.png" />
 
-	<meta name='impact-site-verification' value='118ac292-615c-404f-acb1-f625915e6b02'>
+	<meta name='impact-site-verification' content='118ac292-615c-404f-acb1-f625915e6b02'>
 
 	<link rel="icon" type="image/x-icon" href="/favicon.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png.placeholder" />
@@ -260,10 +260,7 @@
 			<div class="hidden items-center space-x-8 md:flex">
 				<a href="/#about" class="text-gray-600 transition hover:text-gray-900">About</a>
 				<a href="/#projects" class="text-gray-600 transition hover:text-gray-900">Projects</a>
-				<a href="/series" class="text-gray-600 transition hover:text-gray-900">
-					<i class="fas fa-robot mr-1"></i>AI Series
-				</a>
-				<a href="/#thoughts" class="text-gray-600 transition hover:text-gray-900">Thoughts</a>
+				<a href="/#writing" class="text-gray-600 transition hover:text-gray-900">Writing</a>
 				<a
 					href="/#contact"
 					class="rounded-full bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600"
@@ -286,10 +283,7 @@
 		<div class="space-y-3 px-4 py-3">
 			<a href="/#about" class="block text-gray-600 transition hover:text-gray-900">About</a>
 			<a href="/#projects" class="block text-gray-600 transition hover:text-gray-900">Projects</a>
-			<a href="/series" class="block text-gray-600 transition hover:text-gray-900">
-				<i class="fas fa-robot mr-1"></i>AI Series
-			</a>
-			<a href="/#thoughts" class="block text-gray-600 transition hover:text-gray-900">Thoughts</a>
+			<a href="/#writing" class="block text-gray-600 transition hover:text-gray-900">Writing</a>
 			<a
 				href="/#contact"
 				class="block rounded-full bg-blue-500 px-4 py-2 text-center text-white transition hover:bg-blue-600"
