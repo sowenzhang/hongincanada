@@ -1,188 +1,59 @@
 <script lang="ts">
 	import '../app.css';
+	import CursorTrail from '$lib/components/CursorTrail.svelte';
 	import { onMount, onDestroy } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
 
 	let { children } = $props();
 
-	let menuBtn: HTMLElement | null = null;
-	let mobileMenu: HTMLElement | null = null;
-	let backToTopBtn: HTMLElement | null = null;
-	let pingPongInterval: number | null = null;
-	let scrollHandler: ((event: Event) => void) | null = null;
-	let menuClickHandler: ((event: Event) => void) | null = null;
-	let backToTopClickHandler: ((event: Event) => void) | null = null;
-	const anchorHandlers: Array<{ anchor: Element; handler: (e: Event) => void }> = [];
+	let mobileMenuOpen = $state(false);
+	let scrolled = $state(false);
+	let scrollHandler: (() => void) | null = null;
 
 	onMount(() => {
-		// Get DOM elements
-		menuBtn = document.getElementById('menu-btn');
-		mobileMenu = document.getElementById('mobile-menu');
-		backToTopBtn = document.getElementById('back-to-top');
-
-		// Mobile menu toggle
-		if (menuBtn && mobileMenu) {
-			menuClickHandler = () => {
-				mobileMenu?.classList.toggle('hidden');
-			};
-			menuBtn.addEventListener('click', menuClickHandler);
+		// Dark mode: default to dark, respect saved preference
+		const savedTheme = localStorage.getItem('theme');
+		if (savedTheme === 'light') {
+			document.documentElement.classList.remove('dark');
+		} else {
+			document.documentElement.classList.add('dark');
+			if (!savedTheme) localStorage.setItem('theme', 'dark');
 		}
 
-		// Back to top button scroll handler
-		if (backToTopBtn) {
-			scrollHandler = () => {
-				if (window.pageYOffset > 300) {
-					backToTopBtn?.classList.remove('opacity-0', 'invisible');
-					backToTopBtn?.classList.add('opacity-100', 'visible');
-				} else {
-					backToTopBtn?.classList.remove('opacity-100', 'visible');
-					backToTopBtn?.classList.add('opacity-0', 'invisible');
-				}
-			};
-			window.addEventListener('scroll', scrollHandler);
-
-			// Back to top button click handler
-			backToTopClickHandler = () => {
-				window.scrollTo({
-					top: 0,
-					behavior: 'smooth'
-				});
-			};
-			backToTopBtn.addEventListener('click', backToTopClickHandler);
-		}
-
-		// Ping pong ball animation
-		function createPingPongBall(): void {
-			const ball = document.createElement('div');
-			ball.className = 'ping-pong-ball';
-
-			// Random position at the top of the viewport
-			const startX = Math.random() * window.innerWidth;
-			ball.style.left = `${startX}px`;
-			ball.style.top = '-20px';
-
-			document.body.appendChild(ball);
-
-			// Random end position at the bottom
-			const endX = Math.random() * window.innerWidth;
-
-			// Animate
-			let opacity = 0;
-			let top = -20;
-			const id = setInterval(frame, 20);
-
-			function frame(): void {
-				if (top >= window.innerHeight) {
-					clearInterval(id);
-					ball.remove();
-				} else {
-					opacity += 0.02;
-					if (opacity > 1) opacity = 1;
-					top += 5;
-
-					// Calculate current x position (quadratic curve)
-					const progress = top / window.innerHeight;
-					const currentX = startX + (endX - startX) * progress;
-
-					ball.style.opacity = opacity.toString();
-					ball.style.top = `${top}px`;
-					ball.style.left = `${currentX}px`;
-				}
-			}
-		}
-
-		// Create ping pong balls periodically
-		pingPongInterval = window.setInterval(createPingPongBall, 2000);
-
-		// Smooth scrolling for anchor links (both same-page "#" and cross-page "/#")
-		document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach((anchor) => {
-			const handleAnchorClick = (e: Event) => {
-				let targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
-				if (targetId === '#' || targetId === '/#') return;
-
-				// Check if this is a cross-page link (starts with "/")
-				const isCrossPage = targetId?.startsWith('/');
-
-				// Remove leading "/" if present (for cross-page links)
-				if (isCrossPage && targetId) {
-					targetId = targetId.substring(1);
-				}
-
-				console.log('Target ID:', targetId, 'Is cross-page:', isCrossPage);
-
-				const targetElement = document.querySelector(targetId!);
-
-				// If target element exists on current page, prevent default and scroll
-				if (targetElement) {
-					e.preventDefault();
-
-					// Calculate the height of the sticky navigation bar
-					const navbar = document.querySelector('nav');
-					let navbarHeight = 80; // default fallback
-
-					if (navbar) {
-						const rect = navbar.getBoundingClientRect();
-						navbarHeight = rect.height;
-					}
-
-					const totalOffset = navbarHeight;
-
-					// Calculate the target position with offset
-					const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
-					const offsetPosition = elementTop - totalOffset;					// Smooth scroll to the calculated position
-					window.scrollTo({
-						top: offsetPosition,
-						behavior: 'smooth'
-					});
-					// Smooth scroll to the calculated position
-					window.scrollTo({
-						top: offsetPosition,
-						behavior: 'smooth'
-					});
-
-					// Close mobile menu if open
-					if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-						mobileMenu.classList.add('hidden');
-					}
-				}
-				// If target element doesn't exist and this is a cross-page link,
-				// let the browser handle the navigation (don't prevent default)
-				else if (isCrossPage) {
-					// Let the browser navigate to the new page with the anchor
-					// The browser will automatically scroll to the anchor after page load
-					console.log('Cross-page navigation - letting browser handle it');
-					// Don't prevent default - let the link work normally
-				}
-			};
-			anchor.addEventListener('click', handleAnchorClick);
-			anchorHandlers.push({ anchor, handler: handleAnchorClick });
-		});
+		// Nav scroll effect
+		scrollHandler = () => {
+			scrolled = window.scrollY > 50;
+		};
+		window.addEventListener('scroll', scrollHandler, { passive: true });
 	});
 
 	onDestroy(() => {
-		// Clean up interval
-		if (pingPongInterval) {
-			clearInterval(pingPongInterval);
-		}
-
-		// Clean up scroll event listener
 		if (scrollHandler) {
 			window.removeEventListener('scroll', scrollHandler);
 		}
+	});
 
-		// Remove menu click handler
-		if (menuBtn && menuClickHandler) {
-			menuBtn.removeEventListener('click', menuClickHandler);
+	function toggleTheme() {
+		const isDark = document.documentElement.classList.toggle('dark');
+		localStorage.setItem('theme', isDark ? 'dark' : 'light');
+	}
+
+	function closeMobileMenu() {
+		mobileMenuOpen = false;
+	}
+
+	// Scroll to hash anchor after client-side navigation (e.g. from /mosaic to /#writing)
+	afterNavigate(({ to }) => {
+		const hash = to?.url?.hash;
+		if (hash) {
+			// Wait for DOM to update before scrolling
+			requestAnimationFrame(() => {
+				const el = document.querySelector(hash);
+				if (el) {
+					el.scrollIntoView({ behavior: 'smooth' });
+				}
+			});
 		}
-
-		// Remove back-to-top click handler
-		if (backToTopBtn && backToTopClickHandler) {
-			backToTopBtn.removeEventListener('click', backToTopClickHandler);
-		}
-
-		// Remove anchor click handlers
-		anchorHandlers.forEach(({ anchor, handler }) => {
-			anchor.removeEventListener('click', handler);
-		});
 	});
 </script>
 
@@ -192,7 +63,7 @@
 	<title>Hong in Canada</title>
 	<meta
 		name="description"
-		content="Engineering Manager with a passion for building products that people love. Canadian/Chinese with a background in HCI."
+		content="Engineering Manager with a passion for building products that people love. Background in HCI with Product Mindset."
 	/>
 	<meta name="keywords" content="Engineering, Product, HCI, Canada, Hong" />
 	<meta name="author" content="Hong" />
@@ -201,7 +72,7 @@
 	<meta property="og:title" content="Hong in Canada" />
 	<meta
 		property="og:description"
-		content="Engineering Manager with a passion for building products that people love. Canadian/Chinese with a background in HCI."
+		content="Engineering Manager with a passion for building products that people love. Background in HCI with Product Mindset."
 	/>
 	<meta property="og:image" content="/profile.png" />
 	<meta property="og:url" content="https://hongincanada.com" />
@@ -211,11 +82,11 @@
 	<meta name="twitter:title" content="Hong in Canada" />
 	<meta
 		name="twitter:description"
-		content="Engineering Manager with a passion for building products that people love. Canadian/Chinese with a background in HCI."
+		content="Engineering Manager with a passion for building products that people love. Background in HCI with Product Mindset."
 	/>
 	<meta name="twitter:image" content="/profile.png" />
 
-	<meta name='impact-site-verification' content='118ac292-615c-404f-acb1-f625915e6b02'>
+	<meta name="impact-site-verification" content="118ac292-615c-404f-acb1-f625915e6b02" />
 
 	<link rel="icon" type="image/x-icon" href="/favicon.png" />
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png.placeholder" />
@@ -238,97 +109,161 @@
 		gtag('js', new Date());
 		gtag('config', 'G-LF4DS5T0H9');
 	</script>
-	<script src="/site.js"></script>
 
-
-    <!-- AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3210995713998595"
-         crossorigin="anonymous"></script>
+	<!-- AdSense -->
+	<script
+		async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3210995713998595"
+		crossorigin="anonymous"
+	></script>
 </svelte:head>
+
+<!-- Cursor Trail (desktop only, respects reduced motion) -->
+<CursorTrail />
 
 <!-- Navigation -->
 <nav
-	class="fixed left-0 right-0 top-0 z-50 border-b border-gray-100 bg-white/90 shadow-sm backdrop-blur-md"
+	class="nav-glass fixed left-0 right-0 top-0 z-50 transition-all duration-300"
+	class:scrolled
 >
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-		<div class="flex h-16 justify-between">
-			<div class="flex items-center">
-				<a href="/" class="flex items-center text-xl font-bold text-gray-900">
-					<span class="gradient-text font-serif">hongincanada</span>
-				</a>
-			</div>
+		<div class="flex h-16 items-center justify-between">
+			<a href="/" class="flex items-center text-xl font-bold">
+				<span class="gradient-text font-serif">hongincanada</span>
+			</a>
+
+			<!-- Desktop nav -->
 			<div class="hidden items-center space-x-8 md:flex">
-				<a href="/#about" class="text-gray-600 transition hover:text-gray-900">About</a>
-				<a href="/#projects" class="text-gray-600 transition hover:text-gray-900">Projects</a>
-				<a href="/#writing" class="text-gray-600 transition hover:text-gray-900">Writing</a>
+				<a href="/#about" class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white">About</a>
+				<a href="/#projects" class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white">Projects</a>
+				<a href="/#writing" class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white">Writing</a>
 				<a
 					href="/#contact"
-					class="rounded-full bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600"
-					>Contact</a
+					class="rounded-full border border-blue-500/50 bg-blue-500/10 px-4 py-2 text-blue-600 dark:text-blue-400 transition hover:bg-blue-500/20 hover:text-blue-800 dark:hover:text-white"
 				>
+					Contact
+				</a>
+				<button
+					onclick={toggleTheme}
+					class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white"
+					aria-label="Toggle theme"
+				>
+					<i class="fas fa-adjust"></i>
+				</button>
 			</div>
-			<div class="flex items-center md:hidden">
-				<button id="menu-btn" class="text-gray-600 hover:text-gray-900" aria-label="Open menu">
-					<i class="fas fa-bars text-xl"></i>
+
+			<!-- Mobile menu button -->
+			<div class="flex items-center gap-3 md:hidden">
+				<button
+					onclick={toggleTheme}
+					class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white"
+					aria-label="Toggle theme"
+				>
+					<i class="fas fa-adjust"></i>
+				</button>
+				<button
+					onclick={() => (mobileMenuOpen = !mobileMenuOpen)}
+					class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+					aria-label="Toggle menu"
+				>
+					<i class="fas {mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl"></i>
 				</button>
 			</div>
 		</div>
 	</div>
 
 	<!-- Mobile menu -->
-	<div
-		id="mobile-menu"
-		class="hidden border-t border-gray-200 bg-white/90 backdrop-blur-md md:hidden"
-	>
-		<div class="space-y-3 px-4 py-3">
-			<a href="/#about" class="block text-gray-600 transition hover:text-gray-900">About</a>
-			<a href="/#projects" class="block text-gray-600 transition hover:text-gray-900">Projects</a>
-			<a href="/#writing" class="block text-gray-600 transition hover:text-gray-900">Writing</a>
-			<a
-				href="/#contact"
-				class="block rounded-full bg-blue-500 px-4 py-2 text-center text-white transition hover:bg-blue-600"
-				>Contact</a
-			>
+	{#if mobileMenuOpen}
+		<div class="border-t border-gray-200 dark:border-white/5 bg-white/95 dark:bg-gray-950/95 backdrop-blur-lg md:hidden">
+			<div class="space-y-1 px-4 py-4">
+				<a
+					href="/#about"
+					onclick={closeMobileMenu}
+					class="block rounded-lg px-3 py-2 text-gray-700 dark:text-gray-300 transition hover:bg-gray-100 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white"
+				>
+					About
+				</a>
+				<a
+					href="/#projects"
+					onclick={closeMobileMenu}
+					class="block rounded-lg px-3 py-2 text-gray-700 dark:text-gray-300 transition hover:bg-gray-100 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white"
+				>
+					Projects
+				</a>
+				<a
+					href="/#writing"
+					onclick={closeMobileMenu}
+					class="block rounded-lg px-3 py-2 text-gray-700 dark:text-gray-300 transition hover:bg-gray-100 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white"
+				>
+					Writing
+				</a>
+				<a
+					href="/#contact"
+					onclick={closeMobileMenu}
+					class="mt-2 block rounded-lg bg-blue-500/10 px-3 py-2 text-center text-blue-600 dark:text-blue-400 transition hover:bg-blue-500/20"
+				>
+					Contact
+				</a>
+			</div>
 		</div>
-	</div>
+	{/if}
 </nav>
 
-<!-- Add padding to account for fixed navbar -->
-<div class="pt-16"></div>
+<!-- Spacer for fixed nav -->
+<div class="h-16"></div>
 
 <main>
 	{@render children()}
 </main>
 
-<footer class="bg-gray-900 py-12 text-white">
+<footer class="border-t border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-gray-950 py-12 text-gray-900 dark:text-white transition-colors">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<div class="flex flex-col items-center justify-between md:flex-row">
 			<div class="mb-6 md:mb-0">
 				<a href="/" class="flex items-center text-xl font-bold">
 					<span class="gradient-text font-serif">hongincanada</span>
 				</a>
-				<p class="mt-2 text-gray-400">Engineering Manager & Product Builder</p>
+				<p class="mt-2 text-sm text-gray-500">Engineering Manager & Product Builder</p>
 			</div>
 			<div class="flex flex-col items-center md:items-end">
-				<div class="mb-4 flex space-x-6">
+				<div class="mb-4 flex space-x-5">
+					<a
+						href="https://github.com/sowenzhang"
+						target="_blank"
+						class="text-gray-400 dark:text-gray-500 transition hover:text-gray-900 dark:hover:text-white"
+						aria-label="GitHub profile"
+					>
+						<i class="fab fa-github text-lg"></i>
+					</a>
 					<a
 						href="https://www.linkedin.com/in/keepsrunning/"
-						class="text-gray-400 transition hover:text-white"
+						target="_blank"
+						class="text-gray-400 dark:text-gray-500 transition hover:text-gray-900 dark:hover:text-white"
 						aria-label="LinkedIn profile"
 					>
-						<i class="fab fa-linkedin-in"></i>
+						<i class="fab fa-linkedin-in text-lg"></i>
+					</a>
+					<a
+						href="https://www.strava.com/athletes/6051008"
+						target="_blank"
+						class="text-gray-400 dark:text-gray-500 transition hover:text-gray-900 dark:hover:text-white"
+						aria-label="Strava profile"
+					>
+						<i class="fab fa-strava text-lg"></i>
 					</a>
 				</div>
-				<p class="text-sm text-gray-400">© 2025 Hong in Canada. All rights reserved.</p>
+				<p class="text-xs text-gray-400 dark:text-gray-600">&copy; 2025 Hong in Canada. All rights reserved.</p>
 			</div>
 		</div>
 	</div>
 </footer>
 
-<!-- Back to top button -->
+<!-- Back to top -->
 <button
-	id="back-to-top"
-	class="invisible fixed bottom-8 right-8 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white opacity-0 shadow-lg transition hover:bg-blue-600"
+	onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+	class="fixed bottom-8 right-8 flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 dark:border-white/10 bg-white/80 dark:bg-gray-900/80 text-gray-500 dark:text-gray-400 shadow-lg backdrop-blur-sm transition hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white {scrolled
+		? 'opacity-100'
+		: 'pointer-events-none opacity-0'}"
 	aria-label="Back to top"
 >
 	<i class="fas fa-arrow-up"></i>

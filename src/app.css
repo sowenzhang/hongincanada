@@ -3,7 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
+/* Dark-first base styles */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #f9fafb;
+	color: #111827;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+	background-color: #030712;
+	color: #f9fafb;
+}
+
+/* Gradient text */
 .gradient-text {
 	background: linear-gradient(135deg, #3b82f6, #8b5cf6);
 	-webkit-background-clip: text;
@@ -11,6 +27,24 @@
 	background-clip: text;
 }
 
+.gradient-text-warm {
+	background: linear-gradient(135deg, #3b82f6, #06b6d4);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* Hero animated gradient mesh background */
+.hero-gradient-mesh {
+	background:
+		radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+		radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+		radial-gradient(ellipse at 50% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+	animation: gradientShift 8s ease infinite;
+	background-size: 200% 200%;
+}
+
+/* Legacy hero pattern (kept for article pages) */
 .hero-pattern {
 	background-image: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
 		radial-gradient(circle at 75% 75%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
@@ -25,18 +59,66 @@
 	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.cat-paw {
-	position: absolute;
-	opacity: 0.1;
-	animation: float 6s ease-in-out infinite;
+/* Project cards: glass morphism style */
+.glass-card {
+	background: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	backdrop-filter: blur(12px);
+	transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes float {
-	0%, 100% { transform: translateY(0px); }
-	50% { transform: translateY(-20px); }
+.glass-card:hover {
+	background: rgba(255, 255, 255, 0.9);
+	border-color: rgba(0, 0, 0, 0.15);
+	transform: translateY(-4px);
+	box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
 }
 
-/* Enhanced header styles - subtle and clean */
+.dark .glass-card {
+	background: rgba(255, 255, 255, 0.03);
+	border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-card:hover {
+	background: rgba(255, 255, 255, 0.06);
+	border-color: rgba(255, 255, 255, 0.15);
+	box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Nav glassmorphism */
+.nav-glass {
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(16px);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-glass.scrolled {
+	background: rgba(255, 255, 255, 0.95);
+	border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark .nav-glass {
+	background: rgba(3, 7, 18, 0.7);
+	border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark .nav-glass.scrolled {
+	background: rgba(3, 7, 18, 0.92);
+	border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Entrance animation helpers */
+.animate-stagger > * {
+	opacity: 0;
+}
+
+/* Initial state for entrance animations (opacity 0) */
+.entrance-hidden {
+	opacity: 0;
+}
+
+/* Enhanced header styles for article pages */
 .prose h2 {
 	border-left: 4px solid #3b82f6;
 	padding-left: 1rem;
@@ -71,7 +153,7 @@
 	color: #e5e7eb;
 }
 
-/* Enhanced link styles to ensure visibility */
+/* Enhanced link styles */
 .prose a {
 	color: #2563eb;
 	text-decoration: underline;
@@ -92,9 +174,21 @@
 	color: #93c5fd;
 }
 
-/* .prose h4 {
-	@apply border-l-2 border-gray-400 dark:border-gray-500 pl-3 py-1 font-medium text-gray-700 dark:text-gray-300 text-lg mb-3 mt-6;
-} */
+/* Section divider glow */
+.section-glow {
+	position: relative;
+}
+
+.section-glow::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+}
 
 /* Mobile-friendly list styles */
 @media (max-width: 640px) {
@@ -113,7 +207,6 @@
 		margin-bottom: 0.25rem;
 	}
 
-	/* Special styling for nested lists */
 	.prose ul ul,
 	.prose ol ol,
 	.prose ul ol,
@@ -127,18 +220,15 @@
 
 /* Enhanced mobile readability for callout boxes */
 @media (max-width: 640px) {
-	/* Reduce padding in callout boxes on mobile */
 	.not-prose {
 		padding: 1rem;
 	}
 
-	/* Target elements with border-left directly */
 	[class*="border-l-4"] {
 		padding-left: 0.75rem !important;
 		padding-right: 0.75rem !important;
 	}
 
-	/* Override BaseSeriesPage specific prose classes for mobile */
 	.prose ul {
 		margin-left: 0.75rem !important;
 		padding-left: 0.75rem !important;
@@ -152,5 +242,18 @@
 	.prose li {
 		padding-left: 0.25rem !important;
 		margin-bottom: 0.25rem !important;
+	}
+}
+
+/* Reduced motion: disable all custom animations */
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	.hero-gradient-mesh {
+		animation: none;
 	}
 }
