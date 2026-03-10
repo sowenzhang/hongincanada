@@ -11,14 +11,25 @@
 		ogImage: 'https://www.hongincanada.com/profile.png'
 	};
 
-	// Hero entrance animation state
-	let heroReady = $state(false);
+	// Hero entrance animation — multi-stage cinematic reveal
+	let stage = $state(0); // 0=hidden, 1=bg, 2=line, 3=greeting, 4=name, 5=tagline, 6=subtagline, 7=cta, 8=scroll
 
 	onMount(() => {
-		// Trigger entrance animation
-		requestAnimationFrame(() => {
-			heroReady = true;
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+		if (prefersReducedMotion) {
+			stage = 8;
+			return;
+		}
+
+		// Cinematic staggered entrance
+		const timings = [100, 400, 800, 1000, 1500, 1900, 2300, 2800];
+		const timeouts: ReturnType<typeof setTimeout>[] = [];
+		timings.forEach((ms, i) => {
+			timeouts.push(setTimeout(() => { stage = i + 1; }, ms));
 		});
+
+		return () => timeouts.forEach(clearTimeout);
 	});
 
 	function generateEmailLink() {
@@ -70,32 +81,71 @@
 <!-- HERO: Full-viewport immersive entrance       -->
 <!-- ============================================ -->
 <section
-	class="hero-gradient-mesh relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-white dark:bg-gray-950"
+	class="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-white dark:bg-gray-950"
 	itemscope
 	itemtype="https://schema.org/Person"
 >
-	<!-- Subtle grid pattern overlay -->
+	<!-- Animated gradient mesh background — scales up from center -->
 	<div
-		class="pointer-events-none absolute inset-0 opacity-[0.03]"
-		style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 32px 32px;"
+		class="hero-bg-reveal hero-gradient-mesh pointer-events-none absolute inset-0"
+		style="opacity: {stage >= 1 ? 1 : 0}; transform: scale({stage >= 1 ? 1 : 1.3});"
 	></div>
 
+	<!-- Subtle grid pattern overlay -->
+	<div
+		class="pointer-events-none absolute inset-0 transition-opacity duration-1000"
+		style="opacity: {stage >= 1 ? 0.03 : 0}; background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 32px 32px;"
+	></div>
+
+	<!-- Decorative reveal line — sweeps outward from center -->
+	<div class="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+		<div
+			class="hero-reveal-line h-[1px] bg-gradient-to-r from-transparent via-blue-500/60 to-transparent"
+			style="width: {stage >= 2 ? '280px' : '0px'}; opacity: {stage >= 4 ? 0 : 1};"
+		></div>
+	</div>
+
 	<div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
-		<!-- Name -->
-		<h1
-			class="mb-4 text-5xl font-bold tracking-tight text-gray-900 dark:text-white transition-all duration-1000 md:text-7xl lg:text-8xl {heroReady
-				? 'translate-y-0 opacity-100'
-				: 'translate-y-8 opacity-0'}"
+		<!-- Greeting — fades in with subtle upward drift + deblur -->
+		<p
+			class="hero-text-reveal mb-2 font-serif text-lg text-gray-500 dark:text-gray-500 md:text-xl"
+			style="opacity: {stage >= 3 ? 1 : 0}; transform: translateY({stage >= 3 ? '0' : '20px'}); filter: blur({stage >= 3 ? '0px' : '8px'});"
 		>
-			<span class="font-serif">Hello, I'm </span>
-			<span class="gradient-text font-serif" itemprop="name">Hong</span>
+			Hello, I'm
+		</p>
+
+		<!-- Name — dramatic scale-down + deblur reveal -->
+		<h1
+			class="hero-name-dramatic mb-6 text-6xl font-bold tracking-tight md:text-8xl lg:text-9xl"
+			style="opacity: {stage >= 4 ? 1 : 0}; transform: scale({stage >= 4 ? 1 : 1.15}) translateY({stage >= 4 ? '0' : '10px'}); filter: blur({stage >= 4 ? '0px' : '12px'});"
+		>
+			<span
+				class="font-serif bg-gradient-to-r from-blue-600 via-purple-500 to-cyan-500 bg-clip-text text-transparent"
+				style="background-size: {stage >= 4 ? '200% 200%' : '100% 100%'}; animation: {stage >= 4 ? 'gradientTextShimmer 3s ease infinite' : 'none'};"
+				itemprop="name"
+			>Hong</span>
 		</h1>
+
+		<!-- Decorative divider under name -->
+		<div class="mx-auto mb-6 flex items-center justify-center gap-3">
+			<div
+				class="hero-reveal-line h-[1px] bg-gradient-to-r from-transparent to-blue-500/40"
+				style="width: {stage >= 5 ? '60px' : '0px'}; opacity: {stage >= 5 ? 1 : 0};"
+			></div>
+			<div
+				class="hero-text-reveal h-1.5 w-1.5 rounded-full bg-blue-500/60"
+				style="opacity: {stage >= 5 ? 1 : 0}; transform: scale({stage >= 5 ? 1 : 0});"
+			></div>
+			<div
+				class="hero-reveal-line h-[1px] bg-gradient-to-l from-transparent to-purple-500/40"
+				style="width: {stage >= 5 ? '60px' : '0px'}; opacity: {stage >= 5 ? 1 : 0};"
+			></div>
+		</div>
 
 		<!-- Tagline -->
 		<p
-			class="mb-3 text-lg text-gray-600 dark:text-gray-400 transition-all delay-300 duration-1000 md:text-xl {heroReady
-				? 'translate-y-0 opacity-100'
-				: 'translate-y-6 opacity-0'}"
+			class="hero-text-reveal mb-3 text-lg text-gray-600 dark:text-gray-400 md:text-xl"
+			style="opacity: {stage >= 5 ? 1 : 0}; transform: translateY({stage >= 5 ? '0' : '16px'}); filter: blur({stage >= 5 ? '0px' : '6px'});"
 			itemprop="description"
 		>
 			<span itemprop="jobTitle">Engineering/Product Lead</span> · HCI · Product Builder
@@ -103,28 +153,25 @@
 
 		<!-- Sub-tagline -->
 		<p
-			class="mb-10 text-sm text-gray-500 dark:text-gray-500 transition-all delay-500 duration-1000 md:text-base {heroReady
-				? 'translate-y-0 opacity-100'
-				: 'translate-y-4 opacity-0'}"
+			class="hero-text-reveal mb-12 text-sm text-gray-500 dark:text-gray-500 md:text-base"
+			style="opacity: {stage >= 6 ? 1 : 0}; transform: translateY({stage >= 6 ? '0' : '12px'}); filter: blur({stage >= 6 ? '0px' : '4px'});"
 		>
 			I build things that solve real problems for real people.
 		</p>
 
-		<!-- CTA links -->
-		<div
-			class="flex flex-wrap items-center justify-center gap-4 transition-all delay-700 duration-1000 {heroReady
-				? 'translate-y-0 opacity-100'
-				: 'translate-y-4 opacity-0'}"
-		>
+		<!-- CTA links — pop in with slight overshoot -->
+		<div class="flex flex-wrap items-center justify-center gap-4">
 			<a
 				href="#projects"
-				class="rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-2.5 text-sm font-medium text-blue-600 dark:text-blue-400 transition hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
+				class="hero-cta-pop rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-2.5 text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
+				style="opacity: {stage >= 7 ? 1 : 0}; transform: scale({stage >= 7 ? 1 : 0.8}) translateY({stage >= 7 ? '0' : '16px'}); filter: blur({stage >= 7 ? '0px' : '4px'});"
 			>
 				See My Work
 			</a>
 			<a
 				href="#about"
-				class="rounded-full border border-gray-300 dark:border-white/10 px-6 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:border-gray-400 dark:hover:border-white/20 hover:text-gray-900 dark:hover:text-white"
+				class="hero-cta-pop rounded-full border border-gray-300 dark:border-white/10 px-6 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-400 transition-colors hover:border-gray-400 dark:hover:border-white/20 hover:text-gray-900 dark:hover:text-white"
+				style="opacity: {stage >= 7 ? 1 : 0}; transform: scale({stage >= 7 ? 1 : 0.8}) translateY({stage >= 7 ? '0' : '16px'}); filter: blur({stage >= 7 ? '0px' : '4px'});"
 			>
 				About Me
 			</a>
@@ -133,9 +180,8 @@
 
 	<!-- Scroll indicator -->
 	<div
-		class="absolute bottom-8 left-1/2 -translate-x-1/2 transition-all delay-1000 duration-1000 {heroReady
-			? 'opacity-100'
-			: 'opacity-0'}"
+		class="hero-text-reveal absolute bottom-8 left-1/2 -translate-x-1/2"
+		style="opacity: {stage >= 8 ? 1 : 0}; transform: translateX(-50%) translateY({stage >= 8 ? '0' : '10px'});"
 	>
 		<div class="flex animate-bounce flex-col items-center gap-2 text-gray-600">
 			<span class="text-xs tracking-widest uppercase">Scroll</span>
@@ -161,35 +207,35 @@
 
 		<!-- Featured Live Projects -->
 		<div class="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-			<!-- Minibreaks.io -->
+			<!-- NoCloud Chat -->
 			<ScrollReveal delay={100}>
 				<a
-					href="https://minibreaks.io"
+					href="https://github.com/sowenzhang/Nocloud"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group block rounded-2xl p-6"
+					class="glass-card group flex h-full flex-col rounded-2xl p-6"
 					itemscope
 					itemtype="https://schema.org/SoftwareApplication"
 				>
 					<div class="mb-4 flex items-center justify-between">
-						<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10">
-							<i class="fas fa-spa text-xl text-blue-400"></i>
+						<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10">
+							<i class="fas fa-shield-halved text-xl text-emerald-400"></i>
 						</div>
 						<div class="flex items-center gap-2">
-							<span class="flex items-center gap-1.5 rounded-full bg-green-500/10 px-2.5 py-1 text-[10px] font-medium text-green-400">
-								<span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>Live
+							<span class="flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
+								<i class="fab fa-github text-[10px]"></i> Open Source
 							</span>
-							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-blue-400"></i>
+							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-emerald-400"></i>
 						</div>
 					</div>
-					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">Minibreaks.io</h3>
-					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
-						Mental health breaks in your workplace. Built with AI assistance — the subject of my 10-part series.
+					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">NoCloud Chat</h3>
+					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
+						A messaging app for home. Works within your subnet — no registration, no cloud, complete privacy.
 					</p>
 					<div class="flex flex-wrap gap-2">
-						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">SvelteKit</span>
-						<span class="rounded-full bg-green-500/10 px-2.5 py-0.5 text-[10px] font-medium text-green-400">AI-Powered</span>
-						<span class="rounded-full bg-purple-500/10 px-2.5 py-0.5 text-[10px] font-medium text-purple-400">Mental Health</span>
+						<span class="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-medium text-emerald-400">Privacy-First</span>
+						<span class="rounded-full bg-orange-500/10 px-2.5 py-0.5 text-[10px] font-medium text-orange-400">Local Network</span>
+						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">Messaging</span>
 					</div>
 				</a>
 			</ScrollReveal>
@@ -200,7 +246,7 @@
 					href="https://nearbygame.com"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group block rounded-2xl p-6"
+					class="glass-card group flex h-full flex-col rounded-2xl p-6"
 					itemscope
 					itemtype="https://schema.org/SoftwareApplication"
 				>
@@ -216,7 +262,7 @@
 						</div>
 					</div>
 					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">NearbyGame.com</h3>
-					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
+					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
 						Discover and join local games and sports. Connect with players, find your next match.
 					</p>
 					<div class="flex flex-wrap gap-2">
@@ -227,35 +273,35 @@
 				</a>
 			</ScrollReveal>
 
-			<!-- Nocloud -->
+			<!-- Minibreaks.io -->
 			<ScrollReveal delay={300}>
 				<a
-					href="https://github.com/sowenzhang/Nocloud"
+					href="https://minibreaks.io"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group block rounded-2xl p-6"
+					class="glass-card group flex h-full flex-col rounded-2xl p-6"
 					itemscope
 					itemtype="https://schema.org/SoftwareApplication"
 				>
 					<div class="mb-4 flex items-center justify-between">
-						<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10">
-							<i class="fas fa-shield-halved text-xl text-emerald-400"></i>
+						<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10">
+							<i class="fas fa-spa text-xl text-blue-400"></i>
 						</div>
 						<div class="flex items-center gap-2">
-							<span class="flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
-								<i class="fab fa-github text-[10px]"></i> Open Source
+							<span class="flex items-center gap-1.5 rounded-full bg-green-500/10 px-2.5 py-1 text-[10px] font-medium text-green-400">
+								<span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>Live
 							</span>
-							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-emerald-400"></i>
+							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-blue-400"></i>
 						</div>
 					</div>
-					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">Nocloud</h3>
-					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
-						A messaging app for home. Works within your subnet — no registration, no cloud, complete privacy.
+					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">Minibreaks.io</h3>
+					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
+						Mental health breaks in your workplace. Built with AI assistance — the subject of my 10-part series.
 					</p>
 					<div class="flex flex-wrap gap-2">
-						<span class="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-medium text-emerald-400">Privacy-First</span>
-						<span class="rounded-full bg-orange-500/10 px-2.5 py-0.5 text-[10px] font-medium text-orange-400">Local Network</span>
-						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">Messaging</span>
+						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">SvelteKit</span>
+						<span class="rounded-full bg-green-500/10 px-2.5 py-0.5 text-[10px] font-medium text-green-400">AI-Powered</span>
+						<span class="rounded-full bg-purple-500/10 px-2.5 py-0.5 text-[10px] font-medium text-purple-400">Mental Health</span>
 					</div>
 				</a>
 			</ScrollReveal>
@@ -317,7 +363,7 @@
 		<div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
 			<!-- Mosaic Series -->
 			<ScrollReveal delay={100}>
-				<a href="/mosaic" class="glass-card group block rounded-2xl p-6">
+				<a href="/mosaic" class="glass-card group flex h-full flex-col rounded-2xl p-6">
 					<div class="mb-4 flex items-center gap-3">
 						<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
 							<i class="fas fa-th text-purple-400"></i>
@@ -329,7 +375,7 @@
 					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-purple-300 transition">
 						Mosaic: From App Stores to App Flows
 					</h3>
-					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 						A vision that replaces app stores with seamless, context-aware app flows. What if your phone understood your journey?
 					</p>
 					<span class="flex items-center gap-2 text-sm font-medium text-purple-400 transition group-hover:gap-3">
@@ -340,7 +386,7 @@
 
 			<!-- AI Series -->
 			<ScrollReveal delay={200}>
-				<a href="/series" class="glass-card group block rounded-2xl p-6">
+				<a href="/series" class="glass-card group flex h-full flex-col rounded-2xl p-6">
 					<div class="mb-4 flex items-center gap-3">
 						<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
 							<i class="fas fa-robot text-emerald-400"></i>
@@ -352,7 +398,7 @@
 					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-300 transition">
 						How I Built MiniBreaks.io With AI
 					</h3>
-					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 						The real story of building a complete website with AI — from idea to deployment. What worked. What didn't.
 					</p>
 					<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
@@ -464,7 +510,7 @@
 								src="/melody.jpg"
 								loading="lazy"
 								alt="Melody — Hong's cat"
-								class="h-48 w-full object-cover"
+								class="h-48 w-full object-cover grayscale"
 							/>
 						</div>
 						<div class="grid grid-cols-2 gap-4">
@@ -473,7 +519,7 @@
 									src="/otto.jpg"
 									loading="lazy"
 									alt="Otto — Hong's cat"
-									class="h-32 w-full object-cover"
+									class="h-40 w-full object-cover"
 								/>
 							</div>
 							<div class="glass-card overflow-hidden rounded-2xl">
@@ -481,7 +527,7 @@
 									src="/AI-me-and-otto.jpg"
 									loading="lazy"
 									alt="Hong and Otto together"
-									class="h-32 w-full object-cover"
+									class="h-40 w-full object-cover"
 								/>
 							</div>
 						</div>
@@ -494,6 +540,9 @@
 						<p class="mb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
 							When I'm not building products or leading teams, you'll find me running trails around the Seattle area,
 							playing table tennis (still learning — still improving), or being bossed around by Melody and Otto.
+						</p>
+						<p class="mb-6 text-sm italic text-gray-500 dark:text-gray-400 leading-relaxed">
+							In loving memory of Melody. You are deeply missed and always in our hearts.
 						</p>
 						<div class="flex flex-wrap gap-3">
 							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
@@ -509,10 +558,19 @@
 								<i class="fas fa-swatchbook mr-2 text-yellow-400"></i>UX Design
 							</span>
 							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
-								<i class="fas fa-lightbulb mr-2 text-blue-400"></i>Product Strategy
+								<i class="fas fa-microscope mr-2 text-yellow-400"></i>HCI Researcher
 							</span>
 							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
-								<i class="fas fa-people-group mr-2 text-cyan-400"></i>Team Leadership
+								<i class="fas fa-lightbulb mr-2 text-blue-400"></i>Product Mindset
+							</span>
+							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+								<i class="fas fa-wand-magic-sparkles mr-2 text-indigo-400"></i>AI Builder
+							</span>
+							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+								<i class="fas fa-drafting-compass mr-2 text-emerald-400"></i>UX Thinking
+							</span>
+							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+								<i class="fas fa-people-group mr-2 text-cyan-400"></i>Engineering Lead
 							</span>
 						</div>
 					</div>

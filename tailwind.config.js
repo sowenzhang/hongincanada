@@ -19,6 +19,7 @@ export default {
 				'pulse-slow': 'pulse 3s ease-in-out infinite',
 				'float': 'float 6s ease-in-out infinite',
 				'gradient-shift': 'gradientShift 8s ease infinite',
+				'gradient-text-shimmer': 'gradientTextShimmer 3s ease infinite',
 			},
 			keyframes: {
 				fadeIn: {
@@ -40,6 +41,10 @@ export default {
 				gradientShift: {
 					'0%, 100%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
+				},
+				gradientTextShimmer: {
+					'0%, 100%': { backgroundPosition: '0% 50%', backgroundSize: '200% 200%' },
+					'50%': { backgroundPosition: '100% 50%', backgroundSize: '200% 200%' },
 				},
 			},
 		}
