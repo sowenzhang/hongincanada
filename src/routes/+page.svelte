@@ -148,7 +148,7 @@
 			style="opacity: {stage >= 5 ? 1 : 0}; transform: translateY({stage >= 5 ? '0' : '16px'}); filter: blur({stage >= 5 ? '0px' : '6px'});"
 			itemprop="description"
 		>
-			<span itemprop="jobTitle">Engineering/Product Lead</span> · HCI · Product Builder
+			<span itemprop="jobTitle">Engineering Lead</span> · HCI · Product Builder
 		</p>
 
 		<!-- Sub-tagline -->
@@ -360,9 +360,39 @@
 			</div>
 		</ScrollReveal>
 
-		<div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+		<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+			<!-- NoCloud Chat Blog (featured — spans both rows) -->
+			<div class="md:row-span-2 flex flex-col">
+				<a href="/blog/why-i-build-nocloud-chat" class="glass-card group flex flex-1 flex-col rounded-2xl p-6">
+					<div class="mb-4 flex items-center gap-3">
+						<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10">
+							<i class="fas fa-cloud text-cyan-400"></i>
+						</div>
+						<span class="rounded-full bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-400">
+							BLOG
+						</span>
+					</div>
+					<h3 class="mb-3 text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-300 transition">
+						Why Do I Build NoCloud Chat
+					</h3>
+					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						A candid look at why I built a chat app that keeps your conversations private — no cloud, no compromise.
+					</p>
+					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						NoCloud Chat is a zero-registration, instant local-network chat. Launch on any device on the same Wi-Fi or LAN — no sign-up, no server, no internet needed.
+					</p>
+					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						Built with Compose for cross platform, it is an interesting project to create a truly private messaging experience for friends and family.
+						In this article, I share the story of its creation, the challenges I faced, and the lessons I learned along the way.
+					</p>
+					<span class="flex items-center gap-2 text-sm font-medium text-cyan-400 transition group-hover:gap-3">
+						Read Post <i class="fas fa-arrow-right text-xs"></i>
+					</span>
+				</a>
+			</div>
+
 			<!-- Mosaic Series -->
-			<ScrollReveal delay={100}>
+			<ScrollReveal delay={200}>
 				<a href="/mosaic" class="glass-card group flex h-full flex-col rounded-2xl p-6">
 					<div class="mb-4 flex items-center gap-3">
 						<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
@@ -385,7 +415,7 @@
 			</ScrollReveal>
 
 			<!-- AI Series -->
-			<ScrollReveal delay={200}>
+			<ScrollReveal delay={300}>
 				<a href="/series" class="glass-card group flex h-full flex-col rounded-2xl p-6">
 					<div class="mb-4 flex items-center gap-3">
 						<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
@@ -409,9 +439,9 @@
 		</div>
 
 		<!-- Coming soon teaser -->
-		<ScrollReveal delay={300}>
+		<ScrollReveal delay={400}>
 			<p class="mt-10 text-center text-sm text-gray-600">
-				<i class="fas fa-pen-nib mr-1"></i> 2 more articles in the works — stay tuned.
+				<i class="fas fa-pen-nib mr-1"></i> More articles in the works — stay tuned.
 			</p>
 		</ScrollReveal>
 	</div>
