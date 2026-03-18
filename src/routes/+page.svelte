@@ -360,83 +360,98 @@
 			</div>
 		</ScrollReveal>
 
-		<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
-			<!-- NoCloud Chat Blog (featured — spans both rows) -->
-			<div class="md:row-span-2 flex flex-col">
-				<a href="/blog/why-i-build-nocloud-chat" class="glass-card group flex flex-1 flex-col rounded-2xl p-6">
-					<div class="mb-4 flex items-center gap-3">
-						<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10">
-							<i class="fas fa-cloud text-cyan-400"></i>
+		<ScrollReveal>
+			<div class="mx-auto max-w-6xl columns-1 gap-6 md:columns-2">
+				<!-- Latest blog first: duplicate this block to add future posts -->
+				<article class="mb-6 break-inside-avoid">
+					<a href="/blog/minibreaks-pivot" class="glass-card group flex flex-col rounded-2xl p-6">
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
+								<i class="fas fa-leaf text-orange-400"></i>
+							</div>
+							<span class="rounded-full bg-orange-500/10 px-2.5 py-1 text-[10px] font-medium text-orange-400">
+								LATEST BLOG
+							</span>
 						</div>
-						<span class="rounded-full bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-400">
-							BLOG
+						<h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-orange-300 transition">
+							MiniBreaks Pivot: From Wellness to Micro-Apps
+						</h3>
+						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+							Why I pivoted MiniBreaks into a weekly micro-app experiment, and how I structured AI roles to ship one tiny app every week.
+						</p>
+						<span class="flex items-center gap-2 text-sm font-medium text-orange-400 transition group-hover:gap-3">
+							Read Post <i class="fas fa-arrow-right text-xs"></i>
 						</span>
-					</div>
-					<h3 class="mb-3 text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-300 transition">
-						Why Do I Build NoCloud Chat
-					</h3>
-					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-						A candid look at why I built a chat app that keeps your conversations private — no cloud, no compromise.
-					</p>
-					<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-						NoCloud Chat is a zero-registration, instant local-network chat. Launch on any device on the same Wi-Fi or LAN — no sign-up, no server, no internet needed.
-					</p>
-					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-						Built with Compose for cross platform, it is an interesting project to create a truly private messaging experience for friends and family.
-						In this article, I share the story of its creation, the challenges I faced, and the lessons I learned along the way.
-					</p>
-					<span class="flex items-center gap-2 text-sm font-medium text-cyan-400 transition group-hover:gap-3">
-						Read Post <i class="fas fa-arrow-right text-xs"></i>
-					</span>
-				</a>
+					</a>
+				</article>
+
+				<article class="mb-6 break-inside-avoid">
+					<a href="/blog/why-i-build-nocloud-chat" class="glass-card group flex flex-col rounded-2xl p-6">
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10">
+								<i class="fas fa-cloud text-cyan-400"></i>
+							</div>
+							<span class="rounded-full bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-400">
+								BLOG
+							</span>
+						</div>
+						<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-cyan-300 transition">
+							Why Do I Build NoCloud Chat
+						</h3>
+						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+							Why I built a local-first chat app with no registration and no cloud dependency.
+						</p>
+						<span class="flex items-center gap-2 text-sm font-medium text-cyan-400 transition group-hover:gap-3">
+							Read Post <i class="fas fa-arrow-right text-xs"></i>
+						</span>
+					</a>
+				</article>
+
+				<article class="mb-6 break-inside-avoid">
+					<a href="/mosaic" class="glass-card group flex flex-col rounded-2xl p-6">
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
+								<i class="fas fa-th text-purple-400"></i>
+							</div>
+							<span class="rounded-full bg-purple-500/10 px-2.5 py-1 text-[10px] font-medium text-purple-400">
+								4-PART ARTICLE
+							</span>
+						</div>
+						<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-purple-300 transition">
+							Mosaic: From App Stores to App Flows
+						</h3>
+						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+							A vision that replaces app stores with seamless, context-aware app flows.
+						</p>
+						<span class="flex items-center gap-2 text-sm font-medium text-purple-400 transition group-hover:gap-3">
+							Read Article <i class="fas fa-arrow-right text-xs"></i>
+						</span>
+					</a>
+				</article>
+
+				<article class="mb-6 break-inside-avoid">
+					<a href="/series" class="glass-card group flex flex-col rounded-2xl p-6">
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
+								<i class="fas fa-robot text-emerald-400"></i>
+							</div>
+							<span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
+								10-PART SERIES
+							</span>
+						</div>
+						<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-300 transition">
+							How I Built MiniBreaks.io With AI
+						</h3>
+						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+							The full story of building a complete website with AI from idea to deployment.
+						</p>
+						<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
+							Read Series <i class="fas fa-arrow-right text-xs"></i>
+						</span>
+					</a>
+				</article>
 			</div>
-
-			<!-- Mosaic Series -->
-			<ScrollReveal delay={200}>
-				<a href="/mosaic" class="glass-card group flex h-full flex-col rounded-2xl p-6">
-					<div class="mb-4 flex items-center gap-3">
-						<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
-							<i class="fas fa-th text-purple-400"></i>
-						</div>
-						<span class="rounded-full bg-purple-500/10 px-2.5 py-1 text-[10px] font-medium text-purple-400">
-							4-PART ARTICLE
-						</span>
-					</div>
-					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-purple-300 transition">
-						Mosaic: From App Stores to App Flows
-					</h3>
-					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-						A vision that replaces app stores with seamless, context-aware app flows. What if your phone understood your journey?
-					</p>
-					<span class="flex items-center gap-2 text-sm font-medium text-purple-400 transition group-hover:gap-3">
-						Read Article <i class="fas fa-arrow-right text-xs"></i>
-					</span>
-				</a>
-			</ScrollReveal>
-
-			<!-- AI Series -->
-			<ScrollReveal delay={300}>
-				<a href="/series" class="glass-card group flex h-full flex-col rounded-2xl p-6">
-					<div class="mb-4 flex items-center gap-3">
-						<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
-							<i class="fas fa-robot text-emerald-400"></i>
-						</div>
-						<span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
-							10-PART SERIES
-						</span>
-					</div>
-					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-300 transition">
-						How I Built MiniBreaks.io With AI
-					</h3>
-					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-						The real story of building a complete website with AI — from idea to deployment. What worked. What didn't.
-					</p>
-					<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
-						Read Series <i class="fas fa-arrow-right text-xs"></i>
-					</span>
-				</a>
-			</ScrollReveal>
-		</div>
+		</ScrollReveal>
 
 		<!-- Coming soon teaser -->
 		<ScrollReveal delay={400}>

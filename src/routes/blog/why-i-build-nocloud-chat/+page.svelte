@@ -44,6 +44,14 @@
 	function scrollToTop() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
+
+	function getTwitterShareUrl() {
+		return `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageData.canonical)}&text=${encodeURIComponent(pageData.title)}`;
+	}
+
+	function getLinkedInShareUrl() {
+		return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageData.canonical)}`;
+	}
 </script>
 
 <svelte:head>
@@ -298,18 +306,54 @@
 				<!-- Sticky TOC Sidebar -->
 				{#if showTOC}
 					<aside class="lg:w-56 lg:flex-shrink-0" transition:slide={{ axis: 'x' }}>
-						<div class="sticky top-20 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 shadow-lg">
-							<h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">Contents</h3>
-							<nav class="space-y-1">
-								{#each tableOfContents as item (item.id)}
+						<div class="sticky top-20 space-y-4">
+							<div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 shadow-lg">
+								<h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">Contents</h3>
+								<nav class="space-y-1">
+									{#each tableOfContents as item (item.id)}
+										<a
+											href="#{item.id}"
+											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+										>
+											{item.title}
+										</a>
+									{/each}
+								</nav>
+							</div>
+
+							<div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 shadow-lg">
+								<h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">Share</h3>
+								<div class="flex gap-2">
 									<a
-										href="#{item.id}"
-										class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+										href={getTwitterShareUrl()}
+										target="_blank"
+										rel="noopener noreferrer"
+										aria-label="Share on Twitter"
+										class="flex-1 rounded-lg bg-blue-50 dark:bg-blue-900/30 p-2 text-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
 									>
-										{item.title}
+										<i class="fab fa-twitter text-xs"></i>
 									</a>
-								{/each}
-							</nav>
+									<a
+										href={getLinkedInShareUrl()}
+										target="_blank"
+										rel="noopener noreferrer"
+										aria-label="Share on LinkedIn"
+										class="flex-1 rounded-lg bg-blue-50 dark:bg-blue-900/30 p-2 text-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+									>
+										<i class="fab fa-linkedin-in text-xs"></i>
+									</a>
+									<button
+										onclick={() => {
+											navigator.clipboard.writeText(pageData.canonical);
+											alert('Link copied!');
+										}}
+										aria-label="Copy link to clipboard"
+										class="flex-1 rounded-lg bg-gray-100 dark:bg-gray-700 p-2 text-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+									>
+										<i class="fas fa-link text-xs"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</aside>
 				{/if}
