@@ -51,16 +51,6 @@
     </script>`}
 </svelte:head>
 
-<!-- Obsolete Disclaimer Banner -->
-<div class="sticky top-16 z-40 bg-amber-50/95 dark:bg-amber-900/30 border-b border-amber-200 dark:border-amber-700/40 backdrop-blur-sm">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex gap-3">
-        <i class="fas fa-triangle-exclamation mt-0.5 text-amber-500 flex-shrink-0" aria-hidden="true"></i>
-        <div class="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
-            <strong>Note: This series is no longer current.</strong> Many of the tools and services referenced here — including certain HuggingFace models and third-party integrations — are no longer available or have changed significantly. It's kept here as a record of a real learning journey. There are better ways to build a website with AI today, but the core takeaway probably remains the same: <em>it's possible, but it's also not as straightforward as people say.</em>
-        </div>
-    </div>
-</div>
-
 <!-- Hero Section -->
 <section class="relative py-20 md:py-24 overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20 pointer-events-none"></div>

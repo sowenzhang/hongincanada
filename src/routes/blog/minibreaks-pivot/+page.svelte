@@ -168,6 +168,8 @@
 								prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-blue-700 dark:prose-h3:text-blue-400
 								prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
 								prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:mb-2
+								prose-ul:list-disc prose-ul:list-inside prose-ul:pl-1 prose-ol:list-decimal prose-ol:list-inside prose-ol:pl-1
+								prose-li:marker:text-gray-500 dark:prose-li:marker:text-gray-400
 								prose-strong:text-gray-900 dark:prose-strong:text-white
 								prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline-offset-2
 								prose-pre:rounded-xl prose-pre:border prose-pre:border-gray-200 dark:prose-pre:border-gray-700
@@ -249,7 +251,7 @@
 										<p class="mb-2 text-gray-700 dark:text-gray-300 leading-relaxed">
 											<strong>Before → After</strong>
 										</p>
-										<ul class="space-y-2 text-gray-700 dark:text-gray-300">
+										<ul class="list-disc list-inside pl-1 space-y-2 text-gray-700 dark:text-gray-300 marker:text-orange-500">
 											<li><strong>Workplace wellness platform</strong> → Micro-app hub</li>
 											<li><strong>Topic-focused</strong> → Tool-focused</li>
 											<li><strong>Hard to decide what to build</strong> → Endless small ideas</li>
@@ -274,7 +276,7 @@
 										A good tiny tool has a few non-negotiable properties:
 									</p>
 
-									<ul>
+									<ul class="list-disc list-inside pl-1 space-y-2">
 										<li>The user understands it immediately</li>
 										<li>It performs one clear action</li>
 										<li>It produces an instant result</li>
@@ -291,24 +293,24 @@
 									<h2>Organizing the AI Workflow</h2>
 
 									<p>
-										To sustain a weekly shipping cadence, I needed to scale my development process. Instead of treating AI as a single assistant, I began organizing the workflow into <strong>roles</strong>.
+										To sustain a weekly shipping cadence, I needed to scale my development process. Instead of treating AI as a single assistant, I began organizing the workflow into <strong>roles</strong>, aka, agents.
 									</p>
 
 									<p>
 										For example:
 									</p>
 
-									<ul>
+									<ul class="list-disc list-inside pl-1 space-y-2">
 										<li>One role helps expand and refine app ideas</li>
 										<li>Another role focuses on implementation</li>
 										<li>Another role checks quality, simplicity, and consistency</li>
 									</ul>
 
 									<p>
-										To support this, I created a small configuration structure inside the repository with <strong>Agents</strong> (representing roles like planner, generator, reviewer) and <strong>Skills</strong> (representing reusable workflows).
+										To support this, I created a small configuration structure inside the repository with <strong>Agents</strong> (representing roles like planner, generator, reviewer) and <strong>Skills</strong> (representing reusable workflows). If you want a deeper reference, OpenAI has a guide on <a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener noreferrer">skills</a>, and Claude has documentation on <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener noreferrer">agent skills</a>.
 									</p>
 
-<figure class="not-prose float-left mr-6 mb-4">
+<figure class="not-prose float-left mr-6 mb-2">
 							<div class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 p-3 flex justify-center w-64">
 								<img
 									src="/pivot_minibreaks/ai_coding_structure.png"
@@ -326,7 +328,7 @@
 										The reviewer, for example, has clear responsibilities:
 									</p>
 
-									<ul>
+									<ul class="list-disc list-inside pl-1 space-y-2">
 										<li>Review apps before shipping</li>
 										<li>Enforce UX simplicity</li>
 										<li>Ensure MiniBreaks consistency</li>
@@ -337,7 +339,7 @@
 										I also created domain-specific skills. The <strong>"Ship Checklist"</strong> skill, for instance, verifies that an app is ready for release by checking:
 									</p>
 
-									<ul>
+									<ul class="list-disc list-inside pl-1 space-y-2">
 										<li><strong>Functionality:</strong> Does it work? Does it always generate a result?</li>
 										<li><strong>UX:</strong> Is there one clear action? Is there a retry option?</li>
 										<li><strong>Mobile:</strong> Does the layout work on small screens? Are buttons accessible?</li>
@@ -399,13 +401,16 @@ Checks:
 									</p>
 
 									<p>
-										The process works like this:
+										The process works like this (just one example, this app doesn't actually exist):
 									</p>
 
 									<div class="bg-gray-900 text-gray-100 rounded-lg p-5 overflow-x-auto font-mono text-sm leading-relaxed border border-gray-700 my-4">
-										<pre><code>/weekly-ship decision spinner, no login, mobile first</code></pre>
+										<pre><code>/weekly-ship decision spinner, with smooth animation, mobile friendly, (other requirements...)</code></pre>
 									</div>
 
+									<p>
+										The agent then will follow the structured workflow (see below steps) to take that idea and turn it into a live app:
+									</p>
 									<ol>
 										<li><strong>Planning:</strong> Refine the idea into a specific app name, route, description, primary interaction, and result format</li>
 										<li><strong>Generation:</strong> Create the app, keeping it mobile-friendly with one main action, a retry option, and minimal dependencies</li>
@@ -446,7 +451,7 @@ Checks:
 									</p>
 
 									<p>
-										I don't yet know what I'll end up with, but I'm genuinely excited about this learning journey.
+										I don't yet know what I'll end up with, but I'm genuinely excited about this new learning journey.
 									</p>
 
 									<p class="text-sm mt-8 italic text-gray-600 dark:text-gray-400">
