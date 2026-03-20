@@ -309,7 +309,22 @@
 
 		<!-- Secondary Projects -->
 		<ScrollReveal delay={100}>
-			<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 max-w-3xl mx-auto">
+			<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+				<a
+					href="https://apps.microsoft.com/detail/9p6jx7l8f0x9"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="glass-card group flex items-center gap-4 rounded-xl p-4"
+				>
+					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-500/10">
+						<i class="fas fa-check-double text-teal-400"></i>
+					</div>
+					<div class="min-w-0">
+						<h4 class="font-semibold text-gray-900 dark:text-white">CrossIt</h4>
+						<p class="truncate text-xs text-gray-500">A lightweight habit helper for recurring routines</p>
+					</div>
+					<i class="fas fa-arrow-right ml-auto text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+				</a>
 				<a
 					href="https://apps.microsoft.com/detail/9n8r514363br"
 					target="_blank"
@@ -338,7 +353,7 @@
 						<h4 class="font-semibold text-gray-900 dark:text-white">FotoAssemblyLine</h4>
 						<p class="truncate text-xs text-gray-500">Batch image processing & filters</p>
 					</div>
-<i class="fas fa-arrow-right ml-auto text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i class="fas fa-arrow-right ml-auto text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
 				</a>
 			</div>
 		</ScrollReveal>

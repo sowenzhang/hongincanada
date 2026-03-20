@@ -22,19 +22,33 @@
 	];
 
 	let isDark = $state(true);
-	let showTOC = $state(true);
+	let showTOC = $state(false);
 	let showBackToTop = $state(false);
+	let prefersReducedMotion = $state(false);
+	let copyStatus = $state('');
 
 	onMount(() => {
+		const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+		prefersReducedMotion = mediaQuery.matches;
+
 		const saved = localStorage.getItem('theme');
 		isDark = saved ? saved === 'dark' : true;
 		document.documentElement.classList.toggle('dark', isDark);
+		showTOC = window.innerWidth >= 1024;
 
 		const handleScroll = () => {
 			showBackToTop = window.scrollY > 400;
 		};
+		const handleMotionChange = (event: MediaQueryListEvent) => {
+			prefersReducedMotion = event.matches;
+		};
+
 		window.addEventListener('scroll', handleScroll, { passive: true });
-		return () => window.removeEventListener('scroll', handleScroll);
+		mediaQuery.addEventListener('change', handleMotionChange);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			mediaQuery.removeEventListener('change', handleMotionChange);
+		};
 	});
 
 	function toggleTheme() {
@@ -44,7 +58,20 @@
 	}
 
 	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+		window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+	}
+
+	async function copyLink() {
+		try {
+			await navigator.clipboard.writeText(pageData.canonical);
+			copyStatus = 'Link copied';
+		} catch {
+			copyStatus = 'Copy failed';
+		}
+
+		setTimeout(() => {
+			copyStatus = '';
+		}, 2000);
 	}
 
 	function getTwitterShareUrl() {
@@ -52,7 +79,10 @@
 	}
 
 	function getLinkedInShareUrl() {
-		return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageData.canonical)}`;
+		const url = encodeURIComponent(pageData.canonical);
+		const title = encodeURIComponent(pageData.title);
+		const summary = encodeURIComponent(pageData.description);
+		return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${summary}`;
 	}
 </script>
 
@@ -344,7 +374,7 @@
 				</article>
 
 				{#if showTOC}
-					<aside class="lg:w-56 lg:flex-shrink-0" transition:slide={{ axis: 'x' }}>
+					<aside class="lg:w-56 lg:flex-shrink-0" transition:slide={{ axis: 'x', duration: prefersReducedMotion ? 0 : 250 }}>
 						<div class="sticky top-20 space-y-4">
 							<div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-5 shadow-lg">
 								<h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">Contents</h3>
@@ -382,16 +412,14 @@
 										<i class="fab fa-linkedin-in text-xs"></i>
 									</a>
 									<button
-										onclick={() => {
-											navigator.clipboard.writeText(pageData.canonical);
-											alert('Link copied!');
-										}}
+										onclick={copyLink}
 										aria-label="Copy link to clipboard"
 										class="flex-1 rounded-lg bg-gray-100 dark:bg-gray-700 p-2 text-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
 									>
 										<i class="fas fa-link text-xs"></i>
 									</button>
 								</div>
+								<p class="mt-2 text-xs text-gray-500 dark:text-gray-400" aria-live="polite">{copyStatus}</p>
 							</div>
 						</div>
 					</aside>
@@ -408,7 +436,7 @@
 {#if showBackToTop}
 	<button
 		onclick={scrollToTop}
-		transition:slide={{ axis: 'y' }}
+		transition:slide={{ axis: 'y', duration: prefersReducedMotion ? 0 : 200 }}
 		class="fixed bottom-8 right-8 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg hover:scale-110 transition-transform"
 		aria-label="Back to top"
 	>

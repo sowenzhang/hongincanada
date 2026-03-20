@@ -1,4 +1,4 @@
-import type { SeriesMetadata, SeriesPartData } from '$lib/types/series';
+import type { ArticleData, SeriesMetadata, SeriesPartData } from '$lib/types/series';
 
 // Centralized series data that can be used by both the series landing page
 // and individual article pages to ensure consistency
@@ -155,9 +155,11 @@ export function getNavigationData(partNumber: number) {
 }
 
 // Helper function to get article data for a specific part
-export function getArticleData(partNumber: number) {
+export function getArticleData(partNumber: number): ArticleData {
     const partData = getPartData(partNumber);
-    if (!partData) return null;
+    if (!partData) {
+        throw new Error(`No series part metadata found for part ${partNumber}`);
+    }
 
     return {
         title: partData.title,
