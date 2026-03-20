@@ -364,13 +364,35 @@
 			<div class="mx-auto max-w-6xl columns-1 gap-6 md:columns-2">
 				<!-- Latest blog first: duplicate this block to add future posts -->
 				<article class="mb-6 break-inside-avoid">
+					<a href="/blog/introducing-crossit" class="glass-card group flex flex-col rounded-2xl p-6">
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-500/10">
+								<i class="fas fa-check-double text-teal-400"></i>
+							</div>
+							<span class="rounded-full bg-teal-500/10 px-2.5 py-1 text-[10px] font-medium text-teal-400">
+								LATEST BLOG
+							</span>
+						</div>
+						<h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-teal-300 transition">
+							Introducing CrossIt: A Lightweight Habit Helper
+						</h3>
+						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+							A simple local-first habit helper focused on one action: complete a routine and cross it off.
+						</p>
+						<span class="flex items-center gap-2 text-sm font-medium text-teal-400 transition group-hover:gap-3">
+							Read Post <i class="fas fa-arrow-right text-xs"></i>
+						</span>
+					</a>
+				</article>
+
+				<article class="mb-6 break-inside-avoid">
 					<a href="/blog/minibreaks-pivot" class="glass-card group flex flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
 								<i class="fas fa-leaf text-orange-400"></i>
 							</div>
 							<span class="rounded-full bg-orange-500/10 px-2.5 py-1 text-[10px] font-medium text-orange-400">
-								LATEST BLOG
+								BLOG
 							</span>
 						</div>
 						<h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-orange-300 transition">
