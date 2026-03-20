@@ -13,13 +13,30 @@ npm run lint         # Prettier check + ESLint
 npm run format       # Auto-format with Prettier
 ```
 
-There are no tests in this project.
+There are no automated unit/integration tests in this project.
 
-## Architecture
+## Project Snapshot
 
 **Stack:** SvelteKit 2 + Svelte 5 + TypeScript + Tailwind CSS, deployed via Node adapter.
 
 This is a static content blog hosting two multi-part article series. No backend or API — all data is declarative TypeScript.
+
+## Working Rules
+
+- Prefer Svelte 5 runes patterns for new component logic.
+- Preserve SEO metadata and JSON-LD structured data on edited pages.
+- Keep motion performant and always respect `prefers-reduced-motion`.
+- Avoid heavy animation dependencies unless explicitly requested.
+- Do not hand-edit generated artifacts under `build/`.
+
+## Validation Workflow
+
+Run after meaningful changes:
+
+```bash
+npm run check
+npm run build
+```
 
 ### Routing
 
@@ -28,7 +45,7 @@ File-based SvelteKit routing:
 - `/series` — "How I Built MiniBreaks.io With AI" series landing (10 parts at `/series/part-{n}-{slug}`)
 - `/mosaic` — "Mosaic: Rethinking App Design" series landing (4 parts at `/mosaic/{slug}`)
 
-### Data Layer
+### Data Layer (Canonical)
 
 All series metadata lives in `src/lib/data/`:
 - `seriesData.ts` — AI development series (10 parts), exports `getPartData()`, `getNavigationData()`
@@ -36,7 +53,7 @@ All series metadata lives in `src/lib/data/`:
 
 When adding a new series part, add its metadata to the relevant data file first, then create the route.
 
-### Component Pattern
+### Shared Component Pattern
 
 `src/lib/components/BaseSeriesPage.svelte` is the shared template for all article pages. It handles:
 - Breadcrumbs, article metadata, prev/next navigation
