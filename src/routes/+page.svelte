@@ -4,9 +4,9 @@
 
 	// Page metadata
 	const pageData = {
-		title: 'Hong in Canada — Engineering Manager, HCI, Product Builder',
+		title: 'Hong in Canada — Product Builder, HCI, Engineering Leadership',
 		description:
-			'Engineering Manager with a passion for building products that people love. Background in HCI with Product Mindset.',
+			'Product Builder with a passion for building products that people love. Background in HCI with Product Mindset.',
 		canonical: 'https://www.hongincanada.com',
 		ogImage: 'https://www.hongincanada.com/profile.png'
 	};
@@ -148,7 +148,7 @@
 			style="opacity: {stage >= 5 ? 1 : 0}; transform: translateY({stage >= 5 ? '0' : '16px'}); filter: blur({stage >= 5 ? '0px' : '6px'});"
 			itemprop="description"
 		>
-			<span itemprop="jobTitle">Engineering Lead</span> · HCI · Product Builder
+			<span itemprop="jobTitle">Product Builder</span> · HCI · Engineering Leadership
 		</p>
 
 		<!-- Sub-tagline -->
@@ -156,7 +156,8 @@
 			class="hero-text-reveal mb-12 text-sm text-gray-500 dark:text-gray-500 md:text-base"
 			style="opacity: {stage >= 6 ? 1 : 0}; transform: translateY({stage >= 6 ? '0' : '12px'}); filter: blur({stage >= 6 ? '0px' : '4px'});"
 		>
-			I build things that solve real problems for real people.
+			I build AI-powered products from 0 → 1, fast.<br/>
+			Designing systems where ideas turn into working software in days, not months
 		</p>
 
 		<!-- CTA links — pop in with slight overshoot -->
@@ -255,19 +256,19 @@
 							<i class="fas fa-location-dot text-xl text-teal-400"></i>
 						</div>
 						<div class="flex items-center gap-2">
-							<span class="flex items-center gap-1.5 rounded-full bg-green-500/10 px-2.5 py-1 text-[10px] font-medium text-green-400">
-								<span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>Live
+							<span class="flex items-center gap-1.5 rounded-full bg-yellow-500/10 px-2.5 py-1 text-[10px] font-medium text-yellow-400">
+								<span class="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>Pending
 							</span>
 							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-teal-400"></i>
 						</div>
 					</div>
 					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">NearbyGame.com</h3>
 					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
-						Discover and join local games and sports. Connect with players, find your next match.
+						A calming experience: just walk, relax, explore, collect, and learn about the world nearby.
 					</p>
 					<div class="flex flex-wrap gap-2">
 						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">SvelteKit</span>
-						<span class="rounded-full bg-yellow-500/10 px-2.5 py-0.5 text-[10px] font-medium text-yellow-400">Location</span>
+						<span class="rounded-full bg-yellow-500/10 px-2.5 py-0.5 text-[10px] font-medium text-yellow-400">Tauri</span>
 						<span class="rounded-full bg-pink-500/10 px-2.5 py-0.5 text-[10px] font-medium text-pink-400">Community</span>
 					</div>
 				</a>
@@ -296,7 +297,7 @@
 					</div>
 					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">Minibreaks.io</h3>
 					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
-						Mental health breaks in your workplace. Built with AI assistance — the subject of my 10-part series.
+						An AI-driven product engine: One app every week. Built using structured AI workflows and rapid iteration loops.
 					</p>
 					<div class="flex flex-wrap gap-2">
 						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">SvelteKit</span>
@@ -314,46 +315,46 @@
 					href="https://apps.microsoft.com/detail/9p6jx7l8f0x9"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex items-center gap-4 rounded-xl p-4"
+					class="glass-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
 					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-500/10">
 						<i class="fas fa-check-double text-teal-400"></i>
 					</div>
 					<div class="min-w-0">
 						<h4 class="font-semibold text-gray-900 dark:text-white">CrossIt</h4>
-						<p class="truncate text-xs text-gray-500">A lightweight habit helper for recurring routines</p>
+						<p class="text-xs leading-relaxed text-gray-500">A lightweight habit helper for recurring routines</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
 				</a>
 				<a
 					href="https://apps.microsoft.com/detail/9n8r514363br"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex items-center gap-4 rounded-xl p-4"
+					class="glass-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
 					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/10">
 						<i class="fas fa-robot text-purple-400"></i>
 					</div>
 					<div class="min-w-0">
 						<h4 class="font-semibold text-gray-900 dark:text-white">FakeBlueScreen</h4>
-						<p class="truncate text-xs text-gray-500">A legitimate excuse to procrastinate</p>
+						<p class="text-xs leading-relaxed text-gray-500">A legitimate excuse to procrastinate, prank it!</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
 				</a>
 				<a
 					href="https://apps.microsoft.com/detail/9mtg2ff7rnq4"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex items-center gap-4 rounded-xl p-4"
+					class="glass-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
 					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-500/10">
 						<i class="fas fa-images text-emerald-400"></i>
 					</div>
 					<div class="min-w-0">
 						<h4 class="font-semibold text-gray-900 dark:text-white">FotoAssemblyLine</h4>
-						<p class="truncate text-xs text-gray-500">Batch image processing & filters</p>
+						<p class="text-xs leading-relaxed text-gray-500">Batch image processing, watermarking, & filters</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
 				</a>
 			</div>
 		</ScrollReveal>
@@ -376,22 +377,44 @@
 		</ScrollReveal>
 
 		<ScrollReveal>
-			<div class="mx-auto max-w-6xl columns-1 gap-6 md:columns-2">
+			<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
 				<!-- Latest blog first: duplicate this block to add future posts -->
-				<article class="mb-6 break-inside-avoid">
-					<a href="/blog/introducing-crossit" class="glass-card group flex flex-col rounded-2xl p-6">
+				<article class="h-full">
+					<a href="/blog/nearbygame-pivot" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
+								<i class="fas fa-route text-emerald-400"></i>
+							</div>
+							<span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
+								LATEST BLOG
+							</span>
+						</div>
+						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-emerald-300 dark:text-white">
+							How I Pivoted NearbyGame and Used AI to Go From 0 to 1
+						</h3>
+						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+							Why I abandoned a venue-discovery idea, reframed the problem with AI, and turned NearbyGame into a calm walking experience built for one user first.
+						</p>
+						<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
+							Read Post <i class="fas fa-arrow-right text-xs"></i>
+						</span>
+					</a>
+				</article>
+
+				<article class="h-full">
+					<a href="/blog/introducing-crossit" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-500/10">
 								<i class="fas fa-check-double text-teal-400"></i>
 							</div>
 							<span class="rounded-full bg-teal-500/10 px-2.5 py-1 text-[10px] font-medium text-teal-400">
-								LATEST BLOG
+								BLOG
 							</span>
 						</div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-teal-300 transition">
+						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-teal-300 transition">
 							Introducing CrossIt: A Lightweight Habit Helper
 						</h3>
-						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 							A simple local-first habit helper focused on one action: complete a routine and cross it off.
 						</p>
 						<span class="flex items-center gap-2 text-sm font-medium text-teal-400 transition group-hover:gap-3">
@@ -400,8 +423,8 @@
 					</a>
 				</article>
 
-				<article class="mb-6 break-inside-avoid">
-					<a href="/blog/minibreaks-pivot" class="glass-card group flex flex-col rounded-2xl p-6">
+				<article class="h-full">
+					<a href="/blog/minibreaks-pivot" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
 								<i class="fas fa-leaf text-orange-400"></i>
@@ -410,10 +433,10 @@
 								BLOG
 							</span>
 						</div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-orange-300 transition">
+						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-orange-300 transition">
 							MiniBreaks Pivot: From Wellness to Micro-Apps
 						</h3>
-						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 							Why I pivoted MiniBreaks into a weekly micro-app experiment, and how I structured AI roles to ship one tiny app every week.
 						</p>
 						<span class="flex items-center gap-2 text-sm font-medium text-orange-400 transition group-hover:gap-3">
@@ -422,8 +445,8 @@
 					</a>
 				</article>
 
-				<article class="mb-6 break-inside-avoid">
-					<a href="/blog/why-i-build-nocloud-chat" class="glass-card group flex flex-col rounded-2xl p-6">
+				<article class="h-full">
+					<a href="/blog/why-i-build-nocloud-chat" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10">
 								<i class="fas fa-cloud text-cyan-400"></i>
@@ -432,10 +455,10 @@
 								BLOG
 							</span>
 						</div>
-						<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-cyan-300 transition">
+						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-300 transition">
 							Why Do I Build NoCloud Chat
 						</h3>
-						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 							Why I built a local-first chat app with no registration and no cloud dependency.
 						</p>
 						<span class="flex items-center gap-2 text-sm font-medium text-cyan-400 transition group-hover:gap-3">
@@ -444,8 +467,8 @@
 					</a>
 				</article>
 
-				<article class="mb-6 break-inside-avoid">
-					<a href="/mosaic" class="glass-card group flex flex-col rounded-2xl p-6">
+				<article class="h-full">
+					<a href="/mosaic" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
 								<i class="fas fa-th text-purple-400"></i>
@@ -454,10 +477,10 @@
 								4-PART ARTICLE
 							</span>
 						</div>
-						<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-purple-300 transition">
+						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-purple-300 transition">
 							Mosaic: From App Stores to App Flows
 						</h3>
-						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 							A vision that replaces app stores with seamless, context-aware app flows.
 						</p>
 						<span class="flex items-center gap-2 text-sm font-medium text-purple-400 transition group-hover:gap-3">
@@ -466,8 +489,8 @@
 					</a>
 				</article>
 
-				<article class="mb-6 break-inside-avoid">
-					<a href="/series" class="glass-card group flex flex-col rounded-2xl p-6">
+				<article class="h-full">
+					<a href="/series" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
 								<i class="fas fa-robot text-emerald-400"></i>
@@ -476,10 +499,10 @@
 								10-PART SERIES
 							</span>
 						</div>
-						<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-300 transition">
+						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-300 transition">
 							How I Built MiniBreaks.io With AI
 						</h3>
-						<p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 							The full story of building a complete website with AI from idea to deployment.
 						</p>
 						<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
@@ -498,6 +521,24 @@
 		</ScrollReveal>
 	</div>
 </section>
+
+<style>
+	.writing-card-title {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		line-clamp: 2;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+	}
+
+	.writing-card-description {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		line-clamp: 3;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+	}
+</style>
 
 <!-- ============================================ -->
 <!-- ABOUT: The Journey                           -->
@@ -533,7 +574,7 @@
 						<div class="glass-card rounded-xl p-5">
 							<h3 class="font-bold text-gray-900 dark:text-white">Master's in HCI</h3>
 							<p class="text-sm text-gray-500">University of Manitoba</p>
-							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Where I learned that the best technology is invisible — it just works for people.</p>
+							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Where I learned that the best technology is invisible: it should just work for users.</p>
 						</div>
 					</div>
 				</ScrollReveal>
@@ -559,9 +600,11 @@
 							<i class="fas fa-users text-sm text-purple-400"></i>
 						</div>
 						<div class="glass-card rounded-xl p-5">
-							<h3 class="font-bold text-gray-900 dark:text-white">Engineering Manager</h3>
-							<p class="text-sm text-gray-500">Leading teams, still building products</p>
-							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">I lead teams to build scalable software while fostering collaboration, learning, and a relentless focus on the user.</p>
+							<h3 class="font-bold text-gray-900 dark:text-white">Product Builder & Engineering Leadership</h3>
+							<p class="text-sm text-gray-500">Still always building products and applying engineering lean principles</p>
+							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">I lead teams to build scalable software while fostering collaboration, learning, and a relentless focus on the user.
+Never stop building products in the last 10+ years.
+							</p>
 						</div>
 					</div>
 				</ScrollReveal>

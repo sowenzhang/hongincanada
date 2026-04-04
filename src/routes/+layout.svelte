@@ -63,7 +63,7 @@
 	<title>Hong in Canada</title>
 	<meta
 		name="description"
-		content="Engineering Manager with a passion for building products that people love. Background in HCI with Product Mindset."
+		content="Product Builder with a passion for building products that people love. Background in HCI with Product Mindset."
 	/>
 	<meta name="keywords" content="Engineering, Product, HCI, Canada, Hong" />
 	<meta name="author" content="Hong" />
@@ -72,7 +72,7 @@
 	<meta property="og:title" content="Hong in Canada" />
 	<meta
 		property="og:description"
-		content="Engineering Manager with a passion for building products that people love. Background in HCI with Product Mindset."
+		content="Product Builder with a passion for building products that people love. Background in HCI with Product Mindset."
 	/>
 	<meta property="og:image" content="/profile.png" />
 	<meta property="og:url" content="https://hongincanada.com" />
@@ -82,7 +82,7 @@
 	<meta name="twitter:title" content="Hong in Canada" />
 	<meta
 		name="twitter:description"
-		content="Engineering Manager with a passion for building products that people love. Background in HCI with Product Mindset."
+		content="Product Builder with a passion for building products that people love. Background in HCI with Product Mindset."
 	/>
 	<meta name="twitter:image" content="/profile.png" />
 

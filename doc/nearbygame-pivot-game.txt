@@ -1,0 +1,335 @@
+# How I Pivoted NearbyGame (and Used AI to Go From 0 → 1)
+
+A few weeks ago, NearbyGame was something completely different.
+
+It wasn’t a game.
+
+It was a place to find badminton and table tennis venues nearby — something like a mix between Yelp and Meetup. The idea sounded reasonable: help people discover places and connect to play.
+
+But something felt off.
+
+I didn’t have the energy to manually collect venue data. There is also no easy way to scrap data from Internet. Free sources such as openstreetmap have a lot of missing and false information. I had to build an ingestion pipeline with a lot of manual intervention. 
+But more importantly — it didn’t feel exciting to build.
+
+(insert image: previous_nearbygame_home.jpg and previous_nearbygame_venuepage.jpg) 
+
+So I paused.
+
+And instead of forcing execution, I started using AI to **think**.
+
+---
+
+## Step 1: Realizing the problem wasn’t execution
+
+At first, I thought:
+
+> “Maybe I just need to push harder — collect more data, improve SEO, add more features.”
+
+But after a few conversations (with AI as a sounding board), it became clear:
+
+This wasn’t an execution problem.
+It was a **problem selection problem**.
+
+The original idea had hidden constraints:
+
+* required manual data (venues)
+* required two-sided marketplace (players + places)
+* low engagement frequency (people don’t play every day)
+* depended on network effects too early
+
+That’s a tough place to start.
+
+AI didn’t give me the answer — but it helped me **see the structure of the problem clearly**.
+
+---
+
+## Step 2: Breaking the idea down
+
+Instead of asking:
+
+> “How do I fix NearbyGame?”
+
+I started asking:
+
+> “What part of this idea actually matters?”
+
+Through iterative conversations, I decomposed it into:
+
+* “nearby” → proximity
+* “game” → interaction
+* “people” → connection
+
+Then I questioned each:
+
+Do I really need:
+
+* real-world venues?
+* scheduling?
+* coordination?
+
+The answer was no.
+
+Those were the hard parts.
+
+---
+
+## Step 3: Reframing the idea
+
+This was the turning point.
+
+Instead of:
+
+> “Help people organize games in real life”
+
+I shifted to:
+
+> “What if people are already *in a shared experience*, and connection happens naturally?”
+
+That’s a completely different direction.
+
+---
+
+## Step 4: From coordination → encounter
+
+The old idea required effort:
+
+* find a place
+* find a time
+* find people
+
+The new idea removes all of that.
+
+You just:
+
+* open the app
+* start walking
+* occasionally encounter someone
+
+And only then:
+
+* decide if you want to interact
+
+No pressure. No planning.
+
+---
+
+## Step 5: The new concept
+
+NearbyGame is now:
+
+> A quiet walking experience where you might meet someone.
+
+You start in a foggy world.
+
+* You walk forward
+* You explore abstract “cities”
+* You accumulate distance over time
+
+There’s no map. No specific destination.
+
+Just progress.
+
+And sometimes…
+
+You see another player.
+
+You don’t know them.
+You don’t have to talk.
+
+You can:
+
+* ignore
+* acknowledge
+* or send a simple signal: “Game?”
+
+If both agree, you jump into a small shared game.
+
+Then you continue your walk.
+
+---
+
+## Step 6: Designing for single-player first
+
+This was one of the biggest lessons.
+
+The original idea only worked if multiple users showed up at the same time.
+
+The new version works with one user.
+
+That changes everything.
+
+Now:
+
+* no dependency on network effects
+* no cold start problem
+* no need for growth before value
+
+AI helped reinforce this principle again and again:
+
+> “Make it meaningful for one user first.”
+
+I actually love this idea, and to be honestly, I was having fun when testing the app. 
+
+---
+
+## Step 7: Using AI to go from idea → structure → system
+
+AI wasn’t just helping me brainstorm.
+
+It helped me:
+
+### 1. Clarify constraints
+
+* what to avoid (marketplaces, scheduling, coordination)
+* what to focus on (solo loop, lightweight interaction)
+
+### 2. Define architecture
+
+* What platform to start with
+* What technology used for frontend, backend, and cross-platform
+* What telemetry is crucial to collect without burning server load
+* What security I should pay attention to
+
+### 3. Break work into systems
+
+* world rendering
+* session system
+* progression system
+* map system
+
+### 4. Create a build framework
+
+I even generated:
+
+* CLAUDE.md (project philosophy)
+* agents (modular roles)
+* skills (reusable capabilities)
+* story.md (product narrative)
+
+This turned a vague idea into something I could actually build.
+
+---
+
+## Step 8: Building the first version
+
+Instead of jumping into a full 3D engine, I chose:
+
+* lightweight rendering (web-based and 25D)
+* simple foggy road
+* abstract city nodes
+
+Why?
+
+Because the goal is not graphics.
+
+The goal is to answer one question:
+
+> “Can I create something simple for people to come back?”
+
+---
+
+## Step 9: Adding meaning — progression
+
+One small feature made the experience feel real:
+
+> Landmark discovery
+> Area exploration
+
+As you walk, your distance converts into:
+
+- “You have explored 6.5% of the Washington state”
+
+or 
+
+- "You have seen Space Needle" 
+
+It’s abstract, but motivating.
+
+It gives:
+
+* direction without pressure
+* progress without goals
+* scale without complexity
+
+In the progression window, you will even see all landmarks you have discovered, and you can even click it to learn more about the landmark. 
+
+(insert the image nearbygame_progress.jpg)
+
+This is where myself feeling exicted and having fun with. While I was working on this game, I learn so much about a state, its cities and landmarks. It actually feels very educational, in addition to feeling relax and calm. 
+
+---
+
+## Step 10: What I learned
+
+This pivot taught me a few things:
+
+### 1. Don’t force ideas
+
+If something feels heavy, it usually is.
+
+### 2. Remove dependencies
+
+The more your product depends on other people, the harder it is to start.
+
+### 3. Build for one user first
+
+Then layer social on top.
+
+### 4. AI is not just for coding
+
+It’s a **thinking tool**:
+
+* breaking down ideas
+* challenging assumptions
+* exploring alternatives
+
+### 5. Speed matters
+
+I went from:
+
+* stuck idea → new concept → structured system → landing page
+
+in a very short time.
+
+---
+
+## What’s next
+
+Right now, NearbyGame is just a landing page. 
+
+The next step is simple: Finish the first MVP and ship it. 
+
+Then test:
+
+> “Does this feel like something I want to come back to?”
+
+I am actually very close to the MVP, stay tuned and come back later to learn more about the new NearbyGame. 
+
+---
+
+## Final thought
+
+NearbyGame didn’t fail.
+
+It evolved.
+
+And the biggest shift wasn’t technical.
+
+It was this:
+
+> From organizing people…
+> To creating a world where connection can happen naturally.
+
+---
+
+If you’re building something and feel stuck:
+
+Try this:
+
+Don’t ask “how do I build this?”
+Ask:
+
+> “What part of this idea is actually worth building?”
+
+That’s where the real pivot begins.
+
