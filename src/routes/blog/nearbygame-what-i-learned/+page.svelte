@@ -5,7 +5,7 @@
 	const pageData = {
 		title: "What I Learned Building a Walking Game With AI's Help | Hong in Canada",
 		description:
-			'Geography, ambient audio, and the pain of Microsoft Store IAP — what a year of building NearbyGame as a solo dev with AI taught me.',
+			'Geography, ambient audio, and the pain of Microsoft Store IAP -- what a year of building NearbyGame as a solo dev with AI taught me.',
 		canonical: 'https://www.hongincanada.com/blog/nearbygame-what-i-learned',
 		ogImage: 'https://www.hongincanada.com/nearbygame-announce/cities-landmarks-discovery.png',
 		publishDate: 'May 11, 2026',
@@ -15,10 +15,8 @@
 	const tableOfContents = [
 		{ id: 'hook', title: 'The Short Version' },
 		{ id: 'why-walking-game', title: 'Why a Walking Game' },
-		{ id: 'what-i-wanted-to-learn', title: 'What I Wanted to Learn' },
-		{ id: 'the-fun-parts', title: 'The Fun Parts' },
+		{ id: 'what-i-wanted-to-learn', title: 'Building the World' },
 		{ id: 'microsoft-store-iap', title: 'The Hard Parts: Store IAP' },
-		{ id: 'what-id-do-differently', title: "What I'd Do Differently" },
 		{ id: 'where-it-is-now', title: 'Where It Is Now' }
 	];
 
@@ -27,7 +25,7 @@
 		'@type': 'BlogPosting',
 		headline: "What I Learned Building a Walking Game With AI's Help",
 		description:
-			'Geography, ambient audio, and the pain of Microsoft Store IAP — what a year of building NearbyGame as a solo dev with AI taught me.',
+			'Geography, ambient audio, and the pain of Microsoft Store IAP -- what a year of building NearbyGame as a solo dev with AI taught me.',
 		author: {
 			'@type': 'Person',
 			name: 'Hong'
@@ -186,7 +184,7 @@
 				What I Learned Building a Walking Game With AI's Help
 			</h1>
 			<p class="mb-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-				Geography, ambient audio, and the pain of Microsoft Store IAP — a year of solo dev notes.
+				Geography, ambient audio, and the pain of Microsoft Store IAP -- a year of solo dev notes.
 			</p>
 			<div class="flex flex-wrap items-center gap-5 text-sm text-gray-500 dark:text-gray-400">
 				<span
@@ -220,118 +218,94 @@
 							>
 								<section id="hook">
 									<p>
-										I always wanted to build a walking simulator. I don't know 3D, I'd never
-										shipped a game, and I had a day job. None of that stopped me — because
-										with AI's help, I didn't have to be an expert at any one piece. I just
-										had to be willing to keep walking.
+										A year later, NearbyGame is live on the Microsoft Store. It is a quiet
+										game where you walk real roads between real cities, through changing
+										weather and ambient audio. No combat, no quests, no timers. This post
+										is not a launch announcement -- it is what I actually learned along
+										the way.
 									</p>
 
 									<p>
-										A year later, NearbyGame is live on the Microsoft Store. It's a quiet
-										game where you walk real roads between real cities through ever-changing
-										weather and ambient audio. No combat, no quests, no timers. This post
-										isn't a launch announcement — it's what I actually learned along the way.
+										In the
+										<a href="/blog/nearbygame-pivot">previous blog</a>, I wrote about how
+										I pivoted from the original NearbyGame vision -- a venue-finding app
+										-- into the walking game it is today.
+									</p>
+
+									<div class="not-prose my-6 rounded-lg border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #1
+										</p>
+										<p class="text-gray-700 dark:text-gray-300 text-base">
+											Do not force ideas, even when the idea is just for fun and personal
+											passion. If it feels heavy to build, it probably is. Recognize it
+											early and pivot.
+										</p>
+									</div>
+
+									<p>
+										Today I want to announce that NearbyGame is officially launched,
+										almost two months after that pivot. In this blog I want to share the
+										other learnings I have gained during this journey.
+									</p>
+
+									<p>
+										You can try it here:
+										<a
+											href="https://nearbygame.com"
+											target="_blank"
+											rel="noopener noreferrer"
+										>nearbygame.com</a>
+										(free for Windows, Washington state included).
 									</p>
 								</section>
-
-								<figure class="not-prose my-10">
-									<div
-										class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 p-3"
-									>
-										<img
-											src="/nearbygame-announce/cities-landmarks-discovery.png"
-											alt="NearbyGame: walking through cities and discovering landmarks"
-											class="w-full rounded-xl shadow-sm"
-											loading="lazy"
-										/>
-									</div>
-									<figcaption
-										class="mt-3 text-center text-sm text-gray-500 dark:text-gray-400"
-									>
-										NearbyGame: walk real cities, discover real landmarks, no quests.
-									</figcaption>
-								</figure>
 
 								<section id="why-walking-game">
 									<h2>Why a Walking Game, of All Things</h2>
 
 									<p>
-										Walking sims are an unfashionable genre. There's no combat, no progression
-										curve, no retention loop. The reviews tend to fall into two camps: "this
-										was exactly what I needed" and "nothing happens." Both are right. That's
-										the appeal.
+										It is always interesting to me that this type of game exists --
+										<a
+											href="https://en.wikipedia.org/wiki/Walking_simulator"
+											target="_blank"
+											rel="noopener noreferrer"
+										>walking simulators</a>. I played a few over the years, but they all
+										had fancy graphics, or puzzles to solve, or horror plots. None of them
+										were like what I wanted: no purpose at all, simply just walk.
 									</p>
 
 									<p>
-										I spend my days in software, which means I spend my days inside small,
-										bright rectangles that demand attention. The last thing I want at the end
-										of a workday is another game that asks me to optimize a build order or
-										grind for a drop. I wanted something I could sit with. Calming, not
-										racing. A place to be, not a thing to beat.
+										Completely relaxing and calming. No story, no jump scare, not even 3D
+										rendering. Just ambient noise, like you are walking alone on a trail.
 									</p>
 
 									<p>
-										Walking sims do that better than almost any other genre, and they're
-										technically tractable for a solo dev. You don't need physics or netcode
-										or anti-cheat. You need a sense of place. That felt like something I
-										could actually deliver, even without a 3D background.
-									</p>
-								</section>
-
-								<section id="what-i-wanted-to-learn">
-									<h2>What I Wanted to Learn From Making It</h2>
-
-									<p>
-										I didn't build this to get rich. I built it to learn. Here's what I actually
-										wanted to learn:
-									</p>
-
-									<ul>
-										<li>
-											<strong>Geography of the US and Canada</strong> — which cities are where,
-											which highways connect them, what the terrain actually looks like along the
-											way.
-										</li>
-										<li>
-											<strong>How to build an ambient audio system</strong> that switches
-											automatically based on location: coast → ocean waves, forest → birdsong, city
-											night → distant traffic.
-										</li>
-										<li>
-											<strong>How to make the visual landscape change as you walk</strong> — city,
-											ocean, desert, forest, mountain — without it feeling like a slideshow.
-										</li>
-										<li>
-											<strong>Landmarks of each state and province</strong> — the things you'd
-											actually look up if you visited.
-										</li>
-									</ul>
-
-									<p>
-										The geography piece surprised me the most. I've lived in the Pacific
-										Northwest for years and still managed to learn things I should have
-										known. I learned that the Olympic Peninsula has an actual rainforest — a
-										temperate one, dripping with moss, an hour from a coffee chain. I learned
-										which highways cross the Cascades and which ones close in winter. I
-										learned the order of small towns along I-5 between Seattle and Portland
-										the way you only learn them by reading them off road maps a hundred times
-										in a row.
+										Most of my days are spent in busy work -- driving from A to B, being
+										distracted between housework and office work. I am not sure if I am
+										the only person feeling this, but my time is constantly not controlled
+										by myself. The freedom of doing nothing is a luxury. That is why I do
+										not want another grind with a game. I just want to sit there,
+										listening to white noise, doing nothing, no purpose.
 									</p>
 
 									<p>
-										I built the audio system second, after the basic walking loop, and it
-										became the soul of the project. The rule is simple: every location has a
-										biome tag (coast, forest, urban, desert, mountain), every biome has a
-										small library of loops and one-shots, and the mixer crossfades as you
-										cross boundaries. The hard part wasn't the mixing — it was the taxonomy.
-										What does the road between Hood River and The Dalles sound like? It's not
-										exactly forest, not exactly desert, not exactly urban. Most of the work
-										was sitting with audio clips and asking myself, "does this feel like
-										there?"
+										However, I do not have the fancy skill of 3D rendering. I tried, even
+										with the help of AI, and I do not think that can take me too far. So I
+										decided to focus on <em>where</em> -- a sense of place. I decided to
+										walk-sim in the real world.
 									</p>
-								</section>
 
-								<figure class="not-prose my-10">
+									<p>
+										I picked where I live -- Washington State -- as a starter.
+									</p>
+
+									<p>
+										I started building a map of this state, connecting major cities,
+										defining terrain, adding layers of sounds, and placing famous
+										landmarks accordingly.
+									</p>
+
+									<figure class="not-prose my-10">
 									<div
 										class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 p-3"
 									>
@@ -349,133 +323,159 @@
 									</figcaption>
 								</figure>
 
-								<section>
-									<p>
-										Landmarks were the most enjoyable research. I'd start with a state, open
-										a map, and write down everything I could plausibly include — not the
-										obvious ones, but the ones you'd actually point out to a visitor. Some of
-										what I ended up finding: <em>[LANDMARK_PLACEHOLDER_1]</em>,
-										<em>[LANDMARK_PLACEHOLDER_2]</em>, and
-										<em>[LANDMARK_PLACEHOLDER_3]</em>. None of those were on my radar a year
-										ago.
-									</p>
-								</section>
-
-								<section id="the-fun-parts">
-									<h2>The Fun Parts</h2>
-
-									<p>
-										Most of building this was just fun, and I'd rather not pretend otherwise.
-										The ambient sound system in particular ended up being something I use
-										outside the game. I have it running quietly in another window while I
-										write this. It's a coast loop with light wind and distant gulls, and
-										it's better than every focus-music app I've tried, because I designed it
-										for someone who wants the sound to do almost nothing.
-									</p>
-
-									<p>
-										The single moment that sold me on the whole project was the first time
-										I walked from Seattle south toward Portland and noticed, somewhere south
-										of Olympia, that the soundscape had quietly shifted. I hadn't scripted
-										that transition manually. The biome tags and crossfades had simply done
-										their job. That tiny invisible system worked, and the world it produced
-										felt like a real place.
-									</p>
-
-									<p>
-										The other surprise was the light. I built a simple day-night cycle and
-										didn't think much of it until the first time I walked a long stretch
-										and watched the sky shift through actual dawn-to-dusk colors. It sounds
-										obvious, but the first time you see your own code produce a sunset that
-										looks like a sunset, you sit with it for a minute. Some things you only
-										appreciate when you've built them yourself.
-									</p>
-								</section>
-
-								<figure class="not-prose my-10">
-									<div
-										class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 p-3"
-									>
-										<img
-											src="/nearbygame-announce/cat_walking.png"
-											alt="A small companion walking alongside you in NearbyGame"
-											class="w-full rounded-xl shadow-sm"
-											loading="lazy"
-										/>
+									<div class="not-prose my-6 rounded-lg border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #2
+										</p>
+										<p class="text-gray-700 dark:text-gray-300 text-base">
+											When building an idea, I still need to recognize my limitations.
+											Most importantly, I need to be the first customer of my own idea.
+										</p>
 									</div>
-									<figcaption
-										class="mt-3 text-center text-sm text-gray-500 dark:text-gray-400"
-									>
-										Small companions and small surprises — the parts that make a quiet world
-										feel alive.
-									</figcaption>
-								</figure>
+								</section>
+
+								<section id="what-i-wanted-to-learn">
+									<h2>Building the World</h2>
+
+									<p>
+										Even though I am not doing fancy 3D rendering, I still want the game
+										to feel like a real place. My approach was to render the environment
+										and change the ambient sounds based on where the player is walking.
+										For example, near a city like Seattle or Spokane, the game shows a
+										city-like view and you hear traffic or distant music. Near a forest
+										or trail, like Olympic National Park, you see green and mountains,
+										and hear frogs and creeks.
+									</p>
+
+									<p>
+										In the screenshot below, you can see the game has an Auto Environment
+										Audio option that automatically adjusts the ambient noise based on
+										your location. It also shows the walk towards Pullman, a city in
+										eastern Washington, where the game depicts a rocky, gravel-like
+										environment.
+									</p>
+
+									<figure class="not-prose my-10">
+										<div
+											class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 p-3"
+										>
+											<img
+												src="/nearbygame-announce/nearbygame_scene2.png"
+												alt="NearbyGame: walking towards Pullman with auto environment audio enabled"
+												class="w-full rounded-xl shadow-sm"
+												loading="lazy"
+											/>
+										</div>
+										<figcaption
+											class="mt-3 text-center text-sm text-gray-500 dark:text-gray-400"
+										>
+											Walking towards Pullman -- auto environment audio and terrain rendering.
+										</figcaption>
+									</figure>
+
+									<p>
+										But walking is not just about cities. I also designed landmarks that
+										players can discover along the way. For each discovered landmark,
+										you can click the link to learn more about it.
+									</p>
+
+									<figure class="not-prose my-10">
+										<div
+											class="rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 p-3"
+										>
+											<img
+												src="/nearbygame-announce/cities-landmarks-discovery.png"
+												alt="NearbyGame: discovering cities and landmarks along the walk"
+												class="w-full rounded-xl shadow-sm"
+												loading="lazy"
+											/>
+										</div>
+										<figcaption
+											class="mt-3 text-center text-sm text-gray-500 dark:text-gray-400"
+										>
+											Discovering cities and landmarks as you walk.
+										</figcaption>
+									</figure>
+
+									<p>
+										This might actually be the most fun part of creating the game. AI can
+										help to a certain degree when planning landmarks for each city, but a
+										lot of the time it oversimplifies and skips interesting places --
+										unless I give it specific instructions like "use Instagram to search
+										what places are most shared." I learned a lot during this process
+										myself. For example, I learned that Kurt Cobain's memorial is in
+										Aberdeen, Washington. I learned there is a place called Thor's Well
+										in Oregon. In Idaho, there is a massive pear-shaped boulder called
+										Balanced Rock. So many cool places I had never heard of or been to,
+										and just learning about them was already a great experience.
+									</p>
+
+									<div class="not-prose my-6 rounded-lg border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #3
+										</p>
+										<p class="text-gray-700 dark:text-gray-300 text-base">
+											Even if I do not have what other people have (like fancy rendering),
+											I can still add value and meaning to the idea from a different angle.
+										</p>
+									</div>
+								</section>
 
 								<section id="microsoft-store-iap">
-									<h2>The Hard Parts — Microsoft Store IAP</h2>
+									<h2>The Hard Parts -- Microsoft Store IAP</h2>
 
 									<p>
-										This is the section I'd actually want to read on someone else's blog,
-										because nobody talks about it, so I'll be specific.
+										This is the section I would actually want to read on someone else's
+										blog, because nobody talks about it. So I will be specific.
 									</p>
 
 									<p>
-										NearbyGame uses In-App Purchase to unlock regions beyond the free
-										Washington tier. It's a one-time $4.99 unlock through the Microsoft
-										Store. Conceptually simple. Implementation-wise, this was the single
-										hardest part of the entire project, and the painful part wasn't the SDK.
+										NearbyGame uses In-App Purchase through the Microsoft Store to
+										unlock additional regions. Conceptually simple. In practice, this
+										was the single hardest part of the entire project, and the painful
+										part was not the SDK itself.
 									</p>
 
 									<p>
-										I submitted <strong>eleven iterations</strong> of the build to Partner
-										Center before IAP behaved correctly end-to-end. Each iteration was a
-										full MSIX rebuild, a full submission, and a wait for certification.
-										That's not a fast loop. The reason it took so many tries is that there
-										is no good local sandbox for Store IAP. You can stub purchase calls in
-										dev, but to actually validate that a real purchase against the real
-										Store catalog unlocks the right entitlement on the real machine, you
-										have to ship a real build. Then exercise the real purchase. Then refund
-										it through the Store and try the next iteration.
+										I submitted <strong>eleven iterations</strong> of the build to
+										Partner Center before IAP worked correctly end-to-end. Each
+										iteration was a full MSIX rebuild and a full submission.
+										Fortunately, Partner Center submissions are now fast enough that I
+										could try again and again without waiting days between attempts.
+										Still, there is no good local sandbox for Store IAP. You can stub
+										purchase calls in dev, but to actually validate that a real
+										purchase against the real Store catalog unlocks the right
+										entitlement on the real machine, you have to ship a real build,
+										exercise the real purchase, refund it, and try again.
 									</p>
 
 									<p>
-										The bug that ate the most time wasn't even in the IAP SDK. It was a
-										permissions issue with Tauri 2's <code>plugin-fs</code> in an MSIX
-										context. I was writing the entitlement receipt to local storage after
-										purchase, and the write looked like it was working — no error, no
-										exception, the function returned cleanly — but the file simply wasn't
-										there afterward. The <code>mkdir</code> calls right next to it worked
-										fine, which made it look like a filesystem layout problem, not a
-										permissions one. Several days of staring at this later, I found it:
-										<code>fs:allow-write</code> in the Tauri capability config doesn't cover
-										binary <code>writeFile(Uint8Array)</code> in MSIX. You need the more
-										granular <code>fs:allow-write-file</code> permission. Once I added that
-										line, the entire IAP flow worked on the next submission.
+										The bug that ate the most time was not even in the IAP SDK. It was
+										a permissions issue with Tauri 2's <code>plugin-fs</code> in an
+										MSIX context. I was writing the entitlement receipt to local
+										storage after purchase, and the write looked like it was working
+										-- no error, no exception, the function returned cleanly -- but
+										the file simply was not there afterward. The <code>mkdir</code>
+										calls right next to it worked fine, which made it look like a
+										filesystem layout problem, not a permissions one. Several days of
+										staring at this later, I found it:
+										<code>fs:allow-write</code> in the Tauri capability config does
+										not cover binary <code>writeFile(Uint8Array)</code> in MSIX. You
+										need the more granular <code>fs:allow-write-file</code>
+										permission. Once I added that one line, the entire IAP flow worked
+										on the next submission.
 									</p>
 
-									<p>
-										A soft critique of the Store experience: there should be a better local
-										sandbox for IAP. Or at least a tighter feedback loop than full
-										submissions. I'm a Microsoft engineer and I still spent days finding a
-										permission flag. Indies without that context will spend weeks. If anyone
-										reading this knows the better path — internal tools, a smarter test
-										mode, anything — I'd genuinely like to hear about it, because I'll be
-										back here for the next DLC.
-									</p>
-								</section>
-
-								<section id="what-id-do-differently">
-									<h2>What I'd Do Differently</h2>
-
-									<p>
-										One thing, mostly: I'd build the IAP integration earlier. I treated it
-										as the last step — wrap up the game, then bolt on the store — and that's
-										exactly why it crammed into the final two weeks. If I'd built a
-										half-broken IAP path against a single test product from month two, the
-										eleven iterations would have been spread across the whole year instead
-										of stacked on top of launch crunch. Everything else I'd do roughly the
-										same. The friction taught me things a smoother path wouldn't have.
-									</p>
+									<div class="not-prose my-6 rounded-lg border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #4
+										</p>
+										<p class="text-gray-700 dark:text-gray-300 text-base">
+											Give yourself enough room to cross the finish line. Even when I
+											was excited to ship, the last piece turned out to be the most
+											challenging part. Do not underestimate the final stretch.
+										</p>
+									</div>
 								</section>
 
 								<section id="where-it-is-now">
@@ -483,7 +483,7 @@
 
 									<p>
 										NearbyGame is live on the Microsoft Store. The free tier covers Washington
-										state — 33 cities and 37 roads. The full version ($4.99, one-time) unlocks
+										state -- 33 cities and 37 roads. The full version ($4.99, one-time) unlocks
 										Oregon, BC, Idaho, and Nevada, with more regions on the way as DLC.
 									</p>
 
@@ -493,34 +493,26 @@
 										a walk.
 									</p>
 
-									<div
-										class="not-prose mt-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 p-6"
-									>
-										<p class="mb-4 text-sm text-gray-600 dark:text-gray-300">
-											Try NearbyGame — free for Windows, Washington state included:
-										</p>
-										<div class="flex flex-wrap items-center gap-4">
-											<a
-												href="https://apps.microsoft.com/detail/9PF6C7N61JWB"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												<img
-													src="https://get.microsoft.com/images/en-us%20dark.svg"
-													width="200"
-													alt="Get NearbyGame from Microsoft Store"
-												/>
-											</a>
-											<a
-												href="https://nearbygame.com"
-												target="_blank"
-												rel="noopener noreferrer"
-												class="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-											>
-												<i class="fas fa-globe text-xs" aria-hidden="true"></i>
-												nearbygame.com
-											</a>
-										</div>
+									<div class="not-prose mt-8 flex flex-wrap items-center gap-4">
+										<a
+											href="https://apps.microsoft.com/detail/9PF6C7N61JWB"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<img
+												src="https://get.microsoft.com/images/en-us%20dark.svg"
+												width="200"
+												alt="Get NearbyGame from Microsoft Store"
+											/>
+										</a>
+										<a
+											href="https://nearbygame.com"
+											target="_blank"
+											rel="noopener noreferrer"
+											class="text-emerald-600 dark:text-emerald-400 font-medium hover:underline"
+										>
+											nearbygame.com
+										</a>
 									</div>
 								</section>
 							</div>
