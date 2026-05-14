@@ -256,8 +256,8 @@
 							<i class="fas fa-location-dot text-xl text-teal-400"></i>
 						</div>
 						<div class="flex items-center gap-2">
-							<span class="flex items-center gap-1.5 rounded-full bg-yellow-500/10 px-2.5 py-1 text-[10px] font-medium text-yellow-400">
-								<span class="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>Pending
+							<span class="flex items-center gap-1.5 rounded-full bg-green-500/10 px-2.5 py-1 text-[10px] font-medium text-green-400">
+								<span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>Live
 							</span>
 							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-teal-400"></i>
 						</div>
