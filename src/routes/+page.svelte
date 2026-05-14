@@ -380,13 +380,35 @@
 			<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
 				<!-- Latest blog first: duplicate this block to add future posts -->
 				<article class="h-full">
+					<a href="/blog/nearbygame-what-i-learned" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
+								<i class="fas fa-route text-emerald-400"></i>
+							</div>
+							<span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
+								LATEST BLOG
+							</span>
+						</div>
+						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-emerald-300 dark:text-white">
+							What I Learned Building a Walking Game With AI's Help
+						</h3>
+						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+							Geography, ambient audio, and the pain of Microsoft Store IAP — a year of solo dev notes from building NearbyGame.
+						</p>
+						<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
+							Read Post <i class="fas fa-arrow-right text-xs"></i>
+						</span>
+					</a>
+				</article>
+
+				<article class="h-full">
 					<a href="/blog/app-flow-first-pilot" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
 								<i class="fas fa-link text-orange-400"></i>
 							</div>
 							<span class="rounded-full bg-orange-500/10 px-2.5 py-1 text-[10px] font-medium text-orange-400">
-								LATEST BLOG
+								BLOG
 							</span>
 						</div>
 						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-orange-300 dark:text-white">
