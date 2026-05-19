@@ -137,6 +137,7 @@
 				<a href="/#about" class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white">About</a>
 				<a href="/#projects" class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white">Projects</a>
 				<a href="/#writing" class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white">Writing</a>
+				<a href="/ai-workflow-review" class="text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white">AI Review</a>
 				<a
 					href="/#contact"
 					class="rounded-full border border-blue-500/50 bg-blue-500/10 px-4 py-2 text-blue-600 dark:text-blue-400 transition hover:bg-blue-500/20 hover:text-blue-800 dark:hover:text-white"
@@ -196,6 +197,13 @@
 					class="block rounded-lg px-3 py-2 text-gray-700 dark:text-gray-300 transition hover:bg-gray-100 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white"
 				>
 					Writing
+				</a>
+				<a
+					href="/ai-workflow-review"
+					onclick={closeMobileMenu}
+					class="block rounded-lg px-3 py-2 text-gray-700 dark:text-gray-300 transition hover:bg-gray-100 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white"
+				>
+					AI Review
 				</a>
 				<a
 					href="/#contact"
