@@ -16,7 +16,8 @@
 		currentProcess: '',
 		tools: '',
 		betterLooksLike: '',
-		sensitiveData: ''
+		sensitiveData: '',
+		quotePermission: 'no'
 	});
 
 	let formStatus = $state<'idle' | 'sending' | 'sent' | 'error'>('idle');
@@ -34,7 +35,8 @@
 				`How it works today:\n${formData.currentProcess}\n\n` +
 				`Current tools:\n${formData.tools}\n\n` +
 				`What "better" looks like:\n${formData.betterLooksLike}\n\n` +
-				`Sensitive data note:\n${formData.sensitiveData}`
+				`Sensitive data note:\n${formData.sensitiveData}\n\n` +
+				`Quote permission:\n${formData.quotePermission === 'yes' ? 'Yes — may quote or summarize anonymously' : 'No — do not quote or summarize'}`
 			);
 			window.location.href = `mailto:me@hongincanada.com?subject=${subject}&body=${body}`;
 			formStatus = 'sent';
@@ -124,10 +126,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Can't I just ask ChatGPT?",
+          "name": "Is this free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, and sometimes that is enough. This review is for people who want another human to look at the workflow, spot risks, suggest a simpler first step, and turn a vague idea into something testable."
+            "text": "Yes. This is currently free. I review selected requests when I have availability, so I may not be able to respond to every submission."
           }
         },
         {
@@ -140,10 +142,10 @@
         },
         {
           "@type": "Question",
-          "name": "Is this free?",
+          "name": "Can't I just ask ChatGPT?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. This is currently free. I review selected requests when I have availability, so I may not be able to respond to every submission."
+            "text": "Yes, and sometimes that is enough. This review is for people who want another human to look at the workflow, spot risks, suggest a simple first step, and turn a vague idea into something testable."
           }
         },
         {
@@ -549,11 +551,11 @@
 		</ScrollReveal>
 
 		<div class="space-y-6">
-			<ScrollReveal delay={100}>
-				<div id="faq-chatgpt" class="glass-card rounded-xl p-6">
-					<h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Can't I just ask ChatGPT?</h3>
+			<ScrollReveal delay={300}>
+				<div id="faq-free" class="glass-card rounded-xl p-6">
+					<h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Is this free?</h3>
 					<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-						Yes, and sometimes that is enough. This review is for people who want another human to look at the workflow, spot risks, suggest a simpler first step, and turn a vague idea into something testable.
+						Yes. This is currently free. I review selected requests when I have availability, so I may not be able to respond to every submission.
 					</p>
 				</div>
 			</ScrollReveal>
@@ -567,11 +569,11 @@
 				</div>
 			</ScrollReveal>
 
-			<ScrollReveal delay={300}>
-				<div id="faq-free" class="glass-card rounded-xl p-6">
-					<h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Is this free?</h3>
+			<ScrollReveal delay={100}>
+				<div id="faq-chatgpt" class="glass-card rounded-xl p-6">
+					<h3 class="mb-2 font-semibold text-gray-900 dark:text-white">Can't I just ask ChatGPT?</h3>
 					<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-						Yes. This is currently free. I review selected requests when I have availability, so I may not be able to respond to every submission.
+						Yes, and sometimes that is enough. This review is for people who want another human to look at the workflow, spot risks, suggest a simpler first step, and turn a vague idea into something testable.
 					</p>
 				</div>
 			</ScrollReveal>
@@ -672,8 +674,16 @@
 				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-blue-400">Submit</p>
 				<h2 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">Send a workflow</h2>
 				<p class="mt-3 text-sm text-gray-500 dark:text-gray-400">
-					Describe one repetitive workflow. I will review selected requests when I have availability.
+					Describe one repetitive workflow you want a second opinion on. Please keep examples anonymized and avoid sensitive data.
 				</p>
+				<details class="mt-4 text-left rounded-lg border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-gray-900/50 px-4 py-3 text-sm">
+					<summary class="cursor-pointer font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors select-none">
+						See an example submission
+					</summary>
+					<p class="mt-3 italic text-gray-500 dark:text-gray-400 leading-relaxed">
+						"I run a tutoring business and answer the same 10 parent questions every week through email. I use Gmail and Google Docs. Better would mean drafting consistent answers faster while still reviewing before sending."
+					</p>
+				</details>
 			</div>
 		</ScrollReveal>
 
@@ -746,6 +756,20 @@
 						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						placeholder="e.g. Spend less time writing the same thing, fewer errors, faster turnaround"
 					></textarea>
+				</div>
+
+				<div>
+					<label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">Can I quote or summarize this workflow anonymously in future writing?</label>
+					<div class="flex gap-4">
+						<label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
+							<input type="radio" bind:group={formData.quotePermission} value="yes" class="accent-blue-500" />
+							Yes
+						</label>
+						<label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
+							<input type="radio" bind:group={formData.quotePermission} value="no" class="accent-blue-500" />
+							No
+						</label>
+					</div>
 				</div>
 
 				<div>

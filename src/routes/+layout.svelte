@@ -260,7 +260,7 @@
 						<i class="fab fa-strava text-lg"></i>
 					</a>
 				</div>
-				<p class="text-xs text-gray-400 dark:text-gray-600">&copy; 2025 Hong in Canada. All rights reserved.</p>
+				<p class="text-xs text-gray-400 dark:text-gray-600">&copy; 2026 Hong in Canada. All rights reserved.</p>
 			</div>
 		</div>
 	</div>
