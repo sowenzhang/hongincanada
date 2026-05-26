@@ -380,13 +380,35 @@
 			<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
 				<!-- Latest blog first: duplicate this block to add future posts -->
 				<article class="h-full">
+					<a href="/blog/building-deckmark" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/10">
+								<i class="fas fa-wand-magic-sparkles text-indigo-400"></i>
+							</div>
+							<span class="rounded-full bg-indigo-500/10 px-2.5 py-1 text-[10px] font-medium text-indigo-400">
+								LATEST BLOG
+							</span>
+						</div>
+						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-indigo-300 dark:text-white">
+							Building Deckmark: Closing the Feedback Loop for AI-Generated Slide Decks
+						</h3>
+						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+							An MCP server that lets you click directly on slide elements to give feedback to an AI agent. Why I built it, and the human-in-the-loop pattern behind it.
+						</p>
+						<span class="flex items-center gap-2 text-sm font-medium text-indigo-400 transition group-hover:gap-3">
+							Read Post <i class="fas fa-arrow-right text-xs"></i>
+						</span>
+					</a>
+				</article>
+
+				<article class="h-full">
 					<a href="/blog/nearbygame-what-i-learned" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
 								<i class="fas fa-route text-emerald-400"></i>
 							</div>
 							<span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
-								LATEST BLOG
+								BLOG
 							</span>
 						</div>
 						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-emerald-300 dark:text-white">
