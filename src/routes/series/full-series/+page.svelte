@@ -202,19 +202,19 @@
 {/if}
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-blue-50 to-emerald-50 dark:from-blue-900/20 dark:to-emerald-900/20 py-16">
+<section class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <div class="mb-6">
-                <a href="/series" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium">
+                <a href="/series" class="inline-flex min-h-[44px] items-center text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium">
                     ← Back to Series Overview
                 </a>
             </div>
-            <div class="mb-4 inline-flex items-center rounded-lg bg-emerald-50 dark:bg-emerald-900/30 px-4 py-2 text-emerald-800 dark:text-emerald-300">
+            <div class="mb-4 inline-flex items-center rounded-lg bg-blue-50 dark:bg-blue-900/30 px-4 py-2 text-blue-800 dark:text-blue-300">
                 <i class="fas fa-book-open mr-2" aria-hidden="true"></i>
                 <span class="font-medium">Complete Series — 10 Parts</span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 class="font-serif text-4xl md:text-5xl font-semibold text-gray-900 dark:text-white mb-6">
                 How I Built MiniBreaks.io With AI
             </h1>
             <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
@@ -336,7 +336,7 @@
                     </div>
                 </div>
                 <div class="flex items-start space-x-4">
-                    <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900"><i class="fas fa-comment-dots text-purple-600 dark:text-purple-300" aria-hidden="true"></i></div>
+                    <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"><i class="fas fa-comment-dots text-blue-600 dark:text-blue-300" aria-hidden="true"></i></div>
                     <div>
                         <h4 class="mb-2 font-bold text-gray-900 dark:text-white">Writing Effective Prompts</h4>
                         <p class="text-gray-600 dark:text-gray-400">How to communicate with AI tools to get exactly what you need, not overwhelming lists of possibilities.</p>
@@ -350,7 +350,7 @@
                     </div>
                 </div>
                 <div class="flex items-start space-x-4">
-                    <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900"><i class="fas fa-handshake text-orange-600 dark:text-orange-300"></i></div>
+                    <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"><i class="fas fa-handshake text-blue-600 dark:text-blue-300"></i></div>
                     <div>
                         <h4 class="mb-2 font-bold text-gray-900 dark:text-white">Making AI Your Partner</h4>
                         <p class="text-gray-600 dark:text-gray-400">Most importantly, how to work with AI as a collaborative partner rather than expecting it to do everything for you.</p>
@@ -364,12 +364,12 @@
             <p>Whether you're a complete beginner who's never written a line of code, or someone with technical experience who wants to see how AI can accelerate your workflow, this series is designed to be accessible and practical.</p>
             <p>I'll explain technical concepts in plain language, show you exactly which buttons to click, and most importantly, share the real challenges I faced and how I overcame them.</p>
 
-            <div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
+            <div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
                 <div class="flex items-start space-x-3">
-                    <i class="fas fa-lightbulb mt-1 text-emerald-600 dark:text-emerald-400"></i>
+                    <i class="fas fa-lightbulb mt-1 text-blue-600 dark:text-blue-400"></i>
                     <div>
-                        <p class="mb-2 font-semibold text-emerald-800 dark:text-emerald-300">My Promise to You</p>
-                        <p class="mb-0 text-emerald-700 dark:text-emerald-400">No jargon without explanation. No skipped steps. No "and then magic happens" moments. Just honest, practical guidance from someone who's been through the process.</p>
+                        <p class="mb-2 font-semibold text-blue-800 dark:text-blue-300">My Promise to You</p>
+                        <p class="mb-0 text-blue-700 dark:text-blue-400">No jargon without explanation. No skipped steps. No "and then magic happens" moments. Just honest, practical guidance from someone who's been through the process.</p>
                     </div>
                 </div>
             </div>
@@ -447,12 +447,12 @@
             <p>But let's be honest: it wasn't hands-off magic. AI required careful direction, clear communication, and constant quality control. There were moments of frustration when AI would misunderstand requirements or generate code that looked right but had subtle bugs.</p>
             <p>I learned that AI amplifies both good and bad practices. If I was unclear in my instructions, I got unclear results. If I didn't understand the problem space well enough, AI couldn't compensate for that gap.</p>
 
-            <div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
+            <div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
                 <div class="flex items-start space-x-3">
-                    <i class="fas fa-lightbulb mt-1 text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
+                    <i class="fas fa-lightbulb mt-1 text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
                     <div>
-                        <p class="mb-2 font-semibold text-emerald-800 dark:text-emerald-300">Key Lesson</p>
-                        <p class="mb-0 text-emerald-700 dark:text-emerald-400">I need to get my requirements right before asking AI to implement them.</p>
+                        <p class="mb-2 font-semibold text-blue-800 dark:text-blue-300">Key Lesson</p>
+                        <p class="mb-0 text-blue-700 dark:text-blue-400">I need to get my requirements right before asking AI to implement them.</p>
                     </div>
                 </div>
             </div>
@@ -521,12 +521,12 @@
                     <h4 class="mb-2 font-bold text-green-700 dark:text-green-300">⚡ GitHub Copilot/Cursor</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-400">Your AI coding assistant that writes code as you instruct it</p>
                 </div>
-                <div class="rounded-lg border-l-4 border-purple-500 bg-purple-50 p-6 dark:bg-purple-900/20">
-                    <h4 class="mb-2 font-bold text-purple-700 dark:text-purple-300">🤗 Hugging Face</h4>
+                <div class="rounded-lg border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+                    <h4 class="mb-2 font-bold text-blue-700 dark:text-blue-300">🤗 Hugging Face</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-400">Free AI models for advanced features such as designing (optional)</p>
                 </div>
-                <div class="rounded-lg border-l-4 border-orange-500 bg-orange-50 p-6 dark:bg-orange-900/20">
-                    <h4 class="mb-2 font-bold text-orange-700 dark:text-orange-300">📁 GitHub</h4>
+                <div class="rounded-lg border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+                    <h4 class="mb-2 font-bold text-blue-700 dark:text-blue-300">📁 GitHub</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-400">Where your code lives and how you deploy your site</p>
                 </div>
             </div>
@@ -549,7 +549,7 @@
 
             <h3 id="cursor">Cursor IDE - AI-First Code Editor</h3>
             <p>Cursor is like a supercharged code editor built specifically for AI assistance. It's what I used to kick off MiniBreaks.io, and it's <strong>completely free</strong>.</p>
-            <div class="not-prose my-6 border-l-4 border-purple-500 bg-purple-50 p-4 dark:bg-purple-900/20">
+            <div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
                 <p class="mb-0 text-gray-700 dark:text-gray-300"><strong>My recommendation:</strong> Start with Cursor (free), do as much as you can in the first 2 weeks, and add GitHub Copilot later if you want even more AI assistance.</p>
             </div>
 
@@ -600,7 +600,7 @@
                         <p class="text-sm text-gray-600 dark:text-gray-400">Write code with AI assistance</p>
                     </div>
                     <div class="text-center">
-                        <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900"><span class="font-bold text-purple-600 dark:text-purple-300">3</span></div>
+                        <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"><span class="font-bold text-blue-600 dark:text-blue-300">3</span></div>
                         <h4 class="mb-1 font-bold text-gray-900 dark:text-white">Deploy to GitHub</h4>
                         <p class="text-sm text-gray-600 dark:text-gray-400">Push your changes live</p>
                     </div>
@@ -678,7 +678,7 @@
                     </div>
                 </div>
                 <div class="flex items-start space-x-4">
-                    <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-white font-bold">3</div>
+                    <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">3</div>
                     <div>
                         <h4 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white" id="business-needs">Focus on business needs</h4>
                         <p class="text-gray-700 dark:text-gray-300">If you don't frame your request around business needs, AI will behave like an overanxious parent — giving you way more technical details than you need at this stage.</p>
@@ -904,9 +904,9 @@
                 <li>Reusable components in <code>src/lib/components/</code></li>
                 <li>All JavaScript converted to TypeScript</li>
             </ul>
-            <div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
-                <p class="mb-2 text-lg font-semibold text-emerald-700 dark:text-emerald-300">✨ The Magic Moment</p>
-                <p class="mb-0 text-emerald-700 dark:text-emerald-300">You now have a structured, maintainable project with a home page, an about page, and reusable components — making it easy for AI (and you) to expand further.</p>
+            <div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+                <p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">✨ The Magic Moment</p>
+                <p class="mb-0 text-blue-700 dark:text-blue-300">You now have a structured, maintainable project with a home page, an about page, and reusable components — making it easy for AI (and you) to expand further.</p>
             </div>
 
             <h3 id="extending-with-ai">Extending Your Site with AI</h3>
@@ -928,7 +928,7 @@
                     <p class="text-gray-700 dark:text-gray-300">Instead of asking AI to build an entire feature, break it into smaller components. Ask for one component at a time, then integrate them.</p>
                 </div>
                 <div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
-                    <h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white"><i class="fas fa-sync-alt mr-3 text-orange-500" aria-hidden="true"></i>Iterate and Refine</h4>
+                    <h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white"><i class="fas fa-sync-alt mr-3 text-blue-500" aria-hidden="true"></i>Iterate and Refine</h4>
                     <p class="text-gray-700 dark:text-gray-300">Don't expect perfection on the first try. Use follow-up prompts to refine styling, improve accessibility, or add missing functionality.</p>
                 </div>
             </div>
@@ -975,7 +975,7 @@
             <p>Think of a database as a digital notebook that stores all your website's important information neatly organized into tables. Each table is like a spreadsheet with rows and columns.</p>
             <div class="not-prose my-6 space-y-4">
                 <div class="flex items-start space-x-4">
-                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-white font-bold"><i class="fas fa-table" aria-hidden="true"></i></div>
+                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold"><i class="fas fa-table" aria-hidden="true"></i></div>
                     <div><h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Table</h4><p class="text-gray-700 dark:text-gray-300">Like a sheet in Excel where you store related information.</p></div>
                 </div>
                 <div class="flex items-start space-x-4">
@@ -1040,7 +1040,7 @@ CREATE TABLE users (
 
             <h3 id="password-recovery">Step 3: Password Recovery Page</h3>
             <div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
-                <div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-purple-500">
+                <div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-blue-500">
                     <p class="text-gray-700 dark:text-gray-300 italic">"Create a page that lets users recover their password by entering their email. For now, just create the form and logic, but leave the email sending functionality as a placeholder."</p>
                 </div>
             </div>
@@ -1320,17 +1320,17 @@ CREATE TABLE users (
                 <p class="text-gray-700 dark:text-gray-300"><strong>Root Cause:</strong> The issue wasn't in the component — it was a timing conflict between the backdrop click handler and the button click handler. The AI kept changing the component structure because it didn't have enough context about event propagation.</p>
                 <p class="text-gray-700 dark:text-gray-300 mt-4"><strong>Solution:</strong> I stopped the AI, looked at the event flow myself, added <code>event.stopPropagation()</code> to the Cancel button, and it worked instantly.</p>
             </div>
-            <div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
-                <p class="mb-2 text-lg font-semibold text-emerald-700 dark:text-emerald-300">🎓 Takeaway</p>
-                <p class="text-emerald-700 dark:text-emerald-300">When AI keeps failing to fix an issue, step back and try to understand the root cause yourself. AI is great at generating code, but debugging often requires a higher-level understanding of how pieces fit together.</p>
+            <div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+                <p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">🎓 Takeaway</p>
+                <p class="text-blue-700 dark:text-blue-300">When AI keeps failing to fix an issue, step back and try to understand the root cause yourself. AI is great at generating code, but debugging often requires a higher-level understanding of how pieces fit together.</p>
             </div>
 
             <h3 id="deployment-case-study">Case Study 2: Deployment Troubleshooting</h3>
             <p>After weeks of development, I was ready to deploy MiniBreaks.io. The AI suggested using a popular deployment platform and provided step-by-step instructions. Everything seemed fine — until I pushed my code and got a build error.</p>
             <p>The AI tried to fix the error by modifying the build configuration, but each fix introduced new issues. It took me hours of back-and-forth before I realized the root cause: my Node.js version was incompatible with one of my dependencies.</p>
-            <div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
-                <p class="mb-2 text-lg font-semibold text-emerald-700 dark:text-emerald-300">🎓 Takeaway</p>
-                <p class="text-emerald-700 dark:text-emerald-300">Always check your environment configuration (Node.js version, dependencies) before troubleshooting code-level issues. Version mismatches are a common source of deployment problems.</p>
+            <div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+                <p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">🎓 Takeaway</p>
+                <p class="text-blue-700 dark:text-blue-300">Always check your environment configuration (Node.js version, dependencies) before troubleshooting code-level issues. Version mismatches are a common source of deployment problems.</p>
             </div>
         </section>
 
@@ -1391,15 +1391,15 @@ CREATE TABLE users (
             <h2>🚀 What's Next for AI Development?</h2>
             <p>AI tools are evolving at a breathtaking pace. Here's what I see coming:</p>
             <div class="my-6 space-y-6">
-                <div class="rounded-lg bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 border border-blue-200 dark:border-blue-800">
+                <div class="rounded-lg bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 p-6 border border-blue-200 dark:border-blue-800">
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">🧠 Smarter Context Understanding</h4>
                     <p class="text-gray-700 dark:text-gray-300">AI will get better at understanding entire codebases, not just individual files. This means fewer context-switching issues and more coherent suggestions.</p>
                 </div>
-                <div class="rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 border border-green-200 dark:border-green-800">
+                <div class="rounded-lg bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-6 border border-green-200 dark:border-green-800">
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">🔗 Better Tool Integration</h4>
                     <p class="text-gray-700 dark:text-gray-300">Expect tighter integration between AI and development tools — from design to deployment, AI will be woven into every step.</p>
                 </div>
-                <div class="rounded-lg bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 p-6 border border-orange-200 dark:border-orange-800">
+                <div class="rounded-lg bg-gradient-to-r from-blue-50 to-amber-50 dark:from-blue-900/20 dark:to-amber-900/20 p-6 border border-blue-200 dark:border-blue-800">
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">🎯 More Specialized Models</h4>
                     <p class="text-gray-700 dark:text-gray-300">Instead of one-size-fits-all, we'll see AI models specialized for different frameworks, languages, and even types of applications.</p>
                 </div>
@@ -1428,11 +1428,11 @@ CREATE TABLE users (
                     <div><h4 class="text-lg font-semibold text-gray-900 dark:text-white">Stay Curious</h4><p class="text-gray-700 dark:text-gray-300">AI tools change fast. Keep experimenting, keep learning, and don't be afraid to try new approaches.</p></div>
                 </div>
                 <div class="flex items-start space-x-4">
-                    <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-white font-bold text-sm">3</div>
+                    <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold text-sm">3</div>
                     <div><h4 class="text-lg font-semibold text-gray-900 dark:text-white">Build for People</h4><p class="text-gray-700 dark:text-gray-300">Technology is a means to an end. Focus on solving real problems for real people, and the tools will follow.</p></div>
                 </div>
                 <div class="flex items-start space-x-4">
-                    <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm">4</div>
+                    <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold text-sm">4</div>
                     <div><h4 class="text-lg font-semibold text-gray-900 dark:text-white">Share Your Journey</h4><p class="text-gray-700 dark:text-gray-300">Document what you learn. Others are on the same path, and your experience might be exactly what someone needs to hear.</p></div>
                 </div>
             </div>
@@ -1446,7 +1446,7 @@ CREATE TABLE users (
 
         <section id="cheat-sheet">
             <h2>📋 AI Development Cheat Sheet</h2>
-            <div class="not-prose my-8 rounded-xl bg-gradient-to-br from-blue-600 via-purple-600 to-emerald-600 p-1">
+            <div class="not-prose my-8 rounded-xl bg-gradient-to-br from-blue-600 via-blue-600 to-blue-600 p-1">
                 <div class="rounded-xl bg-white dark:bg-gray-900 p-8">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Quick Reference Guide</h3>
                     <div class="grid md:grid-cols-2 gap-6">
@@ -1471,7 +1471,7 @@ CREATE TABLE users (
                             </ul>
                         </div>
                         <div>
-                            <h4 class="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">⭐ Best Practices</h4>
+                            <h4 class="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">⭐ Best Practices</h4>
                             <ul class="space-y-1 text-gray-700 dark:text-gray-300 text-sm">
                                 <li>Be specific in your prompts</li>
                                 <li>Break complex tasks into small steps</li>
@@ -1501,7 +1501,7 @@ CREATE TABLE users (
                             </ul>
                         </div>
                         <div>
-                            <h4 class="text-lg font-semibold text-emerald-600 dark:text-emerald-400 mb-3">🎯 Closing Thought</h4>
+                            <h4 class="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">🎯 Closing Thought</h4>
                             <p class="text-gray-700 dark:text-gray-300 text-sm italic">"AI makes the fast things faster. Your job is to bring the wisdom — the decisions, the empathy, the judgment that turns code into products people love."</p>
                         </div>
                     </div>

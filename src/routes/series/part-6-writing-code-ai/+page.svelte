@@ -27,7 +27,7 @@
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			Writing Code with AI Assistance
 		</h1>
@@ -158,11 +158,11 @@
 				</div>
 			</div>
 
-			<div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
-				<p class="mb-2 text-lg font-semibold text-emerald-700 dark:text-emerald-300">
+			<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+				<p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">
 					💡 Personal Experience
 				</p>
-				<p class="mb-0 text-emerald-700 dark:text-emerald-300">
+				<p class="mb-0 text-blue-700 dark:text-blue-300">
 					When I first tried using AI to generate React code, I often had to fix mismatched libraries or deprecated APIs. With SvelteKit, I had a much smoother experience — and I could focus on building rather than debugging.
 				</p>
 			</div>
@@ -269,11 +269,11 @@
 						<li>All JavaScript converted to TypeScript</li>
 					</ul>
 
-					<div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
-						<p class="mb-2 text-lg font-semibold text-emerald-700 dark:text-emerald-300">
+					<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+						<p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">
 							✨ The Magic Moment
 						</p>
-						<p class="mb-0 text-emerald-700 dark:text-emerald-300">
+						<p class="mb-0 text-blue-700 dark:text-blue-300">
 							You now have a structured, maintainable project with a home page, an about page, and reusable components — making it easy for AI (and you) to expand further.
 						</p>
 					</div>
@@ -330,7 +330,7 @@
 
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-sync-alt mr-3 text-orange-500" aria-hidden="true"></i>
+					<i class="fas fa-sync-alt mr-3 text-blue-500" aria-hidden="true"></i>
 					Iterate and Refine
 				</h4>
 				<p class="text-gray-700 dark:text-gray-300">
@@ -403,7 +403,7 @@
 			<li>Step-by-step instructions for wiring these features to your UI</li>
 		</ul>
 
-		<div class="not-prose my-8 border-l-4 border-purple-500 bg-purple-50 p-6 dark:bg-purple-900/20">
+		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>🔧 Coming up:</strong> We'll explore how AI can help you implement complex features like user accounts, email systems, and databases with practical examples and real code you can use in your project.
 			</p>

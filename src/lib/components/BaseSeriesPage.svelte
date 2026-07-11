@@ -183,7 +183,7 @@ Best regards`;
             <!-- Back to Series button - only show on mobile when part indicator is hidden -->
             <div class="sm:hidden mb-6">
                 <div class="flex flex-col items-center gap-3">
-                    <a href="{navigation.seriesUrl}" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
+                    <a href="{navigation.seriesUrl}" class="inline-flex min-h-[44px] items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
                         <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>Back to Series
                     </a>
                     <span class="bg-blue-500 dark:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -193,7 +193,7 @@ Best regards`;
             </div>
             <!-- Desktop: Just the back button since part indicator is in nav -->
             <div class="hidden sm:block mb-6">
-                <a href="{navigation.seriesUrl}" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
+                <a href="{navigation.seriesUrl}" class="inline-flex min-h-[44px] items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
                     <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>Back to Series
                 </a>
             </div>
@@ -201,7 +201,7 @@ Best regards`;
 
         <!-- Allow customization of header content -->
         <slot name="header">
-            <h1 class="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-900 dark:text-white transition-colors">
+            <h1 class="font-serif text-4xl md:text-5xl font-semibold text-center mb-6 text-gray-900 dark:text-white transition-colors">
                 {articleData.title}
             </h1>
 
@@ -256,7 +256,7 @@ Best regards`;
 </div>
 
 <!-- Article Content -->
-<main class="py-12 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors min-h-screen">
+<main class="py-12 bg-[var(--bg)] transition-colors min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="flex flex-col lg:flex-row gap-8 transition-all duration-300">
@@ -291,7 +291,7 @@ Best regards`;
             <article class="flex-1 max-w-none text-gray-700 dark:text-gray-300">
                 <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
                     <!-- Reading optimized content area -->
-                    <div class="p-8 lg:p-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+                    <div class="p-8 lg:p-14 bg-white dark:bg-gray-900">
                         <div class="prose prose-xl dark:prose-invert max-w-4xl mx-auto scroll-pt-24
                                     prose-headings:text-gray-900 dark:prose-headings:text-white prose-headings:font-bold
                                     prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:text-lg
@@ -300,8 +300,8 @@ Best regards`;
                                     prose-ol:ml-6 prose-ol:mb-6 prose-ol:mt-4 prose-ol:space-y-2 prose-ol:list-decimal prose-ol:pl-6
                                     prose-strong:text-gray-900 dark:prose-strong:text-white
                                     prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-blue-800 dark:hover:prose-a:text-blue-300 prose-a:transition-colors
-                                    prose-code:text-pink-600 dark:prose-code:text-pink-400 prose-code:font-medium
-                                    prose-code:bg-pink-50 dark:prose-code:bg-pink-900/20 prose-code:px-2 prose-code:py-1 prose-code:rounded
+                                    prose-code:text-blue-700 dark:prose-code:text-blue-300 prose-code:font-medium
+                                    prose-code:bg-blue-50 dark:prose-code:bg-blue-900/20 prose-code:px-2 prose-code:py-1 prose-code:rounded
                                     prose-pre:bg-gray-100 dark:prose-pre:bg-gray-800 prose-pre:border prose-pre:border-gray-200 dark:prose-pre:border-gray-700
                                     prose-blockquote:border-blue-500 dark:prose-blockquote:border-blue-400 prose-blockquote:bg-blue-50 dark:prose-blockquote:bg-blue-900/10
                                     prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
@@ -385,7 +385,7 @@ Best regards`;
 
 <!-- CTA Section -->
 <slot name="cta">
-    <section class="py-12 bg-gradient-to-r from-blue-500 to-emerald-500 dark:from-blue-600 dark:to-emerald-600 text-white">
+    <section class="py-12 bg-blue-600 dark:bg-blue-700 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">Enjoying the Series?</h2>
             <p class="text-blue-100 dark:text-blue-200 mb-6 text-lg">

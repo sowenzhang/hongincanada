@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hongincanada.com/sitemap.xml
+Sitemap: https://www.hongincanada.com/sitemap.xml
 
 # Block access to private areas
 Disallow: /bin/

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import MorePosts from '$lib/components/MorePosts.svelte';
 	import { slide } from 'svelte/transition';
 
 	const pageData = {
@@ -22,13 +23,13 @@
 		{ id: 'closing', title: 'Closing Thoughts' }
 	];
 
-	let isDark = $state(true);
+	let isDark = $state(false);
 	let showTOC = $state(true);
 	let showBackToTop = $state(false);
 
 	onMount(() => {
 		const saved = localStorage.getItem('theme');
-		isDark = saved ? saved === 'dark' : true;
+		isDark = saved ? saved === 'dark' : false;
 		document.documentElement.classList.toggle('dark', isDark);
 
 		const handleScroll = () => {
@@ -135,14 +136,14 @@
 				<span class="text-gray-600 dark:text-gray-300">MiniBreaks Pivot</span>
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
-				<span class="rounded-full bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-500 dark:text-orange-400">
+				<span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500 dark:text-blue-400">
 					<i class="fas fa-leaf mr-1.5" aria-hidden="true"></i>MiniBreaks
 				</span>
 				<span class="rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
 					Product Experiment
 				</span>
 			</div>
-			<h1 class="mb-5 text-4xl font-bold leading-tight text-gray-900 dark:text-white md:text-5xl">
+			<h1 class="mb-5 font-serif text-4xl font-semibold leading-tight text-gray-900 dark:text-white md:text-5xl">
 				MiniBreaks Pivot: From Wellness Platform to Micro-App Hub
 			</h1>
 			<div class="flex flex-wrap items-center gap-5 text-sm text-gray-500 dark:text-gray-400">
@@ -154,7 +155,7 @@
 	</header>
 
 	<!-- Main Content Area -->
-	<main class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 py-12 transition-colors min-h-screen">
+	<main class="bg-[var(--bg)] py-12 transition-colors min-h-screen">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 			<div class="flex flex-col lg:flex-row gap-8">
 
@@ -247,11 +248,11 @@
 										The new goal is straightforward: <strong>Ship one small app every week</strong>. After one year, the site will contain <strong>52 tiny apps</strong>.
 									</p>
 
-									<div class="not-prose my-8 border-l-4 border-orange-500 bg-orange-50 p-6 dark:bg-orange-900/20 rounded-r-xl">
+									<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20 rounded-r-xl">
 										<p class="mb-2 text-gray-700 dark:text-gray-300 leading-relaxed">
 											<strong>Before → After</strong>
 										</p>
-										<ul class="list-disc list-inside pl-1 space-y-2 text-gray-700 dark:text-gray-300 marker:text-orange-500">
+										<ul class="list-disc list-inside pl-1 space-y-2 text-gray-700 dark:text-gray-300 marker:text-blue-500">
 											<li><strong>Workplace wellness platform</strong> → Micro-app hub</li>
 											<li><strong>Topic-focused</strong> → Tool-focused</li>
 											<li><strong>Hard to decide what to build</strong> → Endless small ideas</li>
@@ -529,6 +530,8 @@ Checks:
 			</div>
 		</div>
 	</main>
+
+	<MorePosts currentSlug="minibreaks-pivot" />
 
 	<!-- Back to Top Button -->
 	{#if showBackToTop}

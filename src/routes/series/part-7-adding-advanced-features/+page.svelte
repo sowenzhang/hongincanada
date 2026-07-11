@@ -30,7 +30,7 @@
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			Adding Advanced Features with AI
 		</h1>
@@ -85,7 +85,7 @@
 
 		<div class="not-prose my-6 space-y-4">
 			<div class="flex items-start space-x-4">
-				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-white font-bold">
+				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
 					<i class="fas fa-table" aria-hidden="true"></i>
 				</div>
 				<div>
@@ -157,7 +157,7 @@
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
 					3
 				</div>
 				<div>
@@ -168,7 +168,7 @@
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
 					4
 				</div>
 				<div>
@@ -294,10 +294,10 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-key mr-3 text-purple-500 text-2xl" aria-hidden="true"></i>
+				<i class="fas fa-key mr-3 text-blue-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Prompt Example:</h4>
 			</div>
-			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-purple-500">
+			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-blue-500">
 				<p class="text-gray-700 dark:text-gray-300 italic">
 					"Create a page that lets users recover their password by entering their email. For now, just create the form and logic, but leave the email sending functionality as a placeholder that I can complete later."
 				</p>
@@ -347,7 +347,7 @@ CREATE TABLE users (
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
 					3
 				</div>
 				<div>
@@ -482,11 +482,11 @@ CREATE TABLE users (
 			</div>
 		</div>
 
-		<div class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
-			<p class="mb-2 font-medium text-emerald-800 dark:text-emerald-200">
+		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+			<p class="mb-2 font-medium text-blue-800 dark:text-blue-200">
 				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>Documentation Tip
 			</p>
-			<p class="text-emerald-700 dark:text-emerald-300">
+			<p class="text-blue-700 dark:text-blue-300">
 				Keep a simple text file or document where you record the prompts you used and what AI generated. This becomes invaluable when you need to make changes or debug issues later. It's like having a conversation history with your AI assistant!
 			</p>
 		</div>
@@ -508,7 +508,7 @@ CREATE TABLE users (
 			<li>Different deployment environments and strategies</li>
 		</ul>
 
-		<div class="not-prose my-8 border-l-4 border-purple-500 bg-purple-50 p-6 dark:bg-purple-900/20">
+		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>🚀 Coming up:</strong> We'll explore how to ensure your website is ready for real users, including performance considerations, security checks, and deployment best practices that will make your launch smooth and successful.
 			</p>

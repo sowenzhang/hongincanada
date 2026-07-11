@@ -23,7 +23,7 @@
 <BaseSeriesPage {articleData} {navigation} {tableOfContents}>
     <!-- Article Content -->
     <section id="intro">
-        <div class="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-xl p-8 mb-8 border border-purple-100 dark:border-purple-800">
+        <div class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl p-8 mb-8 border border-blue-100 dark:border-blue-800">
             <p class="text-xl leading-relaxed mb-4">Think about the last time you planned a trip.</p>
 
             <div class="space-y-4 text-lg">
@@ -34,17 +34,17 @@
                 <p>📸 And after the trip? You probably dug through Photos and a budgeting app to figure out what you spent.</p>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 mt-6 border-l-4 border-purple-500">
-                <p class="text-xl font-semibold text-purple-700 dark:text-purple-300 mb-2">That's five or six apps — all for one journey.</p>
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-6 mt-6 border-l-4 border-blue-500">
+                <p class="text-xl font-semibold text-blue-700 dark:text-blue-300 mb-2">That's five or six apps — all for one journey.</p>
                 <p class="text-gray-600 dark:text-gray-400">This is normal today. But it doesn't feel right, does it?</p>
             </div>
         </div>
 
-        <p class="text-lg leading-relaxed mb-6">We live in a world where apps are still siloed products. App stores want you to search, install, and learn them one by one. But our lives don't fit into silos. We live in <em class="font-semibold text-purple-600 dark:text-purple-400">flows</em> — trips, health check-ups, courses, projects — and those flows cut across dozens of apps.</p>
+        <p class="text-lg leading-relaxed mb-6">We live in a world where apps are still siloed products. App stores want you to search, install, and learn them one by one. But our lives don't fit into silos. We live in <em class="font-semibold text-blue-600 dark:text-blue-400">flows</em> — trips, health check-ups, courses, projects — and those flows cut across dozens of apps.</p>
 
         <div class="text-center my-8">
-            <p class="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">This series is about a different way of thinking:</p>
-            <p class="text-4xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Mosaic</p>
+            <p class="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">This series is about a different way of thinking:</p>
+            <p class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Mosaic</p>
         </div>
     </section>
 
@@ -76,7 +76,7 @@
     <section id="what-this-series-will-cover">
         <h2>What This Series Will Cover</h2>
 
-        <div class="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-lg p-6 my-8">
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6 my-8">
             <ul class="space-y-3">
                 <li><strong>Part 1 — The Problem with Apps Today</strong><br>
                     <span class="text-gray-600 dark:text-gray-400">You're reading it! Why app stores and siloed apps don't fit the modern user journey. Introduce the Mosaic concept at a high level.</span></li>

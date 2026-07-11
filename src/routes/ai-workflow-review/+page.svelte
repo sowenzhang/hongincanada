@@ -170,7 +170,7 @@
 	<div class="hero-gradient-mesh pointer-events-none absolute inset-0 opacity-50"></div>
 	<div class="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6">
 		<ScrollReveal>
-			<h1 class="mb-6 text-4xl font-bold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+			<h1 class="mb-6 font-serif text-4xl font-semibold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
 				Free AI Workflow Review
 			</h1>
 			<p class="mx-auto mb-10 max-w-2xl text-lg text-gray-600 dark:text-gray-400 md:text-xl">
@@ -179,13 +179,13 @@
 			<div class="flex flex-wrap items-center justify-center gap-4">
 				<a
 					href="#send-workflow"
-					class="rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-2.5 text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
+					class="rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-3 text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
 				>
 					Send a Workflow
 				</a>
 				<a
 					href="#examples"
-					class="rounded-full border border-gray-300 dark:border-white/10 px-6 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-400 transition-colors hover:border-gray-400 dark:hover:border-white/20 hover:text-gray-900 dark:hover:text-white"
+					class="rounded-full border border-gray-300 dark:border-white/10 px-6 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 transition-colors hover:border-gray-400 dark:hover:border-white/20 hover:text-gray-900 dark:hover:text-white"
 				>
 					See Examples
 				</a>
@@ -200,7 +200,7 @@
 <section class="bg-gray-50 dark:bg-gray-900/50 py-12">
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<ScrollReveal>
-			<h2 class="mb-6 text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
+			<h2 class="mb-6 font-serif text-2xl font-semibold text-gray-900 dark:text-white md:text-3xl">
 				AI advice is often too vague to act on
 			</h2>
 			<div class="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -222,8 +222,8 @@
 	<div class="mx-auto max-w-4xl px-4 sm:px-6">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-blue-400">Process</p>
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">How it works</h2>
+				<p class="mb-2 eyebrow">Process</p>
+				<h2 class="font-serif text-2xl font-semibold text-gray-900 dark:text-white md:text-3xl">How it works</h2>
 			</div>
 		</ScrollReveal>
 
@@ -231,7 +231,7 @@
 		<div class="mx-auto max-w-2xl">
 			<div class="relative">
 				<!-- Connecting line -->
-				<div class="absolute left-6 top-6 bottom-6 w-px bg-gradient-to-b from-blue-500/40 via-purple-500/40 to-emerald-500/40 md:left-8"></div>
+				<div class="absolute left-6 top-6 bottom-6 w-px bg-gradient-to-b from-blue-500/40 via-blue-500/40 to-blue-500/40 md:left-8"></div>
 
 				<ScrollReveal delay={100}>
 					<div class="relative mb-8 flex items-start gap-4 md:gap-6">
@@ -247,8 +247,8 @@
 
 				<ScrollReveal delay={200}>
 					<div class="relative mb-8 flex items-start gap-4 md:gap-6">
-						<div class="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/10 border border-purple-500/20 md:h-16 md:w-16">
-							<span class="text-lg font-bold text-purple-400 md:text-xl">2</span>
+						<div class="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/10 border border-blue-500/20 md:h-16 md:w-16">
+							<span class="text-lg font-bold text-blue-500 md:text-xl">2</span>
 						</div>
 						<div class="pt-2 md:pt-4">
 							<h3 class="mb-1 font-semibold text-gray-900 dark:text-white">I review selected requests</h3>
@@ -259,8 +259,8 @@
 
 				<ScrollReveal delay={300}>
 					<div class="relative mb-8 flex items-start gap-4 md:gap-6">
-						<div class="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-cyan-500/10 border border-cyan-500/20 md:h-16 md:w-16">
-							<span class="text-lg font-bold text-cyan-400 md:text-xl">3</span>
+						<div class="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/10 border border-blue-500/20 md:h-16 md:w-16">
+							<span class="text-lg font-bold text-blue-500 md:text-xl">3</span>
 						</div>
 						<div class="pt-2 md:pt-4">
 							<h3 class="mb-1 font-semibold text-gray-900 dark:text-white">I send back a short written review</h3>
@@ -271,8 +271,8 @@
 
 				<ScrollReveal delay={400}>
 					<div class="relative flex items-start gap-4 md:gap-6">
-						<div class="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/20 md:h-16 md:w-16">
-							<span class="text-lg font-bold text-emerald-400 md:text-xl">4</span>
+						<div class="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/10 border border-blue-500/20 md:h-16 md:w-16">
+							<span class="text-lg font-bold text-blue-500 md:text-xl">4</span>
 						</div>
 						<div class="pt-2 md:pt-4">
 							<h3 class="mb-1 font-semibold text-gray-900 dark:text-white">You decide whether to test it</h3>
@@ -291,7 +291,7 @@
 <section class="bg-gray-50 dark:bg-gray-900/50 py-12">
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<ScrollReveal>
-			<h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
+			<h2 class="mb-8 font-serif text-2xl font-semibold text-gray-900 dark:text-white md:text-3xl">
 				Who this is for
 			</h2>
 			<p class="mb-6 text-gray-600 dark:text-gray-400">This may be useful if you are someone who has repetitive knowledge work, for example:</p>
@@ -300,23 +300,23 @@
 		<ScrollReveal delay={100}>
 			<ul class="space-y-3">
 				<li class="flex items-start gap-3">
-					<i class="fas fa-circle-check mt-0.5 text-sm text-emerald-400"></i>
+					<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 					<span class="text-gray-700 dark:text-gray-300">A small business owner with repeated customer questions, documents, or admin work</span>
 				</li>
 				<li class="flex items-start gap-3">
-					<i class="fas fa-circle-check mt-0.5 text-sm text-emerald-400"></i>
+					<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 					<span class="text-gray-700 dark:text-gray-300">A solo professional or consultant who creates similar proposals, reports, or follow-ups</span>
 				</li>
 				<li class="flex items-start gap-3">
-					<i class="fas fa-circle-check mt-0.5 text-sm text-emerald-400"></i>
+					<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 					<span class="text-gray-700 dark:text-gray-300">An educator or creator trying to turn notes, lessons, or ideas into reusable material</span>
 				</li>
 				<li class="flex items-start gap-3">
-					<i class="fas fa-circle-check mt-0.5 text-sm text-emerald-400"></i>
+					<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 					<span class="text-gray-700 dark:text-gray-300">A small team trying to use AI without buying a big system or starting a huge project</span>
 				</li>
 				<li class="flex items-start gap-3">
-					<i class="fas fa-circle-check mt-0.5 text-sm text-emerald-400"></i>
+					<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 					<span class="text-gray-700 dark:text-gray-300">A builder who has a messy workflow and wants a second opinion on where AI can help</span>
 				</li>
 			</ul>
@@ -326,7 +326,7 @@
 			<div class="mt-10 flex justify-center">
 				<a
 					href="#send-workflow"
-					class="rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-2.5 text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
+					class="rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-3 text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
 				>
 					Send a Workflow
 				</a>
@@ -341,7 +341,7 @@
 <section class="bg-white dark:bg-gray-950 py-12">
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<ScrollReveal>
-			<h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
+			<h2 class="mb-8 font-serif text-2xl font-semibold text-gray-900 dark:text-white md:text-3xl">
 				Probably not a good fit
 			</h2>
 			<p class="mb-6 text-gray-600 dark:text-gray-400">This is probably not a good fit if you need:</p>
@@ -381,14 +381,14 @@
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<ScrollReveal>
 			<div class="rounded-2xl border border-blue-500/20 bg-blue-500/5 p-5 md:p-6">
-				<h3 class="mb-3 text-xl font-bold text-gray-900 dark:text-white">Still not sure?</h3>
+				<h3 class="mb-3 font-serif text-xl font-semibold text-gray-900 dark:text-white">Still not sure?</h3>
 				<p class="mb-6 text-gray-600 dark:text-gray-400">
 					That's okay. Send a simple, anonymized version of the workflow and I'll decide whether it's something I can reasonably review.
 				</p>
 				<div class="flex justify-center">
 					<a
 						href="#send-workflow"
-						class="rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-2.5 text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
+						class="rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-3 text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
 					>
 						Send a Workflow
 					</a>
@@ -405,8 +405,8 @@
 	<div class="mx-auto max-w-5xl px-4 sm:px-6">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-emerald-400">Examples</p>
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">Workflows that work well for this</h2>
+				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-blue-500">Examples</p>
+				<h2 class="font-serif text-2xl font-semibold text-gray-900 dark:text-white md:text-3xl">Workflows that work well for this</h2>
 			</div>
 		</ScrollReveal>
 
@@ -425,8 +425,8 @@
 
 			<ScrollReveal delay={150}>
 				<div class="glass-card flex h-full min-h-[132px] items-start gap-4 rounded-xl p-5">
-					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/10">
-						<i class="fas fa-list-check text-purple-400"></i>
+					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-500/10">
+						<i class="fas fa-list-check text-blue-500"></i>
 					</div>
 					<div class="flex min-h-full flex-1 flex-col">
 						<h3 class="min-h-[3rem] font-semibold leading-tight text-gray-900 dark:text-white">Meeting notes to action items</h3>
@@ -437,8 +437,8 @@
 
 			<ScrollReveal delay={200}>
 				<div class="glass-card flex h-full min-h-[132px] items-start gap-4 rounded-xl p-5">
-					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-cyan-500/10">
-						<i class="fas fa-chart-bar text-cyan-400"></i>
+					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-500/10">
+						<i class="fas fa-chart-bar text-blue-500"></i>
 					</div>
 					<div class="flex min-h-full flex-1 flex-col">
 						<h3 class="min-h-[3rem] font-semibold leading-tight text-gray-900 dark:text-white">Weekly reports</h3>
@@ -473,8 +473,8 @@
 
 			<ScrollReveal delay={350}>
 				<div class="glass-card flex h-full min-h-[132px] items-start gap-4 rounded-xl p-5">
-					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-500/10">
-						<i class="fas fa-file-contract text-emerald-400"></i>
+					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-500/10">
+						<i class="fas fa-file-contract text-blue-500"></i>
 					</div>
 					<div class="flex min-h-full flex-1 flex-col">
 						<h3 class="min-h-[3rem] font-semibold leading-tight text-gray-900 dark:text-white">Public document summaries</h3>
@@ -493,8 +493,8 @@
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<ScrollReveal>
 			<div class="mb-8 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-purple-400">Output</p>
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">What you may receive</h2>
+				<p class="mb-2 eyebrow">Output</p>
+				<h2 class="font-serif text-2xl font-semibold text-gray-900 dark:text-white md:text-3xl">What you may receive</h2>
 			</div>
 			<p class="mb-8 text-center text-gray-600 dark:text-gray-400">
 				If I review your workflow, I will send a short written document that may include:
@@ -509,7 +509,7 @@
 						<span class="text-gray-700 dark:text-gray-300">A summary of your workflow as I understand it</span>
 					</li>
 					<li class="flex items-start gap-3">
-						<i class="fas fa-circle-check mt-0.5 text-sm text-emerald-400"></i>
+						<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 						<span class="text-gray-700 dark:text-gray-300">Where AI might realistically help</span>
 					</li>
 					<li class="flex items-start gap-3">
@@ -517,11 +517,11 @@
 						<span class="text-gray-700 dark:text-gray-300">Where AI should not be used</span>
 					</li>
 					<li class="flex items-start gap-3">
-						<i class="fas fa-circle-check mt-0.5 text-sm text-purple-400"></i>
+						<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 						<span class="text-gray-700 dark:text-gray-300">Suggested prompts or templates you can try</span>
 					</li>
 					<li class="flex items-start gap-3">
-						<i class="fas fa-circle-check mt-0.5 text-sm text-cyan-400"></i>
+						<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 						<span class="text-gray-700 dark:text-gray-300">Simple tool suggestions (if relevant)</span>
 					</li>
 					<li class="flex items-start gap-3">
@@ -529,7 +529,7 @@
 						<span class="text-gray-700 dark:text-gray-300">Risks and guardrails to keep in mind</span>
 					</li>
 					<li class="flex items-start gap-3">
-						<i class="fas fa-circle-check mt-0.5 text-sm text-emerald-400"></i>
+						<i class="fas fa-circle-check mt-0.5 text-sm text-blue-500"></i>
 						<span class="text-gray-700 dark:text-gray-300">A small test plan or next steps</span>
 					</li>
 				</ul>
@@ -545,8 +545,8 @@
 	<div class="mx-auto max-w-3xl px-4 sm:px-6">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-cyan-400">Questions</p>
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">Common questions</h2>
+				<p class="mb-2 eyebrow">Questions</p>
+				<h2 class="font-serif text-2xl font-semibold text-gray-900 dark:text-white md:text-3xl">Common questions</h2>
 			</div>
 		</ScrollReveal>
 
@@ -601,7 +601,7 @@
 					<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
 						<i class="fas fa-shield-halved text-orange-400"></i>
 					</div>
-					<h2 class="text-xl font-bold text-gray-900 dark:text-white">Please do not send sensitive data</h2>
+					<h2 class="font-serif text-xl font-semibold text-gray-900 dark:text-white">Please do not send sensitive data</h2>
 				</div>
 				<p class="mb-4 text-sm text-gray-600 dark:text-gray-400">
 					This review involves discussing your workflow in writing. Do not include anything you would not want pasted into an AI tool. Specifically, please avoid sending:
@@ -654,7 +654,7 @@
 					<i class="fas fa-user text-2xl text-blue-400"></i>
 				</div>
 				<div>
-					<h2 class="mb-3 text-xl font-bold text-gray-900 dark:text-white">About me</h2>
+					<h2 class="mb-3 font-serif text-xl font-semibold text-gray-900 dark:text-white">About me</h2>
 					<p class="leading-relaxed text-gray-600 dark:text-gray-400">
 						I’m Hong Zhang. I’ve spent years working across business consulting, large-scale software systems, product UX, experimentation, and AI-assisted development workflows. I’ve worked in both consulting environments and large corporations, where much of the work is turning vague problems into practical systems people can actually use.
 					</p>
@@ -671,8 +671,8 @@
 	<div class="mx-auto max-w-2xl px-4 sm:px-6">
 		<ScrollReveal>
 			<div class="mb-10 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-blue-400">Submit</p>
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">Send a workflow</h2>
+				<p class="mb-2 eyebrow">Submit</p>
+				<h2 class="font-serif text-2xl font-semibold text-gray-900 dark:text-white md:text-3xl">Send a workflow</h2>
 				<p class="mt-3 text-sm text-gray-500 dark:text-gray-400">
 					Describe one repetitive workflow you want a second opinion on. Please keep examples anonymized and avoid sensitive data.
 				</p>
@@ -696,7 +696,7 @@
 						id="name"
 						bind:value={formData.name}
 						required
-						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						placeholder="Your name"
 					/>
 				</div>
@@ -708,7 +708,7 @@
 						id="email"
 						bind:value={formData.email}
 						required
-						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						placeholder="you@example.com"
 					/>
 				</div>
@@ -720,7 +720,7 @@
 						bind:value={formData.workflow}
 						required
 						rows="3"
-						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						placeholder="e.g. I reply to 20+ similar customer emails each day about shipping status"
 					></textarea>
 				</div>
@@ -731,7 +731,7 @@
 						id="currentProcess"
 						bind:value={formData.currentProcess}
 						rows="3"
-						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						placeholder="Walk through the steps you currently take"
 					></textarea>
 				</div>
@@ -742,7 +742,7 @@
 						type="text"
 						id="tools"
 						bind:value={formData.tools}
-						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						placeholder="e.g. Gmail, Google Docs, Slack, Notion"
 					/>
 				</div>
@@ -753,24 +753,24 @@
 						id="betterLooksLike"
 						bind:value={formData.betterLooksLike}
 						rows="2"
-						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						placeholder="e.g. Spend less time writing the same thing, fewer errors, faster turnaround"
 					></textarea>
 				</div>
 
-				<div>
-					<label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">Can I quote or summarize this workflow anonymously in future writing?</label>
+				<fieldset>
+					<legend class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">Can I quote or summarize this workflow anonymously in future writing?</legend>
 					<div class="flex gap-4">
-						<label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
-							<input type="radio" bind:group={formData.quotePermission} value="yes" class="accent-blue-500" />
+						<label class="flex min-h-[44px] items-center gap-2 text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
+							<input type="radio" bind:group={formData.quotePermission} value="yes" class="accent-blue-500 h-5 w-5" />
 							Yes
 						</label>
-						<label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
-							<input type="radio" bind:group={formData.quotePermission} value="no" class="accent-blue-500" />
+						<label class="flex min-h-[44px] items-center gap-2 text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
+							<input type="radio" bind:group={formData.quotePermission} value="no" class="accent-blue-500 h-5 w-5" />
 							No
 						</label>
 					</div>
-				</div>
+				</fieldset>
 
 				<div>
 					<label for="sensitiveData" class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300">Does this involve sensitive data?</label>
@@ -778,7 +778,7 @@
 						id="sensitiveData"
 						bind:value={formData.sensitiveData}
 						rows="2"
-						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-2.5 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+						class="w-full rounded-lg border border-gray-300 dark:border-white/10 bg-white dark:bg-gray-900 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 						placeholder="If yes, please anonymize before sending. Describe the type of data without including actual records."
 					></textarea>
 				</div>
@@ -798,7 +798,7 @@
 				</button>
 
 				{#if formStatus === 'sent'}
-					<p class="text-center text-sm text-emerald-500">
+					<p class="text-center text-sm text-blue-500">
 						Your email client should open with the details pre-filled. If it did not, you can email me directly at me@hongincanada.com.
 					</p>
 				{/if}

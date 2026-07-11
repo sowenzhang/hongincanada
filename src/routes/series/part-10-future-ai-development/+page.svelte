@@ -28,7 +28,7 @@
 	<!-- Custom header -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			The Future of AI-Assisted Development
 		</h1>
@@ -130,7 +130,7 @@
 			<p class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-6">Here's everything you need to know in one compact reference — bookmark this section!</p>
 
 			<!-- Cheat Sheet Container -->
-			<div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 border border-blue-200 dark:border-gray-700 shadow-lg">
+			<div class="bg-gradient-to-br from-blue-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 border border-blue-200 dark:border-gray-700 shadow-lg">
 
 				<!-- Quick Start Section -->
 				<div class="mb-8">
@@ -182,13 +182,13 @@
 								</div>
 								<div class="flex justify-between items-center">
 									<span class="font-semibold text-gray-800 dark:text-gray-200">VS Code / Cursor</span>
-									<span class="text-sm bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded">Writing & Testing</span>
+									<span class="text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded">Writing & Testing</span>
 								</div>
 							</div>
 							<div class="p-4 space-y-3">
 								<div class="flex justify-between items-center">
 									<span class="font-semibold text-gray-800 dark:text-gray-200">Hugging Face / OpenAI</span>
-									<span class="text-sm bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-2 py-1 rounded">AI & Design</span>
+									<span class="text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded">AI & Design</span>
 								</div>
 								<div class="flex justify-between items-center">
 									<span class="font-semibold text-gray-800 dark:text-gray-200">Render / Netlify / Vercel</span>
@@ -203,8 +203,8 @@
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
 					<!-- Best Practices -->
 					<div>
-						<h4 class="text-xl font-bold text-purple-800 dark:text-purple-300 mb-4 flex items-center">
-							<i class="fas fa-comments mr-3 text-purple-600" aria-hidden="true"></i> Best Prompt Practices
+						<h4 class="text-xl font-bold text-blue-800 dark:text-blue-300 mb-4 flex items-center">
+							<i class="fas fa-comments mr-3 text-blue-600" aria-hidden="true"></i> Best Prompt Practices
 						</h4>
 						<div class="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-sm space-y-3">
 							<div class="flex items-center">
@@ -273,8 +273,8 @@
 								<span class="text-sm font-medium text-gray-800 dark:text-gray-200">Explain concepts</span>
 							</div>
 							<div class="text-center">
-								<div class="bg-purple-100 dark:bg-purple-900 rounded-lg p-3 mb-2">
-									<i class="fas fa-vial text-purple-600 text-xl" aria-hidden="true"></i>
+								<div class="bg-blue-100 dark:bg-blue-900 rounded-lg p-3 mb-2">
+									<i class="fas fa-vial text-blue-600 text-xl" aria-hidden="true"></i>
 								</div>
 								<span class="text-sm font-medium text-gray-800 dark:text-gray-200">Suggest tests</span>
 							</div>
@@ -303,7 +303,7 @@
 		</div>
 
 		<!-- Call to Action -->
-		<div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-8 text-center border border-purple-200 dark:border-purple-700 mt-12">
+		<div class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl p-8 text-center border border-blue-200 dark:border-blue-700 mt-12">
 			<h4 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Ready to Start Building?</h4>
 			<p class="text-gray-600 dark:text-gray-400 mb-6">
 				Take what you've learned and start your own AI-assisted development journey. Remember, every expert was once a beginner.
@@ -313,7 +313,7 @@
 					<i class="fas fa-arrow-left mr-3 no-underline" style="color: white !important; text-decoration: none !important;" aria-hidden="true"></i>
 					<span style="color: white !important; ">Review the Full Series</span>
 				</a>
-				<a href="https://minibreaks.io" target="_blank" class="inline-flex items-center px-8 py-4 bg-emerald-600 hover:bg-emerald-700 font-bold rounded-lg transition-colors shadow-lg hover:shadow-xl border border-emerald-500 no-underline" style="color: white !important; ">
+				<a href="https://minibreaks.io" target="_blank" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 font-bold rounded-lg transition-colors shadow-lg hover:shadow-xl border border-blue-500 no-underline" style="color: white !important; ">
 					<i class="fas fa-external-link-alt mr-3 no-underline" style="color: white !important; text-decoration: none !important;" aria-hidden="true"></i>
 					<span style="color: white !important; ">See MiniBreaks.io Live</span>
 				</a>
@@ -321,14 +321,14 @@
 		</div>
 
 		<!-- Want to Read More? Section -->
-		<div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-8 text-center border border-blue-200 dark:border-blue-700 mt-8">
+		<div class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl p-8 text-center border border-blue-200 dark:border-blue-700 mt-8">
 			<h4 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Want to read more?</h4>
 			<p class="text-gray-600 dark:text-gray-400 mb-6">
 				If you enjoyed this AI development series, you might be interested in my thoughts on the future of how we interact with software.
 			</p>
 			<div class="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-600 max-w-2xl mx-auto mb-6">
 				<div class="flex items-center justify-center mb-4">
-					<i class="fas fa-th text-purple-500 text-2xl mr-3"></i>
+					<i class="fas fa-th text-blue-500 text-2xl mr-3"></i>
 					<h5 class="text-xl font-bold text-gray-800 dark:text-gray-200">Mosaic: Rethinking App Flows</h5>
 				</div>
 				<p class="text-gray-600 dark:text-gray-400 text-left mb-4">
@@ -338,7 +338,7 @@
 					A 4-part exploration of the future of digital interaction design.
 				</p>
 			</div>
-			<a href="/mosaic" class="inline-flex items-center px-8 py-4 bg-purple-100 dark:bg-purple-600 hover:bg-purple-400 text-white font-bold rounded-lg transition-colors shadow-lg hover:shadow-xl border border-purple-500 no-underline">
+			<a href="/mosaic" class="inline-flex items-center px-8 py-4 bg-blue-100 dark:bg-blue-600 hover:bg-blue-400 text-white font-bold rounded-lg transition-colors shadow-lg hover:shadow-xl border border-blue-500 no-underline">
 				<i class="fas fa-th mr-3" aria-hidden="true"></i>
 				<span>Read the Mosaic Series</span>
 			</a>

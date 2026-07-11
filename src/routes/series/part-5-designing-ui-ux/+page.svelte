@@ -22,7 +22,7 @@
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			Designing Your UI/UX with AI
 		</h1>

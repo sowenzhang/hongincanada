@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import MorePosts from '$lib/components/MorePosts.svelte';
 	import { slide } from 'svelte/transition';
 
 	const pageData = {
@@ -40,7 +41,7 @@
 		image: 'https://hongincanada.com/pivot_nearbygame/nearbygame_play.jpg'
 	});
 
-	let isDark = $state(true);
+	let isDark = $state(false);
 	let showTOC = $state(false);
 	let showBackToTop = $state(false);
 	let prefersReducedMotion = $state(false);
@@ -50,7 +51,7 @@
 		prefersReducedMotion = mediaQuery.matches;
 
 		const saved = localStorage.getItem('theme');
-		isDark = saved ? saved === 'dark' : true;
+		isDark = saved ? saved === 'dark' : false;
 		document.documentElement.classList.toggle('dark', isDark);
 		showTOC = window.innerWidth >= 1024;
 
@@ -110,23 +111,23 @@
 			<div class="flex items-center gap-4">
 				<a
 					href="/"
-					class="flex items-center gap-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+					class="min-h-[44px] flex items-center gap-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
 				>
 					<i class="fas fa-arrow-left text-xs" aria-hidden="true"></i>
 					Hong in Canada
 				</a>
 				<button
 					onclick={() => (showTOC = !showTOC)}
-					class="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+					class="flex items-center gap-2 min-h-[44px] rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
 				>
-					<i class="fas fa-list text-xs text-emerald-500" aria-hidden="true"></i>
+					<i class="fas fa-list text-xs text-blue-500" aria-hidden="true"></i>
 					<span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Contents</span>
 					<i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-xs text-gray-400" aria-hidden="true"></i>
 				</button>
 			</div>
 			<button
 				onclick={toggleTheme}
-				class="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+				class="flex items-center gap-2 min-h-[44px] rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
 				aria-label="Toggle theme"
 			>
 				{#if isDark}
@@ -150,14 +151,14 @@
 				<span class="text-gray-600 dark:text-gray-300">NearbyGame Pivot</span>
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
-				<span class="rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-500 dark:text-emerald-400">
+				<span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500 dark:text-blue-400">
 					<i class="fas fa-route mr-1.5" aria-hidden="true"></i>NearbyGame
 				</span>
 				<span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400">
 					Product Pivot
 				</span>
 			</div>
-			<h1 class="mb-5 text-4xl font-bold leading-tight text-gray-900 dark:text-white md:text-5xl">
+			<h1 class="mb-5 font-serif text-4xl font-semibold leading-tight text-gray-900 dark:text-white md:text-5xl">
 				How I Pivoted NearbyGame and Used AI to Go From 0 to 1
 			</h1>
 			<p class="max-w-3xl text-lg leading-relaxed text-gray-600 dark:text-gray-300">
@@ -171,7 +172,7 @@
 		</div>
 	</header>
 
-	<main class="min-h-screen bg-gradient-to-br from-emerald-50 to-sky-50 py-12 transition-colors dark:from-gray-900 dark:to-gray-800">
+	<main class="min-h-screen bg-[var(--bg)] py-12 transition-colors">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 			<div class="flex flex-col gap-8 lg:flex-row">
 				<article class="min-w-0 flex-1">
@@ -181,14 +182,14 @@
 								class="prose prose-lg max-w-none dark:prose-invert
 									prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
 									prose-h2:mt-12 prose-h2:mb-5 prose-h2:text-2xl prose-h2:scroll-mt-24
-									prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-xl prose-h3:text-emerald-700 dark:prose-h3:text-emerald-400
+									prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-xl prose-h3:text-blue-700 dark:prose-h3:text-blue-400
 									prose-p:leading-relaxed prose-p:text-gray-700 dark:prose-p:text-gray-300
 									prose-li:mb-2 prose-li:text-gray-700 dark:prose-li:text-gray-300
 									prose-ul:list-disc prose-ul:list-outside prose-ul:pl-6 prose-ol:list-decimal prose-ol:list-inside prose-ol:pl-1
 									prose-li:marker:text-gray-500 dark:prose-li:marker:text-gray-400
 									prose-strong:text-gray-900 dark:prose-strong:text-white
-									prose-a:text-emerald-600 prose-a:underline-offset-2 dark:prose-a:text-emerald-400
-									prose-blockquote:border-emerald-500 prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
+									prose-a:text-blue-600 prose-a:underline-offset-2 dark:prose-a:text-blue-400
+									prose-blockquote:border-blue-500 prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
 									[&_section]:scroll-mt-24 [&_h2]:scroll-mt-24"
 							>
 								<p class="text-lg leading-relaxed">
@@ -318,11 +319,11 @@
 										The new idea removes most of that. You open the app, start walking, and occasionally encounter someone. Only then do you decide whether you want to interact.
 									</p>
 
-									<div class="not-prose my-8 rounded-r-xl border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20">
+									<div class="not-prose my-8 rounded-r-xl border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
 										<p class="mb-2 leading-relaxed text-gray-700 dark:text-gray-300">
 											<strong>Old loop -> New loop</strong>
 										</p>
-										<ul class="list-outside list-disc space-y-2 pl-6 text-gray-700 marker:text-emerald-500 dark:text-gray-300">
+										<ul class="list-outside list-disc space-y-2 pl-6 text-gray-700 marker:text-blue-500 dark:text-gray-300">
 											<li><strong>Plan first</strong> -> <strong>Experience first</strong></li>
 											<li><strong>Coordinate people</strong> -> <strong>Discover people naturally</strong></li>
 											<li><strong>Logistics-heavy</strong> -> <strong>Low-pressure and ambient</strong></li>
@@ -545,7 +546,7 @@
 										<li>
 											<a
 												href={`#${item.id}`}
-												class="block text-gray-600 transition-colors hover:text-emerald-600 dark:text-gray-400 dark:hover:text-emerald-400"
+												class="block text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
 											>
 												{item.title}
 											</a>
@@ -564,7 +565,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on Twitter"
-										class="flex-1 rounded-lg bg-emerald-50 p-2 text-center text-sm font-medium text-emerald-600 transition-colors hover:bg-emerald-100 dark:bg-emerald-900/30 dark:text-emerald-400 dark:hover:bg-emerald-900/50"
+										class="flex-1 rounded-lg bg-blue-50 p-2 text-center text-sm font-medium text-blue-600 transition-colors hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50"
 									>
 										<i class="fab fa-twitter text-xs"></i>
 									</a>
@@ -573,7 +574,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on LinkedIn"
-										class="flex-1 rounded-lg bg-emerald-50 p-2 text-center text-sm font-medium text-emerald-600 transition-colors hover:bg-emerald-100 dark:bg-emerald-900/30 dark:text-emerald-400 dark:hover:bg-emerald-900/50"
+										class="flex-1 rounded-lg bg-blue-50 p-2 text-center text-sm font-medium text-blue-600 transition-colors hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50"
 									>
 										<i class="fab fa-linkedin-in text-xs"></i>
 									</a>
@@ -596,10 +597,12 @@
 		</div>
 	</main>
 
+	<MorePosts currentSlug="nearbygame-pivot" />
+
 	{#if showBackToTop}
 		<button
 			onclick={scrollToTop}
-			class="fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-white shadow-lg transition-colors hover:bg-emerald-600"
+			class="fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white shadow-lg transition-colors hover:bg-blue-600"
 			aria-label="Back to top"
 		>
 			<i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>

@@ -14,7 +14,7 @@
 		</div>
 		<a
 			href="/blog/minibreaks-pivot"
-			class="inline-flex flex-shrink-0 items-center justify-center gap-2 rounded-full border border-amber-300 bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-900 transition-colors hover:bg-amber-200 dark:border-amber-600 dark:bg-amber-800/40 dark:text-amber-100 dark:hover:bg-amber-700/50"
+			class="inline-flex min-h-[44px] flex-shrink-0 items-center justify-center gap-2 rounded-full border border-amber-300 bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-900 transition-colors hover:bg-amber-200 dark:border-amber-600 dark:bg-amber-800/40 dark:text-amber-100 dark:hover:bg-amber-700/50"
 		>
 			Read: MiniBreaks Pivot
 			<i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>

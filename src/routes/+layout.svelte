@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import CursorTrail from '$lib/components/CursorTrail.svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 
@@ -11,13 +10,13 @@
 	let scrollHandler: (() => void) | null = null;
 
 	onMount(() => {
-		// Dark mode: default to dark, respect saved preference
+		// Light-first: default to light, respect saved preference
 		const savedTheme = localStorage.getItem('theme');
-		if (savedTheme === 'light') {
-			document.documentElement.classList.remove('dark');
-		} else {
+		if (savedTheme === 'dark') {
 			document.documentElement.classList.add('dark');
-			if (!savedTheme) localStorage.setItem('theme', 'dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+			if (!savedTheme) localStorage.setItem('theme', 'light');
 		}
 
 		// Nav scroll effect
@@ -60,31 +59,12 @@
 <svelte:head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Fallback title only; every route sets its own title/description/canonical/OG/Twitter tags.
+	     SvelteKit dedupes <title> (the page's wins), so this is a safe default for any route
+	     that does not set one. Per-page SEO tags previously lived here too, but they duplicated
+	     and preceded each page's own tags — causing every article to canonicalize to the home
+	     URL and emit a conflicting og:type. Kept out of the layout to preserve per-page SEO. -->
 	<title>Hong in Canada</title>
-	<meta
-		name="description"
-		content="Product Builder with a passion for building products that people love. Background in HCI with Product Mindset."
-	/>
-	<meta name="keywords" content="Engineering, Product, HCI, Canada, Hong" />
-	<meta name="author" content="Hong" />
-	<meta name="robots" content="index, follow" />
-	<link rel="canonical" href="https://hongincanada.com" />
-	<meta property="og:title" content="Hong in Canada" />
-	<meta
-		property="og:description"
-		content="Product Builder with a passion for building products that people love. Background in HCI with Product Mindset."
-	/>
-	<meta property="og:image" content="/profile.png" />
-	<meta property="og:url" content="https://hongincanada.com" />
-	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="Hong in Canada" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Hong in Canada" />
-	<meta
-		name="twitter:description"
-		content="Product Builder with a passion for building products that people love. Background in HCI with Product Mindset."
-	/>
-	<meta name="twitter:image" content="/profile.png" />
 
 	<meta name="impact-site-verification" content="118ac292-615c-404f-acb1-f625915e6b02" />
 
@@ -118,8 +98,13 @@
 	></script>
 </svelte:head>
 
-<!-- Cursor Trail (desktop only, respects reduced motion) -->
-<CursorTrail />
+<!-- Skip link: first focusable element so keyboard/AT users can bypass the nav (WCAG 2.4.1) -->
+<a
+	href="#main-content"
+	class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:inline-flex focus:min-h-[44px] focus:items-center focus:rounded-lg focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white focus:shadow-lg"
+>
+	Skip to main content
+</a>
 
 <!-- Navigation -->
 <nav
@@ -220,7 +205,7 @@
 <!-- Spacer for fixed nav -->
 <div class="h-16"></div>
 
-<main>
+<main id="main-content" tabindex="-1">
 	{@render children()}
 </main>
 
