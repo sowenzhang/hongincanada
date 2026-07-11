@@ -1,159 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://hongincanada.com</loc>
+        <loc>https://www.hongincanada.com</loc>
         <lastmod>2026-04-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series</loc>
+        <loc>https://www.hongincanada.com/series</loc>
         <lastmod>2026-03-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-1-can-you-build-with-ai</loc>
+        <loc>https://www.hongincanada.com/series/part-1-can-you-build-with-ai</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-2-why-use-ai</loc>
+        <loc>https://www.hongincanada.com/series/part-2-why-use-ai</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-3-tools-and-setup</loc>
+        <loc>https://www.hongincanada.com/series/part-3-tools-and-setup</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-4-crafting-idea-mvp</loc>
+        <loc>https://www.hongincanada.com/series/part-4-crafting-idea-mvp</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-5-designing-ui-ux</loc>
+        <loc>https://www.hongincanada.com/series/part-5-designing-ui-ux</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-6-writing-code-ai</loc>
+        <loc>https://www.hongincanada.com/series/part-6-writing-code-ai</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-7-adding-advanced-features</loc>
+        <loc>https://www.hongincanada.com/series/part-7-adding-advanced-features</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-8-before-deployment</loc>
+        <loc>https://www.hongincanada.com/series/part-8-before-deployment</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-9-lessons-learned</loc>
+        <loc>https://www.hongincanada.com/series/part-9-lessons-learned</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/series/part-10-future-ai-development</loc>
+        <loc>https://www.hongincanada.com/series/part-10-future-ai-development</loc>
+        <lastmod>2025-09-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.hongincanada.com/series/full-series</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <!-- Mosaic Series -->
     <url>
-        <loc>https://hongincanada.com/mosaic</loc>
+        <loc>https://www.hongincanada.com/mosaic</loc>
         <lastmod>2025-09-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/mosaic/the-problem-with-apps-today</loc>
+        <loc>https://www.hongincanada.com/mosaic/the-problem-with-apps-today</loc>
         <lastmod>2025-09-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/mosaic/adaptive-journeys</loc>
+        <loc>https://www.hongincanada.com/mosaic/adaptive-journeys</loc>
         <lastmod>2025-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/mosaic/app-flow-under-the-hood</loc>
+        <loc>https://www.hongincanada.com/mosaic/app-flow-under-the-hood</loc>
         <lastmod>2025-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/mosaic/near-future-and-beyond</loc>
+        <loc>https://www.hongincanada.com/mosaic/near-future-and-beyond</loc>
         <lastmod>2025-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/mosaic/full-series</loc>
+        <loc>https://www.hongincanada.com/mosaic/full-series</loc>
         <lastmod>2025-09-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- Blog -->
     <url>
-        <loc>https://hongincanada.com/blog/building-deckmark</loc>
+        <loc>https://www.hongincanada.com/blog/loop-engineering</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.hongincanada.com/blog/building-deckmark</loc>
         <lastmod>2026-05-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/ai-workflow-review</loc>
+        <loc>https://www.hongincanada.com/ai-workflow-review</loc>
         <lastmod>2026-05-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/blog/nearbygame-what-i-learned</loc>
+        <loc>https://www.hongincanada.com/blog/nearbygame-what-i-learned</loc>
         <lastmod>2026-05-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/blog/app-flow-first-pilot</loc>
+        <loc>https://www.hongincanada.com/blog/app-flow-first-pilot</loc>
         <lastmod>2026-04-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/blog/nearbygame-pivot</loc>
+        <loc>https://www.hongincanada.com/blog/nearbygame-pivot</loc>
         <lastmod>2026-04-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/blog/introducing-crossit</loc>
+        <loc>https://www.hongincanada.com/blog/introducing-crossit</loc>
         <lastmod>2026-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/blog/minibreaks-pivot</loc>
+        <loc>https://www.hongincanada.com/blog/minibreaks-pivot</loc>
         <lastmod>2026-03-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hongincanada.com/blog/why-i-build-nocloud-chat</loc>
+        <loc>https://www.hongincanada.com/blog/why-i-build-nocloud-chat</loc>
         <lastmod>2026-03-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

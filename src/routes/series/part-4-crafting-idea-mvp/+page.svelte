@@ -26,7 +26,7 @@
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			Crafting Your Idea & MVP with AI
 		</h1>
@@ -140,7 +140,7 @@
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
 					3
 				</div>
 				<div>
@@ -346,7 +346,7 @@
 			speaks to your users' needs.
 		</p>
 
-		<div class="not-prose my-6 border-l-4 border-purple-500 bg-purple-50 p-4 dark:bg-purple-900/20">
+		<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>🎨 Coming up:</strong> We'll explore AI-powered design tools, learn prompt engineering
 				for visual concepts, and create a design system that you can actually implement.

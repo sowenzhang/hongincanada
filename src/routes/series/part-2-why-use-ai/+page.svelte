@@ -25,7 +25,7 @@
 	<!-- Custom header -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			Why I Wanted to Use AI
 		</h1>
@@ -180,13 +180,13 @@
 		</p>
 
     <div
-			class="not-prose my-8 border-l-4 border-emerald-500 bg-emerald-50 p-6 dark:bg-emerald-900/20"
+			class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20"
 		>
 			<div class="flex items-start space-x-3">
-				<i class="fas fa-lightbulb mt-1 text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
+				<i class="fas fa-lightbulb mt-1 text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
 				<div>
-					<p class="mb-2 font-semibold text-emerald-800 dark:text-emerald-300">Key Lesson</p>
-					<p class="mb-0 text-emerald-700 dark:text-emerald-400">
+					<p class="mb-2 font-semibold text-blue-800 dark:text-blue-300">Key Lesson</p>
+					<p class="mb-0 text-blue-700 dark:text-blue-400">
 I need to get my requirements right before
       asking AI to implement them.
     					</p>

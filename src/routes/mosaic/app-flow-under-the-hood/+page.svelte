@@ -102,8 +102,8 @@ export async function getWeather(location: string) &#123;
 &lt;/div&gt;</code></pre>
                 </div>
 
-                <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-                    <h4 class="text-xl font-semibold mb-3 text-purple-800 dark:text-purple-200">Metadata Layer</h4>
+                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+                    <h4 class="text-xl font-semibold mb-3 text-blue-800 dark:text-blue-200">Metadata Layer</h4>
                     <p class="text-lg mb-4">Tells the Composer when and how to use the tile.</p>
                     <p class="text-lg mb-4 font-medium">Example manifest (JSON):</p>
 
@@ -264,7 +264,7 @@ export async function getWeather(location: string) &#123;
     <section id="homework-for-you">
         <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Homework for You</h2>
 
-        <div class="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-xl p-8 mb-6 border border-orange-200 dark:border-orange-800">
+        <div class="bg-gradient-to-r from-blue-50 to-red-50 dark:from-blue-900/20 dark:to-red-900/20 rounded-xl p-8 mb-6 border border-blue-200 dark:border-blue-800">
             <p class="text-lg mb-4"><strong>👉 Homework 1:</strong> Pick one task you'd describe in a sentence ("I'm moving to a new house," "I'm training for a marathon"). What tiles would you need if Mosaic built an App Flow for you?</p>
 
             <p class="text-lg"><strong>👉 Homework 2 (for builders):</strong> Take one feature from your app and imagine it as a tile. Write a simple manifest:</p>

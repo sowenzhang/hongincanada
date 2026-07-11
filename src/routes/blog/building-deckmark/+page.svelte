@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import MorePosts from '$lib/components/MorePosts.svelte';
 	import { slide } from 'svelte/transition';
 
 	const pageData = {
@@ -124,7 +125,7 @@
 		]
 	});
 
-	let isDark = $state(true);
+	let isDark = $state(false);
 	let showTOC = $state(false);
 	let showBackToTop = $state(false);
 	let prefersReducedMotion = $state(false);
@@ -135,7 +136,7 @@
 		prefersReducedMotion = mediaQuery.matches;
 
 		const saved = localStorage.getItem('theme');
-		isDark = saved ? saved === 'dark' : true;
+		isDark = saved ? saved === 'dark' : false;
 		document.documentElement.classList.toggle('dark', isDark);
 		showTOC = window.innerWidth >= 1024;
 
@@ -225,7 +226,7 @@
 					onclick={() => (showTOC = !showTOC)}
 					class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
 				>
-					<i class="fas fa-list text-indigo-500 text-xs" aria-hidden="true"></i>
+					<i class="fas fa-list text-blue-500 text-xs" aria-hidden="true"></i>
 					<span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Contents</span>
 					<i
 						class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400 text-xs"
@@ -260,7 +261,7 @@
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
 				<span
-					class="rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-600 dark:text-indigo-400"
+					class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-400"
 				>
 					<i class="fas fa-wand-magic-sparkles mr-1.5" aria-hidden="true"></i>Deckmark
 				</span>
@@ -276,7 +277,7 @@
 				</span>
 			</div>
 			<h1
-				class="mb-5 text-4xl font-bold leading-tight text-gray-900 dark:text-white md:text-5xl"
+				class="mb-5 font-serif text-4xl font-semibold leading-tight text-gray-900 dark:text-white md:text-5xl"
 			>
 				Building Deckmark: Closing the Feedback Loop for AI-Generated Slide Decks
 			</h1>
@@ -293,7 +294,7 @@
 					href="https://github.com/sowenzhang/deckmark"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-indigo-600 dark:text-indigo-400 hover:underline"
+					class="text-blue-600 dark:text-blue-400 hover:underline"
 				>
 					<i class="fab fa-github mr-1.5" aria-hidden="true"></i>github.com/sowenzhang/deckmark
 				</a>
@@ -302,7 +303,7 @@
 	</header>
 
 	<main
-		class="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 py-12 transition-colors min-h-screen"
+		class="bg-[var(--bg)] py-12 transition-colors min-h-screen"
 	>
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 			<div class="flex flex-col lg:flex-row gap-8">
@@ -319,17 +320,17 @@
 								prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
 								prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:mb-2
 								prose-strong:text-gray-900 dark:prose-strong:text-white
-								prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:underline-offset-2
-								prose-code:text-indigo-700 dark:prose-code:text-indigo-300 prose-code:bg-indigo-50 dark:prose-code:bg-indigo-950/40 prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:font-medium prose-code:before:content-none prose-code:after:content-none
+								prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline-offset-2
+								prose-code:text-blue-700 dark:prose-code:text-blue-300 prose-code:bg-blue-50 dark:prose-code:bg-blue-950/40 prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:font-medium prose-code:before:content-none prose-code:after:content-none
 								[&_section]:scroll-mt-24 [&_h2]:scroll-mt-24"
 							>
 								<section id="tldr">
-									<div class="not-prose mb-8 rounded-xl border border-indigo-200 dark:border-indigo-800/60 bg-indigo-50/70 dark:bg-indigo-950/30 px-6 py-5">
-										<p class="mb-2 text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">
+									<div class="not-prose mb-8 rounded-xl border border-blue-200 dark:border-blue-800/60 bg-blue-50/70 dark:bg-blue-950/30 px-6 py-5">
+										<p class="mb-2 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
 											TL;DR
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-											<a href="https://github.com/sowenzhang/deckmark" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">Deckmark</a>
+											<a href="https://github.com/sowenzhang/deckmark" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Deckmark</a>
 											is an open-source MCP server that lets an AI agent generate a slide deck, open it in your browser, collect annotations you click directly on slide elements, then read those annotations back and apply the changes. No screenshots, no copy-paste, no "the third bullet on slide 4." It is also my bet on a pattern I think matters way beyond slides: tight human-in-the-loop review for agentic work.
 										</p>
 									</div>
@@ -350,8 +351,8 @@
 										This is the part that breaks the loop. You are doing all the work of seeing the slide and the agent is doing none of it. By the time you finish typing the third correction, you have basically given up on review and accepted whatever is there.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-indigo-700 dark:text-indigo-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>The friction
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -598,8 +599,8 @@
 										Building Deckmark was a way to think this through in code, not in a deck about decks. It made me much more concrete about how agent workflows, browser-based UX, and developer workflows can actually fit together. It also gave me a thing I use myself, which is the only honest test for whether a tool is good.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-indigo-700 dark:text-indigo-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
 											<i class="fas fa-compass mr-1.5" aria-hidden="true"></i>The bet
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -685,7 +686,7 @@
 									{#each tableOfContents as item (item.id)}
 										<a
 											href="#{item.id}"
-											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
 										>
 											{item.title}
 										</a>
@@ -737,10 +738,10 @@
 							</div>
 
 							<div
-								class="rounded-xl border border-indigo-200 dark:border-indigo-800/60 bg-indigo-50/70 dark:bg-indigo-950/30 p-5"
+								class="rounded-xl border border-blue-200 dark:border-blue-800/60 bg-blue-50/70 dark:bg-blue-950/30 p-5"
 							>
 								<h3
-									class="mb-3 text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400"
+									class="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400"
 								>
 									The Repo
 								</h3>
@@ -748,7 +749,7 @@
 									href="https://github.com/sowenzhang/deckmark"
 									target="_blank"
 									rel="noopener noreferrer"
-									class="flex items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+									class="flex items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
 								>
 									<i class="fab fa-github" aria-hidden="true"></i>
 									sowenzhang/deckmark
@@ -763,6 +764,8 @@
 			</div>
 		</div>
 	</main>
+
+	<MorePosts currentSlug="building-deckmark" />
 
 	<footer
 		class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-sm text-gray-500 dark:text-gray-500"

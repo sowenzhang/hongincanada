@@ -109,19 +109,19 @@
                     <p class="text-lg">Flows are just links — instantly accessible.</p>
                 </div>
 
-                <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-                    <h4 class="text-xl font-semibold mb-3 text-purple-800 dark:text-purple-200">Installability</h4>
+                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+                    <h4 class="text-xl font-semibold mb-3 text-blue-800 dark:text-blue-200">Installability</h4>
                     <p class="text-lg mb-2">The container can live on your home screen.</p>
                     <p class="text-lg">Users can "install Mosaic" once, but still open any App Flow link.</p>
                 </div>
 
-                <div class="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-6 border border-orange-200 dark:border-orange-800">
-                    <h4 class="text-xl font-semibold mb-3 text-orange-800 dark:text-orange-200">Offline capabilities</h4>
+                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+                    <h4 class="text-xl font-semibold mb-3 text-blue-800 dark:text-blue-200">Offline capabilities</h4>
                     <p class="text-lg">Tiles can cache data or run local logic when offline.</p>
                 </div>
 
-                <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
-                    <h4 class="text-xl font-semibold mb-3 text-teal-800 dark:text-teal-200">Instant shareability</h4>
+                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+                    <h4 class="text-xl font-semibold mb-3 text-blue-800 dark:text-blue-200">Instant shareability</h4>
                     <p class="text-lg mb-2">A Tokyo Trip flow is just a URL you can send to a friend.</p>
                     <p class="text-lg">When they click, it runs inside their Mosaic container (or in the browser if they haven't installed yet).</p>
                 </div>
@@ -205,8 +205,8 @@
                 </ul>
             </div>
 
-            <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-                <h3 class="text-xl font-semibold mb-3 text-purple-800 dark:text-purple-200">Long Term</h3>
+            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+                <h3 class="text-xl font-semibold mb-3 text-blue-800 dark:text-blue-200">Long Term</h3>
                 <ul class="text-lg space-y-2 list-disc pl-6">
                     <li>Registry management at the OS level.</li>
                     <li>Adaptive App Flows become first-class citizens of the OS.</li>
@@ -223,7 +223,7 @@
 
         <p class="text-lg mb-4">But the long-term vision is bigger: Mosaic as an OS-native orchestrator, with registries managed at the system level. Unlike MCP's chat-first approach, Mosaic enables goal-first disposable apps that adapt and disappear when finished.</p>
 
-        <div class="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-xl p-8 mb-6 border border-indigo-200 dark:border-indigo-800">
+        <div class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl p-8 mb-6 border border-blue-200 dark:border-blue-800">
             <p class="text-xl font-semibold text-center mb-4">The future isn't about apps you hunt down and install.</p>
             <p class="text-xl font-semibold text-center">It's about flows that find you, adapt with you, and vanish when the job is done.</p>
         </div>
@@ -232,10 +232,10 @@
     <section id="homework-for-you">
         <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Homework for You</h2>
 
-        <div class="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-xl p-8 mb-6 border border-orange-200 dark:border-orange-800">
+        <div class="bg-gradient-to-r from-blue-50 to-red-50 dark:from-blue-900/20 dark:to-red-900/20 rounded-xl p-8 mb-6 border border-blue-200 dark:border-blue-800">
             <p class="text-lg mb-4"><strong>👉 Homework 1:</strong> Look at the URLs you used today. How many of them could be App Flows inside one container PWA instead of separate apps?</p>
 
-            <p class="text-lg"><strong>👉 Homework 2:</strong> If you're technical, read a PWA manifest on one of your installed web apps. Notice the scope field. Can you imagine how <code class="bg-orange-100 dark:bg-orange-800 px-2 py-1 rounded">/appflow/:flowId</code> could all be grouped under one container?</p>
+            <p class="text-lg"><strong>👉 Homework 2:</strong> If you're technical, read a PWA manifest on one of your installed web apps. Notice the scope field. Can you imagine how <code class="bg-blue-100 dark:bg-blue-800 px-2 py-1 rounded">/appflow/:flowId</code> could all be grouped under one container?</p>
         </div>
     </section>
 </BaseSeriesPage>

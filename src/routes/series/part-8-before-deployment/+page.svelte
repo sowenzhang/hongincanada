@@ -36,7 +36,7 @@
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			Before Deployment: Testing & Preparation
 		</h1>
@@ -232,11 +232,11 @@
 
     <p>In the above screenshot, you can toggle the responsiveness testing by clicking the button pointed by the red arrow, and you can also change your device size with the dropdown once it's toggled.</p>
 
-		<div class="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-6 my-6">
-			<h4 class="text-lg font-semibold text-purple-800 dark:text-purple-200 mb-3">
+		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
+			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
 				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI Accessibility Prompt
 			</h4>
-			<p class="text-purple-700 dark:text-purple-300">
+			<p class="text-blue-700 dark:text-blue-300">
 				"Can you create a simple checklist to ensure my website is accessible and responsive? Focus on the most important items for a beginner."
 			</p>
 		</div>
@@ -376,11 +376,11 @@
 			<li>✅ Error handling implemented for edge cases</li>
 		</ul>
 
-		<div class="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-6 my-6">
-			<h4 class="text-lg font-semibold text-orange-800 dark:text-orange-200 mb-3">
+		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
+			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
 				<i class="fas fa-rocket mr-2" aria-hidden="true"></i>For SvelteKit Users
 			</h4>
-			<p class="text-orange-700 dark:text-orange-300 mb-3">
+			<p class="text-blue-700 dark:text-blue-300 mb-3">
 				SvelteKit supports multiple deployment methods (serverless, static, node). Check the <a href="https://kit.svelte.dev/docs/adapters" target="_blank" rel="noopener noreferrer" class="underline">adapter documentation</a> for your chosen platform.
 			</p>
 		</div>

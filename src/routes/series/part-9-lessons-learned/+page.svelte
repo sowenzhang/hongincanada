@@ -26,7 +26,7 @@
 	<!-- Custom header -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			Lessons Learned
 		</h1>
@@ -111,7 +111,7 @@
 		</p>
 
 		<section id="repetitive-suggestions">
-			<h3><i class="fas fa-sync-alt mr-3 text-orange-500" aria-hidden="true"></i>Repetitive Suggestions</h3>
+			<h3><i class="fas fa-sync-alt mr-3 text-blue-500" aria-hidden="true"></i>Repetitive Suggestions</h3>
 
 			<p>
 				One of the most frustrating patterns was when AI got stuck suggesting the same solution over and over — even after I clearly said it didn't work. This happened when debugging CSS layout glitches and while resolving deployment issues.
@@ -132,7 +132,7 @@
 		</section>
 
 		<section id="overcomplicated-code">
-			<h3><i class="fas fa-code mr-3 text-orange-500" aria-hidden="true"></i>Overcomplicated Code</h3>
+			<h3><i class="fas fa-code mr-3 text-blue-500" aria-hidden="true"></i>Overcomplicated Code</h3>
 
 			<p>
 				Another limitation: AI often writes more code than necessary. For example, when I asked for a simple Svelte component, it returned a bloated implementation that added unnecessary dependencies.
@@ -149,7 +149,7 @@
 		</section>
 
 		<section id="wrong-assumptions">
-			<h3><i class="fas fa-exclamation-triangle mr-3 text-orange-500" aria-hidden="true"></i>Wrong Assumptions About Environment</h3>
+			<h3><i class="fas fa-exclamation-triangle mr-3 text-blue-500" aria-hidden="true"></i>Wrong Assumptions About Environment</h3>
 
 			<p>
 				At one point, AI assumed I was running my server on Ubuntu when I was actually on a managed hosting platform. Its advice — such as editing <code>/etc/nginx/sites-available</code> — simply didn't apply.
@@ -196,11 +196,11 @@
 				</ol>
 			</div>
 
-			<div class="not-prose my-6 border-l-4 border-purple-500 bg-purple-50 p-6 dark:bg-purple-900/20">
-				<h4 class="mb-3 flex items-center text-lg font-semibold text-purple-800 dark:text-purple-200">
+			<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+				<h4 class="mb-3 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
 					<i class="fas fa-graduation-cap mr-3" aria-hidden="true"></i>Lesson learned
 				</h4>
-				<p class="text-purple-700 dark:text-purple-300">
+				<p class="text-blue-700 dark:text-blue-300">
 					The clearer your guidance — and the more concrete examples you can give — the better the result.
 				</p>
 			</div>
@@ -235,11 +235,11 @@
 <p>See how happy AI was after she learned about the new error message and understood the root cause?</p>
 <img src="/ai-series/AI-finally-understood-the-issue.jpg" loading="lazy" alt="AI happy after learning about the new error message" class="my-6 w-full rounded-lg shadow-lg">
 
-			<div class="not-prose my-6 border-l-4 border-purple-500 bg-purple-50 p-6 dark:bg-purple-900/20">
-				<h4 class="mb-3 flex items-center text-lg font-semibold text-purple-800 dark:text-purple-200">
+			<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+				<h4 class="mb-3 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
 					<i class="fas fa-graduation-cap mr-3" aria-hidden="true"></i>Lesson learned
 				</h4>
-				<p class="text-purple-700 dark:text-purple-300">
+				<p class="text-blue-700 dark:text-blue-300">
 					Sometimes you need to dig a little yourself to provide AI with the right clue. Without the right context, it can get stuck in a loop.
 				</p>
 			</div>
@@ -263,11 +263,11 @@
 				</p>
 			</div>
 
-			<div class="rounded-lg border border-purple-200 bg-purple-50 p-6 dark:border-purple-800 dark:bg-purple-900/20">
-				<h4 class="mb-4 flex items-center text-lg font-semibold text-purple-800 dark:text-purple-200">
+			<div class="rounded-lg border border-blue-200 bg-blue-50 p-6 dark:border-blue-800 dark:bg-blue-900/20">
+				<h4 class="mb-4 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
 					<i class="fas fa-magic mr-3" aria-hidden="true"></i>Creative Naming and Messaging
 				</h4>
-				<p class="text-purple-700 dark:text-purple-300">
+				<p class="text-blue-700 dark:text-blue-300">
 					Another surprise was how creative AI can be with wording and tone. When I asked it to help craft playful messages for the mini-games, it delivered delightful, catchy copy that I wouldn't have thought of myself.
 				</p>
 			</div>
@@ -285,26 +285,26 @@
 			AI needs direction, context, and occasionally, a firm correction. The key is learning how to work <em>with</em> it rather than expecting it to work <em>for</em> you.
 		</p>
 
-		<div class="not-prose my-8 rounded-lg border border-indigo-200 bg-indigo-50 p-6 dark:border-indigo-800 dark:bg-indigo-900/20">
-			<h4 class="mb-4 text-lg font-semibold text-indigo-800 dark:text-indigo-200">
+		<div class="not-prose my-8 rounded-lg border border-blue-200 bg-blue-50 p-6 dark:border-blue-800 dark:bg-blue-900/20">
+			<h4 class="mb-4 text-lg font-semibold text-blue-800 dark:text-blue-200">
 				If I did this all over again, I'd:
 			</h4>
 			<ul class="space-y-3">
 				<li class="flex items-start">
 					<i class="fas fa-check-circle mt-1 mr-3 text-green-500" aria-hidden="true"></i>
-					<span class="text-indigo-700 dark:text-indigo-300">Provide more detailed context up front</span>
+					<span class="text-blue-700 dark:text-blue-300">Provide more detailed context up front</span>
 				</li>
 				<li class="flex items-start">
 					<i class="fas fa-check-circle mt-1 mr-3 text-green-500" aria-hidden="true"></i>
-					<span class="text-indigo-700 dark:text-indigo-300">Set constraints clearly</span>
+					<span class="text-blue-700 dark:text-blue-300">Set constraints clearly</span>
 				</li>
 				<li class="flex items-start">
 					<i class="fas fa-check-circle mt-1 mr-3 text-green-500" aria-hidden="true"></i>
-					<span class="text-indigo-700 dark:text-indigo-300">Use examples early and often</span>
+					<span class="text-blue-700 dark:text-blue-300">Use examples early and often</span>
 				</li>
 				<li class="flex items-start">
 					<i class="fas fa-check-circle mt-1 mr-3 text-green-500" aria-hidden="true"></i>
-					<span class="text-indigo-700 dark:text-indigo-300">Trust my own instincts more when something feels wrong</span>
+					<span class="text-blue-700 dark:text-blue-300">Trust my own instincts more when something feels wrong</span>
 				</li>
 			</ul>
 		</div>

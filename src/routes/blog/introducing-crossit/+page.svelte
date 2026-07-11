@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import MorePosts from '$lib/components/MorePosts.svelte';
 	import { slide } from 'svelte/transition';
 
 	const pageData = {
@@ -21,7 +22,7 @@
 		{ id: 'get-crossit', title: 'Get CrossIt' }
 	];
 
-	let isDark = $state(true);
+	let isDark = $state(false);
 	let showTOC = $state(false);
 	let showBackToTop = $state(false);
 	let prefersReducedMotion = $state(false);
@@ -32,7 +33,7 @@
 		prefersReducedMotion = mediaQuery.matches;
 
 		const saved = localStorage.getItem('theme');
-		isDark = saved ? saved === 'dark' : true;
+		isDark = saved ? saved === 'dark' : false;
 		document.documentElement.classList.toggle('dark', isDark);
 		showTOC = window.innerWidth >= 1024;
 
@@ -160,14 +161,14 @@
 				<span class="text-gray-600 dark:text-gray-300">Introducing CrossIt</span>
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
-				<span class="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-medium text-teal-600 dark:text-teal-400">
+				<span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-400">
 					<i class="fas fa-check-double mr-1.5" aria-hidden="true"></i>CrossIt
 				</span>
 				<span class="rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
 					Product Launch
 				</span>
 			</div>
-			<h1 class="mb-5 text-4xl font-bold leading-tight text-gray-900 dark:text-white md:text-5xl">
+			<h1 class="mb-5 font-serif text-4xl font-semibold leading-tight text-gray-900 dark:text-white md:text-5xl">
 				Introducing CrossIt: A Lightweight Habit Helper
 			</h1>
 			<p class="mb-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -181,7 +182,7 @@
 		</div>
 	</header>
 
-	<main class="bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-12 transition-colors min-h-screen">
+	<main class="bg-[var(--bg)] py-12 transition-colors min-h-screen">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 			<div class="flex flex-col lg:flex-row gap-8">
 				<article class="flex-1 min-w-0">
@@ -427,6 +428,8 @@
 			</div>
 		</div>
 	</main>
+
+	<MorePosts currentSlug="introducing-crossit" />
 
 	<footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-sm text-gray-500 dark:text-gray-500">
 		<a href="/" class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Back to hongincanada.com</a>

@@ -6,7 +6,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-				'serif': ['Playfair Display', 'Georgia', 'serif'],
+				'serif': ['Fraunces', 'Georgia', 'Times New Roman', 'serif'],
 			},
 			animation: {
 				'fade-in': 'fadeIn 1s ease-out forwards',

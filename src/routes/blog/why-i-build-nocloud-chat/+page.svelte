@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import MorePosts from '$lib/components/MorePosts.svelte';
 	import { slide } from 'svelte/transition';
 
 	const pageData = {
@@ -19,13 +20,13 @@
 		{ id: 'whats-next', title: "What's Next?" }
 	];
 
-	let isDark = $state(true);
+	let isDark = $state(false);
 	let showTOC = $state(true);
 	let showBackToTop = $state(false);
 
 	onMount(() => {
 		const saved = localStorage.getItem('theme');
-		isDark = saved ? saved === 'dark' : true;
+		isDark = saved ? saved === 'dark' : false;
 		document.documentElement.classList.toggle('dark', isDark);
 
 		const handleScroll = () => {
@@ -115,14 +116,14 @@
 				<span class="text-gray-600 dark:text-gray-300">Why Do I Build NoCloud Chat</span>
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
-				<span class="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-500 dark:text-cyan-400">
+				<span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500 dark:text-blue-400">
 					<i class="fas fa-wifi mr-1.5" aria-hidden="true"></i>NoCloud Chat
 				</span>
 				<span class="rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
 					Personal Build
 				</span>
 			</div>
-			<h1 class="mb-5 text-4xl font-bold leading-tight text-gray-900 dark:text-white md:text-5xl">
+			<h1 class="mb-5 font-serif text-4xl font-semibold leading-tight text-gray-900 dark:text-white md:text-5xl">
 				Why Do I Build NoCloud Chat
 			</h1>
 			<div class="flex flex-wrap items-center gap-5 text-sm text-gray-500 dark:text-gray-400">
@@ -134,7 +135,7 @@
 	</header>
 
 	<!-- Main Content Area -->
-	<main class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 py-12 transition-colors min-h-screen">
+	<main class="bg-[var(--bg)] py-12 transition-colors min-h-screen">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 			<div class="flex flex-col lg:flex-row gap-8">
 
@@ -212,7 +213,7 @@
 										I created six teams: <strong>PM, Tech Lead, Design, Dev, SRM, and Network Security Expert</strong>. Each had its own system prompt and set of responsibilities. Then I handed the entire project over with one instruction: notify me when it is ready to demo.
 									</p>
 
-									<div class="not-prose my-8 border-l-4 border-cyan-500 bg-cyan-50 p-6 dark:bg-cyan-900/20 rounded-r-xl">
+									<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20 rounded-r-xl">
 										<p class="mb-0 text-gray-700 dark:text-gray-300 leading-relaxed">
 											<strong>Honest take:</strong> The first demo was genuinely impressive. But there were a lot of bugs. We went through multiple demo-and-fix cycles. YOLO mode does not handle UX polish on its own, especially responsiveness and interaction design. Once I gave clear and specific feedback though, the agents understood exactly what to address.
 										</p>
@@ -361,6 +362,8 @@
 			</div>
 		</div>
 	</main>
+
+	<MorePosts currentSlug="why-i-build-nocloud-chat" />
 
 	<!-- Footer -->
 	<footer class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-sm text-gray-500 dark:text-gray-500">

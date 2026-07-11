@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import MorePosts from '$lib/components/MorePosts.svelte';
 	import { slide } from 'svelte/transition';
 
 	const pageData = {
@@ -34,7 +35,7 @@
 		image: 'https://www.hongincanada.com/nearbygame-announce/cities-landmarks-discovery.png'
 	});
 
-	let isDark = $state(true);
+	let isDark = $state(false);
 	let showTOC = $state(false);
 	let showBackToTop = $state(false);
 	let prefersReducedMotion = $state(false);
@@ -45,7 +46,7 @@
 		prefersReducedMotion = mediaQuery.matches;
 
 		const saved = localStorage.getItem('theme');
-		isDark = saved ? saved === 'dark' : true;
+		isDark = saved ? saved === 'dark' : false;
 		document.documentElement.classList.toggle('dark', isDark);
 		showTOC = window.innerWidth >= 1024;
 
@@ -133,7 +134,7 @@
 					onclick={() => (showTOC = !showTOC)}
 					class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
 				>
-					<i class="fas fa-list text-emerald-500 text-xs" aria-hidden="true"></i>
+					<i class="fas fa-list text-blue-500 text-xs" aria-hidden="true"></i>
 					<span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Contents</span>
 					<i
 						class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400 text-xs"
@@ -168,7 +169,7 @@
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
 				<span
-					class="rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-600 dark:text-emerald-400"
+					class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-400"
 				>
 					<i class="fas fa-route mr-1.5" aria-hidden="true"></i>NearbyGame
 				</span>
@@ -179,7 +180,7 @@
 				</span>
 			</div>
 			<h1
-				class="mb-5 text-4xl font-bold leading-tight text-gray-900 dark:text-white md:text-5xl"
+				class="mb-5 font-serif text-4xl font-semibold leading-tight text-gray-900 dark:text-white md:text-5xl"
 			>
 				What I Learned Building a Walking Game With AI's Help
 			</h1>
@@ -197,7 +198,7 @@
 	</header>
 
 	<main
-		class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-900 dark:to-gray-800 py-12 transition-colors min-h-screen"
+		class="bg-[var(--bg)] py-12 transition-colors min-h-screen"
 	>
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 			<div class="flex flex-col lg:flex-row gap-8">
@@ -213,7 +214,7 @@
 								prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
 								prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:mb-2
 								prose-strong:text-gray-900 dark:prose-strong:text-white
-								prose-a:text-emerald-600 dark:prose-a:text-emerald-400 prose-a:underline-offset-2
+								prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline-offset-2
 								[&_section]:scroll-mt-24 [&_h2]:scroll-mt-24"
 							>
 								<section id="hook">
@@ -232,8 +233,8 @@
 										-- into the walking game it is today.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #1
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -323,8 +324,8 @@
 									</figcaption>
 								</figure>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #2
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -410,8 +411,8 @@
 										and just learning about them was already a great experience.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #3
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -466,8 +467,8 @@
 										on the next submission.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #4
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -509,7 +510,7 @@
 											href="https://nearbygame.com"
 											target="_blank"
 											rel="noopener noreferrer"
-											class="text-emerald-600 dark:text-emerald-400 font-medium hover:underline"
+											class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
 										>
 											nearbygame.com
 										</a>
@@ -538,7 +539,7 @@
 									{#each tableOfContents as item (item.id)}
 										<a
 											href="#{item.id}"
-											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
 										>
 											{item.title}
 										</a>
@@ -594,6 +595,8 @@
 			</div>
 		</div>
 	</main>
+
+	<MorePosts currentSlug="nearbygame-what-i-learned" />
 
 	<footer
 		class="border-t border-gray-200 dark:border-gray-800 py-10 text-center text-sm text-gray-500 dark:text-gray-500"

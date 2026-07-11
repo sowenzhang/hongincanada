@@ -78,103 +78,86 @@
 </svelte:head>
 
 <!-- ============================================ -->
-<!-- HERO: Full-viewport immersive entrance       -->
+<!-- HERO: Refined editorial typographic entrance -->
 <!-- ============================================ -->
 <section
-	class="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-white dark:bg-gray-950"
+	class="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden"
+	style="background: var(--bg);"
 	itemscope
 	itemtype="https://schema.org/Person"
 >
-	<!-- Animated gradient mesh background — scales up from center -->
+	<!-- Quiet accent wash at the top -->
 	<div
 		class="hero-bg-reveal hero-gradient-mesh pointer-events-none absolute inset-0"
-		style="opacity: {stage >= 1 ? 1 : 0}; transform: scale({stage >= 1 ? 1 : 1.3});"
+		style="opacity: {stage >= 1 ? 1 : 0};"
 	></div>
 
-	<!-- Subtle grid pattern overlay -->
-	<div
-		class="pointer-events-none absolute inset-0 transition-opacity duration-1000"
-		style="opacity: {stage >= 1 ? 0.03 : 0}; background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 32px 32px;"
-	></div>
-
-	<!-- Decorative reveal line — sweeps outward from center -->
-	<div class="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-		<div
-			class="hero-reveal-line h-[1px] bg-gradient-to-r from-transparent via-blue-500/60 to-transparent"
-			style="width: {stage >= 2 ? '280px' : '0px'}; opacity: {stage >= 4 ? 0 : 1};"
-		></div>
-	</div>
-
-	<div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
-		<!-- Greeting — fades in with subtle upward drift + deblur -->
+	<div class="relative z-10 mx-auto w-full max-w-4xl px-6 sm:px-8">
+		<!-- Eyebrow -->
 		<p
-			class="hero-text-reveal mb-2 font-serif text-lg text-gray-500 dark:text-gray-500 md:text-xl"
-			style="opacity: {stage >= 3 ? 1 : 0}; transform: translateY({stage >= 3 ? '0' : '20px'}); filter: blur({stage >= 3 ? '0px' : '8px'});"
+			class="hero-text-reveal mb-5 flex items-center gap-3 text-sm"
+			style="color: var(--faint); opacity: {stage >= 3 ? 1 : 0}; transform: translateY({stage >= 3 ? '0' : '14px'});"
 		>
+			<span class="inline-block h-px w-8" style="background: var(--accent);"></span>
 			Hello, I'm
 		</p>
 
-		<!-- Name — dramatic scale-down + deblur reveal -->
+		<!-- Name -->
 		<h1
-			class="hero-name-dramatic mb-6 text-6xl font-bold tracking-tight md:text-8xl lg:text-9xl"
-			style="opacity: {stage >= 4 ? 1 : 0}; transform: scale({stage >= 4 ? 1 : 1.15}) translateY({stage >= 4 ? '0' : '10px'}); filter: blur({stage >= 4 ? '0px' : '12px'});"
+			class="hero-name-dramatic mb-6 font-serif text-7xl font-medium leading-[0.95] tracking-tight md:text-8xl lg:text-9xl"
+			style="color: var(--text); opacity: {stage >= 4 ? 1 : 0}; transform: translateY({stage >= 4 ? '0' : '18px'}); filter: blur({stage >= 4 ? '0px' : '10px'});"
 		>
-			<span
-				class="font-serif bg-gradient-to-r from-blue-600 via-purple-500 to-cyan-500 bg-clip-text text-transparent"
-				style="background-size: {stage >= 4 ? '200% 200%' : '100% 100%'}; animation: {stage >= 4 ? 'gradientTextShimmer 3s ease infinite' : 'none'};"
-				itemprop="name"
-			>Hong</span>
+			<span itemprop="name">Hong</span><span style="color: var(--accent);">.</span>
 		</h1>
 
-		<!-- Decorative divider under name -->
-		<div class="mx-auto mb-6 flex items-center justify-center gap-3">
-			<div
-				class="hero-reveal-line h-[1px] bg-gradient-to-r from-transparent to-blue-500/40"
-				style="width: {stage >= 5 ? '60px' : '0px'}; opacity: {stage >= 5 ? 1 : 0};"
-			></div>
-			<div
-				class="hero-text-reveal h-1.5 w-1.5 rounded-full bg-blue-500/60"
-				style="opacity: {stage >= 5 ? 1 : 0}; transform: scale({stage >= 5 ? 1 : 0});"
-			></div>
-			<div
-				class="hero-reveal-line h-[1px] bg-gradient-to-l from-transparent to-purple-500/40"
-				style="width: {stage >= 5 ? '60px' : '0px'}; opacity: {stage >= 5 ? 1 : 0};"
-			></div>
-		</div>
-
-		<!-- Tagline -->
+		<!-- Positioning line -->
 		<p
-			class="hero-text-reveal mb-3 text-lg text-gray-600 dark:text-gray-400 md:text-xl"
-			style="opacity: {stage >= 5 ? 1 : 0}; transform: translateY({stage >= 5 ? '0' : '16px'}); filter: blur({stage >= 5 ? '0px' : '6px'});"
+			class="hero-text-reveal mb-4 max-w-2xl text-2xl font-medium md:text-3xl"
+			style="color: var(--text); opacity: {stage >= 5 ? 1 : 0}; transform: translateY({stage >= 5 ? '0' : '14px'});"
 			itemprop="description"
 		>
-			<span itemprop="jobTitle">Product Builder</span> · HCI · Engineering Leadership
+			<span itemprop="jobTitle">Product Builder</span> · HCI ·
+			<span class="whitespace-nowrap">Engineering Leadership</span>
 		</p>
 
 		<!-- Sub-tagline -->
 		<p
-			class="hero-text-reveal mb-12 text-sm text-gray-500 dark:text-gray-500 md:text-base"
-			style="opacity: {stage >= 6 ? 1 : 0}; transform: translateY({stage >= 6 ? '0' : '12px'}); filter: blur({stage >= 6 ? '0px' : '4px'});"
+			class="hero-text-reveal mb-10 max-w-xl text-lg leading-relaxed"
+			style="color: var(--muted); opacity: {stage >= 6 ? 1 : 0}; transform: translateY({stage >= 6 ? '0' : '12px'});"
 		>
-			I build AI-powered products from 0 → 1, fast.<br/>
-			Designing systems where ideas turn into working software in days, not months
+			I build AI-powered products from 0 → 1, fast — designing systems where ideas
+			turn into working software in days, not months.
 		</p>
 
-		<!-- CTA links — pop in with slight overshoot -->
-		<div class="flex flex-wrap items-center justify-center gap-4">
+		<!-- CTAs -->
+		<div
+			class="hero-cta-pop flex flex-wrap items-center gap-3"
+			style="opacity: {stage >= 7 ? 1 : 0}; transform: translateY({stage >= 7 ? '0' : '12px'});"
+		>
 			<a
 				href="#projects"
-				class="hero-cta-pop rounded-full border border-blue-500/50 bg-blue-500/10 px-6 py-2.5 text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:bg-blue-500/20 hover:text-blue-700 dark:hover:text-white"
-				style="opacity: {stage >= 7 ? 1 : 0}; transform: scale({stage >= 7 ? 1 : 0.8}) translateY({stage >= 7 ? '0' : '16px'}); filter: blur({stage >= 7 ? '0px' : '4px'});"
+				class="rounded-full px-6 py-3 text-sm font-semibold text-white transition-colors"
+				style="background: var(--accent);"
+				onmouseover={(e) => (e.currentTarget.style.background = 'var(--accent-strong)')}
+				onfocus={(e) => (e.currentTarget.style.background = 'var(--accent-strong)')}
+				onmouseout={(e) => (e.currentTarget.style.background = 'var(--accent)')}
+				onblur={(e) => (e.currentTarget.style.background = 'var(--accent)')}
 			>
-				See My Work
+				See my work
 			</a>
 			<a
-				href="#about"
-				class="hero-cta-pop rounded-full border border-gray-300 dark:border-white/10 px-6 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-400 transition-colors hover:border-gray-400 dark:hover:border-white/20 hover:text-gray-900 dark:hover:text-white"
-				style="opacity: {stage >= 7 ? 1 : 0}; transform: scale({stage >= 7 ? 1 : 0.8}) translateY({stage >= 7 ? '0' : '16px'}); filter: blur({stage >= 7 ? '0px' : '4px'});"
+				href="#writing"
+				class="rounded-full border px-6 py-3 text-sm font-semibold transition-colors"
+				style="border-color: var(--border-strong); color: var(--text);"
 			>
-				About Me
+				Read the writing
+			</a>
+			<a
+				href="#contact"
+				class="px-2 py-3 text-sm font-semibold underline decoration-1 underline-offset-4 transition-colors"
+				style="color: var(--accent);"
+			>
+				Get in touch →
 			</a>
 		</div>
 	</div>
@@ -182,11 +165,11 @@
 	<!-- Scroll indicator -->
 	<div
 		class="hero-text-reveal absolute bottom-8 left-1/2 -translate-x-1/2"
-		style="opacity: {stage >= 8 ? 1 : 0}; transform: translateX(-50%) translateY({stage >= 8 ? '0' : '10px'});"
+		style="opacity: {stage >= 8 ? 1 : 0};"
 	>
-		<div class="flex animate-bounce flex-col items-center gap-2 text-gray-600">
-			<span class="text-xs tracking-widest uppercase">Scroll</span>
-			<i class="fas fa-chevron-down text-sm"></i>
+		<div class="flex animate-bounce flex-col items-center gap-2" style="color: var(--faint);">
+			<span class="text-[11px] tracking-[0.2em] uppercase">Scroll</span>
+			<i class="fas fa-chevron-down text-xs"></i>
 		</div>
 	</div>
 </section>
@@ -194,13 +177,13 @@
 <!-- ============================================ -->
 <!-- PROJECTS: What I Build                       -->
 <!-- ============================================ -->
-<section id="projects" class="section-glow bg-white dark:bg-gray-950 py-24" itemscope itemtype="https://schema.org/CreativeWork">
+<section id="projects" class="section-glow py-24" style="background: var(--bg);" itemscope itemtype="https://schema.org/CreativeWork">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-16 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-blue-400">Projects</p>
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">What I Build</h2>
-				<p class="mx-auto mt-4 max-w-xl text-gray-500">
+				<p class="eyebrow mb-3">Projects</p>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">What I Build</h2>
+				<p class="mx-auto mt-4 max-w-xl" style="color: var(--muted);">
 					Products I've shipped that are live and serving users. Every one started with a real problem.
 				</p>
 			</div>
@@ -364,13 +347,13 @@
 <!-- ============================================ -->
 <!-- WRITING: What I Think                        -->
 <!-- ============================================ -->
-<section id="writing" class="section-glow bg-gray-50 dark:bg-gray-900/50 py-24">
+<section id="writing" class="section-glow py-24" style="background: var(--surface-2);">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-16 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-purple-400">Writing</p>
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">What I Think</h2>
-				<p class="mx-auto mt-4 max-w-xl text-gray-500">
+				<p class="eyebrow mb-3">Writing</p>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">What I Think</h2>
+				<p class="mx-auto mt-4 max-w-xl" style="color: var(--muted);">
 					Ideas on product design, engineering with AI, and rethinking how software should work.
 				</p>
 			</div>
@@ -631,12 +614,12 @@
 <!-- ============================================ -->
 <!-- ABOUT: The Journey                           -->
 <!-- ============================================ -->
-<section id="about" class="section-glow bg-white dark:bg-gray-950 py-24" itemscope itemtype="https://schema.org/AboutPage">
+<section id="about" class="section-glow py-24" style="background: var(--bg);" itemscope itemtype="https://schema.org/AboutPage">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-16 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-cyan-400">Background</p>
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">The Journey</h2>
+				<p class="eyebrow mb-3">Background</p>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">The Journey</h2>
 			</div>
 		</ScrollReveal>
 
@@ -704,12 +687,12 @@ Never stop building products in the last 10+ years.
 <!-- ============================================ -->
 <!-- THE HUMAN: Personality & Interests           -->
 <!-- ============================================ -->
-<section class="section-glow bg-gray-50 dark:bg-gray-900/50 py-24">
+<section class="section-glow py-24" style="background: var(--surface-2);">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-pink-400">Life</p>
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Beyond the Code</h2>
+				<p class="eyebrow mb-3">Life</p>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">Beyond the Code</h2>
 			</div>
 		</ScrollReveal>
 
@@ -796,13 +779,13 @@ Never stop building products in the last 10+ years.
 <!-- ============================================ -->
 <!-- CONNECT: Let's Talk                          -->
 <!-- ============================================ -->
-<section id="contact" class="section-glow bg-white dark:bg-gray-950 py-24">
+<section id="contact" class="section-glow py-24" style="background: var(--bg);">
 	<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
-				<p class="mb-2 text-sm font-medium tracking-widest uppercase text-blue-400">Connect</p>
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Let's Talk</h2>
-				<p class="mx-auto mt-4 max-w-lg text-gray-500">
+				<p class="eyebrow mb-3">Connect</p>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">Let's Talk</h2>
+				<p class="mx-auto mt-4 max-w-lg" style="color: var(--muted);">
 					I'd love to connect with fellow engineers, product enthusiasts, or anyone who just wants to say hi. Currently in the Seattle metro area.
 				</p>
 			</div>

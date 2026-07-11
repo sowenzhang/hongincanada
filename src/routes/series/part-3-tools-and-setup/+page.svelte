@@ -29,7 +29,7 @@
 	<!-- Custom header content -->
 	<svelte:fragment slot="header">
 		<h1
-			class="mb-6 text-center text-4xl font-bold text-gray-900 transition-colors md:text-5xl dark:text-white"
+			class="mb-6 text-center text-4xl font-serif font-semibold text-gray-900 transition-colors md:text-5xl dark:text-white"
 		>
 			Choosing Your Tools & Setting Up
 		</h1>
@@ -87,14 +87,14 @@
 					Your AI coding assistant that writes code as you instruct it
 				</p>
 			</div>
-			<div class="rounded-lg border-l-4 border-purple-500 bg-purple-50 p-6 dark:bg-purple-900/20">
-				<h4 class="mb-2 font-bold text-purple-700 dark:text-purple-300">🤗 Hugging Face</h4>
+			<div class="rounded-lg border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+				<h4 class="mb-2 font-bold text-blue-700 dark:text-blue-300">🤗 Hugging Face</h4>
 				<p class="text-sm text-gray-600 dark:text-gray-400">
 					Free AI models for advanced features such as designing (optional)
 				</p>
 			</div>
-			<div class="rounded-lg border-l-4 border-orange-500 bg-orange-50 p-6 dark:bg-orange-900/20">
-				<h4 class="mb-2 font-bold text-orange-700 dark:text-orange-300">📁 GitHub</h4>
+			<div class="rounded-lg border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+				<h4 class="mb-2 font-bold text-blue-700 dark:text-blue-300">📁 GitHub</h4>
 				<p class="text-sm text-gray-600 dark:text-gray-400">
 					Where your code lives and how you deploy your site
 				</p>
@@ -168,7 +168,7 @@
       However, after using both tools extensively, I found that GitHub Copilot had gained noticeable improvements in its suggestions and accuracy.
     </p>
 
-		<div class="not-prose my-6 border-l-4 border-purple-500 bg-purple-50 p-4 dark:bg-purple-900/20">
+		<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>My recommendation:</strong> Start with Cursor (free), do as much as you can in the first 2 weeks, and add GitHub Copilot later if
 				you want even more AI assistance.
@@ -288,9 +288,9 @@
 				</div>
 				<div class="text-center">
 					<div
-						class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900"
+						class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"
 					>
-						<span class="font-bold text-purple-600 dark:text-purple-300">3</span>
+						<span class="font-bold text-blue-600 dark:text-blue-300">3</span>
 					</div>
 					<h4 class="mb-1 font-bold text-gray-900 dark:text-white">Deploy to GitHub</h4>
 					<p class="text-sm text-gray-600 dark:text-gray-400">Push your changes live</p>
