@@ -286,7 +286,7 @@ body {
 	gap: 0.7rem;
 	border-radius: 0.6rem;
 	padding: 0.5rem 0.75rem;
-	min-height: 40px;
+	min-height: var(--rail-link-h);
 	color: var(--muted);
 	transition: color 0.18s ease, background-color 0.18s ease;
 }
