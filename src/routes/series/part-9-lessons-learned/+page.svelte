@@ -30,7 +30,7 @@
 		>
 			Lessons Learned
 		</h1>
-		<h2 class="mb-8 text-center text-2xl font-medium text-blue-600 md:text-3xl dark:text-blue-400">
+		<h2 class="mb-8 text-center text-2xl font-medium text-teal-600 md:text-3xl dark:text-teal-400">
 			Failures, Frustrations, and Surprises of Building with AI
 		</h2>
 
@@ -48,7 +48,7 @@
 			In this part of the series, I want to share what I learned from building <a
 				href="https://minibreaks.io"
 				target="_blank"
-				class="text-blue-600 underline decoration-2 underline-offset-2 transition-colors hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+				class="text-teal-600 underline decoration-2 underline-offset-2 transition-colors hover:text-teal-800 dark:text-teal-400 dark:hover:text-teal-300"
 				>MiniBreaks.io</a
 			> with AI — including the failures, frustrations, limitations, and surprises. These lessons are for everyone: whether you have a technical background or not, working with AI can feel like having a talented but slightly scatterbrained teammate.
 		</p>
@@ -111,7 +111,7 @@
 		</p>
 
 		<section id="repetitive-suggestions">
-			<h3><i class="fas fa-sync-alt mr-3 text-blue-500" aria-hidden="true"></i>Repetitive Suggestions</h3>
+			<h3><i class="fas fa-sync-alt mr-3 text-teal-500" aria-hidden="true"></i>Repetitive Suggestions</h3>
 
 			<p>
 				One of the most frustrating patterns was when AI got stuck suggesting the same solution over and over — even after I clearly said it didn't work. This happened when debugging CSS layout glitches and while resolving deployment issues.
@@ -121,45 +121,45 @@
 				AI sometimes struggles to "let go" of its initial assumptions, creating an endless loop of unhelpful suggestions.
 			</p>
 
-			<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<h4 class="mb-3 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
+			<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<h4 class="mb-3 flex items-center text-lg font-semibold text-teal-800 dark:text-teal-200">
 					<i class="fas fa-lightbulb mr-3" aria-hidden="true"></i>What I'd do differently
 				</h4>
-				<p class="text-blue-700 dark:text-blue-300">
+				<p class="text-teal-700 dark:text-teal-300">
 					When I notice repeated advice, I now stop sooner, summarize what has already been tried, and explicitly tell AI what to avoid suggesting. That helps break the loop.
 				</p>
 			</div>
 		</section>
 
 		<section id="overcomplicated-code">
-			<h3><i class="fas fa-code mr-3 text-blue-500" aria-hidden="true"></i>Overcomplicated Code</h3>
+			<h3><i class="fas fa-code mr-3 text-teal-500" aria-hidden="true"></i>Overcomplicated Code</h3>
 
 			<p>
 				Another limitation: AI often writes more code than necessary. For example, when I asked for a simple Svelte component, it returned a bloated implementation that added unnecessary dependencies.
 			</p>
 
-			<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<h4 class="mb-3 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
+			<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<h4 class="mb-3 flex items-center text-lg font-semibold text-teal-800 dark:text-teal-200">
 					<i class="fas fa-lightbulb mr-3" aria-hidden="true"></i>What I'd do differently
 				</h4>
-				<p class="text-blue-700 dark:text-blue-300">
+				<p class="text-teal-700 dark:text-teal-300">
 					I now ask AI upfront to "keep it minimal and use only vanilla features unless strictly necessary."
 				</p>
 			</div>
 		</section>
 
 		<section id="wrong-assumptions">
-			<h3><i class="fas fa-exclamation-triangle mr-3 text-blue-500" aria-hidden="true"></i>Wrong Assumptions About Environment</h3>
+			<h3><i class="fas fa-exclamation-triangle mr-3 text-teal-500" aria-hidden="true"></i>Wrong Assumptions About Environment</h3>
 
 			<p>
 				At one point, AI assumed I was running my server on Ubuntu when I was actually on a managed hosting platform. Its advice — such as editing <code>/etc/nginx/sites-available</code> — simply didn't apply.
 			</p>
 
-			<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<h4 class="mb-3 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
+			<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<h4 class="mb-3 flex items-center text-lg font-semibold text-teal-800 dark:text-teal-200">
 					<i class="fas fa-lightbulb mr-3" aria-hidden="true"></i>Lesson learned
 				</h4>
-				<p class="text-blue-700 dark:text-blue-300">
+				<p class="text-teal-700 dark:text-teal-300">
 					Always tell AI your environment and constraints at the beginning. The more context it has, the better it can tailor its advice.
 				</p>
 			</div>
@@ -196,11 +196,11 @@
 				</ol>
 			</div>
 
-			<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<h4 class="mb-3 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
+			<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<h4 class="mb-3 flex items-center text-lg font-semibold text-teal-800 dark:text-teal-200">
 					<i class="fas fa-graduation-cap mr-3" aria-hidden="true"></i>Lesson learned
 				</h4>
-				<p class="text-blue-700 dark:text-blue-300">
+				<p class="text-teal-700 dark:text-teal-300">
 					The clearer your guidance — and the more concrete examples you can give — the better the result.
 				</p>
 			</div>
@@ -235,11 +235,11 @@
 <p>See how happy AI was after she learned about the new error message and understood the root cause?</p>
 <img src="/ai-series/AI-finally-understood-the-issue.jpg" loading="lazy" alt="AI happy after learning about the new error message" class="my-6 w-full rounded-lg shadow-lg">
 
-			<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<h4 class="mb-3 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
+			<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<h4 class="mb-3 flex items-center text-lg font-semibold text-teal-800 dark:text-teal-200">
 					<i class="fas fa-graduation-cap mr-3" aria-hidden="true"></i>Lesson learned
 				</h4>
-				<p class="text-blue-700 dark:text-blue-300">
+				<p class="text-teal-700 dark:text-teal-300">
 					Sometimes you need to dig a little yourself to provide AI with the right clue. Without the right context, it can get stuck in a loop.
 				</p>
 			</div>
@@ -254,20 +254,20 @@
 		</p>
 
 		<div class="my-8 grid gap-6 md:grid-cols-2">
-			<div class="rounded-lg border border-blue-200 bg-blue-50 p-6 dark:border-blue-800 dark:bg-blue-900/20">
-				<h4 class="mb-4 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
+			<div class="rounded-lg border border-teal-200 bg-teal-50 p-6 dark:border-teal-800 dark:bg-teal-900/20">
+				<h4 class="mb-4 flex items-center text-lg font-semibold text-teal-800 dark:text-teal-200">
 					<i class="fas fa-brain mr-3" aria-hidden="true"></i>It Sometimes Thinks Ahead
 				</h4>
-				<p class="text-blue-700 dark:text-blue-300">
+				<p class="text-teal-700 dark:text-teal-300">
 					One pleasant surprise was how AI occasionally caught things I didn't even think of — like adding <code>aria-*</code> attributes for accessibility or suggesting SEO-friendly meta tags. Those small touches improved the final product.
 				</p>
 			</div>
 
-			<div class="rounded-lg border border-blue-200 bg-blue-50 p-6 dark:border-blue-800 dark:bg-blue-900/20">
-				<h4 class="mb-4 flex items-center text-lg font-semibold text-blue-800 dark:text-blue-200">
+			<div class="rounded-lg border border-teal-200 bg-teal-50 p-6 dark:border-teal-800 dark:bg-teal-900/20">
+				<h4 class="mb-4 flex items-center text-lg font-semibold text-teal-800 dark:text-teal-200">
 					<i class="fas fa-magic mr-3" aria-hidden="true"></i>Creative Naming and Messaging
 				</h4>
-				<p class="text-blue-700 dark:text-blue-300">
+				<p class="text-teal-700 dark:text-teal-300">
 					Another surprise was how creative AI can be with wording and tone. When I asked it to help craft playful messages for the mini-games, it delivered delightful, catchy copy that I wouldn't have thought of myself.
 				</p>
 			</div>
@@ -285,26 +285,26 @@
 			AI needs direction, context, and occasionally, a firm correction. The key is learning how to work <em>with</em> it rather than expecting it to work <em>for</em> you.
 		</p>
 
-		<div class="not-prose my-8 rounded-lg border border-blue-200 bg-blue-50 p-6 dark:border-blue-800 dark:bg-blue-900/20">
-			<h4 class="mb-4 text-lg font-semibold text-blue-800 dark:text-blue-200">
+		<div class="not-prose my-8 rounded-lg border border-teal-200 bg-teal-50 p-6 dark:border-teal-800 dark:bg-teal-900/20">
+			<h4 class="mb-4 text-lg font-semibold text-teal-800 dark:text-teal-200">
 				If I did this all over again, I'd:
 			</h4>
 			<ul class="space-y-3">
 				<li class="flex items-start">
 					<i class="fas fa-check-circle mt-1 mr-3 text-green-500" aria-hidden="true"></i>
-					<span class="text-blue-700 dark:text-blue-300">Provide more detailed context up front</span>
+					<span class="text-teal-700 dark:text-teal-300">Provide more detailed context up front</span>
 				</li>
 				<li class="flex items-start">
 					<i class="fas fa-check-circle mt-1 mr-3 text-green-500" aria-hidden="true"></i>
-					<span class="text-blue-700 dark:text-blue-300">Set constraints clearly</span>
+					<span class="text-teal-700 dark:text-teal-300">Set constraints clearly</span>
 				</li>
 				<li class="flex items-start">
 					<i class="fas fa-check-circle mt-1 mr-3 text-green-500" aria-hidden="true"></i>
-					<span class="text-blue-700 dark:text-blue-300">Use examples early and often</span>
+					<span class="text-teal-700 dark:text-teal-300">Use examples early and often</span>
 				</li>
 				<li class="flex items-start">
 					<i class="fas fa-check-circle mt-1 mr-3 text-green-500" aria-hidden="true"></i>
-					<span class="text-blue-700 dark:text-blue-300">Trust my own instincts more when something feels wrong</span>
+					<span class="text-teal-700 dark:text-teal-300">Trust my own instincts more when something feels wrong</span>
 				</li>
 			</ul>
 		</div>
@@ -319,21 +319,21 @@
 
 		<div class="my-6 space-y-4">
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>Practice specificity:</strong> Think of one problem you faced recently — technical or not. Write down the exact question you'd ask AI to help with, being as specific as possible.</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>Compare approaches:</strong> Try giving AI a vague version of the question and then a specific version. Compare the results.</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>Plan your context:</strong> Write down three pieces of context you'd include next time you ask AI for help.</span>
 			</div>
 		</div>
 
-		<div class="not-prose mt-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-			<p class="text-blue-700 dark:text-blue-300">
+		<div class="not-prose mt-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+			<p class="text-teal-700 dark:text-teal-300">
 				<strong>💡 Tip:</strong> Feel free to share your examples with the community! The more we practice being specific and providing good context, the better our results with AI will be.
 			</p>
 		</div>

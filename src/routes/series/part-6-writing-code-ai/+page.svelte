@@ -70,11 +70,11 @@
 			In the previous part, you used DeepSite to create your first landing page, which already included TailwindCSS and some vanilla JavaScript.
 		</p>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-			<p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+			<p class="mb-2 text-lg font-semibold text-teal-700 dark:text-teal-300">
 				Why not just stick with vanilla JavaScript?
 			</p>
-			<p class="mb-0 text-blue-700 dark:text-blue-300">
+			<p class="mb-0 text-teal-700 dark:text-teal-300">
 				Vanilla JavaScript (i.e., plain JavaScript without a framework) works great for adding simple user interactions, animations, and maintaining user state in the browser. However, as your website grows, it becomes hard to maintain and scale.
 			</p>
 		</div>
@@ -158,11 +158,11 @@
 				</div>
 			</div>
 
-			<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">
+			<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<p class="mb-2 text-lg font-semibold text-teal-700 dark:text-teal-300">
 					💡 Personal Experience
 				</p>
-				<p class="mb-0 text-blue-700 dark:text-blue-300">
+				<p class="mb-0 text-teal-700 dark:text-teal-300">
 					When I first tried using AI to generate React code, I often had to fix mismatched libraries or deprecated APIs. With SvelteKit, I had a much smoother experience — and I could focus on building rather than debugging.
 				</p>
 			</div>
@@ -241,9 +241,9 @@
 			In Cursor (or with GitHub Copilot in VS Code), activate Agent mode and include <code>generated.html</code> in the context. Then use this prompt:
 		</p>
 
-		<div class="not-prose my-6 rounded-lg bg-gray-100 p-6 dark:bg-gray-800 border-l-4 border-blue-500">
+		<div class="not-prose my-6 rounded-lg bg-gray-100 p-6 dark:bg-gray-800 border-l-4 border-teal-500">
 			<div class="mb-3 flex items-center">
-				<i class="fas fa-robot mr-2 text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
+				<i class="fas fa-robot mr-2 text-teal-600 dark:text-teal-400" aria-hidden="true"></i>
 				<span class="font-semibold text-gray-900 dark:text-white">AI Prompt Template</span>
 			</div>
 			<div class="text-sm text-gray-700 dark:text-gray-300 font-mono bg-white dark:bg-gray-900 p-4 rounded border">
@@ -269,11 +269,11 @@
 						<li>All JavaScript converted to TypeScript</li>
 					</ul>
 
-					<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-						<p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">
+					<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+						<p class="mb-2 text-lg font-semibold text-teal-700 dark:text-teal-300">
 							✨ The Magic Moment
 						</p>
-						<p class="mb-0 text-blue-700 dark:text-blue-300">
+						<p class="mb-0 text-teal-700 dark:text-teal-300">
 							You now have a structured, maintainable project with a home page, an about page, and reusable components — making it easy for AI (and you) to expand further.
 						</p>
 					</div>
@@ -310,7 +310,7 @@
 		<div class="my-8 space-y-6">
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-code mr-3 text-blue-500" aria-hidden="true"></i>
+					<i class="fas fa-code mr-3 text-teal-500" aria-hidden="true"></i>
 					Be Specific with Context
 				</h4>
 				<p class="text-gray-700 dark:text-gray-300">
@@ -330,7 +330,7 @@
 
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-sync-alt mr-3 text-blue-500" aria-hidden="true"></i>
+					<i class="fas fa-sync-alt mr-3 text-teal-500" aria-hidden="true"></i>
 					Iterate and Refine
 				</h4>
 				<p class="text-gray-700 dark:text-gray-300">
@@ -354,34 +354,34 @@
 
 		<div class="my-6 space-y-4">
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Install <a href="https://nodejs.org/en/download" target="_blank">Node.js</a> and
           <a href="https://git-scm.com/downloads" target="_blank">Git</a>
            on your computer</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Create a SvelteKit project using the CLI</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Move your generated.html into the project folder</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Use the AI prompt above to convert your page to SvelteKit</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Open your project in a browser (<code>npm run dev</code>) and explore the result!</span>
 			</div>
 		</div>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-			<p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+			<p class="mb-2 text-lg font-semibold text-teal-700 dark:text-teal-300">
 				🎯 Success Criteria
 			</p>
-			<p class="mb-0 text-blue-700 dark:text-blue-300">
+			<p class="mb-0 text-teal-700 dark:text-teal-300">
 				By the end of this exercise, you should have a working SvelteKit application that you can view in your browser, with your design properly componentized and at least two pages (Home and About).
 			</p>
 		</div>
@@ -403,7 +403,7 @@
 			<li>Step-by-step instructions for wiring these features to your UI</li>
 		</ul>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>🔧 Coming up:</strong> We'll explore how AI can help you implement complex features like user accounts, email systems, and databases with practical examples and real code you can use in your project.
 			</p>

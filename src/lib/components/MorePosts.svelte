@@ -43,7 +43,7 @@
 		<div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
 			<div class="mb-8 flex items-end justify-between gap-4">
 				<div>
-					<p class="mb-1 text-xs font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+					<p class="mb-1 text-xs font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
 						Keep reading
 					</p>
 					<h2 id="more-posts-heading" class="font-serif text-2xl font-semibold text-gray-900 dark:text-white">
@@ -51,8 +51,8 @@
 					</h2>
 				</div>
 				<a
-					href="/#writing"
-					class="hidden shrink-0 items-center gap-2 text-sm font-medium text-blue-700 transition hover:gap-3 hover:underline dark:text-blue-400 sm:inline-flex sm:min-h-[44px]"
+					href="/blog"
+					class="hidden shrink-0 items-center gap-2 text-sm font-medium text-teal-700 transition hover:gap-3 hover:underline dark:text-teal-400 sm:inline-flex sm:min-h-[44px]"
 				>
 					All posts <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
 				</a>
@@ -62,15 +62,15 @@
 				{#each posts as post (post.slug)}
 					<a
 						href={'/blog/' + post.slug}
-						class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-700"
+						class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-teal-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-teal-700"
 					>
 						<div
-							class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400"
+							class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-teal-500/10 text-teal-600 dark:text-teal-400"
 						>
 							<i class="fas {post.icon}" aria-hidden="true"></i>
 						</div>
 						<h3
-							class="mb-2 font-serif text-lg font-semibold leading-snug text-gray-900 transition group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-300"
+							class="mb-2 font-serif text-lg font-semibold leading-snug text-gray-900 transition group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300"
 						>
 							{post.title}
 						</h3>
@@ -78,7 +78,7 @@
 							{post.description}
 						</p>
 						<span
-							class="inline-flex items-center gap-2 text-sm font-medium text-blue-700 transition group-hover:gap-3 dark:text-blue-400"
+							class="inline-flex items-center gap-2 text-sm font-medium text-teal-700 transition group-hover:gap-3 dark:text-teal-400"
 						>
 							Read post <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
 						</span>
@@ -88,8 +88,8 @@
 
 			<div class="mt-6 sm:hidden">
 				<a
-					href="/#writing"
-					class="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-blue-700 hover:underline dark:text-blue-400"
+					href="/blog"
+					class="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-teal-700 hover:underline dark:text-teal-400"
 				>
 					All posts <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
 				</a>

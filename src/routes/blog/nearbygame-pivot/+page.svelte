@@ -120,7 +120,7 @@
 					onclick={() => (showTOC = !showTOC)}
 					class="flex items-center gap-2 min-h-[44px] rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
 				>
-					<i class="fas fa-list text-xs text-blue-500" aria-hidden="true"></i>
+					<i class="fas fa-list text-xs text-teal-500" aria-hidden="true"></i>
 					<span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Contents</span>
 					<i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-xs text-gray-400" aria-hidden="true"></i>
 				</button>
@@ -151,7 +151,7 @@
 				<span class="text-gray-600 dark:text-gray-300">NearbyGame Pivot</span>
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
-				<span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500 dark:text-blue-400">
+				<span class="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-medium text-teal-500 dark:text-teal-400">
 					<i class="fas fa-route mr-1.5" aria-hidden="true"></i>NearbyGame
 				</span>
 				<span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400">
@@ -182,14 +182,14 @@
 								class="prose prose-lg max-w-none dark:prose-invert
 									prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
 									prose-h2:mt-12 prose-h2:mb-5 prose-h2:text-2xl prose-h2:scroll-mt-24
-									prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-xl prose-h3:text-blue-700 dark:prose-h3:text-blue-400
+									prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-xl prose-h3:text-teal-700 dark:prose-h3:text-teal-400
 									prose-p:leading-relaxed prose-p:text-gray-700 dark:prose-p:text-gray-300
 									prose-li:mb-2 prose-li:text-gray-700 dark:prose-li:text-gray-300
 									prose-ul:list-disc prose-ul:list-outside prose-ul:pl-6 prose-ol:list-decimal prose-ol:list-inside prose-ol:pl-1
 									prose-li:marker:text-gray-500 dark:prose-li:marker:text-gray-400
 									prose-strong:text-gray-900 dark:prose-strong:text-white
-									prose-a:text-blue-600 prose-a:underline-offset-2 dark:prose-a:text-blue-400
-									prose-blockquote:border-blue-500 prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
+									prose-a:text-teal-600 prose-a:underline-offset-2 dark:prose-a:text-teal-400
+									prose-blockquote:border-teal-500 prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
 									[&_section]:scroll-mt-24 [&_h2]:scroll-mt-24"
 							>
 								<p class="text-lg leading-relaxed">
@@ -319,11 +319,11 @@
 										The new idea removes most of that. You open the app, start walking, and occasionally encounter someone. Only then do you decide whether you want to interact.
 									</p>
 
-									<div class="not-prose my-8 rounded-r-xl border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+									<div class="not-prose my-8 rounded-r-xl border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
 										<p class="mb-2 leading-relaxed text-gray-700 dark:text-gray-300">
 											<strong>Old loop -> New loop</strong>
 										</p>
-										<ul class="list-outside list-disc space-y-2 pl-6 text-gray-700 marker:text-blue-500 dark:text-gray-300">
+										<ul class="list-outside list-disc space-y-2 pl-6 text-gray-700 marker:text-teal-500 dark:text-gray-300">
 											<li><strong>Plan first</strong> -> <strong>Experience first</strong></li>
 											<li><strong>Coordinate people</strong> -> <strong>Discover people naturally</strong></li>
 											<li><strong>Logistics-heavy</strong> -> <strong>Low-pressure and ambient</strong></li>
@@ -546,7 +546,7 @@
 										<li>
 											<a
 												href={`#${item.id}`}
-												class="block text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+												class="block text-gray-600 transition-colors hover:text-teal-600 dark:text-gray-400 dark:hover:text-teal-400"
 											>
 												{item.title}
 											</a>
@@ -565,7 +565,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on Twitter"
-										class="flex-1 rounded-lg bg-blue-50 p-2 text-center text-sm font-medium text-blue-600 transition-colors hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50"
+										class="flex-1 rounded-lg bg-teal-50 p-2 text-center text-sm font-medium text-teal-600 transition-colors hover:bg-teal-100 dark:bg-teal-900/30 dark:text-teal-400 dark:hover:bg-teal-900/50"
 									>
 										<i class="fab fa-twitter text-xs"></i>
 									</a>
@@ -574,7 +574,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on LinkedIn"
-										class="flex-1 rounded-lg bg-blue-50 p-2 text-center text-sm font-medium text-blue-600 transition-colors hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-900/50"
+										class="flex-1 rounded-lg bg-teal-50 p-2 text-center text-sm font-medium text-teal-600 transition-colors hover:bg-teal-100 dark:bg-teal-900/30 dark:text-teal-400 dark:hover:bg-teal-900/50"
 									>
 										<i class="fab fa-linkedin-in text-xs"></i>
 									</a>
@@ -602,7 +602,7 @@
 	{#if showBackToTop}
 		<button
 			onclick={scrollToTop}
-			class="fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white shadow-lg transition-colors hover:bg-blue-600"
+			class="fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-white shadow-lg transition-colors hover:bg-teal-600"
 			aria-label="Back to top"
 		>
 			<i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>

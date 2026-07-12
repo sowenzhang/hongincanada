@@ -3,36 +3,40 @@
 @tailwind utilities;
 
 /* ============================================================= */
-/* Design tokens — Refined Editorial (light default + dark mode) */
+/* Design tokens — Atelier (graphite + teal, left-rail studio)   */
+/* Light default + dark mode. Single teal accent.                */
 /* ============================================================= */
 :root {
-	--bg: #fbfaf8;
+	--bg: #f7f7f6;
 	--surface: #ffffff;
-	--surface-2: #f4f2ee;
-	--text: #191919;
-	--muted: #52565c;
-	--faint: #85898f;
-	--border: rgba(20, 20, 20, 0.1);
-	--border-strong: rgba(20, 20, 20, 0.16);
-	--accent: #2452d6;
-	--accent-strong: #1b3fae;
-	--accent-soft: rgba(36, 82, 214, 0.08);
-	--shadow: 0 1px 2px rgba(20, 20, 20, 0.04), 0 12px 32px -16px rgba(20, 20, 20, 0.14);
+	--surface-2: #efefed;
+	--text: #17181a;
+	--muted: #52555b;
+	--faint: #8a8d93;
+	--border: rgba(18, 20, 24, 0.1);
+	--border-strong: rgba(18, 20, 24, 0.17);
+	--accent: #0f766e;
+	--accent-strong: #0b5e54;
+	--accent-soft: rgba(15, 118, 110, 0.09);
+	--on-accent: #ffffff;
+	--shadow: 0 1px 2px rgba(18, 20, 24, 0.04), 0 14px 34px -18px rgba(18, 20, 24, 0.16);
+	--rail-w: 16rem;
 }
 
 .dark {
-	--bg: #0d0e11;
-	--surface: #15171b;
-	--surface-2: #1c1f24;
-	--text: #ecedea;
-	--muted: #a2a8b0;
-	--faint: #6c727a;
-	--border: rgba(255, 255, 255, 0.1);
-	--border-strong: rgba(255, 255, 255, 0.17);
-	--accent: #86a5ff;
-	--accent-strong: #adc3ff;
-	--accent-soft: rgba(134, 165, 255, 0.13);
-	--shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 18px 40px -18px rgba(0, 0, 0, 0.6);
+	--bg: #0a0b0d;
+	--surface: #131518;
+	--surface-2: #1a1d21;
+	--text: #ececee;
+	--muted: #a2a6ad;
+	--faint: #6a6e76;
+	--border: rgba(255, 255, 255, 0.09);
+	--border-strong: rgba(255, 255, 255, 0.16);
+	--accent: #2dd4bf;
+	--accent-strong: #5eead4;
+	--accent-soft: rgba(45, 212, 191, 0.13);
+	--on-accent: #062420;
+	--shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 20px 44px -20px rgba(0, 0, 0, 0.65);
 }
 
 html {
@@ -154,13 +158,204 @@ body {
 	background: var(--border-strong);
 }
 
-/* Thin accent eyebrow */
+/* Thin accent eyebrow — mono, engineering signal */
 .eyebrow {
 	color: var(--accent);
-	font-weight: 600;
-	letter-spacing: 0.18em;
+	font-family: 'JetBrains Mono', ui-monospace, monospace;
+	font-weight: 500;
+	letter-spacing: 0.16em;
 	text-transform: uppercase;
-	font-size: 0.72rem;
+	font-size: 0.7rem;
+}
+
+/* ============================================================= */
+/* Left rail (sidebar) — the new structural chrome               */
+/* ============================================================= */
+.rail {
+	--rail-gap: 2rem;
+	--rail-gap-sm: 1.5rem;
+	--rail-link-h: 40px;
+	--rail-link-py: 0.5rem;
+	--rail-label-pb: 0.5rem;
+	--rail-pad-y: 1.25rem;
+	background: color-mix(in srgb, var(--surface) 60%, var(--bg));
+	border-right: 1px solid var(--border);
+	padding-top: var(--rail-pad-y);
+	padding-bottom: var(--rail-pad-y);
+}
+
+/* Section rhythm inside the rail, driven by CSS vars so it can shrink in
+   tiers as viewport height shrinks — keeps the whole nav in one viewport
+   instead of needing its own scrollbar alongside the page's. */
+.rail-section {
+	margin-top: var(--rail-gap-sm);
+}
+
+.rail-section-first {
+	margin-top: var(--rail-gap);
+}
+
+.rail-bottom {
+	padding-top: var(--rail-gap-sm);
+}
+
+.rail-label {
+	padding-bottom: var(--rail-label-pb);
+}
+
+/* Compact tier: laptops with browser chrome, landscape tablets */
+@media (max-height: 900px) {
+	.rail {
+		--rail-gap: 1.1rem;
+		--rail-gap-sm: 0.85rem;
+		--rail-link-h: 36px;
+		--rail-link-py: 0.4rem;
+		--rail-label-pb: 0.3rem;
+		--rail-pad-y: 0.85rem;
+	}
+}
+
+/* Below this height even the compact tier can't fit every section alongside
+   the always-visible footer (social links + theme toggle) — hide the
+   "Latest" nav rather than shrinking links further or scrolling the rail. */
+@media (max-height: 820px) {
+	.rail-latest {
+		display: none;
+	}
+}
+
+/* Content column offset so it clears the fixed left rail on desktop */
+@media (min-width: 1024px) {
+	.content-shell {
+		padding-left: var(--rail-w);
+	}
+}
+
+.rail-link {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.85rem;
+	border-radius: 0.6rem;
+	padding: var(--rail-link-py) 0.75rem;
+	min-height: 40px;
+	font-size: 0.9rem;
+	color: var(--muted);
+	transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.rail-link:hover {
+	color: var(--text);
+	background: var(--accent-soft);
+}
+
+.rail-link i {
+	width: 1.15rem;
+	text-align: center;
+	color: var(--faint);
+	transition: color 0.18s ease;
+}
+
+.rail-link:hover i,
+.rail-link[aria-current='page'] i {
+	color: var(--accent);
+}
+
+.rail-link[aria-current='page'] {
+	color: var(--text);
+	background: var(--accent-soft);
+	font-weight: 500;
+}
+
+.rail-link[aria-current='page']::before {
+	content: '';
+	position: absolute;
+	left: -0.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 1.15rem;
+	width: 3px;
+	border-radius: 3px;
+	background: var(--accent);
+}
+
+/* Compact "latest posts" link in the rail (icon + single-line short title) */
+.rail-post {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	border-radius: 0.6rem;
+	padding: 0.5rem 0.75rem;
+	min-height: 40px;
+	color: var(--muted);
+	transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.rail-post:hover {
+	color: var(--text);
+	background: var(--accent-soft);
+}
+
+.rail-post i {
+	width: 1.05rem;
+	text-align: center;
+	font-size: 0.8rem;
+	color: var(--faint);
+	transition: color 0.18s ease;
+}
+
+.rail-post:hover i {
+	color: var(--accent);
+}
+
+.rail-post-title {
+	font-size: 0.85rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.rail-post[aria-current='page'] {
+	color: var(--text);
+	background: var(--accent-soft);
+	font-weight: 500;
+}
+
+.rail-post[aria-current='page'] i {
+	color: var(--accent);
+}
+
+/* Mono meta label used across chrome */
+.mono-label {
+	font-family: 'JetBrains Mono', ui-monospace, monospace;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	font-size: 0.68rem;
+	color: var(--faint);
+}
+
+/* Brand identity chips (rail) — discrete pills instead of a dot-separated
+   line, so wrapping breaks cleanly between tags rather than mid-phrase */
+/* Brand identity chips (rail) — 2-column grid so pairs stay balanced
+   regardless of label length, instead of flex-wrap's uneven 3+1 split */
+.rail-tags {
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+	gap: 0.4rem;
+}
+
+.rail-tag {
+	font-family: 'JetBrains Mono', ui-monospace, monospace;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	font-size: 0.62rem;
+	line-height: 1.3;
+	color: var(--muted);
+	background: var(--surface-2);
+	border: 1px solid var(--border);
+	border-radius: 0.35rem;
+	padding: 0.2rem 0.45rem;
+	white-space: nowrap;
 }
 
 /* Entrance animation helpers */

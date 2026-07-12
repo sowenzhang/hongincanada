@@ -104,7 +104,7 @@
 					onclick={() => (showTOC = !showTOC)}
 					class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
 				>
-					<i class="fas fa-list text-blue-500 text-xs" aria-hidden="true"></i>
+					<i class="fas fa-list text-teal-500 text-xs" aria-hidden="true"></i>
 					<span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Contents</span>
 					<i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400 text-xs" aria-hidden="true"></i>
 				</button>
@@ -136,7 +136,7 @@
 				<span class="text-gray-600 dark:text-gray-300">MiniBreaks Pivot</span>
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
-				<span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-500 dark:text-blue-400">
+				<span class="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-medium text-teal-500 dark:text-teal-400">
 					<i class="fas fa-leaf mr-1.5" aria-hidden="true"></i>MiniBreaks
 				</span>
 				<span class="rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
@@ -166,13 +166,13 @@
 							<div class="prose prose-lg dark:prose-invert max-w-none
 								prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
 								prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-5 prose-h2:scroll-mt-24
-								prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-blue-700 dark:prose-h3:text-blue-400
+								prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-teal-700 dark:prose-h3:text-teal-400
 								prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
 								prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:mb-2
 								prose-ul:list-disc prose-ul:list-inside prose-ul:pl-1 prose-ol:list-decimal prose-ol:list-inside prose-ol:pl-1
 								prose-li:marker:text-gray-500 dark:prose-li:marker:text-gray-400
 								prose-strong:text-gray-900 dark:prose-strong:text-white
-								prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline-offset-2
+								prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-a:underline-offset-2
 								prose-pre:rounded-xl prose-pre:border prose-pre:border-gray-200 dark:prose-pre:border-gray-700
 								prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:px-5 prose-pre:py-4 prose-pre:my-6
 								[&_section]:scroll-mt-24 [&_h2]:scroll-mt-24">
@@ -248,11 +248,11 @@
 										The new goal is straightforward: <strong>Ship one small app every week</strong>. After one year, the site will contain <strong>52 tiny apps</strong>.
 									</p>
 
-									<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20 rounded-r-xl">
+									<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20 rounded-r-xl">
 										<p class="mb-2 text-gray-700 dark:text-gray-300 leading-relaxed">
 											<strong>Before → After</strong>
 										</p>
-										<ul class="list-disc list-inside pl-1 space-y-2 text-gray-700 dark:text-gray-300 marker:text-blue-500">
+										<ul class="list-disc list-inside pl-1 space-y-2 text-gray-700 dark:text-gray-300 marker:text-teal-500">
 											<li><strong>Workplace wellness platform</strong> → Micro-app hub</li>
 											<li><strong>Topic-focused</strong> → Tool-focused</li>
 											<li><strong>Hard to decide what to build</strong> → Endless small ideas</li>
@@ -479,7 +479,7 @@ Checks:
 										<li>
 											<a
 												href="#{item.id}"
-												class="block text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+												class="block text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
 											>
 												{item.title}
 											</a>
@@ -499,7 +499,7 @@ Checks:
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on Twitter"
-										class="flex-1 rounded-lg bg-blue-50 dark:bg-blue-900/30 p-2 text-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+										class="flex-1 rounded-lg bg-teal-50 dark:bg-teal-900/30 p-2 text-center text-sm font-medium text-teal-600 dark:text-teal-400 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
 									>
 										<i class="fab fa-twitter text-xs"></i>
 									</a>
@@ -508,7 +508,7 @@ Checks:
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on LinkedIn"
-										class="flex-1 rounded-lg bg-blue-50 dark:bg-blue-900/30 p-2 text-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+										class="flex-1 rounded-lg bg-teal-50 dark:bg-teal-900/30 p-2 text-center text-sm font-medium text-teal-600 dark:text-teal-400 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
 									>
 										<i class="fab fa-linkedin-in text-xs"></i>
 									</a>
@@ -537,7 +537,7 @@ Checks:
 	{#if showBackToTop}
 		<button
 			onclick={scrollToTop}
-			class="fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white shadow-lg hover:bg-blue-600 transition-colors"
+			class="fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-white shadow-lg hover:bg-teal-600 transition-colors"
 			aria-label="Back to top"
 		>
 			<i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>

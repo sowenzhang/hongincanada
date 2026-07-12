@@ -113,7 +113,7 @@
 					<i class="fas fa-arrow-left text-xs" aria-hidden="true"></i> Hong in Canada
 				</a>
 				<button onclick={() => (showTOC = !showTOC)} class="flex items-center gap-2 min-h-[44px] rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700">
-					<i class="fas fa-list text-xs text-blue-500" aria-hidden="true"></i>
+					<i class="fas fa-list text-xs text-teal-500" aria-hidden="true"></i>
 					<span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Contents</span>
 					<i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-xs text-gray-400" aria-hidden="true"></i>
 				</button>
@@ -136,7 +136,7 @@
 				<i class="fas fa-chevron-right text-[9px]" aria-hidden="true"></i><span class="text-gray-600 dark:text-gray-300">Loop Engineering</span>
 			</nav>
 			<div class="mb-4 flex flex-wrap items-center gap-3">
-				<span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-400"><i class="fas fa-arrows-rotate mr-1.5" aria-hidden="true"></i>Spiderloop</span>
+				<span class="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-medium text-teal-600 dark:text-teal-400"><i class="fas fa-arrows-rotate mr-1.5" aria-hidden="true"></i>Spiderloop</span>
 				<span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400">Agentic Engineering</span>
 			</div>
 			<h1 class="mb-5 font-serif text-4xl font-semibold leading-tight text-gray-900 dark:text-white md:text-5xl">Loop Engineering: Building Web Apps with an Agent in the Loop</h1>
@@ -155,9 +155,9 @@
 				<article class="min-w-0 flex-1">
 					<div class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-900">
 									<div class="p-5 sm:p-8 lg:p-14">
-							<div class="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-h2:mb-5 prose-h2:mt-12 prose-h2:scroll-mt-24 prose-h3:mb-3 prose-h3:mt-8 prose-h3:scroll-mt-24 prose-p:leading-relaxed prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-strong:text-gray-900 dark:prose-strong:text-white prose-a:text-blue-700 dark:prose-a:text-blue-400 prose-code:rounded prose-code:bg-blue-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-blue-800 prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-blue-950/40 dark:prose-code:text-blue-300">
+							<div class="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-h2:mb-5 prose-h2:mt-12 prose-h2:scroll-mt-24 prose-h3:mb-3 prose-h3:mt-8 prose-h3:scroll-mt-24 prose-p:leading-relaxed prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-strong:text-gray-900 dark:prose-strong:text-white prose-a:text-teal-700 dark:prose-a:text-teal-400 prose-code:rounded prose-code:bg-teal-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-teal-800 prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-teal-950/40 dark:prose-code:text-teal-300">
 								<section id="tldr">
-																<div class="not-prose mb-8 rounded-xl border border-blue-200 bg-blue-50/80 px-6 py-5 dark:border-blue-800/60 dark:bg-blue-950/30">
+																<div class="not-prose mb-8 rounded-xl border border-teal-200 bg-teal-50/80 px-6 py-5 dark:border-teal-800/60 dark:bg-teal-950/30">
 																	<p class="!m-0 leading-relaxed text-gray-700 dark:text-gray-300">One-shot generation produces a plausible v1 and then stops. Spiderloop wraps the agent in a governed loop: build, observe reality in a real browser, run objective gates, iterate, and stop honestly when the evidence says it is done. I call the discipline behind that loop <strong>Loop Engineering</strong>.</p>
 									</div>
 								</section>
@@ -165,7 +165,7 @@
 								<section id="what-is-a-harness">
 									<h2>What Is an Agentic Harness?</h2>
 									<p>An AI agent can write code, operate tools, and make decisions. An <strong>agentic harness</strong> is the system around that agent: it gives the work a shape, observes what actually happened, runs checks, feeds useful failures back, and decides whether to continue or stop.</p>
-									<div class="not-prose my-8 rounded-xl border border-blue-200 bg-blue-50 px-6 py-5 dark:border-blue-800/60 dark:bg-blue-950/30"><p class="!m-0 text-gray-700 dark:text-gray-300">The harness does not replace the agent. It turns a one-off prompt into a repeatable workflow with boundaries, evidence, and memory.</p></div>
+									<div class="not-prose my-8 rounded-xl border border-teal-200 bg-teal-50 px-6 py-5 dark:border-teal-800/60 dark:bg-teal-950/30"><p class="!m-0 text-gray-700 dark:text-gray-300">The harness does not replace the agent. It turns a one-off prompt into a repeatable workflow with boundaries, evidence, and memory.</p></div>
 									<p>Spiderloop is one implementation of that idea. Its source is organized around a domain-agnostic core, web workflows, and a service layer. The examples below are more useful than a tour of every internal module:</p>
 									<ul>
 										<li><strong><code>/spiderloop:run</code>:</strong> build a site, inspect it in a real browser, run quality gates, then iterate.</li>
@@ -184,7 +184,7 @@
 									<p>Give an agent a brief that says “build me a site” and it can produce something convincing in minutes. The page loads. The headline is there. The colors are coherent. Everyone nods.</p>
 									<p>Then you look closer. A social card points to an image that does not exist. A block of useful content is hidden from assistive technology. A mobile layout overflows by 12 pixels. The agent did not lie exactly; it simply had no mechanism that forced it to find out.</p>
 									<p>That is the failure mode I care about. The problem is not that the model cannot make a good first attempt. The problem is that the thing doing the work is also being asked to decide whether the work is good.</p>
-																<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 px-5 py-4 dark:bg-blue-950/30"><p class="mb-1 text-sm font-semibold text-blue-700 dark:text-blue-400"><i class="fas fa-arrow-right mr-1.5" aria-hidden="true"></i>The reframe</p><p class="!m-0 text-gray-700 dark:text-gray-300">Do not optimize for a perfect generation. Build a system that can produce evidence, respond to it, and know when to stop.</p></div>
+																<div class="not-prose my-6 rounded-lg border-l-4 border-teal-500 bg-teal-50 px-5 py-4 dark:bg-teal-950/30"><p class="mb-1 text-sm font-semibold text-teal-700 dark:text-teal-400"><i class="fas fa-arrow-right mr-1.5" aria-hidden="true"></i>The reframe</p><p class="!m-0 text-gray-700 dark:text-gray-300">Do not optimize for a perfect generation. Build a system that can produce evidence, respond to it, and know when to stop.</p></div>
 								</section>
 
 								<section id="separation-of-powers">
@@ -226,7 +226,7 @@ report(state)</code></pre>
 										<table class="min-w-[680px] w-full border-collapse text-left text-sm">
 											<caption class="sr-only">Separate quality evidence for the Spiderloop and single-pass runs</caption>
 											<thead class="bg-gray-50 text-xs uppercase tracking-wider text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-												<tr><th scope="col" class="px-4 py-3 font-semibold">Signal</th><th scope="col" class="px-4 py-3 font-semibold text-blue-700 dark:text-blue-400">Spiderloop run</th><th scope="col" class="px-4 py-3 font-semibold text-blue-700 dark:text-blue-400">Single-pass run</th></tr>
+												<tr><th scope="col" class="px-4 py-3 font-semibold">Signal</th><th scope="col" class="px-4 py-3 font-semibold text-teal-700 dark:text-teal-400">Spiderloop run</th><th scope="col" class="px-4 py-3 font-semibold text-teal-700 dark:text-teal-400">Single-pass run</th></tr>
 											</thead>
 											<tbody class="divide-y divide-gray-200 dark:divide-gray-700">
 												<tr><th scope="row" class="px-4 py-4 font-semibold text-gray-800 dark:text-gray-200">Routes checked</th><td class="px-4 py-4 text-gray-700 dark:text-gray-300">6 / 6, all gates complete</td><td class="px-4 py-4 text-gray-700 dark:text-gray-300">6 / 6 loaded in the live audit</td></tr>
@@ -280,13 +280,13 @@ report(state)</code></pre>
 									<h2>Build for the Loop, Not the Prompt</h2>
 									<p>The model is still the interesting part when it makes a surprising design choice or solves a hard implementation detail. But the durable engineering insight is elsewhere: generation is only one state in a larger system.</p>
 									<p><strong>Loop Engineering means build, verify against objective truth, iterate, and know when to stop.</strong> The model supplies capability. The harness supplies boundaries, evidence, and memory. A human still closes the last stretch where taste, context, and judgment matter.</p>
-																			<div class="not-prose my-8 rounded-xl border border-blue-200 bg-blue-50 px-6 py-5 dark:border-blue-800/60 dark:bg-blue-950/30"><p class="mb-1 text-sm font-semibold text-blue-700 dark:text-blue-400"><i class="fas fa-compass mr-1.5" aria-hidden="true"></i>The takeaway</p><p class="!m-0 text-gray-700 dark:text-gray-300">Do not ask your agent whether it is done. Give it a loop that can find out.</p></div>
+																			<div class="not-prose my-8 rounded-xl border border-teal-200 bg-teal-50 px-6 py-5 dark:border-teal-800/60 dark:bg-teal-950/30"><p class="mb-1 text-sm font-semibold text-teal-700 dark:text-teal-400"><i class="fas fa-compass mr-1.5" aria-hidden="true"></i>The takeaway</p><p class="!m-0 text-gray-700 dark:text-gray-300">Do not ask your agent whether it is done. Give it a loop that can find out.</p></div>
 								</section>
 							</div>
 
 							<div class="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 pt-6 dark:border-gray-700">
-								<div class="flex items-center gap-3"><button onclick={copyLink} class="inline-flex items-center min-h-[44px] rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 transition hover:border-blue-400 hover:text-blue-600 dark:border-gray-700 dark:text-gray-300 dark:hover:text-blue-400" aria-label="Copy article link"><i class="fas fa-link mr-1.5" aria-hidden="true"></i>Share link</button>{#if copyStatus}<span class="text-sm text-blue-600 dark:text-blue-400">{copyStatus}</span>{/if}</div>
-								<a href={getLinkedInShareUrl()} target="_blank" rel="noopener noreferrer" class="inline-flex items-center min-h-[44px] text-sm font-medium text-blue-700 hover:underline dark:text-blue-400"><i class="fab fa-linkedin mr-1.5" aria-hidden="true"></i>Share on LinkedIn</a>
+								<div class="flex items-center gap-3"><button onclick={copyLink} class="inline-flex items-center min-h-[44px] rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 transition hover:border-teal-400 hover:text-teal-600 dark:border-gray-700 dark:text-gray-300 dark:hover:text-teal-400" aria-label="Copy article link"><i class="fas fa-link mr-1.5" aria-hidden="true"></i>Share link</button>{#if copyStatus}<span class="text-sm text-teal-600 dark:text-teal-400">{copyStatus}</span>{/if}</div>
+								<a href={getLinkedInShareUrl()} target="_blank" rel="noopener noreferrer" class="inline-flex items-center min-h-[44px] text-sm font-medium text-teal-700 hover:underline dark:text-teal-400"><i class="fab fa-linkedin mr-1.5" aria-hidden="true"></i>Share on LinkedIn</a>
 							</div>
 						</div>
 					</div>
@@ -294,7 +294,7 @@ report(state)</code></pre>
 
 				{#if showTOC}
 					<aside class="order-first h-fit shrink-0 lg:order-last lg:sticky lg:top-20 lg:w-64" aria-label="Table of contents">
-						<div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-900"><p class="mb-4 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">On this page</p><nav class="space-y-2">{#each tableOfContents as item}<a href={'#' + item.id} class="flex items-center min-h-[44px] text-sm text-gray-600 transition hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400">{item.title}</a>{/each}</nav></div>
+						<div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-900"><p class="mb-4 text-xs font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400">On this page</p><nav class="space-y-2">{#each tableOfContents as item}<a href={'#' + item.id} class="flex items-center min-h-[44px] text-sm text-gray-600 transition hover:text-teal-600 dark:text-gray-400 dark:hover:text-teal-400">{item.title}</a>{/each}</nav></div>
 					</aside>
 				{/if}
 			</div>
@@ -304,6 +304,6 @@ report(state)</code></pre>
 	<MorePosts currentSlug="loop-engineering" />
 
 	{#if showBackToTop}
-		<button onclick={scrollToTop} class="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition hover:bg-blue-700" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+		<button onclick={scrollToTop} class="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-teal-600 text-white shadow-lg transition hover:bg-teal-700" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
 	{/if}
 </div>

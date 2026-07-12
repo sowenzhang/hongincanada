@@ -160,15 +160,15 @@ Best regards`;
         <div class="flex items-center space-x-4">
             <!-- Breadcrumb Path -->
             <div class="flex items-center space-x-2 text-sm">
-                <a href="/" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">Home</a>
+                <a href="/" class="text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors">Home</a>
                 <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500" aria-hidden="true"></i>
-                <a href="{navigation.seriesUrl}" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">{navigation.seriesTitle}</a>
+                <a href="{navigation.seriesUrl}" class="text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors">{navigation.seriesTitle}</a>
                 <i class="fas fa-chevron-right text-gray-400 dark:text-gray-500" aria-hidden="true"></i>
                 <span class="text-gray-600 dark:text-gray-400">Part {navigation.currentPart}</span>
             </div>
             <!-- Part Indicator -->
             <div class="hidden sm:block">
-                <span class="bg-blue-500 dark:bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                <span class="bg-teal-500 dark:bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-medium">
                     Part {navigation.currentPart} of {navigation.totalParts}
                 </span>
             </div>
@@ -183,17 +183,17 @@ Best regards`;
             <!-- Back to Series button - only show on mobile when part indicator is hidden -->
             <div class="sm:hidden mb-6">
                 <div class="flex flex-col items-center gap-3">
-                    <a href="{navigation.seriesUrl}" class="inline-flex min-h-[44px] items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
+                    <a href="{navigation.seriesUrl}" class="inline-flex min-h-[44px] items-center bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors">
                         <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>Back to Series
                     </a>
-                    <span class="bg-blue-500 dark:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span class="bg-teal-500 dark:bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Part {navigation.currentPart} of {navigation.totalParts}
                     </span>
                 </div>
             </div>
             <!-- Desktop: Just the back button since part indicator is in nav -->
             <div class="hidden sm:block mb-6">
-                <a href="{navigation.seriesUrl}" class="inline-flex min-h-[44px] items-center bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
+                <a href="{navigation.seriesUrl}" class="inline-flex min-h-[44px] items-center bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors">
                     <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>Back to Series
                 </a>
             </div>
@@ -226,9 +226,9 @@ Best regards`;
             {#if tableOfContents.length > 0}
                 <button
                     on:click={toggleTOC}
-                    class="flex items-center space-x-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200"
+                    class="flex items-center space-x-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-teal-300 dark:hover:border-teal-600 transition-all duration-200"
                 >
-                    <i class="fas fa-list text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
+                    <i class="fas fa-list text-teal-600 dark:text-teal-400" aria-hidden="true"></i>
                     <span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Table of Contents</span>
                     <span class="sm:hidden">TOC</span>
                     <i class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400" aria-hidden="true"></i>
@@ -278,7 +278,7 @@ Best regards`;
                         <nav class="space-y-3">
                             {#each tableOfContents as item}
                                 <a href="#{item.id}"
-                                   class="block text-sm {item.level === 1 ? 'font-medium text-gray-900 dark:text-white py-1' : 'text-gray-600 dark:text-gray-400 ml-4 py-0.5'} hover:text-blue-600 dark:hover:text-blue-400 transition-colors rounded px-2 hover:bg-blue-50 dark:hover:bg-blue-900/20">
+                                   class="block text-sm {item.level === 1 ? 'font-medium text-gray-900 dark:text-white py-1' : 'text-gray-600 dark:text-gray-400 ml-4 py-0.5'} hover:text-teal-600 dark:hover:text-teal-400 transition-colors rounded px-2 hover:bg-teal-50 dark:hover:bg-teal-900/20">
                                     {item.title}
                                 </a>
                             {/each}
@@ -299,11 +299,11 @@ Best regards`;
                                     prose-ul:ml-6 prose-ul:mb-6 prose-ul:mt-4 prose-ul:space-y-2 prose-ul:list-disc prose-ul:pl-6
                                     prose-ol:ml-6 prose-ol:mb-6 prose-ol:mt-4 prose-ol:space-y-2 prose-ol:list-decimal prose-ol:pl-6
                                     prose-strong:text-gray-900 dark:prose-strong:text-white
-                                    prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-blue-800 dark:hover:prose-a:text-blue-300 prose-a:transition-colors
-                                    prose-code:text-blue-700 dark:prose-code:text-blue-300 prose-code:font-medium
-                                    prose-code:bg-blue-50 dark:prose-code:bg-blue-900/20 prose-code:px-2 prose-code:py-1 prose-code:rounded
+                                    prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-a:underline prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-teal-800 dark:hover:prose-a:text-teal-300 prose-a:transition-colors
+                                    prose-code:text-teal-700 dark:prose-code:text-teal-300 prose-code:font-medium
+                                    prose-code:bg-teal-50 dark:prose-code:bg-teal-900/20 prose-code:px-2 prose-code:py-1 prose-code:rounded
                                     prose-pre:bg-gray-100 dark:prose-pre:bg-gray-800 prose-pre:border prose-pre:border-gray-200 dark:prose-pre:border-gray-700
-                                    prose-blockquote:border-blue-500 dark:prose-blockquote:border-blue-400 prose-blockquote:bg-blue-50 dark:prose-blockquote:bg-blue-900/10
+                                    prose-blockquote:border-teal-500 dark:prose-blockquote:border-teal-400 prose-blockquote:bg-teal-50 dark:prose-blockquote:bg-teal-900/10
                                     prose-blockquote:text-gray-700 dark:prose-blockquote:text-gray-300
                                     prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl
                                     prose-h1:mb-8 prose-h2:mb-6 prose-h2:mt-12 prose-h3:mb-4 prose-h3:mt-8
@@ -334,8 +334,8 @@ Best regards`;
             <!-- Previous Part -->
             {#if navigation.prevPart}
                 <a href="{navigation.seriesUrl}/{navigation.prevPart.slug}"
-                   class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group min-w-0">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition">
+                   class="flex items-center space-x-3 text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition group min-w-0">
+                    <div class="flex items-center justify-center w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-full group-hover:bg-teal-200 dark:group-hover:bg-teal-800 transition">
                         <i class="fas fa-arrow-left text-lg" aria-hidden="true"></i>
                     </div>
                     <div class="min-w-0">
@@ -356,12 +356,12 @@ Best regards`;
             <!-- Next Part -->
             {#if navigation.nextPart && !disableNextPart}
                 <a href="{navigation.seriesUrl}/{navigation.nextPart.slug}"
-                   class="flex items-center space-x-3 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition group min-w-0">
+                   class="flex items-center space-x-3 text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition group min-w-0">
                     <div class="text-right min-w-0">
                         <div class="text-sm text-gray-500 dark:text-gray-400">Next</div>
                         <div class="font-medium truncate overflow-hidden min-w-0">Part {navigation.nextPart.number}: {navigation.nextPart.title}</div>
                     </div>
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition">
+                    <div class="flex items-center justify-center w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-full group-hover:bg-teal-200 dark:group-hover:bg-teal-800 transition">
                         <i class="fas fa-arrow-right text-lg" aria-hidden="true"></i>
                     </div>
                 </a>
@@ -385,19 +385,19 @@ Best regards`;
 
 <!-- CTA Section -->
 <slot name="cta">
-    <section class="py-12 bg-blue-600 dark:bg-blue-700 text-white">
+    <section class="py-12 bg-teal-600 dark:bg-teal-700 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">Enjoying the Series?</h2>
-            <p class="text-blue-100 dark:text-blue-200 mb-6 text-lg">
+            <p class="text-teal-100 dark:text-teal-200 mb-6 text-lg">
                 Share your thoughts or questions about AI-powered development.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href={generateFeedbackEmail()}
-                   class="bg-white text-blue-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition shadow-lg">
+                   class="bg-white text-teal-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition shadow-lg">
                     <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Send Feedback
                 </a>
                 <a href="https://www.linkedin.com/in/keepsrunning/" target="_blank"
-                   class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-full font-medium transition">
+                   class="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-6 py-3 rounded-full font-medium transition">
                     <i class="fab fa-linkedin mr-2" aria-hidden="true"></i>Discuss on LinkedIn
                 </a>
             </div>

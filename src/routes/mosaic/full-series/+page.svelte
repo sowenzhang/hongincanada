@@ -177,7 +177,7 @@
             {#each fullTOC as item}
                 <button
                     on:click={() => scrollToSection(item.id)}
-                    class="block w-full text-left text-xs py-1 px-2 rounded transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 {activeSectionId === item.id ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300' : 'text-gray-600 dark:text-gray-400'}"
+                    class="block w-full text-left text-xs py-1 px-2 rounded transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 {activeSectionId === item.id ? 'bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300' : 'text-gray-600 dark:text-gray-400'}"
                     class:pl-2={item.level === 1}
                     class:pl-4={item.level === 2}
                     class:pl-6={item.level === 3}
@@ -191,16 +191,16 @@
 {/if}
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 py-16">
+<section class="bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <div class="mb-6">
-                <a href="/mosaic" class="inline-flex min-h-[44px] items-center text-blue-600 hover:text-blue-700 font-medium">
+                <a href="/mosaic" class="inline-flex min-h-[44px] items-center text-teal-600 hover:text-teal-700 font-medium">
                     ← Back to Series Overview
                 </a>
             </div>
             <div class="mb-4">
-                <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+                <span class="bg-teal-100 text-teal-800 px-4 py-2 rounded-full text-sm font-medium">
                     <i class="fas fa-book-open mr-2"></i>Complete Series
                 </span>
             </div>
@@ -232,12 +232,12 @@
 <article class="py-16 bg-white dark:bg-gray-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Note about this page -->
-        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 mb-12 border border-blue-200 dark:border-blue-800">
+        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 mb-12 border border-teal-200 dark:border-teal-800">
             <div class="flex items-start">
-                <i class="fas fa-info-circle text-blue-500 mr-3 mt-1"></i>
+                <i class="fas fa-info-circle text-teal-500 mr-3 mt-1"></i>
                 <div>
-                    <h3 class="font-semibold text-blue-800 dark:text-blue-200 mb-2">Reading the Complete Series</h3>
-                    <p class="text-blue-700 dark:text-blue-300 text-sm">
+                    <h3 class="font-semibold text-teal-800 dark:text-teal-200 mb-2">Reading the Complete Series</h3>
+                    <p class="text-teal-700 dark:text-teal-300 text-sm">
                         This page combines all four parts of the Mosaic series for continuous reading. A floating table of contents appears as you scroll to help navigate between sections. You can also read each part individually from the <a href="/mosaic" class="underline hover:no-underline">series overview</a>.
                     </p>
                 </div>
@@ -246,14 +246,14 @@
 
         <!-- Part 1 Content -->
         <section id="part-1" class="mb-16">
-            <div class="border-l-4 border-blue-500 pl-6 mb-8">
+            <div class="border-l-4 border-teal-500 pl-6 mb-8">
                 <h2 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Part 1: The Problem with Apps Today</h2>
                 <p class="text-gray-600 dark:text-gray-400">5 min read • September 12, 2025</p>
             </div>
 
             <div class="prose prose-lg dark:prose-invert max-w-none">
                 <section id="intro" class="mb-12">
-                    <div class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl p-8 mb-8 border border-blue-100 dark:border-blue-800">
+                    <div class="bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 rounded-xl p-8 mb-8 border border-teal-100 dark:border-teal-800">
                         <p class="text-xl leading-relaxed mb-4">Think about the last time you planned a trip.</p>
 
                         <div class="space-y-4 text-lg">
@@ -264,17 +264,17 @@
                             <p>📸 And after the trip? You probably dug through Photos and a budgeting app to figure out what you spent.</p>
                         </div>
 
-                        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 mt-6 border-l-4 border-blue-500">
-                            <p class="text-xl font-semibold text-blue-700 dark:text-blue-300 mb-2">That's five or six apps — all for one journey.</p>
+                        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 mt-6 border-l-4 border-teal-500">
+                            <p class="text-xl font-semibold text-teal-700 dark:text-teal-300 mb-2">That's five or six apps — all for one journey.</p>
                             <p class="text-gray-600 dark:text-gray-400">This is normal today. But it doesn't feel right, does it?</p>
                         </div>
                     </div>
 
-                    <p class="text-lg leading-relaxed mb-6">We live in a world where apps are still siloed products. App stores want you to search, install, and learn them one by one. But our lives don't fit into silos. We live in <em class="font-semibold text-blue-600 dark:text-blue-400">flows</em> — trips, health check-ups, courses, projects — and those flows cut across dozens of apps.</p>
+                    <p class="text-lg leading-relaxed mb-6">We live in a world where apps are still siloed products. App stores want you to search, install, and learn them one by one. But our lives don't fit into silos. We live in <em class="font-semibold text-teal-600 dark:text-teal-400">flows</em> — trips, health check-ups, courses, projects — and those flows cut across dozens of apps.</p>
 
                     <div class="text-center my-8">
-                        <p class="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">This series is about a different way of thinking:</p>
-                        <p class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">Mosaic</p>
+                        <p class="text-2xl font-bold text-teal-600 dark:text-teal-400 mb-2">This series is about a different way of thinking:</p>
+                        <p class="text-4xl font-bold bg-gradient-to-r from-teal-600 to-teal-600 bg-clip-text text-transparent">Mosaic</p>
                     </div>
                 </section>
 
@@ -306,7 +306,7 @@
                 <section id="what-this-series-will-cover" class="mb-12">
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">What This Series Will Cover</h3>
 
-                    <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6 my-8">
+                    <div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-700 rounded-lg p-6 my-8">
                         <ul class="space-y-3">
                             <li><strong>Part 1 — The Problem with Apps Today</strong><br>
                                 <span class="text-gray-600 dark:text-gray-400">You're reading it! Why app stores and siloed apps don't fit the modern user journey. Introduce the Mosaic concept at a high level.</span></li>
@@ -342,7 +342,7 @@
 
                     <p class="mb-4">Before the next part, here's a simple exercise:</p>
 
-                    <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6 my-8">
+                    <div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-700 rounded-lg p-6 my-8">
                         <p class="text-lg font-medium mb-3">👉 Think of one thing you did this week that required 3 or more apps.</p>
                         <p class="mb-3">Write them down. How did it feel switching back and forth?</p>
                         <p>Hold onto that example — we'll revisit it in Part 2, when we imagine how Mosaic would handle it.</p>
@@ -353,7 +353,7 @@
 
         <!-- Part 2 Content -->
         <section id="part-2" class="mb-16">
-            <div class="border-l-4 border-blue-500 pl-6 mb-8">
+            <div class="border-l-4 border-teal-500 pl-6 mb-8">
                 <h2 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Part 2: Adaptive Journeys in App Flows</h2>
                 <p class="text-gray-600 dark:text-gray-400">7 min read • September 13, 2025</p>
             </div>
@@ -374,7 +374,7 @@
 
                     <p class="mb-4">Every time you need something new, you're pushed into the same cycle:</p>
 
-                    <div class="bg-gradient-to-r from-red-50 to-blue-50 dark:from-red-900/20 dark:to-blue-900/20 rounded-xl p-6 my-6 border border-red-100 dark:border-red-800">
+                    <div class="bg-gradient-to-r from-red-50 to-teal-50 dark:from-red-900/20 dark:to-teal-900/20 rounded-xl p-6 my-6 border border-red-100 dark:border-red-800">
                         <ol class="space-y-2 text-lg list-decimal pl-6">
                             <li>🔍 Search the app store.</li>
                             <li>📊 Compare dozens of options with nearly identical features.</li>
@@ -402,9 +402,9 @@
                             <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">📱 Traditional Apps</h4>
                             <p class="text-gray-600 dark:text-gray-400">Static: once you install them, they look and behave the same, regardless of your stage in a journey.</p>
                         </div>
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
-                            <h4 class="text-xl font-bold text-blue-900 dark:text-blue-100 mb-4">🌊 App Flows</h4>
-                            <p class="text-blue-700 dark:text-blue-300">Dynamic and adaptive — living experiences that grow and shrink with your journey.</p>
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6 border border-teal-200 dark:border-teal-700">
+                            <h4 class="text-xl font-bold text-teal-900 dark:text-teal-100 mb-4">🌊 App Flows</h4>
+                            <p class="text-teal-700 dark:text-teal-300">Dynamic and adaptive — living experiences that grow and shrink with your journey.</p>
                         </div>
                     </div>
 
@@ -416,8 +416,8 @@
                         <li><strong>Rearrange themselves automatically as your context shifts.</strong></li>
                     </ul>
 
-                    <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6 my-8">
-                        <p class="text-xl font-semibold text-blue-700 dark:text-blue-300 text-center">
+                    <div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-700 rounded-lg p-6 my-8">
+                        <p class="text-xl font-semibold text-teal-700 dark:text-teal-300 text-center">
                             They are not "one app per problem" — they are <em>living experiences</em> that grow and shrink with your journey.
                         </p>
                     </div>
@@ -439,8 +439,8 @@
                     <p class="mb-6">Let's imagine you're planning a trip to Tokyo.</p>
 
                     <div class="clear-left md:clear-none">
-                        <h4 class="text-xl font-bold mt-8 mb-4 text-blue-600 dark:text-blue-400">🛫 Before the trip</h4>
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 mb-6 border border-blue-200 dark:border-blue-700 md:mr-8">
+                        <h4 class="text-xl font-bold mt-8 mb-4 text-teal-600 dark:text-teal-400">🛫 Before the trip</h4>
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6 mb-6 border border-teal-200 dark:border-teal-700 md:mr-8">
                             <ul class="list-disc pl-6">
                                 <li>The App Flow emphasizes your <strong>flight tracker</strong> and <strong>hotel reservation</strong> details.</li>
                                 <li>Maps, translation, and restaurant suggestions exist but stay in the background.</li>
@@ -456,8 +456,8 @@
                             </ul>
                         </div>
 
-                        <h4 class="text-xl font-bold mt-8 mb-4 text-blue-600 dark:text-blue-400">📸 After the trip</h4>
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 mb-6 border border-blue-200 dark:border-blue-700 md:mr-8">
+                        <h4 class="text-xl font-bold mt-8 mb-4 text-teal-600 dark:text-teal-400">📸 After the trip</h4>
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6 mb-6 border border-teal-200 dark:border-teal-700 md:mr-8">
                             <ul class="list-disc pl-6">
                                 <li>Your <strong>photo gallery</strong> and <strong>spending tracker</strong> take the spotlight.</li>
                                 <li>The flight tracker <strong>disappears completely</strong>.</li>
@@ -466,53 +466,53 @@
                         </div>
                     </div>
 
-                    <h4 class="text-xl font-bold mt-8 mb-4 text-blue-600 dark:text-blue-400">🗂️ Beyond the trip: Disposable & Archivable Flows</h4>
-                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 mb-6 border border-blue-200 dark:border-blue-700">
-                        <p class="text-blue-700 dark:text-blue-300 mb-4">Here's where App Flows truly differ from traditional apps:</p>
+                    <h4 class="text-xl font-bold mt-8 mb-4 text-teal-600 dark:text-teal-400">🗂️ Beyond the trip: Disposable & Archivable Flows</h4>
+                    <div class="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6 mb-6 border border-teal-200 dark:border-teal-700">
+                        <p class="text-teal-700 dark:text-teal-300 mb-4">Here's where App Flows truly differ from traditional apps:</p>
                         <ul class="space-y-3 list-none">
                             <li class="flex items-start">
                                 <span class="text-2xl mr-3">🗑️</span>
                                 <div>
-                                    <strong class="text-blue-800 dark:text-blue-200">Disposable by default:</strong>
-                                    <span class="text-blue-700 dark:text-blue-300">Once your Tokyo trip is complete, the entire App Flow can gracefully disappear. No cluttered home screen, no forgotten apps taking up storage.</span>
+                                    <strong class="text-teal-800 dark:text-teal-200">Disposable by default:</strong>
+                                    <span class="text-teal-700 dark:text-teal-300">Once your Tokyo trip is complete, the entire App Flow can gracefully disappear. No cluttered home screen, no forgotten apps taking up storage.</span>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-2xl mr-3">📦</span>
                                 <div>
-                                    <strong class="text-blue-800 dark:text-blue-200">Archivable when needed:</strong>
-                                    <span class="text-blue-700 dark:text-blue-300">If you want to keep the flow for reference or reuse, it gets archived with all your preferences, favorite restaurants, and learned patterns intact.</span>
+                                    <strong class="text-teal-800 dark:text-teal-200">Archivable when needed:</strong>
+                                    <span class="text-teal-700 dark:text-teal-300">If you want to keep the flow for reference or reuse, it gets archived with all your preferences, favorite restaurants, and learned patterns intact.</span>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-2xl mr-3">🔄</span>
                                 <div>
-                                    <strong class="text-blue-800 dark:text-blue-200">Instantly retrievable:</strong>
-                                    <span class="text-blue-700 dark:text-blue-300">Planning another trip to Japan two years later? Your archived "Tokyo Trip" flow can be restored instantly, with all your previous preferences and learnings ready to go.</span>
+                                    <strong class="text-teal-800 dark:text-teal-200">Instantly retrievable:</strong>
+                                    <span class="text-teal-700 dark:text-teal-300">Planning another trip to Japan two years later? Your archived "Tokyo Trip" flow can be restored instantly, with all your previous preferences and learnings ready to go.</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="bg-gradient-to-r from-blue-100 to-red-100 dark:from-blue-900/30 dark:to-red-900/30 rounded-xl p-6 my-6 border border-blue-200 dark:border-blue-700">
+                    <div class="bg-gradient-to-r from-teal-100 to-red-100 dark:from-teal-900/30 dark:to-red-900/30 rounded-xl p-6 my-6 border border-teal-200 dark:border-teal-700">
                         <div class="flex items-center justify-center mb-4">
                             <span class="text-3xl mr-4">💡</span>
-                            <h5 class="text-xl font-bold text-blue-800 dark:text-blue-200">The Revolutionary Difference</h5>
+                            <h5 class="text-xl font-bold text-teal-800 dark:text-teal-200">The Revolutionary Difference</h5>
                         </div>
-                        <p class="text-center text-blue-700 dark:text-blue-300 text-lg">
+                        <p class="text-center text-teal-700 dark:text-teal-300 text-lg">
                             Instead of <strong>permanent apps</strong> that accumulate on your device forever, you get <strong>temporary experiences</strong>
                             that exist only as long as you need them — and can be recalled when relevant again.
                         </p>
                     </div>
 
-                    <div class="bg-gradient-to-r from-blue-100 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/30 rounded-xl p-8 my-8 border border-blue-200 dark:border-blue-700">
+                    <div class="bg-gradient-to-r from-teal-100 to-teal-100 dark:from-teal-900/30 dark:to-teal-900/30 rounded-xl p-8 my-8 border border-teal-200 dark:border-teal-700">
                         <div class="flex items-center justify-center mb-4">
                             <span class="text-3xl mr-4">🤝</span>
-                            <p class="text-xl font-bold text-center text-blue-700 dark:text-blue-300">
+                            <p class="text-xl font-bold text-center text-teal-700 dark:text-teal-300">
                                 This isn't just a self-updating app.
                             </p>
                         </div>
-                        <p class="text-lg text-center text-blue-600 dark:text-blue-400">
+                        <p class="text-lg text-center text-teal-600 dark:text-teal-400">
                             It's a <strong>Living Companion</strong> — an app that evolves as your context (location, time, role, and goals).
                         </p>
                     </div>
@@ -524,14 +524,14 @@
                     <p class="mb-4">To be precise:</p>
 
                     <div class="grid md:grid-cols-1 gap-6 my-8">
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
-                            <h4 class="text-xl font-bold text-blue-900 dark:text-blue-100 mb-3">🌊 App Flows</h4>
-                            <p class="text-blue-700 dark:text-blue-300">The representation of the user's goal or journey. They describe what you want to achieve (plan a trip, complete a course, manage a health check-up) and evolve as your context changes.</p>
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6 border border-teal-200 dark:border-teal-700">
+                            <h4 class="text-xl font-bold text-teal-900 dark:text-teal-100 mb-3">🌊 App Flows</h4>
+                            <p class="text-teal-700 dark:text-teal-300">The representation of the user's goal or journey. They describe what you want to achieve (plan a trip, complete a course, manage a health check-up) and evolve as your context changes.</p>
                         </div>
 
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
-                            <h4 class="text-xl font-bold text-blue-900 dark:text-blue-100 mb-3">🎯 Mosaic</h4>
-                            <p class="text-blue-700 dark:text-blue-300">The composition engine that interprets App Flows. It brings together the right "tiles" — small modular capabilities like translation, maps, reminders, or payments — and assembles them into a single adaptive experience.</p>
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6 border border-teal-200 dark:border-teal-700">
+                            <h4 class="text-xl font-bold text-teal-900 dark:text-teal-100 mb-3">🎯 Mosaic</h4>
+                            <p class="text-teal-700 dark:text-teal-300">The composition engine that interprets App Flows. It brings together the right "tiles" — small modular capabilities like translation, maps, reminders, or payments — and assembles them into a single adaptive experience.</p>
                         </div>
                     </div>
 
@@ -539,12 +539,12 @@
                         <h4 class="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-white">In short:</h4>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="text-center">
-                                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">🌊</div>
-                                <p class="text-xl font-semibold text-blue-600 dark:text-blue-400">App Flows capture your intent.</p>
+                                <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">🌊</div>
+                                <p class="text-xl font-semibold text-teal-600 dark:text-teal-400">App Flows capture your intent.</p>
                             </div>
                             <div class="text-center">
-                                <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">🎯</div>
-                                <p class="text-xl font-semibold text-blue-600 dark:text-blue-400">Mosaic builds the experience around it.</p>
+                                <div class="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">🎯</div>
+                                <p class="text-xl font-semibold text-teal-600 dark:text-teal-400">Mosaic builds the experience around it.</p>
                             </div>
                         </div>
                     </div>
@@ -564,28 +564,28 @@
                             <p class="text-green-700 dark:text-green-300">Only what matters now is visible.</p>
                         </div>
 
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-700">
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-4 border border-teal-200 dark:border-teal-700">
                             <div class="flex items-center mb-2">
                                 <span class="text-2xl mr-3">⚡</span>
-                                <h5 class="text-lg font-bold text-blue-900 dark:text-blue-100">Less friction</h5>
+                                <h5 class="text-lg font-bold text-teal-900 dark:text-teal-100">Less friction</h5>
                             </div>
-                            <p class="text-blue-700 dark:text-blue-300">No more searching, installing, or relearning interfaces.</p>
+                            <p class="text-teal-700 dark:text-teal-300">No more searching, installing, or relearning interfaces.</p>
                         </div>
 
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-700">
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-4 border border-teal-200 dark:border-teal-700">
                             <div class="flex items-center mb-2">
                                 <span class="text-2xl mr-3">🔍</span>
-                                <h5 class="text-lg font-bold text-blue-900 dark:text-blue-100">More focus</h5>
+                                <h5 class="text-lg font-bold text-teal-900 dark:text-teal-100">More focus</h5>
                             </div>
-                            <p class="text-blue-700 dark:text-blue-300">Your app evolves with you, stage by stage.</p>
+                            <p class="text-teal-700 dark:text-teal-300">Your app evolves with you, stage by stage.</p>
                         </div>
 
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-700">
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-4 border border-teal-200 dark:border-teal-700">
                             <div class="flex items-center mb-2">
                                 <span class="text-2xl mr-3">🤝</span>
-                                <h5 class="text-lg font-bold text-blue-900 dark:text-blue-100">More trust</h5>
+                                <h5 class="text-lg font-bold text-teal-900 dark:text-teal-100">More trust</h5>
                             </div>
-                            <p class="text-blue-700 dark:text-blue-300">You know the right tool will surface when you need it.</p>
+                            <p class="text-teal-700 dark:text-teal-300">You know the right tool will surface when you need it.</p>
                         </div>
 
                         <div class="md:col-span-2 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 border border-yellow-200 dark:border-yellow-700">
@@ -602,29 +602,29 @@
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Homework for You</h3>
 
                     <div class="space-y-6 my-8">
-                        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6">
+                        <div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-700 rounded-lg p-6">
                             <div class="flex items-center space-x-4 mb-3">
-                                <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
-                                <h4 class="text-lg font-bold text-blue-900 dark:text-blue-100">👉 Homework 1:</h4>
+                                <div class="bg-teal-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                                <h4 class="text-lg font-bold text-teal-900 dark:text-teal-100">👉 Homework 1:</h4>
                             </div>
                             <div class="ml-12">
-                                <p class="text-blue-700 dark:text-blue-300">Think of one journey in your life (a trip, a health check-up, a project, or a course). Write down the stages of that journey. What apps did you use at each stage?</p>
+                                <p class="text-teal-700 dark:text-teal-300">Think of one journey in your life (a trip, a health check-up, a project, or a course). Write down the stages of that journey. What apps did you use at each stage?</p>
                             </div>
                         </div>
 
-                        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6">
+                        <div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-700 rounded-lg p-6">
                             <div class="flex items-center space-x-4 mb-3">
-                                <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
-                                <h4 class="text-lg font-bold text-blue-900 dark:text-blue-100">👉 Homework 2:</h4>
+                                <div class="bg-teal-500 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                                <h4 class="text-lg font-bold text-teal-900 dark:text-teal-100">👉 Homework 2:</h4>
                             </div>
                             <div class="ml-12">
-                                <p class="text-blue-700 dark:text-blue-300">On your phone, scroll through your installed apps. Which ones did you download for a single purpose — and never use again?</p>
+                                <p class="text-teal-700 dark:text-teal-300">On your phone, scroll through your installed apps. Which ones did you download for a single purpose — and never use again?</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-gradient-to-r from-blue-100 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/30 rounded-xl p-8 my-8 border border-blue-200 dark:border-blue-700">
-                        <p class="text-lg text-center text-blue-700 dark:text-blue-300 italic">
+                    <div class="bg-gradient-to-r from-teal-100 to-teal-100 dark:from-teal-900/30 dark:to-teal-900/30 rounded-xl p-8 my-8 border border-teal-200 dark:border-teal-700">
+                        <p class="text-lg text-center text-teal-700 dark:text-teal-300 italic">
                             Imagine if those weren't permanent apps on your phone, but temporary tiles that appeared in your App Flow when needed, and gracefully disappeared afterward.
                         </p>
                     </div>
@@ -634,7 +634,7 @@
 
         <!-- Part 3 Content -->
         <section id="part-3" class="mb-16">
-            <div class="border-l-4 border-blue-500 pl-6 mb-8">
+            <div class="border-l-4 border-teal-500 pl-6 mb-8">
                 <h2 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Part 3: Under the Hood of App Flows</h2>
                 <p class="text-gray-600 dark:text-gray-400">15 min read • September 13, 2025</p>
             </div>
@@ -682,8 +682,8 @@
                         <p class="text-lg mb-6">In Mosaic, registries expose <strong>tiles</strong>: modular units made of three layers:</p>
 
                         <div class="space-y-8">
-                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-                                <h5 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-200">Logic Layer</h5>
+                            <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
+                                <h5 class="text-lg font-semibold mb-3 text-teal-800 dark:text-teal-200">Logic Layer</h5>
                                 <p class="text-lg mb-4">Defines what the tile does.</p>
                                 <p class="text-lg mb-4">Exposed as functions or API wrappers.</p>
                                 <p class="text-lg mb-4 font-medium">Example (TypeScript):</p>
@@ -713,8 +713,8 @@ export async function getWeather(location: string) &#123;
 &lt;/div&gt;</code></pre>
                             </div>
 
-                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-                                <h5 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-200">Metadata Layer</h5>
+                            <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
+                                <h5 class="text-lg font-semibold mb-3 text-teal-800 dark:text-teal-200">Metadata Layer</h5>
                                 <p class="text-lg mb-4">Tells the Composer when and how to use the tile.</p>
                                 <p class="text-lg mb-4 font-medium">Example manifest (JSON):</p>
 
@@ -875,7 +875,7 @@ export async function getWeather(location: string) &#123;
                 <section id="homework-3" class="mb-12">
                     <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Homework for You</h3>
 
-                    <div class="bg-gradient-to-r from-blue-50 to-red-50 dark:from-blue-900/20 dark:to-red-900/20 rounded-xl p-8 mb-6 border border-blue-200 dark:border-blue-800">
+                    <div class="bg-gradient-to-r from-teal-50 to-red-50 dark:from-teal-900/20 dark:to-red-900/20 rounded-xl p-8 mb-6 border border-teal-200 dark:border-teal-800">
                         <p class="text-lg mb-4"><strong>👉 Homework 1:</strong> Pick one task you'd describe in a sentence ("I'm moving to a new house," "I'm training for a marathon"). What tiles would you need if Mosaic built an App Flow for you?</p>
 
                         <p class="text-lg"><strong>👉 Homework 2 (for builders):</strong> Take one feature from your app and imagine it as a tile. Write a simple manifest:</p>
@@ -891,7 +891,7 @@ export async function getWeather(location: string) &#123;
 
         <!-- Part 4 Content -->
         <section id="part-4" class="mb-16">
-            <div class="border-l-4 border-blue-500 pl-6 mb-8">
+            <div class="border-l-4 border-teal-500 pl-6 mb-8">
                 <h2 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Part 4: The Near Future and Beyond</h2>
                 <p class="text-gray-600 dark:text-gray-400">8 min read • September 13, 2025</p>
             </div>
@@ -943,7 +943,7 @@ export async function getWeather(location: string) &#123;
 
                         <p class="text-lg mb-6">This means you install once, and all flows open inside that single container.</p>
 
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 mb-6 border border-blue-200 dark:border-blue-800">
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 mb-6 border border-teal-200 dark:border-teal-800">
                             <ul class="text-lg space-y-2 list-disc pl-6">
                                 <li>To the OS, it's one PWA (one icon, one storage).</li>
                                 <li>To the user, each flow feels like a different app because the Composer dynamically reshapes the UI based on the flow ID.</li>
@@ -971,25 +971,25 @@ export async function getWeather(location: string) &#123;
                                 <p class="text-lg">Flows evolve without reinstallations.</p>
                             </div>
 
-                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-                                <h5 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-200">Cross-platform reach</h5>
+                            <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
+                                <h5 class="text-lg font-semibold mb-3 text-teal-800 dark:text-teal-200">Cross-platform reach</h5>
                                 <p class="text-lg mb-2">PWAs run in browsers, mobile, and desktop.</p>
                                 <p class="text-lg">Flows are just links — instantly accessible.</p>
                             </div>
 
-                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-                                <h5 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-200">Installability</h5>
+                            <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
+                                <h5 class="text-lg font-semibold mb-3 text-teal-800 dark:text-teal-200">Installability</h5>
                                 <p class="text-lg mb-2">The container can live on your home screen.</p>
                                 <p class="text-lg">Users can "install Mosaic" once, but still open any App Flow link.</p>
                             </div>
 
-                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-                                <h5 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-200">Offline capabilities</h5>
+                            <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
+                                <h5 class="text-lg font-semibold mb-3 text-teal-800 dark:text-teal-200">Offline capabilities</h5>
                                 <p class="text-lg">Tiles can cache data or run local logic when offline.</p>
                             </div>
 
-                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-                                <h5 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-200">Instant shareability</h5>
+                            <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
+                                <h5 class="text-lg font-semibold mb-3 text-teal-800 dark:text-teal-200">Instant shareability</h5>
                                 <p class="text-lg mb-2">A Tokyo Trip flow is just a URL you can send to a friend.</p>
                                 <p class="text-lg">When they click, it runs inside their Mosaic container (or in the browser if they haven't installed yet).</p>
                             </div>
@@ -1055,11 +1055,11 @@ export async function getWeather(location: string) &#123;
                     <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">The Roadmap</h3>
 
                     <div class="space-y-8">
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-                            <h4 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-200">Today</h4>
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
+                            <h4 class="text-lg font-semibold mb-3 text-teal-800 dark:text-teal-200">Today</h4>
                             <ul class="text-lg space-y-2 list-disc pl-6">
-                                <li><code class="bg-blue-100 dark:bg-blue-800 px-2 py-1 rounded">&#123;abc.com&#125;</code> as a container PWA.</li>
-                                <li>App Flows are just routes (<code class="bg-blue-100 dark:bg-blue-800 px-2 py-1 rounded">/appflow/:flowId</code>) inside it.</li>
+                                <li><code class="bg-teal-100 dark:bg-teal-800 px-2 py-1 rounded">&#123;abc.com&#125;</code> as a container PWA.</li>
+                                <li>App Flows are just routes (<code class="bg-teal-100 dark:bg-teal-800 px-2 py-1 rounded">/appflow/:flowId</code>) inside it.</li>
                                 <li>Install once, open any flow by link.</li>
                             </ul>
                         </div>
@@ -1073,8 +1073,8 @@ export async function getWeather(location: string) &#123;
                             </ul>
                         </div>
 
-                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-                            <h4 class="text-lg font-semibold mb-3 text-blue-800 dark:text-blue-200">Long Term</h4>
+                        <div class="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-6 border border-teal-200 dark:border-teal-800">
+                            <h4 class="text-lg font-semibold mb-3 text-teal-800 dark:text-teal-200">Long Term</h4>
                             <ul class="text-lg space-y-2 list-disc pl-6">
                                 <li>Registry management at the OS level.</li>
                                 <li>Adaptive App Flows become first-class citizens of the OS.</li>
@@ -1091,7 +1091,7 @@ export async function getWeather(location: string) &#123;
 
                     <p class="text-lg mb-4">But the long-term vision is bigger: Mosaic as an OS-native orchestrator, with registries managed at the system level. Unlike MCP's chat-first approach, Mosaic enables goal-first disposable apps that adapt and disappear when finished.</p>
 
-                    <div class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl p-8 mb-6 border border-blue-200 dark:border-blue-800">
+                    <div class="bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 rounded-xl p-8 mb-6 border border-teal-200 dark:border-teal-800">
                         <p class="text-xl font-semibold text-center mb-4">The future isn't about apps you hunt down and install.</p>
                         <p class="text-xl font-semibold text-center">It's about flows that find you, adapt with you, and vanish when the job is done.</p>
                     </div>
@@ -1100,27 +1100,27 @@ export async function getWeather(location: string) &#123;
                 <section id="homework-4" class="mb-12">
                     <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Homework for You</h3>
 
-                    <div class="bg-gradient-to-r from-blue-50 to-red-50 dark:from-blue-900/20 dark:to-red-900/20 rounded-xl p-8 mb-6 border border-blue-200 dark:border-blue-800">
+                    <div class="bg-gradient-to-r from-teal-50 to-red-50 dark:from-teal-900/20 dark:to-red-900/20 rounded-xl p-8 mb-6 border border-teal-200 dark:border-teal-800">
                         <p class="text-lg mb-4"><strong>👉 Homework 1:</strong> Look at the URLs you used today. How many of them could be App Flows inside one container PWA instead of separate apps?</p>
 
-                        <p class="text-lg"><strong>👉 Homework 2:</strong> If you're technical, read a PWA manifest on one of your installed web apps. Notice the scope field. Can you imagine how <code class="bg-blue-100 dark:bg-blue-800 px-2 py-1 rounded">/appflow/:flowId</code> could all be grouped under one container?</p>
+                        <p class="text-lg"><strong>👉 Homework 2:</strong> If you're technical, read a PWA manifest on one of your installed web apps. Notice the scope field. Can you imagine how <code class="bg-teal-100 dark:bg-teal-800 px-2 py-1 rounded">/appflow/:flowId</code> could all be grouped under one container?</p>
                     </div>
                 </section>
             </div>
         </section>
 
         <!-- Series conclusion -->
-        <section class="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20 rounded-xl p-8 border border-blue-200 dark:border-blue-800">
+        <section class="bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 rounded-xl p-8 border border-teal-200 dark:border-teal-800">
             <div class="text-center">
                 <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Thank You for Reading!</h3>
                 <p class="text-gray-600 dark:text-gray-300 mb-6">
                     You've completed the entire Mosaic series. Share your thoughts and continue the conversation.
                 </p>
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <a href="/mosaic" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition">
+                    <a href="/mosaic" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-full transition">
                         ← Back to Series Overview
                     </a>
-                    <a href="/" class="border border-blue-500 text-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-6 py-3 rounded-full transition">
+                    <a href="/" class="border border-teal-500 text-teal-500 hover:bg-teal-50 dark:hover:bg-teal-900/20 px-6 py-3 rounded-full transition">
                         Explore More Articles
                     </a>
                 </div>
