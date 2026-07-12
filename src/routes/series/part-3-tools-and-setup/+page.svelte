@@ -75,8 +75,8 @@
 		</p>
 
 		<div class="not-prose my-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-			<div class="rounded-lg border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<h4 class="mb-2 font-bold text-blue-700 dark:text-blue-300">💬 ChatGPT</h4>
+			<div class="rounded-lg border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<h4 class="mb-2 font-bold text-teal-700 dark:text-teal-300">💬 ChatGPT</h4>
 				<p class="text-sm text-gray-600 dark:text-gray-400">
 					Your AI brainstorming partner and problem solver
 				</p>
@@ -87,14 +87,14 @@
 					Your AI coding assistant that writes code as you instruct it
 				</p>
 			</div>
-			<div class="rounded-lg border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<h4 class="mb-2 font-bold text-blue-700 dark:text-blue-300">🤗 Hugging Face</h4>
+			<div class="rounded-lg border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<h4 class="mb-2 font-bold text-teal-700 dark:text-teal-300">🤗 Hugging Face</h4>
 				<p class="text-sm text-gray-600 dark:text-gray-400">
 					Free AI models for advanced features such as designing (optional)
 				</p>
 			</div>
-			<div class="rounded-lg border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-				<h4 class="mb-2 font-bold text-blue-700 dark:text-blue-300">📁 GitHub</h4>
+			<div class="rounded-lg border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+				<h4 class="mb-2 font-bold text-teal-700 dark:text-teal-300">📁 GitHub</h4>
 				<p class="text-sm text-gray-600 dark:text-gray-400">
 					Where your code lives and how you deploy your site
 				</p>
@@ -103,7 +103,7 @@
 
 <h3 id="chatgpt">ChatGPT - Your AI Assistant</h3>
 
-<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
+<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-4 dark:bg-teal-900/20">
   <p class="mb-0 text-gray-700 dark:text-gray-300">
     <strong>Think of ChatGPT as your patient mentor who never gets tired of explaining things.</strong>
   </p>
@@ -168,7 +168,7 @@
       However, after using both tools extensively, I found that GitHub Copilot had gained noticeable improvements in its suggestions and accuracy.
     </p>
 
-		<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
+		<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-4 dark:bg-teal-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>My recommendation:</strong> Start with Cursor (free), do as much as you can in the first 2 weeks, and add GitHub Copilot later if
 				you want even more AI assistance.
@@ -270,9 +270,9 @@
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 				<div class="text-center">
 					<div
-						class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"
+						class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 dark:bg-teal-900"
 					>
-						<span class="font-bold text-blue-600 dark:text-blue-300">1</span>
+						<span class="font-bold text-teal-600 dark:text-teal-300">1</span>
 					</div>
 					<h4 class="mb-1 font-bold text-gray-900 dark:text-white">Plan with ChatGPT</h4>
 					<p class="text-sm text-gray-600 dark:text-gray-400">Brainstorm and plan your feature</p>
@@ -288,9 +288,9 @@
 				</div>
 				<div class="text-center">
 					<div
-						class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"
+						class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 dark:bg-teal-900"
 					>
-						<span class="font-bold text-blue-600 dark:text-blue-300">3</span>
+						<span class="font-bold text-teal-600 dark:text-teal-300">3</span>
 					</div>
 					<h4 class="mb-1 font-bold text-gray-900 dark:text-white">Deploy to GitHub</h4>
 					<p class="text-sm text-gray-600 dark:text-gray-400">Push your changes live</p>
@@ -306,23 +306,23 @@
 
 		<div class="my-6 space-y-4">
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Create your GitHub account and first repository</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Download and install Visual Studio Code</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Sign up for GitHub Copilot (start your free trial)</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Sign up for ChatGPT (free account is fine)</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Install Git to connect your computer to GitHub (ask ChatGPT if not familiar)</span>
 			</div>
 		</div>

@@ -134,7 +134,7 @@
 					onclick={() => (showTOC = !showTOC)}
 					class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
 				>
-					<i class="fas fa-list text-blue-500 text-xs" aria-hidden="true"></i>
+					<i class="fas fa-list text-teal-500 text-xs" aria-hidden="true"></i>
 					<span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Contents</span>
 					<i
 						class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400 text-xs"
@@ -169,7 +169,7 @@
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
 				<span
-					class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-400"
+					class="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-medium text-teal-600 dark:text-teal-400"
 				>
 					<i class="fas fa-route mr-1.5" aria-hidden="true"></i>NearbyGame
 				</span>
@@ -214,7 +214,7 @@
 								prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
 								prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:mb-2
 								prose-strong:text-gray-900 dark:prose-strong:text-white
-								prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline-offset-2
+								prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-a:underline-offset-2
 								[&_section]:scroll-mt-24 [&_h2]:scroll-mt-24"
 							>
 								<section id="hook">
@@ -233,8 +233,8 @@
 										-- into the walking game it is today.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-teal-500 bg-teal-50 dark:bg-teal-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-teal-700 dark:text-teal-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #1
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -324,8 +324,8 @@
 									</figcaption>
 								</figure>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-teal-500 bg-teal-50 dark:bg-teal-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-teal-700 dark:text-teal-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #2
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -411,8 +411,8 @@
 										and just learning about them was already a great experience.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-teal-500 bg-teal-50 dark:bg-teal-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-teal-700 dark:text-teal-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #3
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -467,8 +467,8 @@
 										on the next submission.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-teal-500 bg-teal-50 dark:bg-teal-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-teal-700 dark:text-teal-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>Learning #4
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -510,7 +510,7 @@
 											href="https://nearbygame.com"
 											target="_blank"
 											rel="noopener noreferrer"
-											class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+											class="text-teal-600 dark:text-teal-400 font-medium hover:underline"
 										>
 											nearbygame.com
 										</a>
@@ -539,7 +539,7 @@
 									{#each tableOfContents as item (item.id)}
 										<a
 											href="#{item.id}"
-											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-teal-900/20 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
 										>
 											{item.title}
 										</a>
@@ -561,7 +561,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on Twitter"
-										class="flex-1 rounded-lg bg-blue-50 dark:bg-blue-900/30 p-2 text-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+										class="flex-1 rounded-lg bg-teal-50 dark:bg-teal-900/30 p-2 text-center text-sm font-medium text-teal-600 dark:text-teal-400 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
 									>
 										<i class="fab fa-twitter text-xs"></i>
 									</a>
@@ -570,7 +570,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on LinkedIn"
-										class="flex-1 rounded-lg bg-blue-50 dark:bg-blue-900/30 p-2 text-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+										class="flex-1 rounded-lg bg-teal-50 dark:bg-teal-900/30 p-2 text-center text-sm font-medium text-teal-600 dark:text-teal-400 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
 									>
 										<i class="fab fa-linkedin-in text-xs"></i>
 									</a>

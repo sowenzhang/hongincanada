@@ -104,14 +104,14 @@
 			When something doesn't behave correctly, AI can be your debugging partner. Here's a systematic approach:
 		</p>
 
-		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
-			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
+		<div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-6 my-6">
+			<h4 class="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-3">
 				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>AI Debugging Prompt Template
 			</h4>
-			<p class="text-blue-700 dark:text-blue-300 mb-3">
+			<p class="text-teal-700 dark:text-teal-300 mb-3">
 				"This [page/feature] isn't working as expected. Here's what I'm seeing: [describe the issue clearly]. Can you help me write a console log to identify the issue?"
 			</p>
-			<p class="text-sm text-blue-600 dark:text-blue-400">
+			<p class="text-sm text-teal-600 dark:text-teal-400">
 				💡 Pro tip: Capture screenshots of browser console logs and share them with AI for more accurate assistance.
 			</p>
 		</div>
@@ -232,11 +232,11 @@
 
     <p>In the above screenshot, you can toggle the responsiveness testing by clicking the button pointed by the red arrow, and you can also change your device size with the dropdown once it's toggled.</p>
 
-		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
-			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
+		<div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-6 my-6">
+			<h4 class="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-3">
 				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI Accessibility Prompt
 			</h4>
-			<p class="text-blue-700 dark:text-blue-300">
+			<p class="text-teal-700 dark:text-teal-300">
 				"Can you create a simple checklist to ensure my website is accessible and responsive? Focus on the most important items for a beginner."
 			</p>
 		</div>
@@ -283,11 +283,11 @@
 			<li><strong>Minification:</strong> Remove unnecessary characters from code</li>
 		</ul>
 
-		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
-			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
+		<div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-6 my-6">
+			<h4 class="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-3">
 				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI Performance Prompt
 			</h4>
-			<p class="text-blue-700 dark:text-blue-300">
+			<p class="text-teal-700 dark:text-teal-300">
 				"Can you review my solution and identify possible improvements for performance? Focus on the biggest impact optimizations for a [your technology stack] website."
 			</p>
 		</div>
@@ -376,20 +376,20 @@
 			<li>✅ Error handling implemented for edge cases</li>
 		</ul>
 
-		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
-			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
+		<div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-6 my-6">
+			<h4 class="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-3">
 				<i class="fas fa-rocket mr-2" aria-hidden="true"></i>For SvelteKit Users
 			</h4>
-			<p class="text-blue-700 dark:text-blue-300 mb-3">
+			<p class="text-teal-700 dark:text-teal-300 mb-3">
 				SvelteKit supports multiple deployment methods (serverless, static, node). Check the <a href="https://kit.svelte.dev/docs/adapters" target="_blank" rel="noopener noreferrer" class="underline">adapter documentation</a> for your chosen platform.
 			</p>
 		</div>
 
-		<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 my-6">
-			<h4 class="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
+		<div class="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-6 my-6">
+			<h4 class="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-3">
 				<i class="fas fa-robot mr-2" aria-hidden="true"></i>AI Deployment Prompt
 			</h4>
-			<p class="text-blue-700 dark:text-blue-300">
+			<p class="text-teal-700 dark:text-teal-300">
 				"Guide me step-by-step on how to deploy my [technology stack] app using [chosen hosting platform]. Include any specific configuration needed for my setup."
 			</p>
 		</div>
@@ -404,27 +404,27 @@
 
 		<div class="my-6 space-y-4">
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>Manual Testing:</strong> Perform thorough manual testing locally (run <code>npm run dev</code>) to verify all functionality works as expected.</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>Security Implementation:</strong> Apply at least two recommended security practices using AI guidance. Focus on input validation and environment variable protection.</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>Accessibility Audit:</strong> Use the Accessibility Insights extension to perform a quick accessibility audit and fix any critical issues found.</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>Performance Optimization:</strong> Run Lighthouse to boost your website's performance score above 80. Implement suggested improvements.</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>SEO Enhancement:</strong> Implement basic SEO improvements including proper meta tags, alt text for images, and keyword optimization.</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span><strong>Deployment Preparation:</strong> Ask AI for detailed deployment guidance on your selected platform and successfully deploy your MVP.</span>
 			</div>
 		</div>

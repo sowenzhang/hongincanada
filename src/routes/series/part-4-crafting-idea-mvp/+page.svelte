@@ -110,7 +110,7 @@
 
 		<div class="not-prose my-8 space-y-6">
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					1
 				</div>
 				<div>
@@ -140,7 +140,7 @@
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					3
 				</div>
 				<div>
@@ -170,7 +170,7 @@
 			Why? Because you can define the tone and role AI should play for you. For example:
 		</p>
 
-		<div class="not-prose my-6 rounded-lg bg-blue-50 p-6 dark:bg-blue-900/20">
+		<div class="not-prose my-6 rounded-lg bg-teal-50 p-6 dark:bg-teal-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>Project Instructions:</strong><br>
 				"I'd like you to act as my co-founder and brainstorming partner. Please focus on creative yet
@@ -285,23 +285,23 @@
 
 		<div class="my-6 space-y-4">
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Set up a ChatGPT Project for your website brainstorming (if using paid version)</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Write down 3 different website ideas you're considering</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>For each idea, brainstorm with AI using the 3 guidelines</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Choose ONE idea and write your MVP in exactly one paragraph</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Cross-reference your MVP with a second AI tool</span>
 			</div>
 		</div>
@@ -319,7 +319,7 @@
 			</ul>
 		</div>
 
-		<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
+		<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-4 dark:bg-teal-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>📝 Example MVP:</strong> "MiniBreaks.io is a playful website encourages taking mindful breaks, promotes workplace well-being, and fosters a sense of fun through achievements and leaderboards."
 			</p>
@@ -346,7 +346,7 @@
 			speaks to your users' needs.
 		</p>
 
-		<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
+		<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-4 dark:bg-teal-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>🎨 Coming up:</strong> We'll explore AI-powered design tools, learn prompt engineering
 				for visual concepts, and create a design system that you can actually implement.

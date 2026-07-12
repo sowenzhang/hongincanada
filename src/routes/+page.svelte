@@ -136,8 +136,8 @@
 		>
 			<a
 				href="#projects"
-				class="rounded-full px-6 py-3 text-sm font-semibold text-white transition-colors"
-				style="background: var(--accent);"
+				class="rounded-full px-6 py-3 text-sm font-semibold transition-colors"
+				style="background: var(--accent); color: var(--on-accent);"
 				onmouseover={(e) => (e.currentTarget.style.background = 'var(--accent-strong)')}
 				onfocus={(e) => (e.currentTarget.style.background = 'var(--accent-strong)')}
 				onmouseout={(e) => (e.currentTarget.style.background = 'var(--accent)')}
@@ -177,10 +177,10 @@
 <!-- ============================================ -->
 <!-- PROJECTS: What I Build                       -->
 <!-- ============================================ -->
-<section id="projects" class="section-glow py-24" style="background: var(--bg);" itemscope itemtype="https://schema.org/CreativeWork">
+<section id="projects" class="section-glow py-16" style="background: var(--bg);" itemscope itemtype="https://schema.org/CreativeWork">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
-			<div class="mb-16 text-center">
+			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Projects</p>
 				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">What I Build</h2>
 				<p class="mx-auto mt-4 max-w-xl" style="color: var(--muted);">
@@ -345,12 +345,59 @@
 </section>
 
 <!-- ============================================ -->
-<!-- WRITING: What I Think                        -->
+<!-- FREE AI REVIEW: Featured offering            -->
 <!-- ============================================ -->
-<section id="writing" class="section-glow py-24" style="background: var(--surface-2);">
+<section class="py-12" style="background: var(--bg);">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
-			<div class="mb-16 text-center">
+			<div
+				class="glass-card overflow-hidden rounded-2xl p-8 md:p-10"
+				style="background: linear-gradient(135deg, var(--accent-soft), transparent 70%);"
+			>
+				<div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+					<div class="max-w-xl">
+						<p class="eyebrow mb-3">Free · Limited slots</p>
+						<h2 class="font-serif text-3xl font-medium md:text-4xl" style="color: var(--text);">
+							Free AI Workflow Review
+						</h2>
+						<p class="mt-3 leading-relaxed" style="color: var(--muted);">
+							Send me one repetitive workflow. I may send back a short written review with practical
+							AI ideas, prompts, risks, and next steps — no sales pitch.
+						</p>
+					</div>
+					<div class="flex flex-shrink-0 flex-wrap items-center gap-3">
+						<a
+							href="/ai-workflow-review"
+							class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors"
+							style="background: var(--accent); color: var(--on-accent);"
+							onmouseover={(e) => (e.currentTarget.style.background = 'var(--accent-strong)')}
+							onfocus={(e) => (e.currentTarget.style.background = 'var(--accent-strong)')}
+							onmouseout={(e) => (e.currentTarget.style.background = 'var(--accent)')}
+							onblur={(e) => (e.currentTarget.style.background = 'var(--accent)')}
+						>
+							<i class="fas fa-wand-magic-sparkles"></i> Get your review
+						</a>
+						<a
+							href="/ai-workflow-review#examples"
+							class="inline-flex items-center gap-2 text-sm font-semibold underline decoration-1 underline-offset-4"
+							style="color: var(--accent);"
+						>
+							See examples →
+						</a>
+					</div>
+				</div>
+			</div>
+		</ScrollReveal>
+	</div>
+</section>
+
+<!-- ============================================ -->
+<!-- WRITING: What I Think                        -->
+<!-- ============================================ -->
+<section id="writing" class="section-glow py-16" style="background: var(--surface-2);">
+	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+		<ScrollReveal>
+			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Writing</p>
 				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">What I Think</h2>
 				<p class="mx-auto mt-4 max-w-xl" style="color: var(--muted);">
@@ -451,94 +498,6 @@
 				</article>
 
 				<article class="h-full">
-					<a href="/blog/nearbygame-pivot" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
-						<div class="mb-4 flex items-center gap-3">
-							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
-								<i class="fas fa-route text-emerald-400"></i>
-							</div>
-							<span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
-								BLOG
-							</span>
-						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-emerald-300 dark:text-white">
-							How I Pivoted NearbyGame and Used AI to Go From 0 to 1
-						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-							Why I abandoned a venue-discovery idea, reframed the problem with AI, and turned NearbyGame into a calm walking experience built for one user first.
-						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
-							Read Post <i class="fas fa-arrow-right text-xs"></i>
-						</span>
-					</a>
-				</article>
-
-				<article class="h-full">
-					<a href="/blog/introducing-crossit" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
-						<div class="mb-4 flex items-center gap-3">
-							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-500/10">
-								<i class="fas fa-check-double text-teal-400"></i>
-							</div>
-							<span class="rounded-full bg-teal-500/10 px-2.5 py-1 text-[10px] font-medium text-teal-400">
-								BLOG
-							</span>
-						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-teal-300 transition">
-							Introducing CrossIt: A Lightweight Habit Helper
-						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-							A simple local-first habit helper focused on one action: complete a routine and cross it off.
-						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-teal-400 transition group-hover:gap-3">
-							Read Post <i class="fas fa-arrow-right text-xs"></i>
-						</span>
-					</a>
-				</article>
-
-				<article class="h-full">
-					<a href="/blog/minibreaks-pivot" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
-						<div class="mb-4 flex items-center gap-3">
-							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
-								<i class="fas fa-leaf text-orange-400"></i>
-							</div>
-							<span class="rounded-full bg-orange-500/10 px-2.5 py-1 text-[10px] font-medium text-orange-400">
-								BLOG
-							</span>
-						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-orange-300 transition">
-							MiniBreaks Pivot: From Wellness to Micro-Apps
-						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-							Why I pivoted MiniBreaks into a weekly micro-app experiment, and how I structured AI roles to ship one tiny app every week.
-						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-orange-400 transition group-hover:gap-3">
-							Read Post <i class="fas fa-arrow-right text-xs"></i>
-						</span>
-					</a>
-				</article>
-
-				<article class="h-full">
-					<a href="/blog/why-i-build-nocloud-chat" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
-						<div class="mb-4 flex items-center gap-3">
-							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10">
-								<i class="fas fa-cloud text-cyan-400"></i>
-							</div>
-							<span class="rounded-full bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-400">
-								BLOG
-							</span>
-						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-300 transition">
-							Why Do I Build NoCloud Chat
-						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-							Why I built a local-first chat app with no registration and no cloud dependency.
-						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-cyan-400 transition group-hover:gap-3">
-							Read Post <i class="fas fa-arrow-right text-xs"></i>
-						</span>
-					</a>
-				</article>
-
-				<article class="h-full">
 					<a href="/mosaic" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
@@ -584,11 +543,17 @@
 			</div>
 		</ScrollReveal>
 
-		<!-- Coming soon teaser -->
+		<!-- View all writing -->
 		<ScrollReveal delay={400}>
-			<p class="mt-10 text-center text-sm text-gray-600">
-				<i class="fas fa-pen-nib mr-1"></i> More articles in the works — stay tuned.
-			</p>
+			<div class="mt-12 text-center">
+				<a
+					href="/blog"
+					class="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold transition-colors hover:bg-[var(--accent-soft)]"
+					style="border-color: var(--border-strong); color: var(--text);"
+				>
+					View all writing <i class="fas fa-arrow-right text-xs"></i>
+				</a>
+			</div>
 		</ScrollReveal>
 	</div>
 </section>
@@ -614,10 +579,10 @@
 <!-- ============================================ -->
 <!-- ABOUT: The Journey                           -->
 <!-- ============================================ -->
-<section id="about" class="section-glow py-24" style="background: var(--bg);" itemscope itemtype="https://schema.org/AboutPage">
+<section id="about" class="section-glow py-16" style="background: var(--bg);" itemscope itemtype="https://schema.org/AboutPage">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
-			<div class="mb-16 text-center">
+			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Background</p>
 				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">The Journey</h2>
 			</div>
@@ -687,7 +652,7 @@ Never stop building products in the last 10+ years.
 <!-- ============================================ -->
 <!-- THE HUMAN: Personality & Interests           -->
 <!-- ============================================ -->
-<section class="section-glow py-24" style="background: var(--surface-2);">
+<section class="section-glow py-16" style="background: var(--surface-2);">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
@@ -779,7 +744,7 @@ Never stop building products in the last 10+ years.
 <!-- ============================================ -->
 <!-- CONNECT: Let's Talk                          -->
 <!-- ============================================ -->
-<section id="contact" class="section-glow py-24" style="background: var(--bg);">
+<section id="contact" class="section-glow py-16" style="background: var(--bg);">
 	<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">

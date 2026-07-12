@@ -65,11 +65,11 @@
 			This is completely free, but with very limited number of uses. But if you get your prompt right, you should get what you want with one or two attempts.
 		</p>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-			<p class="mb-2 text-lg font-semibold text-blue-700 dark:text-blue-300">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+			<p class="mb-2 text-lg font-semibold text-teal-700 dark:text-teal-300">
 				Keep in mind:
 			</p>
-			<p class="mb-0 text-blue-700 dark:text-blue-300">
+			<p class="mb-0 text-teal-700 dark:text-teal-300">
 				This HuggingFace workspace does not build a complete website. Instead, it generates a beautifully designed landing page (homepage) to serve as the foundation of your site's design system. The expectation is creating the design system of your website, and then you can use other AI tools to expand from there.
 			</p>
 		</div>
@@ -159,7 +159,7 @@
 
 		<div class="not-prose my-6 space-y-4">
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					1
 				</div>
 				<div>
@@ -196,20 +196,20 @@
 
 		<div class="my-6 space-y-4">
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Visit the DeepSite workspace and generate a homepage for your own idea</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Iterate on your prompt if needed - remember, you have limited attempts, so make them count!</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Once happy with the result, click View Source, copy all the code, and save it as <code>generated.html</code></span>
 			</div>
 		</div>
 
-		<div class="not-prose my-6 border-l-4 border-blue-500 bg-blue-50 p-4 dark:bg-blue-900/20">
+		<div class="not-prose my-6 border-l-4 border-teal-500 bg-teal-50 p-4 dark:bg-teal-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				💡 <strong>Pro tip:</strong> Be as specific as possible in your prompt about the mood, target audience, and key features you want to highlight.
 			</p>

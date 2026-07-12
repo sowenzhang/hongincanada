@@ -66,11 +66,11 @@
 			<li><strong>Adding password recovery</strong> - Using an email API for user support</li>
 		</ul>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-			<p class="mb-2 font-medium text-blue-800 dark:text-blue-200">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+			<p class="mb-2 font-medium text-teal-800 dark:text-teal-200">
 				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>Remember Our Approach
 			</p>
-			<p class="text-blue-700 dark:text-blue-300">
+			<p class="text-teal-700 dark:text-teal-300">
 				We'll continue using AI assistance throughout this process. The key is breaking down complex features into clear, manageable steps that AI can help us implement effectively.
 			</p>
 		</div>
@@ -85,7 +85,7 @@
 
 		<div class="not-prose my-6 space-y-4">
 			<div class="flex items-start space-x-4">
-				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					<i class="fas fa-table" aria-hidden="true"></i>
 				</div>
 				<div>
@@ -109,7 +109,7 @@
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					<i class="fas fa-grip-lines-vertical" aria-hidden="true"></i>
 				</div>
 				<div>
@@ -135,12 +135,12 @@
 
 		<div class="not-prose my-6 space-y-4">
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					1
 				</div>
 				<div>
 					<p class="text-gray-700 dark:text-gray-300">
-						Go to <a href="https://www.postgresql.org/download/" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 underline">PostgreSQL Download</a> and choose your operating system.
+						Go to <a href="https://www.postgresql.org/download/" target="_blank" rel="noopener" class="text-teal-600 dark:text-teal-400 underline">PostgreSQL Download</a> and choose your operating system.
 					</p>
 				</div>
 			</div>
@@ -157,7 +157,7 @@
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					3
 				</div>
 				<div>
@@ -168,7 +168,7 @@
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					4
 				</div>
 				<div>
@@ -209,10 +209,10 @@
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-robot mr-3 text-blue-500 text-2xl" aria-hidden="true"></i>
+				<i class="fas fa-robot mr-3 text-teal-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Example Prompt (for non-engineers):</h4>
 			</div>
-			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-blue-500">
+			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-teal-500">
 				<p class="text-gray-700 dark:text-gray-300 italic">
 					"Create SQL commands to set up a table named 'users'. Each user needs:
 				</p>
@@ -280,10 +280,10 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-sign-in-alt mr-3 text-blue-500 text-2xl" aria-hidden="true"></i>
+				<i class="fas fa-sign-in-alt mr-3 text-teal-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Prompt Example:</h4>
 			</div>
-			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-blue-500">
+			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-teal-500">
 				<p class="text-gray-700 dark:text-gray-300 italic">
 					"Create a basic login page where users can enter their username and password to log in to their account. Include a 'Remember me' checkbox and a link to password recovery."
 				</p>
@@ -294,21 +294,21 @@ CREATE TABLE users (
 
 		<div class="not-prose my-8 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
 			<div class="mb-4 flex items-center">
-				<i class="fas fa-key mr-3 text-blue-500 text-2xl" aria-hidden="true"></i>
+				<i class="fas fa-key mr-3 text-teal-500 text-2xl" aria-hidden="true"></i>
 				<h4 class="text-lg font-semibold text-gray-900 dark:text-white">Prompt Example:</h4>
 			</div>
-			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-blue-500">
+			<div class="bg-white dark:bg-gray-900 p-4 rounded border-l-4 border-teal-500">
 				<p class="text-gray-700 dark:text-gray-300 italic">
 					"Create a page that lets users recover their password by entering their email. For now, just create the form and logic, but leave the email sending functionality as a placeholder that I can complete later."
 				</p>
 			</div>
 		</div>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-			<p class="mb-2 font-medium text-blue-800 dark:text-blue-200">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+			<p class="mb-2 font-medium text-teal-800 dark:text-teal-200">
 				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>Why Break It Down?
 			</p>
-			<p class="text-blue-700 dark:text-blue-300">
+			<p class="text-teal-700 dark:text-teal-300">
 				By splitting authentication into separate prompts, you get cleaner, more focused code. AI can concentrate on one task at a time, resulting in better quality and easier debugging.
 			</p>
 		</div>
@@ -325,12 +325,12 @@ CREATE TABLE users (
 
 		<div class="not-prose my-6 space-y-4">
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					1
 				</div>
 				<div>
 					<p class="text-gray-700 dark:text-gray-300">
-						Visit <a href="https://developers.brevo.com/docs/send-a-transactional-email" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 underline">Brevo API documentation</a>.
+						Visit <a href="https://developers.brevo.com/docs/send-a-transactional-email" target="_blank" rel="noopener" class="text-teal-600 dark:text-teal-400 underline">Brevo API documentation</a>.
 					</p>
 				</div>
 			</div>
@@ -347,7 +347,7 @@ CREATE TABLE users (
 			</div>
 
 			<div class="flex items-start space-x-4">
-				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white font-bold">
+				<div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-500 text-white font-bold">
 					3
 				</div>
 				<div>
@@ -421,7 +421,7 @@ CREATE TABLE users (
 
 			<div class="rounded-lg border border-gray-200 p-6 dark:border-gray-700 dark:bg-gray-800">
 				<h4 class="mb-3 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-					<i class="fas fa-shield-alt mr-3 text-blue-500" aria-hidden="true"></i>
+					<i class="fas fa-shield-alt mr-3 text-teal-500" aria-hidden="true"></i>
 					API Key Security
 				</h4>
 				<ul class="space-y-2 text-gray-700 dark:text-gray-300">
@@ -457,36 +457,36 @@ CREATE TABLE users (
 
 		<div class="my-6 space-y-4">
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Install PostgreSQL, create your database, and user table using the SQL commands generated by AI</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Generate your signup and login pages using clear AI prompts</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Create the password recovery page without the email-sending logic</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Sign up for Brevo, obtain your API key, and store it securely</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Use AI to connect email sending functionality to your password recovery</span>
 			</div>
 			<div class="flex items-start space-x-3">
-				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-blue-600" disabled />
+				<input type="checkbox" class="mt-1 h-5 w-5 rounded text-teal-600" disabled />
 				<span>Document your prompts and AI outputs clearly to track your progress!</span>
 			</div>
 		</div>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
-			<p class="mb-2 font-medium text-blue-800 dark:text-blue-200">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
+			<p class="mb-2 font-medium text-teal-800 dark:text-teal-200">
 				<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>Documentation Tip
 			</p>
-			<p class="text-blue-700 dark:text-blue-300">
+			<p class="text-teal-700 dark:text-teal-300">
 				Keep a simple text file or document where you record the prompts you used and what AI generated. This becomes invaluable when you need to make changes or debug issues later. It's like having a conversation history with your AI assistant!
 			</p>
 		</div>
@@ -508,7 +508,7 @@ CREATE TABLE users (
 			<li>Different deployment environments and strategies</li>
 		</ul>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>🚀 Coming up:</strong> We'll explore how to ensure your website is ready for real users, including performance considerations, security checks, and deployment best practices that will make your launch smooth and successful.
 			</p>

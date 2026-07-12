@@ -52,16 +52,16 @@
 
 <!-- Hero Section -->
 <section class="relative py-20 md:py-22 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-blue-900/20 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-transparent to-teal-900/20 pointer-events-none"></div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center">
             <div class="mb-6">
-                <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-4 py-2 rounded-full text-sm font-medium">
+                <span class="bg-teal-500/10 text-teal-400 border border-teal-500/20 px-4 py-2 rounded-full text-sm font-medium">
                     <i class="fas fa-th mr-2" aria-hidden="true"></i>4-Part Article
                 </span>
             </div>
             <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 text-gray-900 dark:text-white">
-                From App Stores to <span class="text-blue-600 dark:text-blue-400">App Flows</span>
+                From App Stores to <span class="text-teal-600 dark:text-teal-400">App Flows</span>
             </h1>
             <h2 class="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8 font-light">
                 Why Mosaic Matters
@@ -71,11 +71,11 @@
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
                 <a href="/mosaic/full-series"
-                   class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition shadow-lg shadow-blue-600/25 font-medium">
+                   class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full transition shadow-lg shadow-teal-600/25 font-medium">
                     <i class="fas fa-book-open mr-2" aria-hidden="true"></i>Read Full Series
                 </a>
                 <a href="/"
-                   class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 px-6 py-3 rounded-full transition font-medium">
+                   class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400 px-6 py-3 rounded-full transition font-medium">
                     ← Back to Home
                 </a>
             </div>
@@ -93,9 +93,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             {#each mosaicSeriesParts as part, index}
-                <article class="group rounded-xl border border-gray-200 dark:border-gray-700/50 bg-white dark:bg-gray-800/50 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-200 p-6">
+                <article class="group rounded-xl border border-gray-200 dark:border-gray-700/50 bg-white dark:bg-gray-800/50 hover:border-teal-500/50 hover:shadow-lg hover:shadow-teal-500/5 transition-all duration-200 p-6">
                     <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                        <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
                             {part.part}
                         </div>
                         <div>
@@ -106,7 +106,7 @@
                     <p class="text-gray-600 dark:text-gray-400 mb-4">
                         {part.description}
                     </p>
-                    <a href="/mosaic/{part.slug}" class="inline-flex min-h-[44px] items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors">
+                    <a href="/mosaic/{part.slug}" class="inline-flex min-h-[44px] items-center text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 font-medium text-sm transition-colors">
                         Read Part {part.part}
                         <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
                     </a>
@@ -119,8 +119,8 @@
 <!-- Read All Parts Option -->
 <section class="py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="rounded-xl bg-gradient-to-r from-blue-500/10 to-blue-500/10 border border-blue-500/20 p-8 text-center">
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div class="rounded-xl bg-gradient-to-r from-teal-500/10 to-teal-500/10 border border-teal-500/20 p-8 text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i class="fas fa-book-open text-white text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Prefer to Read Everything at Once?</h3>
@@ -133,11 +133,11 @@
             </div>
             <div class="flex flex-wrap gap-4 justify-center">
                 <a href="/mosaic/full-series"
-                   class="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white px-8 py-3 rounded-full transition font-medium shadow-lg">
+                   class="inline-flex items-center bg-gradient-to-r from-teal-600 to-teal-600 hover:from-teal-700 hover:to-teal-700 text-white px-8 py-3 rounded-full transition font-medium shadow-lg">
                     <i class="fas fa-book-open mr-2" aria-hidden="true"></i>Read Full Series
                 </a>
                 <a href="/mosaic/the-problem-with-apps-today"
-                   class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-3 rounded-full transition font-medium">
+                   class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-teal-500 hover:text-teal-600 dark:hover:text-teal-400 px-8 py-3 rounded-full transition font-medium">
                     <i class="fas fa-play mr-2" aria-hidden="true"></i>Start with Part 1
                 </a>
             </div>

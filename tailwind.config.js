@@ -7,6 +7,7 @@ export default {
 			fontFamily: {
 				'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
 				'serif': ['Fraunces', 'Georgia', 'Times New Roman', 'serif'],
+				'mono': ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
 			},
 			animation: {
 				'fade-in': 'fadeIn 1s ease-out forwards',

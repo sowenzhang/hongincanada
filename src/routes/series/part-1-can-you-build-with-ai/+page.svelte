@@ -26,7 +26,7 @@
 		>
 			Can You Really Build a Website with AI?
 		</h1>
-		<h2 class="mb-8 text-center text-2xl font-medium text-blue-600 md:text-3xl dark:text-blue-400">
+		<h2 class="mb-8 text-center text-2xl font-medium text-teal-600 md:text-3xl dark:text-teal-400">
 			(Spoiler: Yes, But…)
 		</h2>
 
@@ -44,7 +44,7 @@
 			Welcome to my exploration of building <a
 				href="https://minibreaks.io"
 				target="_blank"
-				class="text-blue-600 underline decoration-2 underline-offset-2 transition-colors hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+				class="text-teal-600 underline decoration-2 underline-offset-2 transition-colors hover:text-teal-800 dark:text-teal-400 dark:hover:text-teal-300"
 				>MiniBreaks.io</a
 			> with AI. A story of me trying to build a complete website using artificial intelligence as my
 			development partner.
@@ -65,7 +65,7 @@
 			good sense of what needed to happen—but even for me, the process wasn't exactly plug-and-play.
 		</p>
 
-		<div class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+		<div class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
 			<p class="mb-0 text-gray-700 dark:text-gray-300">
 				<strong>Here's the thing:</strong> AI is incredibly powerful, but it's not a magic wand. It's
 				more like having a really smart assistant who knows a lot about coding but still needs clear
@@ -190,9 +190,9 @@
 		<div class="my-8 space-y-6">
 			<div class="flex items-start space-x-4">
 				<div
-					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"
+					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-teal-100 dark:bg-teal-900"
 				>
-					<i class="fas fa-tools text-blue-600 dark:text-blue-300" aria-hidden="true"></i>
+					<i class="fas fa-tools text-teal-600 dark:text-teal-300" aria-hidden="true"></i>
 				</div>
 				<div>
 					<h4 class="mb-2 font-bold text-gray-900 dark:text-white">
@@ -207,9 +207,9 @@
 
 			<div class="flex items-start space-x-4">
 				<div
-					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"
+					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-teal-100 dark:bg-teal-900"
 				>
-					<i class="fas fa-comment-dots text-blue-600 dark:text-blue-300" aria-hidden="true"></i>
+					<i class="fas fa-comment-dots text-teal-600 dark:text-teal-300" aria-hidden="true"></i>
 				</div>
 				<div>
 					<h4 class="mb-2 font-bold text-gray-900 dark:text-white">Writing Effective Prompts</h4>
@@ -237,9 +237,9 @@
 
 			<div class="flex items-start space-x-4">
 				<div
-					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900"
+					class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-teal-100 dark:bg-teal-900"
 				>
-					<i class="fas fa-handshake text-blue-600 dark:text-blue-300"></i>
+					<i class="fas fa-handshake text-teal-600 dark:text-teal-300"></i>
 				</div>
 				<div>
 					<h4 class="mb-2 font-bold text-gray-900 dark:text-white">Making AI Your Partner</h4>
@@ -267,13 +267,13 @@
 		</p>
 
 		<div
-			class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20"
+			class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20"
 		>
 			<div class="flex items-start space-x-3">
-				<i class="fas fa-lightbulb mt-1 text-blue-600 dark:text-blue-400"></i>
+				<i class="fas fa-lightbulb mt-1 text-teal-600 dark:text-teal-400"></i>
 				<div>
-					<p class="mb-2 font-semibold text-blue-800 dark:text-blue-300">My Promise to You</p>
-					<p class="mb-0 text-blue-700 dark:text-blue-400">
+					<p class="mb-2 font-semibold text-teal-800 dark:text-teal-300">My Promise to You</p>
+					<p class="mb-0 text-teal-700 dark:text-teal-400">
 						No jargon without explanation. No skipped steps. No "and then magic happens" moments.
 						Just honest, practical guidance from someone who's been through the process.
 					</p>
@@ -300,7 +300,7 @@
 		</p>
 
 		<div
-			class="not-prose my-8 rounded-lg border border-blue-200 bg-gradient-to-r from-blue-50 to-blue-50 p-8 text-center dark:border-blue-700 dark:from-blue-900/20 dark:to-blue-900/20"
+			class="not-prose my-8 rounded-lg border border-teal-200 bg-gradient-to-r from-teal-50 to-teal-50 p-8 text-center dark:border-teal-700 dark:from-teal-900/20 dark:to-teal-900/20"
 		>
 			<h3 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
 				Ready to Start Building?

@@ -29,7 +29,7 @@
 		>
 			Why I Wanted to Use AI
 		</h1>
-		<h2 class="mb-8 text-center text-2xl font-medium text-blue-600 md:text-3xl dark:text-blue-400">
+		<h2 class="mb-8 text-center text-2xl font-medium text-teal-600 md:text-3xl dark:text-teal-400">
 			Setting Realistic Expectations
 		</h2>
 
@@ -180,13 +180,13 @@
 		</p>
 
     <div
-			class="not-prose my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20"
+			class="not-prose my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20"
 		>
 			<div class="flex items-start space-x-3">
-				<i class="fas fa-lightbulb mt-1 text-blue-600 dark:text-blue-400" aria-hidden="true"></i>
+				<i class="fas fa-lightbulb mt-1 text-teal-600 dark:text-teal-400" aria-hidden="true"></i>
 				<div>
-					<p class="mb-2 font-semibold text-blue-800 dark:text-blue-300">Key Lesson</p>
-					<p class="mb-0 text-blue-700 dark:text-blue-400">
+					<p class="mb-2 font-semibold text-teal-800 dark:text-teal-300">Key Lesson</p>
+					<p class="mb-0 text-teal-700 dark:text-teal-400">
 I need to get my requirements right before
       asking AI to implement them.
     					</p>
@@ -207,7 +207,7 @@ I need to get my requirements right before
 
 		<h3 id="reflection-questions">Questions for You</h3>
 
-		<div class="my-8 border-l-4 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+		<div class="my-8 border-l-4 border-teal-500 bg-teal-50 p-6 dark:bg-teal-900/20">
 			<ul class="space-y-3">
 				<li>
 					<strong>What do you want AI to do for you?</strong> Be specific. Is it about speed? Learning?

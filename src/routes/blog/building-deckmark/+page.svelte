@@ -226,7 +226,7 @@
 					onclick={() => (showTOC = !showTOC)}
 					class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
 				>
-					<i class="fas fa-list text-blue-500 text-xs" aria-hidden="true"></i>
+					<i class="fas fa-list text-teal-500 text-xs" aria-hidden="true"></i>
 					<span class="hidden sm:inline">{showTOC ? 'Hide' : 'Show'} Contents</span>
 					<i
 						class="fas fa-chevron-{showTOC ? 'up' : 'down'} text-gray-400 text-xs"
@@ -261,7 +261,7 @@
 			</nav>
 			<div class="mb-4 flex items-center gap-3">
 				<span
-					class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-600 dark:text-blue-400"
+					class="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-medium text-teal-600 dark:text-teal-400"
 				>
 					<i class="fas fa-wand-magic-sparkles mr-1.5" aria-hidden="true"></i>Deckmark
 				</span>
@@ -294,7 +294,7 @@
 					href="https://github.com/sowenzhang/deckmark"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-blue-600 dark:text-blue-400 hover:underline"
+					class="text-teal-600 dark:text-teal-400 hover:underline"
 				>
 					<i class="fab fa-github mr-1.5" aria-hidden="true"></i>github.com/sowenzhang/deckmark
 				</a>
@@ -320,17 +320,17 @@
 								prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
 								prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:mb-2
 								prose-strong:text-gray-900 dark:prose-strong:text-white
-								prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline-offset-2
-								prose-code:text-blue-700 dark:prose-code:text-blue-300 prose-code:bg-blue-50 dark:prose-code:bg-blue-950/40 prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:font-medium prose-code:before:content-none prose-code:after:content-none
+								prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-a:underline-offset-2
+								prose-code:text-teal-700 dark:prose-code:text-teal-300 prose-code:bg-teal-50 dark:prose-code:bg-teal-950/40 prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:font-medium prose-code:before:content-none prose-code:after:content-none
 								[&_section]:scroll-mt-24 [&_h2]:scroll-mt-24"
 							>
 								<section id="tldr">
-									<div class="not-prose mb-8 rounded-xl border border-blue-200 dark:border-blue-800/60 bg-blue-50/70 dark:bg-blue-950/30 px-6 py-5">
-										<p class="mb-2 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+									<div class="not-prose mb-8 rounded-xl border border-teal-200 dark:border-teal-800/60 bg-teal-50/70 dark:bg-teal-950/30 px-6 py-5">
+										<p class="mb-2 text-xs font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400">
 											TL;DR
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-											<a href="https://github.com/sowenzhang/deckmark" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Deckmark</a>
+											<a href="https://github.com/sowenzhang/deckmark" target="_blank" rel="noopener noreferrer" class="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Deckmark</a>
 											is an open-source MCP server that lets an AI agent generate a slide deck, open it in your browser, collect annotations you click directly on slide elements, then read those annotations back and apply the changes. No screenshots, no copy-paste, no "the third bullet on slide 4." It is also my bet on a pattern I think matters way beyond slides: tight human-in-the-loop review for agentic work.
 										</p>
 									</div>
@@ -351,8 +351,8 @@
 										This is the part that breaks the loop. You are doing all the work of seeing the slide and the agent is doing none of it. By the time you finish typing the third correction, you have basically given up on review and accepted whatever is there.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-teal-500 bg-teal-50 dark:bg-teal-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-teal-700 dark:text-teal-400 mb-1">
 											<i class="fas fa-lightbulb mr-1.5" aria-hidden="true"></i>The friction
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -599,8 +599,8 @@
 										Building Deckmark was a way to think this through in code, not in a deck about decks. It made me much more concrete about how agent workflows, browser-based UX, and developer workflows can actually fit together. It also gave me a thing I use myself, which is the only honest test for whether a tool is good.
 									</p>
 
-									<div class="not-prose my-6 rounded-lg border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 px-5 py-4">
-										<p class="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-1">
+									<div class="not-prose my-6 rounded-lg border-l-4 border-teal-500 bg-teal-50 dark:bg-teal-900/20 px-5 py-4">
+										<p class="text-sm font-semibold text-teal-700 dark:text-teal-400 mb-1">
 											<i class="fas fa-compass mr-1.5" aria-hidden="true"></i>The bet
 										</p>
 										<p class="text-gray-700 dark:text-gray-300 text-base">
@@ -686,7 +686,7 @@
 									{#each tableOfContents as item (item.id)}
 										<a
 											href="#{item.id}"
-											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+											class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-teal-900/20 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
 										>
 											{item.title}
 										</a>
@@ -708,7 +708,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on Twitter"
-										class="flex-1 rounded-lg bg-blue-50 dark:bg-blue-900/30 p-2 text-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+										class="flex-1 rounded-lg bg-teal-50 dark:bg-teal-900/30 p-2 text-center text-sm font-medium text-teal-600 dark:text-teal-400 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
 									>
 										<i class="fab fa-twitter text-xs"></i>
 									</a>
@@ -717,7 +717,7 @@
 										target="_blank"
 										rel="noopener noreferrer"
 										aria-label="Share on LinkedIn"
-										class="flex-1 rounded-lg bg-blue-50 dark:bg-blue-900/30 p-2 text-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+										class="flex-1 rounded-lg bg-teal-50 dark:bg-teal-900/30 p-2 text-center text-sm font-medium text-teal-600 dark:text-teal-400 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
 									>
 										<i class="fab fa-linkedin-in text-xs"></i>
 									</a>
@@ -738,10 +738,10 @@
 							</div>
 
 							<div
-								class="rounded-xl border border-blue-200 dark:border-blue-800/60 bg-blue-50/70 dark:bg-blue-950/30 p-5"
+								class="rounded-xl border border-teal-200 dark:border-teal-800/60 bg-teal-50/70 dark:bg-teal-950/30 p-5"
 							>
 								<h3
-									class="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400"
+									class="mb-3 text-xs font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400"
 								>
 									The Repo
 								</h3>
@@ -749,7 +749,7 @@
 									href="https://github.com/sowenzhang/deckmark"
 									target="_blank"
 									rel="noopener noreferrer"
-									class="flex items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+									class="flex items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
 								>
 									<i class="fab fa-github" aria-hidden="true"></i>
 									sowenzhang/deckmark
