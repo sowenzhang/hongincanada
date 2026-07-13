@@ -11,8 +11,9 @@
 		ogImage: 'https://www.hongincanada.com/profile.png'
 	};
 
-	// Hero entrance animation — multi-stage cinematic reveal
-	let stage = $state(0); // 0=hidden, 1=bg, 2=line, 3=greeting, 4=name, 5=tagline, 6=subtagline, 7=cta, 8=scroll
+	// Hero entrance animation — name/greeting show immediately (no blank wait for
+	// the LCP element); only the supporting copy staggers in for a light cinematic feel.
+	let stage = $state(4); // 0=hidden, 1=bg, 3=greeting, 4=name, 5=tagline, 6=subtagline, 7=cta, 8=scroll
 
 	onMount(() => {
 		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -22,11 +23,11 @@
 			return;
 		}
 
-		// Cinematic staggered entrance
-		const timings = [100, 400, 800, 1000, 1500, 1900, 2300, 2800];
+		// Quick staggered reveal for tagline, subtagline, CTAs, and scroll hint only.
+		const timings = [150, 350, 550, 800];
 		const timeouts: ReturnType<typeof setTimeout>[] = [];
 		timings.forEach((ms, i) => {
-			timeouts.push(setTimeout(() => { stage = i + 1; }, ms));
+			timeouts.push(setTimeout(() => { stage = i + 5; }, ms));
 		});
 
 		return () => timeouts.forEach(clearTimeout);
