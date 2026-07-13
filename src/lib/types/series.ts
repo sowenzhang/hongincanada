@@ -7,6 +7,12 @@ export interface ArticleData {
     ogImage: string;
     publishDate: string;
     readTime: string;
+    /** ISO or human date of last content update; falls back to publishDate when absent. */
+    modifiedDate?: string;
+    /** Comma-separated keyword list for the <meta name="keywords"> tag. */
+    keywords?: string;
+    /** Editorial section for og/article/JSON-LD (e.g. "Technology", "Product Design"). */
+    section?: string;
 }
 
 export interface NavigationPart {
@@ -40,6 +46,8 @@ export interface SeriesPartData {
     slug: string;
     canonical: string;
     ogImage: string;
+    /** ISO or human date of last content update for this part. */
+    modifiedDate?: string;
 }
 
 export interface SeriesMetadata {
@@ -50,6 +58,10 @@ export interface SeriesMetadata {
     totalParts: number;
     seriesName: string;
     seriesUrl: string;
+    /** Default keyword list applied to every part in this series. */
+    keywords?: string;
+    /** Default editorial section applied to every part in this series. */
+    section?: string;
 }
 
 export interface SeriesData {

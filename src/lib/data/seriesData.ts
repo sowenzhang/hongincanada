@@ -6,11 +6,13 @@ import type { ArticleData, SeriesMetadata, SeriesPartData } from '$lib/types/ser
 export const seriesMetadata: SeriesMetadata = {
     title: "How I Built a Full Website (MiniBreaks.io) With AI Series",
     description: "A comprehensive 10-part series on building a full website using AI tools. Learn from real-world experience, challenges, and solutions.",
-    canonical: "https://hongincanada.com/series",
-    ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg",
+    canonical: "https://www.hongincanada.com/series",
+    ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg",
     totalParts: 10,
     seriesName: "How I Built a Full Website (MiniBreaks.io) With AI ",
-    seriesUrl: "/series"
+    seriesUrl: "/series",
+    keywords: "AI website development, building websites with AI, ChatGPT web development, GitHub Copilot tutorial, AI coding tutorial, MiniBreaks.io",
+    section: "Technology"
 };
 
 export const seriesParts: SeriesPartData[] = [
@@ -22,8 +24,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-05",
         status: "published",
         slug: "part-1-can-you-build-with-ai",
-        canonical: "https://hongincanada.com/series/part-1-can-you-build-with-ai",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-1-can-you-build-with-ai",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 2,
@@ -33,8 +35,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-06",
         status: "published",
         slug: "part-2-why-use-ai",
-        canonical: "https://hongincanada.com/series/part-2-why-use-ai",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-2-why-use-ai",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 3,
@@ -44,8 +46,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-06",
         status: "published",
         slug: "part-3-tools-and-setup",
-        canonical: "https://hongincanada.com/series/part-3-tools-and-setup",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-3-tools-and-setup",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 4,
@@ -55,8 +57,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-11",
         status: "published",
         slug: "part-4-crafting-idea-mvp",
-        canonical: "https://hongincanada.com/series/part-4-crafting-idea-mvp",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-4-crafting-idea-mvp",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 5,
@@ -66,8 +68,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-12",
         status: "published",
         slug: "part-5-designing-ui-ux",
-        canonical: "https://hongincanada.com/series/part-5-designing-ui-ux",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-5-designing-ui-ux",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 6,
@@ -77,8 +79,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-14",
         status: "published",
         slug: "part-6-writing-code-ai",
-        canonical: "https://hongincanada.com/series/part-6-writing-code-ai",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-6-writing-code-ai",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 7,
@@ -88,8 +90,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-15",
         status: "published",
         slug: "part-7-adding-advanced-features",
-        canonical: "https://hongincanada.com/series/part-7-adding-advanced-features",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-7-adding-advanced-features",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 8,
@@ -99,8 +101,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-19",
         status: "published",
         slug: "part-8-before-deployment",
-        canonical: "https://hongincanada.com/series/part-8-before-deployment",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-8-before-deployment",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 9,
@@ -110,8 +112,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-19",
         status: "published",
         slug: "part-9-lessons-learned",
-        canonical: "https://hongincanada.com/series/part-9-lessons-learned",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-9-lessons-learned",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     },
     {
         part: 10,
@@ -121,8 +123,8 @@ export const seriesParts: SeriesPartData[] = [
         publishDate: "2025-07-19",
         status: "published",
         slug: "part-10-future-ai-development",
-        canonical: "https://hongincanada.com/series/part-10-future-ai-development",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/part-10-future-ai-development",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     }
 ];
 
@@ -167,6 +169,9 @@ export function getArticleData(partNumber: number): ArticleData {
         canonical: partData.canonical,
         ogImage: partData.ogImage,
         publishDate: partData.publishDate,
-        readTime: partData.readTime
+        readTime: partData.readTime,
+        modifiedDate: partData.modifiedDate,
+        keywords: seriesMetadata.keywords,
+        section: seriesMetadata.section
     };
 }

@@ -5,8 +5,8 @@
     const pageData = {
         title: "Complete AI Development Series: How I Built MiniBreaks.io With AI | Hong in Canada",
         description: "Read the complete 10-part series in one continuous 110-minute article. From concept to deployment — building a full website with AI assistance. Tools, prompts, code, lessons learned, and a cheat sheet.",
-        canonical: "https://hongincanada.com/series/full-series",
-        ogImage: "https://hongincanada.com/ai-series/ai-development-series.jpg"
+        canonical: "https://www.hongincanada.com/series/full-series",
+        ogImage: "https://www.hongincanada.com/ai-series/ai-development-series.jpg"
     };
 
     const fullTOC = [
@@ -161,12 +161,12 @@
         "author": {
             "@type": "Person",
             "name": "Hong",
-            "url": "https://hongincanada.com"
+            "url": "https://www.hongincanada.com"
         },
         "publisher": {
             "@type": "Person",
             "name": "Hong",
-            "url": "https://hongincanada.com"
+            "url": "https://www.hongincanada.com"
         },
         "datePublished": "2025-07-15T00:00:00Z",
         "dateModified": "2025-07-19T00:00:00Z",

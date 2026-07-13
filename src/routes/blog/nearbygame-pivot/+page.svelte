@@ -7,8 +7,8 @@
 		title: 'How I Pivoted NearbyGame and Used AI to Go From 0 to 1 | Hong in Canada',
 		description:
 			'How NearbyGame evolved from a venue-discovery product into a quiet walking game, and how AI helped me rethink the problem before I wrote more code.',
-		canonical: 'https://hongincanada.com/blog/nearbygame-pivot',
-		ogImage: 'https://hongincanada.com/pivot_nearbygame/nearbygame_play.jpg',
+		canonical: 'https://www.hongincanada.com/blog/nearbygame-pivot',
+		ogImage: 'https://www.hongincanada.com/pivot_nearbygame/nearbygame_play.jpg',
 		publishDate: 'April 3, 2026',
 		readTime: '~9 min read'
 	};
@@ -38,7 +38,7 @@
 			name: 'Hong'
 		},
 		datePublished: '2026-04-03',
-		image: 'https://hongincanada.com/pivot_nearbygame/nearbygame_play.jpg'
+		image: 'https://www.hongincanada.com/pivot_nearbygame/nearbygame_play.jpg'
 	});
 
 	let isDark = $state(false);

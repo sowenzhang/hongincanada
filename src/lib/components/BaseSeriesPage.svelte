@@ -10,6 +10,54 @@
     /** @type {boolean} Whether the next part link should be disabled (when next part isn't ready yet) */
     export let disableNextPart = false;
 
+    // Canonical site origin (www is the indexed host — keep in sync with sitemap/robots)
+    const SITE_URL = 'https://www.hongincanada.com';
+
+    // Derived SEO values — series-aware, so Mosaic articles don't inherit AI-series metadata.
+    $: seoKeywords =
+        articleData.keywords ??
+        `${articleData.title.toLowerCase()}, ${navigation.seriesTitle.toLowerCase()}`;
+    $: articleSection = articleData.section ?? 'Technology';
+    $: publishedISO = new Date(articleData.publishDate).toISOString();
+    $: modifiedISO = new Date(articleData.modifiedDate ?? articleData.publishDate).toISOString();
+    $: articleJsonLd = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: articleData.title,
+        description: articleData.description,
+        url: articleData.canonical,
+        image: articleData.ogImage,
+        datePublished: publishedISO,
+        dateModified: modifiedISO,
+        author: {
+            '@type': 'Person',
+            name: 'Hong',
+            url: SITE_URL,
+            sameAs: [
+                'https://www.linkedin.com/in/keepsrunning/',
+                'https://github.com/sowenzhang'
+            ]
+        },
+        publisher: {
+            '@type': 'Person',
+            name: 'Hong',
+            url: SITE_URL
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': articleData.canonical
+        },
+        isPartOf: {
+            '@type': 'CreativeWorkSeries',
+            name: navigation.seriesTitle,
+            url: `${SITE_URL}${navigation.seriesUrl}`
+        },
+        articleSection,
+        keywords: seoKeywords,
+        timeRequired: articleData.readTime,
+        position: navigation.currentPart
+    });
+
     // Theme management
     let isDarkMode = false;
     let showTOC = false;
@@ -69,7 +117,7 @@ Best regards`;
 <svelte:head>
     <title>{articleData.title}</title>
     <meta name="description" content={articleData.description} />
-    <meta name="keywords" content="AI website development, {articleData.title.toLowerCase()}, building websites with AI, ChatGPT web development, GitHub Copilot tutorial, AI coding tutorial, {navigation.seriesTitle.toLowerCase()}" />
+    <meta name="keywords" content={seoKeywords} />
     <meta name="author" content="Hong" />
     <link rel="canonical" href={articleData.canonical} />
 
@@ -78,24 +126,25 @@ Best regards`;
     <meta property="og:title" content={articleData.title} />
     <meta property="og:description" content={articleData.description} />
     <meta property="og:image" content={articleData.ogImage} />
+    <meta property="og:image:alt" content={articleData.title} />
     <meta property="og:url" content={articleData.canonical} />
     <meta property="og:site_name" content="Hong in Canada" />
-    <meta property="article:published_time" content={new Date(articleData.publishDate).toISOString()} />
-    <meta property="article:modified_time" content={new Date(articleData.publishDate).toISOString()} />
+    <meta property="article:published_time" content={publishedISO} />
+    <meta property="article:modified_time" content={modifiedISO} />
     <meta property="article:author" content="Hong" />
-    <meta property="article:section" content="Technology" />
-    <meta property="article:tag" content="AI Development" />
+    <meta property="article:section" content={articleSection} />
+    <meta property="article:tag" content={articleSection} />
     <meta property="article:tag" content="Part {navigation.currentPart}" />
-    <meta property="article:tag" content="{articleData.title}" />
+    <meta property="article:tag" content={articleData.title} />
 
     <!-- Series Navigation -->
     {#if navigation.prevPart}
-        <link rel="prev" href="https://hongincanada.com{navigation.seriesUrl}/{navigation.prevPart.slug}" />
+        <link rel="prev" href="{SITE_URL}{navigation.seriesUrl}/{navigation.prevPart.slug}" />
     {/if}
     {#if navigation.nextPart}
-        <link rel="next" href="https://hongincanada.com{navigation.seriesUrl}/{navigation.nextPart.slug}" />
+        <link rel="next" href="{SITE_URL}{navigation.seriesUrl}/{navigation.nextPart.slug}" />
     {/if}
-    <link rel="start" href="https://hongincanada.com{navigation.seriesUrl}" />
+    <link rel="start" href="{SITE_URL}{navigation.seriesUrl}" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -106,52 +155,11 @@ Best regards`;
 
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="article:tag" content="{articleData.title}" />
-    <meta name="article:tag" content="Part {navigation.currentPart}" />
-    <meta name="series:part" content="{String(navigation.currentPart)}" />
-    <meta name="series:total" content="{String(navigation.totalParts)}" />
-    <link rel="alternate" type="application/rss+xml" title="Hong in Canada RSS Feed" href="/rss.xml" />
+    <meta name="series:part" content={String(navigation.currentPart)} />
+    <meta name="series:total" content={String(navigation.totalParts)} />
 
     <!-- Enhanced Structured Data -->
-    {@html `<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "${articleData.title}",
-        "description": "${articleData.description}",
-        "url": "${articleData.canonical}",
-        "image": "${articleData.ogImage}",
-        "datePublished": "${new Date(articleData.publishDate).toISOString()}",
-        "dateModified": "${new Date(articleData.publishDate).toISOString()}",
-        "author": {
-            "@type": "Person",
-            "name": "Hong",
-            "url": "https://hongincanada.com"
-        },
-        "publisher": {
-            "@type": "Person",
-            "name": "Hong",
-            "url": "https://hongincanada.com"
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "${articleData.canonical}"
-        },
-        "isPartOf": {
-            "@type": "BlogPosting",
-            "name": "${navigation.seriesTitle}",
-            "url": "https://hongincanada.com${navigation.seriesUrl}"
-        },
-        "articleSection": "Technology",
-        "keywords": ["AI development", "part ${navigation.currentPart}", "web development", "${articleData.title.toLowerCase()}"],
-        "timeRequired": "${articleData.readTime}",
-        "position": ${navigation.currentPart},
-        "hasPart": {
-            "@type": "CreativeWork",
-            "name": "Part ${navigation.currentPart} of ${navigation.totalParts}"
-        }
-    }
-   </script>`}
+    {@html `<script type="application/ld+json">${articleJsonLd}<\/script>`}
 </svelte:head>
 
 <!-- Breadcrumb -->

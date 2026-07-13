@@ -1,15 +1,32 @@
 User-agent: *
 Allow: /
 
+# AI / answer-engine crawlers — explicitly allowed to index and cite content
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://www.hongincanada.com/sitemap.xml
-
-# Block access to private areas
-Disallow: /bin/
-Disallow: /obj/
-Disallow: /_framework/
-Disallow: /lib/
-
-# Allow access to important files
-Allow: /css/
-Allow: /js/
-Allow: /images/ 

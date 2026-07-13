@@ -32,18 +32,18 @@
         "@type": "Blog",
         "name": "How I Built a full website With AI - Series",
         "description": "A comprehensive series on building a full website using AI tools",
-        "url": "https://hongincanada.com/series",
+        "url": "https://www.hongincanada.com/series",
         "author": {
             "@type": "Person",
             "name": "Hong",
-            "url": "https://hongincanada.com"
+            "url": "https://www.hongincanada.com"
         },
         "blogPost": [
             ${seriesParts.map(part => `{
                 "@type": "BlogPosting",
                 "headline": "${part.title}",
                 "description": "${part.description}",
-                "url": "https://hongincanada.com/series/${part.slug}",
+                "url": "https://www.hongincanada.com/series/${part.slug}",
                 "position": ${part.part}
             }`).join(',')}
         ]

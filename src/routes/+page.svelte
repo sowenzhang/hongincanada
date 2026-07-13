@@ -42,10 +42,13 @@
 	<title>{pageData.title}</title>
 	<meta name="description" content={pageData.description} />
 	<link rel="canonical" href={pageData.canonical} />
+	<meta property="og:type" content="website" />
 	<meta property="og:title" content={pageData.title} />
 	<meta property="og:description" content={pageData.description} />
 	<meta property="og:image" content={pageData.ogImage} />
 	<meta property="og:url" content={pageData.canonical} />
+	<meta property="og:site_name" content="Hong in Canada" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={pageData.title} />
 	<meta name="twitter:description" content={pageData.description} />
 	<meta name="twitter:image" content={pageData.ogImage} />
@@ -56,8 +59,8 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Hong",
-        "jobTitle": "Engineering/Product Lead",
-        "description": "Engineering/Product Lead with a passion for building products that people love. Background in HCI with Product Mindset.",
+        "jobTitle": "Product Builder",
+        "description": "Product Builder with a passion for building products that people love. Background in HCI with Product Mindset.",
         "url": "https://www.hongincanada.com",
         "sameAs": [
             "https://www.linkedin.com/in/keepsrunning/",
@@ -71,7 +74,7 @@
         "knowsAbout": ["Software Engineering", "Product Management", "Human-Computer Interaction", "Table Tennis", "Running"],
         "address": {
             "@type": "PostalAddress",
-            "addressCountry": "US"
+            "addressCountry": "CA"
         }
     }
     </script>`}

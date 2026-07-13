@@ -6,7 +6,7 @@
     const pageData = {
         title: "Complete Mosaic Series: Rethinking App Design for the Multi-App Era | Hong in Canada",
         description: "Read the complete 4-part Mosaic series in one continuous 29-minute article. Explore adaptive journeys, context engines, progressive web apps, and the future of app design. From app store problems to OS-level solutions.",
-        canonical: "https://hongincanada.com/mosaic/full-series",
+        canonical: "https://www.hongincanada.com/mosaic/full-series",
         ogImage: mosaicSeriesMetadata.ogImage
     };
 
@@ -121,7 +121,7 @@
     <meta property="article:published_time" content="2025-09-13T00:00:00Z" />
     <meta property="article:modified_time" content="2025-09-13T00:00:00Z" />
     <meta property="article:author" content="Hong" />
-    <meta property="article:section" content="Technology" />
+    <meta property="article:section" content="Product Design" />
     <meta property="article:tag" content="App Design" />
     <meta property="article:tag" content="Complete Guide" />
     <meta property="article:tag" content="Long Read" />
@@ -135,7 +135,6 @@
 
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <link rel="alternate" type="application/rss+xml" title="Hong in Canada RSS Feed" href="/rss.xml" />
 
     <!-- Schema.org structured data for long-form article -->
     {@html `<script type="application/ld+json">
@@ -148,12 +147,12 @@
         "author": {
             "@type": "Person",
             "name": "Hong",
-            "url": "https://hongincanada.com"
+            "url": "https://www.hongincanada.com"
         },
         "publisher": {
             "@type": "Person",
             "name": "Hong",
-            "url": "https://hongincanada.com"
+            "url": "https://www.hongincanada.com"
         },
         "datePublished": "2025-09-13T00:00:00Z",
         "dateModified": "2025-09-13T00:00:00Z",

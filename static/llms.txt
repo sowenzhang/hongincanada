@@ -1,0 +1,47 @@
+# Hong in Canada
+
+> Personal site of Hong — a Product Builder with an HCI background and engineering leadership experience. The site hosts long-form writing on building software with AI, product design, and shipping side projects. All content is authored by Hong.
+
+## About
+- [Home / About Hong](https://www.hongincanada.com): Background in Human-Computer Interaction, product mindset, and engineering leadership.
+
+## Series: How I Built a Full Website (MiniBreaks.io) With AI
+A 10-part, hands-on series on building a complete website using AI tools.
+- [Series overview](https://www.hongincanada.com/series)
+- [Full series (single read)](https://www.hongincanada.com/series/full-series)
+- [Part 1: Can You Really Build a Website with AI?](https://www.hongincanada.com/series/part-1-can-you-build-with-ai)
+- [Part 2: Why I Wanted to Use AI](https://www.hongincanada.com/series/part-2-why-use-ai)
+- [Part 3: Choosing Your Tools & Setting Up](https://www.hongincanada.com/series/part-3-tools-and-setup)
+- [Part 4: Crafting Your Idea & MVP with AI](https://www.hongincanada.com/series/part-4-crafting-idea-mvp)
+- [Part 5: Designing Your UI/UX with AI](https://www.hongincanada.com/series/part-5-designing-ui-ux)
+- [Part 6: Writing Code with AI Assistance](https://www.hongincanada.com/series/part-6-writing-code-ai)
+- [Part 7: Adding Advanced Features](https://www.hongincanada.com/series/part-7-adding-advanced-features)
+- [Part 8: Before Deployment](https://www.hongincanada.com/series/part-8-before-deployment)
+- [Part 9: Lessons Learned](https://www.hongincanada.com/series/part-9-lessons-learned)
+- [Part 10: The Future of AI Development](https://www.hongincanada.com/series/part-10-future-ai-development)
+
+## Series: Mosaic — Rethinking App Design for the Multi-App Era
+A 4-part series on designing apps that work together via adaptive App Flows.
+- [Series overview](https://www.hongincanada.com/mosaic)
+- [Full series (single read)](https://www.hongincanada.com/mosaic/full-series)
+- [Part 1: The Problem with Apps Today](https://www.hongincanada.com/mosaic/the-problem-with-apps-today)
+- [Part 2: Adaptive Journeys in App Flows](https://www.hongincanada.com/mosaic/adaptive-journeys)
+- [Part 3: Under the Hood of App Flows](https://www.hongincanada.com/mosaic/app-flow-under-the-hood)
+- [Part 4: The Near Future and Beyond](https://www.hongincanada.com/mosaic/near-future-and-beyond)
+
+## Blog
+- [Blog index](https://www.hongincanada.com/blog)
+- [Loop Engineering](https://www.hongincanada.com/blog/loop-engineering)
+- [Building Deckmark: Closing the Feedback Loop for AI-Generated Slide Decks](https://www.hongincanada.com/blog/building-deckmark)
+- [AI Workflow Review](https://www.hongincanada.com/ai-workflow-review)
+- [NearbyGame: What I Learned](https://www.hongincanada.com/blog/nearbygame-what-i-learned)
+- [App Flow: First Pilot](https://www.hongincanada.com/blog/app-flow-first-pilot)
+- [How I Pivoted NearbyGame](https://www.hongincanada.com/blog/nearbygame-pivot)
+- [Introducing CrossIt](https://www.hongincanada.com/blog/introducing-crossit)
+- [MiniBreaks Pivot](https://www.hongincanada.com/blog/minibreaks-pivot)
+- [Why I Build NoCloud Chat](https://www.hongincanada.com/blog/why-i-build-nocloud-chat)
+
+## Author
+- Name: Hong
+- LinkedIn: https://www.linkedin.com/in/keepsrunning/
+- GitHub: https://github.com/sowenzhang
