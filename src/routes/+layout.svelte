@@ -186,9 +186,6 @@
 				<span class="rail-post-title">{post.shortTitle}</span>
 			</a>
 		{/each}
-		<a href="/blog" onclick={closeDrawer} class="rail-link" aria-current={$page.url.pathname === '/blog' ? 'page' : undefined}>
-			<i class="fas fa-arrow-right" aria-hidden="true"></i><span>All writing</span>
-		</a>
 	</nav>
 
 	<!-- Bottom cluster -->
