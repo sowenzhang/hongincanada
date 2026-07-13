@@ -109,6 +109,33 @@ body {
 	transform: translateY(-3px);
 }
 
+/* Interactive cards get a cursor-follow tilt + soft spotlight glow (see
+   +page.svelte onMount). Scoped to .tilt-card so photos, pills, and static
+   timeline cards stay flat. */
+.tilt-card {
+	position: relative;
+	overflow: hidden;
+}
+
+.tilt-card::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: radial-gradient(220px circle at var(--spot-x, 50%) var(--spot-y, 50%), var(--accent-soft), transparent 70%);
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+
+.tilt-card:hover::after {
+	opacity: 1;
+}
+
+.tilt-card.tilting {
+	transition: transform 0.1s ease-out, border-color 0.25s ease, box-shadow 0.3s ease;
+	will-change: transform;
+}
+
 .dark .glass-card {
 	background: var(--surface);
 	border-color: var(--border);
@@ -594,7 +621,9 @@ button[aria-label^='Copy'] {
 }
 
 .hero-bg-reveal {
-	transition: opacity 1.2s ease, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+	/* Opacity handles the initial reveal; transform is reused for the
+	   cursor-follow drift, so it needs a snappier duration than the reveal. */
+	transition: opacity 1.2s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {

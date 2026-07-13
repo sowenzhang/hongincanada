@@ -1,5 +1,7 @@
 <script lang="ts">
 	import ScrollReveal from '$lib/components/ScrollReveal.svelte';
+	import ParallaxLayer from '$lib/components/ParallaxLayer.svelte';
+	import CursorTrail from '$lib/components/CursorTrail.svelte';
 	import { onMount } from 'svelte';
 
 	// Page metadata
@@ -14,6 +16,9 @@
 	// Hero entrance animation — name/greeting show immediately (no blank wait for
 	// the LCP element); only the supporting copy staggers in for a light cinematic feel.
 	let stage = $state(4); // 0=hidden, 1=bg, 3=greeting, 4=name, 5=tagline, 6=subtagline, 7=cta, 8=scroll
+
+	let heroSection: HTMLElement;
+	let heroBg: HTMLElement;
 
 	onMount(() => {
 		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -31,6 +36,71 @@
 		});
 
 		return () => timeouts.forEach(clearTimeout);
+	});
+
+	// Cursor-driven motion: hero background drift + card tilt/spotlight.
+	// Skipped entirely for reduced motion and touch/coarse pointers.
+	onMount(() => {
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const supportsHover = window.matchMedia('(pointer: fine)').matches;
+
+		if (prefersReducedMotion || !supportsHover) return;
+
+		// Hero background drifts gently toward the cursor.
+		let heroRaf = 0;
+		function handleHeroMove(e: PointerEvent) {
+			if (heroRaf) return;
+			heroRaf = requestAnimationFrame(() => {
+				heroRaf = 0;
+				if (!heroSection || !heroBg) return;
+				const rect = heroSection.getBoundingClientRect();
+				const px = (e.clientX - rect.left) / rect.width - 0.5;
+				const py = (e.clientY - rect.top) / rect.height - 0.5;
+				heroBg.style.transform = `translate3d(${px * 24}px, ${py * 24}px, 0)`;
+			});
+		}
+		function handleHeroLeave() {
+			if (heroBg) heroBg.style.transform = '';
+		}
+		heroSection?.addEventListener('pointermove', handleHeroMove);
+		heroSection?.addEventListener('pointerleave', handleHeroLeave);
+
+		// Cards tilt and glow toward the cursor.
+		const cards = Array.from(document.querySelectorAll<HTMLElement>('.tilt-card'));
+		const cardCleanups = cards.map((card) => {
+			function onEnter() {
+				card.classList.add('tilting');
+			}
+			function onMove(e: PointerEvent) {
+				const rect = card.getBoundingClientRect();
+				const px = (e.clientX - rect.left) / rect.width;
+				const py = (e.clientY - rect.top) / rect.height;
+				card.style.setProperty('--spot-x', `${px * 100}%`);
+				card.style.setProperty('--spot-y', `${py * 100}%`);
+				card.style.transform = `perspective(700px) rotateX(${(0.5 - py) * 5}deg) rotateY(${(px - 0.5) * 5}deg) translateY(-4px)`;
+			}
+			function onLeave() {
+				card.classList.remove('tilting');
+				card.style.transform = '';
+				card.style.removeProperty('--spot-x');
+				card.style.removeProperty('--spot-y');
+			}
+			card.addEventListener('pointerenter', onEnter);
+			card.addEventListener('pointermove', onMove);
+			card.addEventListener('pointerleave', onLeave);
+			return () => {
+				card.removeEventListener('pointerenter', onEnter);
+				card.removeEventListener('pointermove', onMove);
+				card.removeEventListener('pointerleave', onLeave);
+			};
+		});
+
+		return () => {
+			heroSection?.removeEventListener('pointermove', handleHeroMove);
+			heroSection?.removeEventListener('pointerleave', handleHeroLeave);
+			if (heroRaf) cancelAnimationFrame(heroRaf);
+			cardCleanups.forEach((fn) => fn());
+		};
 	});
 
 	function generateEmailLink() {
@@ -81,10 +151,13 @@
     </script>`}
 </svelte:head>
 
+<CursorTrail />
+
 <!-- ============================================ -->
 <!-- HERO: Refined editorial typographic entrance -->
 <!-- ============================================ -->
 <section
+	bind:this={heroSection}
 	class="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden"
 	style="background: var(--bg);"
 	itemscope
@@ -92,6 +165,7 @@
 >
 	<!-- Quiet accent wash at the top -->
 	<div
+		bind:this={heroBg}
 		class="hero-bg-reveal hero-gradient-mesh pointer-events-none absolute inset-0"
 		style="opacity: {stage >= 1 ? 1 : 0};"
 	></div>
@@ -182,7 +256,11 @@
 <!-- PROJECTS: What I Build                       -->
 <!-- ============================================ -->
 <section id="projects" class="section-glow py-16" style="background: var(--bg);" itemscope itemtype="https://schema.org/CreativeWork">
-	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+	<ParallaxLayer speed={0.08}>
+		<div class="absolute -top-16 left-1/5 h-72 w-72 rounded-full blur-3xl" style="background: var(--accent-soft);"></div>
+		<div class="absolute bottom-0 right-1/6 h-56 w-56 rounded-full blur-3xl opacity-70" style="background: var(--accent-soft);"></div>
+	</ParallaxLayer>
+	<div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Projects</p>
@@ -201,7 +279,7 @@
 					href="https://github.com/sowenzhang/Nocloud"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex h-full flex-col rounded-2xl p-6"
+					class="glass-card tilt-card group flex h-full flex-col rounded-2xl p-6"
 					itemscope
 					itemtype="https://schema.org/SoftwareApplication"
 				>
@@ -234,7 +312,7 @@
 					href="https://nearbygame.com"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex h-full flex-col rounded-2xl p-6"
+					class="glass-card tilt-card group flex h-full flex-col rounded-2xl p-6"
 					itemscope
 					itemtype="https://schema.org/SoftwareApplication"
 				>
@@ -267,7 +345,7 @@
 					href="https://minibreaks.io"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex h-full flex-col rounded-2xl p-6"
+					class="glass-card tilt-card group flex h-full flex-col rounded-2xl p-6"
 					itemscope
 					itemtype="https://schema.org/SoftwareApplication"
 				>
@@ -302,7 +380,7 @@
 					href="https://apps.microsoft.com/detail/9p6jx7l8f0x9"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
+					class="glass-card tilt-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
 					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-500/10">
 						<i class="fas fa-check-double text-teal-400"></i>
@@ -317,7 +395,7 @@
 					href="https://apps.microsoft.com/detail/9n8r514363br"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
+					class="glass-card tilt-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
 					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/10">
 						<i class="fas fa-robot text-purple-400"></i>
@@ -332,7 +410,7 @@
 					href="https://apps.microsoft.com/detail/9mtg2ff7rnq4"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="glass-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
+					class="glass-card tilt-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
 					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-500/10">
 						<i class="fas fa-images text-emerald-400"></i>
@@ -355,7 +433,7 @@
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div
-				class="glass-card overflow-hidden rounded-2xl p-8 md:p-10"
+				class="glass-card tilt-card overflow-hidden rounded-2xl p-8 md:p-10"
 				style="background: linear-gradient(135deg, var(--accent-soft), transparent 70%);"
 			>
 				<div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
@@ -399,7 +477,11 @@
 <!-- WRITING: What I Think                        -->
 <!-- ============================================ -->
 <section id="writing" class="section-glow py-16" style="background: var(--surface-2);">
-	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+	<ParallaxLayer speed={-0.1}>
+		<div class="absolute -top-10 right-1/4 h-64 w-64 rounded-full blur-3xl" style="background: var(--accent-soft);"></div>
+		<div class="absolute bottom-10 left-1/6 h-48 w-48 rounded-full blur-3xl opacity-60" style="background: var(--accent-soft);"></div>
+	</ParallaxLayer>
+	<div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Writing</p>
@@ -414,7 +496,7 @@
 			<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
 				<!-- Latest blog first: duplicate this block to add future posts -->
 				<article class="h-full">
-					<a href="/blog/loop-engineering" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a href="/blog/loop-engineering" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10">
 								<i class="fas fa-arrows-rotate text-cyan-400"></i>
@@ -436,7 +518,7 @@
 				</article>
 
 				<article class="h-full">
-					<a href="/blog/building-deckmark" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a href="/blog/building-deckmark" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/10">
 								<i class="fas fa-wand-magic-sparkles text-indigo-400"></i>
@@ -458,7 +540,7 @@
 				</article>
 
 				<article class="h-full">
-					<a href="/blog/nearbygame-what-i-learned" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a href="/blog/nearbygame-what-i-learned" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
 								<i class="fas fa-route text-emerald-400"></i>
@@ -480,7 +562,7 @@
 				</article>
 
 				<article class="h-full">
-					<a href="/blog/app-flow-first-pilot" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a href="/blog/app-flow-first-pilot" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
 								<i class="fas fa-link text-orange-400"></i>
@@ -502,7 +584,7 @@
 				</article>
 
 				<article class="h-full">
-					<a href="/mosaic" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a href="/mosaic" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
 								<i class="fas fa-th text-purple-400"></i>
@@ -524,7 +606,7 @@
 				</article>
 
 				<article class="h-full">
-					<a href="/series" class="glass-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a href="/series" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
 								<i class="fas fa-robot text-emerald-400"></i>
@@ -584,7 +666,11 @@
 <!-- ABOUT: The Journey                           -->
 <!-- ============================================ -->
 <section id="about" class="section-glow py-16" style="background: var(--bg);" itemscope itemtype="https://schema.org/AboutPage">
-	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+	<ParallaxLayer speed={0.1}>
+		<div class="absolute top-0 left-1/3 h-60 w-60 rounded-full blur-3xl" style="background: var(--accent-soft);"></div>
+		<div class="absolute bottom-0 right-1/5 h-72 w-72 rounded-full blur-3xl opacity-60" style="background: var(--accent-soft);"></div>
+	</ParallaxLayer>
+	<div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Background</p>
@@ -749,7 +835,10 @@ Never stop building products in the last 10+ years.
 <!-- CONNECT: Let's Talk                          -->
 <!-- ============================================ -->
 <section id="contact" class="section-glow py-16" style="background: var(--bg);">
-	<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+	<ParallaxLayer speed={-0.08}>
+		<div class="absolute -top-12 left-1/3 h-56 w-56 rounded-full blur-3xl" style="background: var(--accent-soft);"></div>
+	</ParallaxLayer>
+	<div class="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Connect</p>
