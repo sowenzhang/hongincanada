@@ -17,6 +17,15 @@ export interface BlogPostMeta {
  */
 export const blogPosts: BlogPostMeta[] = [
 	{
+		slug: 'nearbygame-quiet-game',
+		title: 'A Quiet Walk with Puzzles, Punchlines, and Places to Discover',
+		description:
+			'NearbyGame blends relaxed walking with funny billboards, optional roadside puzzles, and collectible stamps. Wander at your pace, stop to solve a puzzle, and discover new places along the way.',
+		icon: 'fa-route',
+		date: '2026-11-23',
+		shortTitle: 'NearbyGame: Relax, Solve, Discover'
+	},
+	{
 		slug: 'loop-engineering',
 		title: 'Loop Engineering: Building Web Apps with an Agent in the Loop',
 		description:
@@ -82,8 +91,7 @@ export const blogPosts: BlogPostMeta[] = [
 	{
 		slug: 'why-i-build-nocloud-chat',
 		title: 'Why Do I Build NoCloud Chat',
-		description:
-			'Why I built a local-first chat app with no registration and no cloud dependency.',
+		description: 'Why I built a local-first chat app with no registration and no cloud dependency.',
 		icon: 'fa-cloud',
 		date: '2026-03-10',
 		shortTitle: 'NoCloud Chat'
@@ -91,8 +99,8 @@ export const blogPosts: BlogPostMeta[] = [
 ];
 
 /** Posts sorted newest-first by publish date. */
-export const recentPosts: BlogPostMeta[] = [...blogPosts].sort(
-	(a, b) => b.date.localeCompare(a.date)
+export const recentPosts: BlogPostMeta[] = [...blogPosts].sort((a, b) =>
+	b.date.localeCompare(a.date)
 );
 
 /** The N most recently published posts (newest first). */

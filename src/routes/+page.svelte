@@ -32,7 +32,11 @@
 		const timings = [150, 350, 550, 800];
 		const timeouts: ReturnType<typeof setTimeout>[] = [];
 		timings.forEach((ms, i) => {
-			timeouts.push(setTimeout(() => { stage = i + 5; }, ms));
+			timeouts.push(
+				setTimeout(() => {
+					stage = i + 5;
+				}, ms)
+			);
 		});
 
 		return () => timeouts.forEach(clearTimeout);
@@ -174,7 +178,9 @@
 		<!-- Eyebrow -->
 		<p
 			class="hero-text-reveal mb-5 flex items-center gap-3 text-sm"
-			style="color: var(--faint); opacity: {stage >= 3 ? 1 : 0}; transform: translateY({stage >= 3 ? '0' : '14px'});"
+			style="color: var(--faint); opacity: {stage >= 3 ? 1 : 0}; transform: translateY({stage >= 3
+				? '0'
+				: '14px'});"
 		>
 			<span class="inline-block h-px w-8" style="background: var(--accent);"></span>
 			Hello, I'm
@@ -183,7 +189,9 @@
 		<!-- Name -->
 		<h1
 			class="hero-name-dramatic mb-6 font-serif text-7xl font-medium leading-[0.95] tracking-tight md:text-8xl lg:text-9xl"
-			style="color: var(--text); opacity: {stage >= 4 ? 1 : 0}; transform: translateY({stage >= 4 ? '0' : '18px'}); filter: blur({stage >= 4 ? '0px' : '10px'});"
+			style="color: var(--text); opacity: {stage >= 4 ? 1 : 0}; transform: translateY({stage >= 4
+				? '0'
+				: '18px'}); filter: blur({stage >= 4 ? '0px' : '10px'});"
 		>
 			<span itemprop="name">Hong</span><span style="color: var(--accent);">.</span>
 		</h1>
@@ -191,7 +199,9 @@
 		<!-- Positioning line -->
 		<p
 			class="hero-text-reveal mb-4 max-w-2xl text-2xl font-medium md:text-3xl"
-			style="color: var(--text); opacity: {stage >= 5 ? 1 : 0}; transform: translateY({stage >= 5 ? '0' : '14px'});"
+			style="color: var(--text); opacity: {stage >= 5 ? 1 : 0}; transform: translateY({stage >= 5
+				? '0'
+				: '14px'});"
 			itemprop="description"
 		>
 			<span itemprop="jobTitle">Product Builder</span> · HCI ·
@@ -201,10 +211,12 @@
 		<!-- Sub-tagline -->
 		<p
 			class="hero-text-reveal mb-10 max-w-xl text-lg leading-relaxed"
-			style="color: var(--muted); opacity: {stage >= 6 ? 1 : 0}; transform: translateY({stage >= 6 ? '0' : '12px'});"
+			style="color: var(--muted); opacity: {stage >= 6 ? 1 : 0}; transform: translateY({stage >= 6
+				? '0'
+				: '12px'});"
 		>
-			I build AI-powered products from 0 → 1, fast — designing systems where ideas
-			turn into working software in days, not months.
+			I build AI-powered products from 0 → 1, fast — designing systems where ideas turn into working
+			software in days, not months.
 		</p>
 
 		<!-- CTAs -->
@@ -246,7 +258,7 @@
 		style="opacity: {stage >= 8 ? 1 : 0};"
 	>
 		<div class="flex animate-bounce flex-col items-center gap-2" style="color: var(--faint);">
-			<span class="text-[11px] tracking-[0.2em] uppercase">Scroll</span>
+			<span class="text-[11px] uppercase tracking-[0.2em]">Scroll</span>
 			<i class="fas fa-chevron-down text-xs"></i>
 		</div>
 	</div>
@@ -255,18 +267,33 @@
 <!-- ============================================ -->
 <!-- PROJECTS: What I Build                       -->
 <!-- ============================================ -->
-<section id="projects" class="section-glow py-16" style="background: var(--bg);" itemscope itemtype="https://schema.org/CreativeWork">
+<section
+	id="projects"
+	class="section-glow py-16"
+	style="background: var(--bg);"
+	itemscope
+	itemtype="https://schema.org/CreativeWork"
+>
 	<ParallaxLayer speed={0.08}>
-		<div class="absolute -top-16 left-1/5 h-72 w-72 rounded-full blur-3xl" style="background: var(--accent-soft);"></div>
-		<div class="absolute bottom-0 right-1/6 h-56 w-56 rounded-full blur-3xl opacity-70" style="background: var(--accent-soft);"></div>
+		<div
+			class="left-1/5 absolute -top-16 h-72 w-72 rounded-full blur-3xl"
+			style="background: var(--accent-soft);"
+		></div>
+		<div
+			class="right-1/6 absolute bottom-0 h-56 w-56 rounded-full opacity-70 blur-3xl"
+			style="background: var(--accent-soft);"
+		></div>
 	</ParallaxLayer>
 	<div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Projects</p>
-				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">What I Build</h2>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">
+					What I Build
+				</h2>
 				<p class="mx-auto mt-4 max-w-xl" style="color: var(--muted);">
-					Products I've shipped that are live and serving users. Every one started with a real problem.
+					Products I've shipped that are live and serving users. Every one started with a real
+					problem.
 				</p>
 			</div>
 		</ScrollReveal>
@@ -288,20 +315,39 @@
 							<i class="fas fa-shield-halved text-xl text-emerald-400"></i>
 						</div>
 						<div class="flex items-center gap-2">
-							<span class="flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
+							<span
+								class="flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400"
+							>
 								<i class="fab fa-github text-[10px]"></i> Open Source
 							</span>
-							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-emerald-400"></i>
+							<i
+								class="fas fa-external-link-alt text-xs text-gray-400 transition group-hover:text-emerald-400 dark:text-gray-600"
+							></i>
 						</div>
 					</div>
-					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">NoCloud Chat</h3>
-					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
-						A messaging app for home. Works within your subnet — no registration, no cloud, complete privacy.
+					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">
+						NoCloud Chat
+					</h3>
+					<p
+						class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						itemprop="description"
+					>
+						A messaging app for home. Works within your subnet — no registration, no cloud, complete
+						privacy.
 					</p>
 					<div class="flex flex-wrap gap-2">
-						<span class="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-medium text-emerald-400">Privacy-First</span>
-						<span class="rounded-full bg-orange-500/10 px-2.5 py-0.5 text-[10px] font-medium text-orange-400">Local Network</span>
-						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">Messaging</span>
+						<span
+							class="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-medium text-emerald-400"
+							>Privacy-First</span
+						>
+						<span
+							class="rounded-full bg-orange-500/10 px-2.5 py-0.5 text-[10px] font-medium text-orange-400"
+							>Local Network</span
+						>
+						<span
+							class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400"
+							>Messaging</span
+						>
 					</div>
 				</a>
 			</ScrollReveal>
@@ -321,20 +367,39 @@
 							<i class="fas fa-location-dot text-xl text-teal-400"></i>
 						</div>
 						<div class="flex items-center gap-2">
-							<span class="flex items-center gap-1.5 rounded-full bg-green-500/10 px-2.5 py-1 text-[10px] font-medium text-green-400">
+							<span
+								class="flex items-center gap-1.5 rounded-full bg-green-500/10 px-2.5 py-1 text-[10px] font-medium text-green-400"
+							>
 								<span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>Live
 							</span>
-							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-teal-400"></i>
+							<i
+								class="fas fa-external-link-alt text-xs text-gray-400 transition group-hover:text-teal-400 dark:text-gray-600"
+							></i>
 						</div>
 					</div>
-					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">NearbyGame.com</h3>
-					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
-						A calming experience: just walk, relax, explore, collect, and learn about the world nearby.
+					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">
+						NearbyGame.com
+					</h3>
+					<p
+						class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						itemprop="description"
+					>
+						A calming experience: just walk, relax, explore, collect, and learn about the world
+						nearby.
 					</p>
 					<div class="flex flex-wrap gap-2">
-						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">SvelteKit</span>
-						<span class="rounded-full bg-yellow-500/10 px-2.5 py-0.5 text-[10px] font-medium text-yellow-400">Tauri</span>
-						<span class="rounded-full bg-pink-500/10 px-2.5 py-0.5 text-[10px] font-medium text-pink-400">Community</span>
+						<span
+							class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400"
+							>SvelteKit</span
+						>
+						<span
+							class="rounded-full bg-yellow-500/10 px-2.5 py-0.5 text-[10px] font-medium text-yellow-400"
+							>Tauri</span
+						>
+						<span
+							class="rounded-full bg-pink-500/10 px-2.5 py-0.5 text-[10px] font-medium text-pink-400"
+							>Community</span
+						>
 					</div>
 				</a>
 			</ScrollReveal>
@@ -354,20 +419,39 @@
 							<i class="fas fa-spa text-xl text-blue-400"></i>
 						</div>
 						<div class="flex items-center gap-2">
-							<span class="flex items-center gap-1.5 rounded-full bg-green-500/10 px-2.5 py-1 text-[10px] font-medium text-green-400">
+							<span
+								class="flex items-center gap-1.5 rounded-full bg-green-500/10 px-2.5 py-1 text-[10px] font-medium text-green-400"
+							>
 								<span class="h-1.5 w-1.5 rounded-full bg-green-400"></span>Live
 							</span>
-							<i class="fas fa-external-link-alt text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-blue-400"></i>
+							<i
+								class="fas fa-external-link-alt text-xs text-gray-400 transition group-hover:text-blue-400 dark:text-gray-600"
+							></i>
 						</div>
 					</div>
-					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">Minibreaks.io</h3>
-					<p class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400" itemprop="description">
-						An AI-driven product engine: One app every week. Built using structured AI workflows and rapid iteration loops.
+					<h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white" itemprop="name">
+						Minibreaks.io
+					</h3>
+					<p
+						class="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						itemprop="description"
+					>
+						An AI-driven product engine: One app every week. Built using structured AI workflows and
+						rapid iteration loops.
 					</p>
 					<div class="flex flex-wrap gap-2">
-						<span class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400">SvelteKit</span>
-						<span class="rounded-full bg-green-500/10 px-2.5 py-0.5 text-[10px] font-medium text-green-400">AI-Powered</span>
-						<span class="rounded-full bg-purple-500/10 px-2.5 py-0.5 text-[10px] font-medium text-purple-400">Mental Health</span>
+						<span
+							class="rounded-full bg-blue-500/10 px-2.5 py-0.5 text-[10px] font-medium text-blue-400"
+							>SvelteKit</span
+						>
+						<span
+							class="rounded-full bg-green-500/10 px-2.5 py-0.5 text-[10px] font-medium text-green-400"
+							>AI-Powered</span
+						>
+						<span
+							class="rounded-full bg-purple-500/10 px-2.5 py-0.5 text-[10px] font-medium text-purple-400"
+							>Mental Health</span
+						>
 					</div>
 				</a>
 			</ScrollReveal>
@@ -375,21 +459,27 @@
 
 		<!-- Secondary Projects -->
 		<ScrollReveal delay={100}>
-			<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+			<div class="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
 				<a
 					href="https://apps.microsoft.com/detail/9p6jx7l8f0x9"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="glass-card tilt-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
-					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-500/10">
+					<div
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-500/10"
+					>
 						<i class="fas fa-check-double text-teal-400"></i>
 					</div>
 					<div class="min-w-0">
 						<h4 class="font-semibold text-gray-900 dark:text-white">CrossIt</h4>
-						<p class="text-xs leading-relaxed text-gray-500">A lightweight habit helper for recurring routines</p>
+						<p class="text-xs leading-relaxed text-gray-500">
+							A lightweight habit helper for recurring routines
+						</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i
+						class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 transition group-hover:text-gray-900 dark:text-gray-600 dark:group-hover:text-white"
+					></i>
 				</a>
 				<a
 					href="https://apps.microsoft.com/detail/9n8r514363br"
@@ -397,14 +487,20 @@
 					rel="noopener noreferrer"
 					class="glass-card tilt-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
-					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/10">
+					<div
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/10"
+					>
 						<i class="fas fa-robot text-purple-400"></i>
 					</div>
 					<div class="min-w-0">
 						<h4 class="font-semibold text-gray-900 dark:text-white">FakeBlueScreen</h4>
-						<p class="text-xs leading-relaxed text-gray-500">A legitimate excuse to procrastinate, prank it!</p>
+						<p class="text-xs leading-relaxed text-gray-500">
+							A legitimate excuse to procrastinate, prank it!
+						</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i
+						class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 transition group-hover:text-gray-900 dark:text-gray-600 dark:group-hover:text-white"
+					></i>
 				</a>
 				<a
 					href="https://apps.microsoft.com/detail/9mtg2ff7rnq4"
@@ -412,14 +508,20 @@
 					rel="noopener noreferrer"
 					class="glass-card tilt-card group flex min-h-[88px] items-start gap-4 rounded-xl p-5"
 				>
-					<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-500/10">
+					<div
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-500/10"
+					>
 						<i class="fas fa-images text-emerald-400"></i>
 					</div>
 					<div class="min-w-0">
 						<h4 class="font-semibold text-gray-900 dark:text-white">FotoAssemblyLine</h4>
-						<p class="text-xs leading-relaxed text-gray-500">Batch image processing, watermarking, & filters</p>
+						<p class="text-xs leading-relaxed text-gray-500">
+							Batch image processing, watermarking, & filters
+						</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i
+						class="fas fa-arrow-right ml-auto mt-1 text-xs text-gray-400 transition group-hover:text-gray-900 dark:text-gray-600 dark:group-hover:text-white"
+					></i>
 				</a>
 			</div>
 		</ScrollReveal>
@@ -478,14 +580,22 @@
 <!-- ============================================ -->
 <section id="writing" class="section-glow py-16" style="background: var(--surface-2);">
 	<ParallaxLayer speed={-0.1}>
-		<div class="absolute -top-10 right-1/4 h-64 w-64 rounded-full blur-3xl" style="background: var(--accent-soft);"></div>
-		<div class="absolute bottom-10 left-1/6 h-48 w-48 rounded-full blur-3xl opacity-60" style="background: var(--accent-soft);"></div>
+		<div
+			class="absolute -top-10 right-1/4 h-64 w-64 rounded-full blur-3xl"
+			style="background: var(--accent-soft);"
+		></div>
+		<div
+			class="left-1/6 absolute bottom-10 h-48 w-48 rounded-full opacity-60 blur-3xl"
+			style="background: var(--accent-soft);"
+		></div>
 	</ParallaxLayer>
 	<div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Writing</p>
-				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">What I Think</h2>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">
+					What I Think
+				</h2>
 				<p class="mx-auto mt-4 max-w-xl" style="color: var(--muted);">
 					Ideas on product design, engineering with AI, and rethinking how software should work.
 				</p>
@@ -496,132 +606,236 @@
 			<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
 				<!-- Latest blog first: duplicate this block to add future posts -->
 				<article class="h-full">
-					<a href="/blog/loop-engineering" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a
+						href="/blog/nearbygame-quiet-game"
+						class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6"
+					>
+						<div class="mb-4 flex items-center gap-3">
+							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-500/10">
+								<i class="fas fa-route text-teal-400"></i>
+							</div>
+							<span
+								class="rounded-full bg-teal-500/10 px-2.5 py-1 text-[10px] font-medium text-teal-400"
+							>
+								LATEST BLOG
+							</span>
+						</div>
+						<h3
+							class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-teal-300 dark:text-white"
+						>
+							A Quiet Walk with Puzzles, Punchlines, and Places to Discover
+						</h3>
+						<p
+							class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						>
+							Relaxing walks, funny billboards, optional roadside puzzles, and collectible stamps,
+							all at your own pace.
+						</p>
+						<span
+							class="flex items-center gap-2 text-sm font-medium text-teal-400 transition group-hover:gap-3"
+						>
+							Read Post <i class="fas fa-arrow-right text-xs"></i>
+						</span>
+					</a>
+				</article>
+
+				<article class="h-full">
+					<a
+						href="/blog/loop-engineering"
+						class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6"
+					>
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500/10">
 								<i class="fas fa-arrows-rotate text-cyan-400"></i>
 							</div>
-							<span class="rounded-full bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-400">
-								LATEST BLOG
+							<span
+								class="rounded-full bg-cyan-500/10 px-2.5 py-1 text-[10px] font-medium text-cyan-400"
+							>
+								BLOG
 							</span>
 						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-cyan-300 dark:text-white">
+						<h3
+							class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-cyan-300 dark:text-white"
+						>
 							Loop Engineering: Building Web Apps with an Agent in the Loop
 						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-							Why an AI agent needs a governed loop of observation, objective gates, iteration, and honest stopping to ship reliable web apps.
+						<p
+							class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						>
+							Why an AI agent needs a governed loop of observation, objective gates, iteration, and
+							honest stopping to ship reliable web apps.
 						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-cyan-400 transition group-hover:gap-3">
+						<span
+							class="flex items-center gap-2 text-sm font-medium text-cyan-400 transition group-hover:gap-3"
+						>
 							Read Post <i class="fas fa-arrow-right text-xs"></i>
 						</span>
 					</a>
 				</article>
 
 				<article class="h-full">
-					<a href="/blog/building-deckmark" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a
+						href="/blog/building-deckmark"
+						class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6"
+					>
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/10">
 								<i class="fas fa-wand-magic-sparkles text-indigo-400"></i>
 							</div>
-							<span class="rounded-full bg-indigo-500/10 px-2.5 py-1 text-[10px] font-medium text-indigo-400">
-								LATEST BLOG
+							<span
+								class="rounded-full bg-indigo-500/10 px-2.5 py-1 text-[10px] font-medium text-indigo-400"
+							>
+								BLOG
 							</span>
 						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-indigo-300 dark:text-white">
+						<h3
+							class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-indigo-300 dark:text-white"
+						>
 							Building Deckmark: Closing the Feedback Loop for AI-Generated Slide Decks
 						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-							An MCP server that lets you click directly on slide elements to give feedback to an AI agent. Why I built it, and the human-in-the-loop pattern behind it.
+						<p
+							class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						>
+							An MCP server that lets you click directly on slide elements to give feedback to an AI
+							agent. Why I built it, and the human-in-the-loop pattern behind it.
 						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-indigo-400 transition group-hover:gap-3">
+						<span
+							class="flex items-center gap-2 text-sm font-medium text-indigo-400 transition group-hover:gap-3"
+						>
 							Read Post <i class="fas fa-arrow-right text-xs"></i>
 						</span>
 					</a>
 				</article>
 
 				<article class="h-full">
-					<a href="/blog/nearbygame-what-i-learned" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a
+						href="/blog/nearbygame-what-i-learned"
+						class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6"
+					>
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
 								<i class="fas fa-route text-emerald-400"></i>
 							</div>
-							<span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
+							<span
+								class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400"
+							>
 								BLOG
 							</span>
 						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-emerald-300 dark:text-white">
+						<h3
+							class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-emerald-300 dark:text-white"
+						>
 							What I Learned Building a Walking Game With AI's Help
 						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-							Geography, ambient audio, and the pain of Microsoft Store IAP — a year of solo dev notes from building NearbyGame.
+						<p
+							class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						>
+							Geography, ambient audio, and the pain of Microsoft Store IAP — a year of solo dev
+							notes from building NearbyGame.
 						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
+						<span
+							class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3"
+						>
 							Read Post <i class="fas fa-arrow-right text-xs"></i>
 						</span>
 					</a>
 				</article>
 
 				<article class="h-full">
-					<a href="/blog/app-flow-first-pilot" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a
+						href="/blog/app-flow-first-pilot"
+						class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6"
+					>
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
 								<i class="fas fa-link text-orange-400"></i>
 							</div>
-							<span class="rounded-full bg-orange-500/10 px-2.5 py-1 text-[10px] font-medium text-orange-400">
+							<span
+								class="rounded-full bg-orange-500/10 px-2.5 py-1 text-[10px] font-medium text-orange-400"
+							>
 								BLOG
 							</span>
 						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-orange-300 dark:text-white">
+						<h3
+							class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-orange-300 dark:text-white"
+						>
 							App Flow: First Pilot
 						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-							A practical pilot of disposable micro-apps that chain from Squad Shuffer to Group Qualifier to Tournament Bracket, with optional paths for different match formats.
+						<p
+							class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						>
+							A practical pilot of disposable micro-apps that chain from Squad Shuffer to Group
+							Qualifier to Tournament Bracket, with optional paths for different match formats.
 						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-orange-400 transition group-hover:gap-3">
+						<span
+							class="flex items-center gap-2 text-sm font-medium text-orange-400 transition group-hover:gap-3"
+						>
 							Read Post <i class="fas fa-arrow-right text-xs"></i>
 						</span>
 					</a>
 				</article>
 
 				<article class="h-full">
-					<a href="/mosaic" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a
+						href="/mosaic"
+						class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6"
+					>
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10">
 								<i class="fas fa-th text-purple-400"></i>
 							</div>
-							<span class="rounded-full bg-purple-500/10 px-2.5 py-1 text-[10px] font-medium text-purple-400">
+							<span
+								class="rounded-full bg-purple-500/10 px-2.5 py-1 text-[10px] font-medium text-purple-400"
+							>
 								4-PART ARTICLE
 							</span>
 						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-purple-300 transition">
+						<h3
+							class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-purple-300 dark:text-white"
+						>
 							Mosaic: From App Stores to App Flows
 						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						<p
+							class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						>
 							A vision that replaces app stores with seamless, context-aware app flows.
 						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-purple-400 transition group-hover:gap-3">
+						<span
+							class="flex items-center gap-2 text-sm font-medium text-purple-400 transition group-hover:gap-3"
+						>
 							Read Article <i class="fas fa-arrow-right text-xs"></i>
 						</span>
 					</a>
 				</article>
 
 				<article class="h-full">
-					<a href="/series" class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6">
+					<a
+						href="/series"
+						class="glass-card tilt-card group flex h-full min-h-[240px] flex-col rounded-2xl p-6"
+					>
 						<div class="mb-4 flex items-center gap-3">
 							<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10">
 								<i class="fas fa-robot text-emerald-400"></i>
 							</div>
-							<span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
+							<span
+								class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400"
+							>
 								10-PART SERIES
 							</span>
 						</div>
-						<h3 class="writing-card-title mb-2 text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-300 transition">
+						<h3
+							class="writing-card-title mb-2 text-xl font-bold text-gray-900 transition group-hover:text-emerald-300 dark:text-white"
+						>
 							How I Built MiniBreaks.io With AI
 						</h3>
-						<p class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+						<p
+							class="writing-card-description mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400"
+						>
 							The full story of building a complete website with AI from idea to deployment.
 						</p>
-						<span class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3">
+						<span
+							class="flex items-center gap-2 text-sm font-medium text-emerald-400 transition group-hover:gap-3"
+						>
 							Read Series <i class="fas fa-arrow-right text-xs"></i>
 						</span>
 					</a>
@@ -644,37 +858,33 @@
 	</div>
 </section>
 
-<style>
-	.writing-card-title {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		line-clamp: 2;
-		-webkit-line-clamp: 2;
-		overflow: hidden;
-	}
-
-	.writing-card-description {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		line-clamp: 3;
-		-webkit-line-clamp: 3;
-		overflow: hidden;
-	}
-</style>
-
 <!-- ============================================ -->
 <!-- ABOUT: The Journey                           -->
 <!-- ============================================ -->
-<section id="about" class="section-glow py-16" style="background: var(--bg);" itemscope itemtype="https://schema.org/AboutPage">
+<section
+	id="about"
+	class="section-glow py-16"
+	style="background: var(--bg);"
+	itemscope
+	itemtype="https://schema.org/AboutPage"
+>
 	<ParallaxLayer speed={0.1}>
-		<div class="absolute top-0 left-1/3 h-60 w-60 rounded-full blur-3xl" style="background: var(--accent-soft);"></div>
-		<div class="absolute bottom-0 right-1/5 h-72 w-72 rounded-full blur-3xl opacity-60" style="background: var(--accent-soft);"></div>
+		<div
+			class="absolute left-1/3 top-0 h-60 w-60 rounded-full blur-3xl"
+			style="background: var(--accent-soft);"
+		></div>
+		<div
+			class="right-1/5 absolute bottom-0 h-72 w-72 rounded-full opacity-60 blur-3xl"
+			style="background: var(--accent-soft);"
+		></div>
 	</ParallaxLayer>
 	<div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Background</p>
-				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">The Journey</h2>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">
+					The Journey
+				</h2>
 			</div>
 		</ScrollReveal>
 
@@ -683,24 +893,31 @@
 			<ScrollReveal>
 				<div class="mb-16 text-center" itemprop="about">
 					<p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-						With a Master's in <strong class="text-gray-900 dark:text-white">Human-Computer Interaction</strong>, I bridge the gap between technology and people.
-						I think like a product manager, build like an engineer, and always start with the user.
+						With a Master's in <strong class="text-gray-900 dark:text-white"
+							>Human-Computer Interaction</strong
+						>, I bridge the gap between technology and people. I think like a product manager, build
+						like an engineer, and always start with the user.
 					</p>
 				</div>
 			</ScrollReveal>
 
 			<!-- Timeline -->
-			<div class="relative border-l border-gray-200 dark:border-white/10 pl-8 space-y-12 ml-4">
+			<div class="relative ml-4 space-y-12 border-l border-gray-200 pl-8 dark:border-white/10">
 				<!-- Education -->
 				<ScrollReveal delay={100}>
 					<div class="relative">
-						<div class="absolute -left-[2.6rem] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/20 ring-2 ring-blue-500/30">
+						<div
+							class="absolute -left-[2.6rem] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/20 ring-2 ring-blue-500/30"
+						>
 							<i class="fas fa-graduation-cap text-sm text-blue-400"></i>
 						</div>
 						<div class="glass-card rounded-xl p-5">
 							<h3 class="font-bold text-gray-900 dark:text-white">Master's in HCI</h3>
 							<p class="text-sm text-gray-500">University of Manitoba</p>
-							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Where I learned that the best technology is invisible: it should just work for users.</p>
+							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+								Where I learned that the best technology is invisible: it should just work for
+								users.
+							</p>
 						</div>
 					</div>
 				</ScrollReveal>
@@ -708,13 +925,18 @@
 				<!-- Software Engineer -->
 				<ScrollReveal delay={200}>
 					<div class="relative">
-						<div class="absolute -left-[2.6rem] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/20 ring-2 ring-emerald-500/30">
+						<div
+							class="absolute -left-[2.6rem] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/20 ring-2 ring-emerald-500/30"
+						>
 							<i class="fas fa-laptop-code text-sm text-emerald-400"></i>
 						</div>
 						<div class="glass-card rounded-xl p-5">
 							<h3 class="font-bold text-gray-900 dark:text-white">Software Engineer</h3>
 							<p class="text-sm text-gray-500">Business Consulting · Starbucks · Microsoft</p>
-							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Shipped products at scale. Also built independent apps on the side — because I can't stop building.</p>
+							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+								Shipped products at scale. Also built independent apps on the side — because I can't
+								stop building.
+							</p>
 						</div>
 					</div>
 				</ScrollReveal>
@@ -722,14 +944,21 @@
 				<!-- Engineering Manager -->
 				<ScrollReveal delay={300}>
 					<div class="relative">
-						<div class="absolute -left-[2.6rem] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 ring-2 ring-purple-500/30">
+						<div
+							class="absolute -left-[2.6rem] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/20 ring-2 ring-purple-500/30"
+						>
 							<i class="fas fa-users text-sm text-purple-400"></i>
 						</div>
 						<div class="glass-card rounded-xl p-5">
-							<h3 class="font-bold text-gray-900 dark:text-white">Product Builder & Engineering Leadership</h3>
-							<p class="text-sm text-gray-500">Still always building products and applying engineering lean principles</p>
-							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">I lead teams to build scalable software while fostering collaboration, learning, and a relentless focus on the user.
-Never stop building products in the last 10+ years.
+							<h3 class="font-bold text-gray-900 dark:text-white">
+								Product Builder & Engineering Leadership
+							</h3>
+							<p class="text-sm text-gray-500">
+								Still always building products and applying engineering lean principles
+							</p>
+							<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+								I lead teams to build scalable software while fostering collaboration, learning, and
+								a relentless focus on the user. Never stop building products in the last 10+ years.
 							</p>
 						</div>
 					</div>
@@ -747,7 +976,9 @@ Never stop building products in the last 10+ years.
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Life</p>
-				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">Beyond the Code</h2>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">
+					Beyond the Code
+				</h2>
 			</div>
 		</ScrollReveal>
 
@@ -788,39 +1019,58 @@ Never stop building products in the last 10+ years.
 				<!-- Interests -->
 				<ScrollReveal delay={200}>
 					<div class="flex h-full flex-col justify-center">
-						<p class="mb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
-							When I'm not building products or leading teams, you'll find me running trails around the Seattle area,
-							playing table tennis (still learning — still improving), or being bossed around by Melody and Otto.
+						<p class="mb-6 leading-relaxed text-gray-600 dark:text-gray-400">
+							When I'm not building products or leading teams, you'll find me running trails around
+							the Seattle area, playing table tennis (still learning — still improving), or being
+							bossed around by Melody and Otto.
 						</p>
-						<p class="mb-6 text-sm italic text-gray-500 dark:text-gray-400 leading-relaxed">
+						<p class="mb-6 text-sm italic leading-relaxed text-gray-500 dark:text-gray-400">
 							In loving memory of Melody. You are deeply missed and always in our hearts.
 						</p>
 						<div class="flex flex-wrap gap-3">
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-running mr-2 text-orange-400"></i>Running
 							</span>
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-table-tennis-paddle-ball mr-2 text-red-400"></i>Table Tennis
 							</span>
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-cat mr-2 text-purple-400"></i>Cats
 							</span>
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-swatchbook mr-2 text-yellow-400"></i>UX Design
 							</span>
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-microscope mr-2 text-yellow-400"></i>HCI Researcher
 							</span>
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-lightbulb mr-2 text-blue-400"></i>Product Mindset
 							</span>
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-wand-magic-sparkles mr-2 text-indigo-400"></i>AI Builder
 							</span>
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-drafting-compass mr-2 text-emerald-400"></i>UX Thinking
 							</span>
-							<span class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+							<span
+								class="glass-card rounded-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
+							>
 								<i class="fas fa-people-group mr-2 text-cyan-400"></i>Engineering Lead
 							</span>
 						</div>
@@ -836,15 +1086,21 @@ Never stop building products in the last 10+ years.
 <!-- ============================================ -->
 <section id="contact" class="section-glow py-16" style="background: var(--bg);">
 	<ParallaxLayer speed={-0.08}>
-		<div class="absolute -top-12 left-1/3 h-56 w-56 rounded-full blur-3xl" style="background: var(--accent-soft);"></div>
+		<div
+			class="absolute -top-12 left-1/3 h-56 w-56 rounded-full blur-3xl"
+			style="background: var(--accent-soft);"
+		></div>
 	</ParallaxLayer>
 	<div class="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
 		<ScrollReveal>
 			<div class="mb-12 text-center">
 				<p class="eyebrow mb-3">Connect</p>
-				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">Let's Talk</h2>
+				<h2 class="font-serif text-4xl font-medium md:text-5xl" style="color: var(--text);">
+					Let's Talk
+				</h2>
 				<p class="mx-auto mt-4 max-w-lg" style="color: var(--muted);">
-					I'd love to connect with fellow engineers, product enthusiasts, or anyone who just wants to say hi. Currently in the Seattle metro area.
+					I'd love to connect with fellow engineers, product enthusiasts, or anyone who just wants
+					to say hi. Currently in the Seattle metro area.
 				</p>
 			</div>
 		</ScrollReveal>
@@ -855,14 +1111,18 @@ Never stop building products in the last 10+ years.
 					href={generateEmailLink()}
 					class="glass-card group flex items-center gap-4 rounded-xl p-4 transition"
 				>
-					<div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/10">
+					<div
+						class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/10"
+					>
 						<i class="fas fa-envelope text-blue-400"></i>
 					</div>
 					<div>
 						<h4 class="font-medium text-gray-900 dark:text-white">Email</h4>
 						<p class="text-sm text-gray-500">The best way to reach me</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i
+						class="fas fa-arrow-right ml-auto text-gray-400 transition group-hover:text-gray-900 dark:text-gray-600 dark:group-hover:text-white"
+					></i>
 				</a>
 
 				<a
@@ -871,14 +1131,18 @@ Never stop building products in the last 10+ years.
 					rel="noopener noreferrer"
 					class="glass-card group flex items-center gap-4 rounded-xl p-4 transition"
 				>
-					<div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-gray-500/10">
+					<div
+						class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-gray-500/10"
+					>
 						<i class="fab fa-github text-gray-700 dark:text-gray-300"></i>
 					</div>
 					<div>
 						<h4 class="font-medium text-gray-900 dark:text-white">GitHub</h4>
 						<p class="text-sm text-gray-500">Open source & side projects</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i
+						class="fas fa-arrow-right ml-auto text-gray-400 transition group-hover:text-gray-900 dark:text-gray-600 dark:group-hover:text-white"
+					></i>
 				</a>
 
 				<a
@@ -887,14 +1151,18 @@ Never stop building products in the last 10+ years.
 					rel="noopener noreferrer"
 					class="glass-card group flex items-center gap-4 rounded-xl p-4 transition"
 				>
-					<div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-blue-600/10">
+					<div
+						class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-blue-600/10"
+					>
 						<i class="fab fa-linkedin-in text-blue-400"></i>
 					</div>
 					<div>
 						<h4 class="font-medium text-gray-900 dark:text-white">LinkedIn</h4>
 						<p class="text-sm text-gray-500">Professional network</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i
+						class="fas fa-arrow-right ml-auto text-gray-400 transition group-hover:text-gray-900 dark:text-gray-600 dark:group-hover:text-white"
+					></i>
 				</a>
 
 				<a
@@ -903,14 +1171,18 @@ Never stop building products in the last 10+ years.
 					rel="noopener noreferrer"
 					class="glass-card group flex items-center gap-4 rounded-xl p-4 transition"
 				>
-					<div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-orange-500/10">
+					<div
+						class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-orange-500/10"
+					>
 						<i class="fab fa-strava text-orange-400"></i>
 					</div>
 					<div>
 						<h4 class="font-medium text-gray-900 dark:text-white">Strava</h4>
 						<p class="text-sm text-gray-500">Running & fitness activities</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i
+						class="fas fa-arrow-right ml-auto text-gray-400 transition group-hover:text-gray-900 dark:text-gray-600 dark:group-hover:text-white"
+					></i>
 				</a>
 
 				<a
@@ -919,16 +1191,38 @@ Never stop building products in the last 10+ years.
 					rel="noopener noreferrer"
 					class="glass-card group flex items-center gap-4 rounded-xl p-4 transition"
 				>
-					<div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-red-500/10">
+					<div
+						class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-red-500/10"
+					>
 						<i class="fas fa-table-tennis-paddle-ball text-red-400"></i>
 					</div>
 					<div>
 						<h4 class="font-medium text-gray-900 dark:text-white">USATT</h4>
 						<p class="text-sm text-gray-500">Table tennis rating — not great, but improving</p>
 					</div>
-					<i class="fas fa-arrow-right ml-auto text-gray-400 dark:text-gray-600 transition group-hover:text-gray-900 dark:group-hover:text-white"></i>
+					<i
+						class="fas fa-arrow-right ml-auto text-gray-400 transition group-hover:text-gray-900 dark:text-gray-600 dark:group-hover:text-white"
+					></i>
 				</a>
 			</div>
 		</ScrollReveal>
 	</div>
 </section>
+
+<style>
+	.writing-card-title {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		line-clamp: 2;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+	}
+
+	.writing-card-description {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		line-clamp: 3;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+	}
+</style>

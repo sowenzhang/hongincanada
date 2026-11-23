@@ -31,6 +31,7 @@ A 4-part series on designing apps that work together via adaptive App Flows.
 
 ## Blog
 - [Blog index](https://www.hongincanada.com/blog)
+- [A Quiet Walk with Puzzles, Punchlines, and Places to Discover](https://www.hongincanada.com/blog/nearbygame-quiet-game)
 - [Loop Engineering](https://www.hongincanada.com/blog/loop-engineering)
 - [Building Deckmark: Closing the Feedback Loop for AI-Generated Slide Decks](https://www.hongincanada.com/blog/building-deckmark)
 - [AI Workflow Review](https://www.hongincanada.com/ai-workflow-review)
