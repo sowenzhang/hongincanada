@@ -43,7 +43,7 @@
 		<div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
 			<div class="mb-8 flex items-end justify-between gap-4">
 				<div>
-					<p class="mb-1 text-xs font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
+					<p class="mb-1 text-xs font-semibold uppercase tracking-widest text-teal-700 dark:text-teal-400">
 						Keep reading
 					</p>
 					<h2 id="more-posts-heading" class="font-serif text-2xl font-semibold text-gray-900 dark:text-white">

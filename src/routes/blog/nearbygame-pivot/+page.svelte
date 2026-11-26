@@ -43,7 +43,6 @@
 
 	let isDark = $state(false);
 	let showTOC = $state(false);
-	let showBackToTop = $state(false);
 	let prefersReducedMotion = $state(false);
 
 	onMount(() => {
@@ -55,16 +54,11 @@
 		document.documentElement.classList.toggle('dark', isDark);
 		showTOC = window.innerWidth >= 1024;
 
-		const handleScroll = () => {
-			showBackToTop = window.scrollY > 400;
-		};
 		const handleMotionChange = (event: MediaQueryListEvent) => {
 			prefersReducedMotion = event.matches;
 		};
-		window.addEventListener('scroll', handleScroll, { passive: true });
 		mediaQuery.addEventListener('change', handleMotionChange);
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
 			mediaQuery.removeEventListener('change', handleMotionChange);
 		};
 	});
@@ -75,9 +69,6 @@
 		localStorage.setItem('theme', isDark ? 'dark' : 'light');
 	}
 
-	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-	}
 
 	function getTwitterShareUrl() {
 		return `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageData.canonical)}&text=${encodeURIComponent(pageData.title)}`;
@@ -599,15 +590,6 @@
 
 	<MorePosts currentSlug="nearbygame-pivot" />
 
-	{#if showBackToTop}
-		<button
-			onclick={scrollToTop}
-			class="fixed bottom-8 right-8 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-white shadow-lg transition-colors hover:bg-teal-600"
-			aria-label="Back to top"
-		>
-			<i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>
-		</button>
-	{/if}
 </div>
 
 <style>

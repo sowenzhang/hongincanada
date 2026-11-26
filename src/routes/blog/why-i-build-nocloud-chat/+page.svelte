@@ -22,18 +22,11 @@
 
 	let isDark = $state(false);
 	let showTOC = $state(true);
-	let showBackToTop = $state(false);
 
 	onMount(() => {
 		const saved = localStorage.getItem('theme');
 		isDark = saved ? saved === 'dark' : false;
 		document.documentElement.classList.toggle('dark', isDark);
-
-		const handleScroll = () => {
-			showBackToTop = window.scrollY > 400;
-		};
-		window.addEventListener('scroll', handleScroll, { passive: true });
-		return () => window.removeEventListener('scroll', handleScroll);
 	});
 
 	function toggleTheme() {
@@ -42,9 +35,6 @@
 		localStorage.setItem('theme', isDark ? 'dark' : 'light');
 	}
 
-	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}
 
 	function getTwitterShareUrl() {
 		return `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageData.canonical)}&text=${encodeURIComponent(pageData.title)}`;
@@ -373,13 +363,3 @@
 </div>
 
 <!-- Back to Top Button -->
-{#if showBackToTop}
-	<button
-		onclick={scrollToTop}
-		transition:slide={{ axis: 'y' }}
-		class="fixed bottom-8 right-8 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg hover:scale-110 transition-transform"
-		aria-label="Back to top"
-	>
-		<i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>
-	</button>
-{/if}

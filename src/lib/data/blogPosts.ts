@@ -17,6 +17,15 @@ export interface BlogPostMeta {
  */
 export const blogPosts: BlogPostMeta[] = [
 	{
+		slug: 'minibreaks-spaces',
+		title: 'MiniBreaks Spaces: Turning 52 Tiny Apps Into a Desk You Come Back To',
+		description:
+			'MiniBreaks Spaces puts the right tiny apps on one desk for teachers, coaches, focused workdays and personal bests. Why it matters, who it is for, and how I built it with AI.',
+		icon: 'fa-table-cells-large',
+		date: '2026-12-03',
+		shortTitle: 'MiniBreaks Spaces'
+	},
+	{
 		slug: 'nearbygame-quiet-game',
 		title: 'A Quiet Walk with Puzzles, Punchlines, and Places to Discover',
 		description:

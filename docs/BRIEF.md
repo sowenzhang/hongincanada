@@ -6,7 +6,7 @@ The judge. Every route is scored against this.
 Home + AI-workflow tool page + 8 standalone blog posts + Mosaic series (landing + 4 parts + full-series) + AI series (landing + layout + 10 parts + full-series). 28 routes total:
 - `/` — home (hero, projects, writing index, about/journey, interests, contact)
 - `/ai-workflow-review`
-- `/blog/app-flow-first-pilot`, `/blog/building-deckmark`, `/blog/introducing-crossit`, `/blog/loop-engineering`, `/blog/minibreaks-pivot`, `/blog/nearbygame-pivot`, `/blog/nearbygame-what-i-learned`, `/blog/why-i-build-nocloud-chat`
+- `/blog/app-flow-first-pilot`, `/blog/building-deckmark`, `/blog/introducing-crossit`, `/blog/loop-engineering`, `/blog/minibreaks-pivot`, `/blog/minibreaks-spaces`, `/blog/nearbygame-pivot`, `/blog/nearbygame-what-i-learned`, `/blog/why-i-build-nocloud-chat`
 - `/mosaic`, `/mosaic/the-problem-with-apps-today`, `/mosaic/adaptive-journeys`, `/mosaic/app-flow-under-the-hood`, `/mosaic/near-future-and-beyond`, `/mosaic/full-series`
 - `/series`, `/series/full-series`, `/series/part-1..10-*`
 

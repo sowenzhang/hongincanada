@@ -37,7 +37,6 @@
 
 	let isDark = $state(false);
 	let showTOC = $state(false);
-	let showBackToTop = $state(false);
 	let prefersReducedMotion = $state(false);
 	let copyStatus = $state('');
 
@@ -50,17 +49,12 @@
 		document.documentElement.classList.toggle('dark', isDark);
 		showTOC = window.innerWidth >= 1024;
 
-		const handleScroll = () => {
-			showBackToTop = window.scrollY > 400;
-		};
 		const handleMotionChange = (event: MediaQueryListEvent) => {
 			prefersReducedMotion = event.matches;
 		};
 
-		window.addEventListener('scroll', handleScroll, { passive: true });
 		mediaQuery.addEventListener('change', handleMotionChange);
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
 			mediaQuery.removeEventListener('change', handleMotionChange);
 		};
 	});
@@ -71,9 +65,6 @@
 		localStorage.setItem('theme', isDark ? 'dark' : 'light');
 	}
 
-	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-	}
 
 	async function copyLink() {
 		try {
@@ -607,13 +598,3 @@
 	</footer>
 </div>
 
-{#if showBackToTop}
-	<button
-		onclick={scrollToTop}
-		transition:slide={{ axis: 'y', duration: prefersReducedMotion ? 0 : 200 }}
-		class="fixed bottom-8 right-8 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg hover:scale-110 transition-transform"
-		aria-label="Back to top"
-	>
-		<i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>
-	</button>
-{/if}

@@ -23,6 +23,10 @@ Stack: **sveltekit**.
 
 - `src/routes/blog/loop-engineering/+page.svelte`
 
+### `/blog/minibreaks-spaces`
+
+- `src/routes/blog/minibreaks-spaces/+page.svelte`
+
 ### `/blog/minibreaks-pivot`
 
 - `src/routes/blog/minibreaks-pivot/+page.svelte`

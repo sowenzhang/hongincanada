@@ -41,7 +41,6 @@
 
 	let isDark = $state(false);
 	let showTOC = $state(false);
-	let showBackToTop = $state(false);
 	let prefersReducedMotion = $state(false);
 	let copyStatus = $state('');
 
@@ -53,13 +52,10 @@
 		document.documentElement.classList.toggle('dark', isDark);
 		showTOC = window.innerWidth >= 1024;
 
-		const handleScroll = () => (showBackToTop = window.scrollY > 400);
 		const handleMotionChange = (event: MediaQueryListEvent) => (prefersReducedMotion = event.matches);
-		window.addEventListener('scroll', handleScroll, { passive: true });
 		mediaQuery.addEventListener('change', handleMotionChange);
 
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
 			mediaQuery.removeEventListener('change', handleMotionChange);
 		};
 	});
@@ -70,9 +66,6 @@
 		localStorage.setItem('theme', isDark ? 'dark' : 'light');
 	}
 
-	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-	}
 
 	async function copyLink() {
 		try {
@@ -303,7 +296,4 @@ report(state)</code></pre>
 
 	<MorePosts currentSlug="loop-engineering" />
 
-	{#if showBackToTop}
-		<button onclick={scrollToTop} class="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-teal-600 text-white shadow-lg transition hover:bg-teal-700" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
-	{/if}
 </div>

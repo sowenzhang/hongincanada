@@ -304,7 +304,11 @@
 
 <!-- Back to top -->
 <button
-	onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+	onclick={() =>
+		window.scrollTo({
+			top: 0,
+			behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+		})}
 	class="fixed bottom-8 right-8 z-30 flex h-12 w-12 items-center justify-center rounded-full border shadow-lg backdrop-blur-sm transition {scrolled
 		? 'opacity-100'
 		: 'pointer-events-none opacity-0'}"
